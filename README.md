@@ -118,14 +118,59 @@ so. Set a long random `JWT_SECRET` for anything shared.
 (`cups:POS-80`). All of those are LAN-local, so **the server must run where the printers
 are reachable** — a cloud-hosted API cannot print.
 
-### Production
+### Production (self-hosted)
 
 ```bash
 npm run build                 # → .output/
 node .output/server/index.mjs # one Node process serving the app AND /api/*
 ```
 
-One process means one port, one certificate and one reverse-proxy rule.
+One process means one port, one certificate and one reverse-proxy rule. The server must
+run somewhere with a route to the printers (see above).
+
+### Deploying to Vercel
+
+**This is ONE Vercel project, rooted at the repository root.** Vercel's import screen
+also offers `server/` as a project, because that folder has its own `package.json` with
+`hono` and `@hono/node-server` in it. Ignore it (or delete it if it was created) — the
+API is *not* a separate deployment. `src/server.ts` mounts the Hono app into the
+TanStack Start server, so a single function serves both:
+
+| Route | Handled by |
+| --- | --- |
+| `/api/*` | the Hono app (`server/src/app.ts`) |
+| everything else | the TanStack Start SSR handler |
+
+`vercel.json` pins that: framework detection off, `npm run build`, and the Build Output
+API (`.vercel/output`). Nitro picks the `vercel` preset automatically because `VERCEL=1`
+is set in Vercel's build environment.
+
+**Environment variables** (Settings → Environment Variables) — `.env` is gitignored, so
+nothing is inherited:
+
+| Variable | Notes |
+| --- | --- |
+| `TURSO_DATABASE_URL` | required |
+| `TURSO_AUTH_TOKEN` | required for Turso |
+| `JWT_SECRET` | **set a long random value.** Unset, the server falls back to a hard-coded development secret — do not ship that |
+| `SEED_ADMIN_EMAIL` / `SEED_ADMIN_PASSWORD` | optional, only used by `db:ensure-admin`, which `npm run build` does not run |
+
+Two things to know before you rely on it:
+
+- **The function timeout is raised to 60s** (`vite.config.ts` → `nitro.vercel.functions.maxDuration`)
+  because `/api/dashboard` measures ~12s warm over Turso. On the Hobby plan 60s is the
+  ceiling, so if the dashboard gets slower it will 504 rather than load. The real fix is
+  to speed that endpoint up.
+- **Printing cannot work from Vercel.** `/api/print/*` talks to a printer on the store's
+  LAN (`tcp://…:9100`, `/dev/usb/lp0`, `cups:…`), which a serverless function cannot
+  reach. Receipt printing needs the app deployed inside the network, or a per-store print
+  agent.
+
+To preview the Vercel output locally:
+
+```bash
+VERCEL=1 npm run build        # → .vercel/output
+```
 
 
 

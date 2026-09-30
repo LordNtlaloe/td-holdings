@@ -13,6 +13,9 @@ __unconfig*
 todos.json
 .yarn
 
+# Vercel build output (Build Output API)
+.vercel
+
 # Snapshot export of the legacy database (may contain production data)
 convex-export/
 convex-export.zip
