@@ -2,15 +2,17 @@
   "include": ["src/**/*.ts", "src/**/*.tsx", "vite.config.ts"],
   "exclude": [
     "node_modules",
-    "server",
-    "scripts",
     "dist",
     ".output",
-    // The custom server entry imports the API sources from `server/`. It is
-    // type-checked by `server/tsconfig.json` (Node types, no DOM lib) — adding
-    // it here would drag every server file into this program with frontend
-    // settings.
-    "src/server.ts"
+    ".vercel",
+    // The API (`src/api/**`) and the custom server entry (`src/server.ts`) are
+    // Node-only and are type-checked by `tsconfig.api.json` instead. They live
+    // under `src/` so the app is one source tree, but compiling them with this
+    // config's DOM/JSX settings produced ~60 spurious errors.
+    "src/api",
+    "src/server.ts",
+    "scripts",
+    "drizzle.config.ts"
   ],
   "compilerOptions": {
     "target": "ES2022",

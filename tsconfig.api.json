@@ -1,0 +1,33 @@
+{
+  // Type-checks the API half of the app: the Hono routes under `src/api/`, the
+  // custom TanStack Start server entry that mounts them (`src/server.ts`), and
+  // the Node-side tooling (migrations config + `scripts/`).
+  //
+  // This is a separate project from the root `tsconfig.json` on purpose: the API
+  // is Node-only (no DOM lib, `types: ["node"]`, no `jsx`), while the frontend
+  // needs DOM + JSX. Running both through one config produced ~60 spurious
+  // errors (type-only imports, Buffer-vs-BufferSource, unused locals).
+  //
+  // Run with:  npm run typecheck
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "lib": ["ES2022"],
+    "types": ["node"],
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "allowImportingTsExtensions": true,
+    "noEmit": true
+  },
+  "include": [
+    "src/api/**/*",
+    "src/server.ts",
+    "scripts/**/*",
+    "drizzle.config.ts"
+  ],
+  "exclude": ["node_modules", "dist", ".output", ".vercel"]
+}

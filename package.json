@@ -7,18 +7,21 @@
   },
   "scripts": {
     "dev": "npm run db:bootstrap && npm run db:ensure-admin && vite dev --port 3000",
-    "dev:api": "cd server && npm run dev",
+    "dev:api": "tsx src/api/index.ts",
     "generate-routes": "tsr generate",
     "build": "vite build",
-    "build:server": "cd server && npm run build",
     "preview": "vite preview",
     "test": "vitest run",
-    "db:bootstrap": "cd server && npm run db:bootstrap",
-    "db:reset": "cd server && npm run db:reset",
-    "db:ensure-admin": "cd server && npm run db:ensure-admin",
-    "db:generate": "cd server && npm run db:generate",
-    "db:push": "cd server && npm run db:push",
-    "db:migrate": "cd server && npm run db:migrate"
+    "typecheck": "tsc --noEmit && tsc --noEmit -p tsconfig.api.json",
+    "db:bootstrap": "tsx scripts/bootstrap-local-db.ts",
+    "db:reset": "tsx scripts/bootstrap-local-db.ts --reset",
+    "db:ensure-admin": "tsx scripts/ensure-admin.ts",
+    "db:import": "tsx scripts/import-convex-export.ts",
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "drizzle-kit migrate",
+    "db:push": "drizzle-kit generate && drizzle-kit migrate",
+    "db:push:direct": "drizzle-kit push",
+    "db:studio": "drizzle-kit studio"
   },
   "dependencies": {
     "@auth/core": "0.41.1",
@@ -28,6 +31,7 @@
     "@dnd-kit/utilities": "^3.2.2",
     "@fontsource-variable/inter": "^5.2.8",
     "@fontsource-variable/noto-sans": "^5.2.10",
+    "@hono/node-server": "^1.13.0",
     "@libsql/client": "^0.18.0",
     "@react-pdf/renderer": "^4.5.1",
     "@react-thermal-printer/image": "^0.14.0",
@@ -51,6 +55,7 @@
     "dotenv": "^18.0.4",
     "drizzle-kit": "^0.31.11",
     "drizzle-orm": "^0.45.3",
+    "hono": "^4.13.0",
     "jimp": "^1.6.1",
     "jspdf": "^4.2.1",
     "jspdf-autotable": "^5.0.8",
@@ -115,5 +120,6 @@
         "arm64"
       ]
     }
-  }
+  },
+  "packageManager": "yarn@4.18.1"
 }

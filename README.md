@@ -44,16 +44,37 @@ If you prefer not to use Tailwind CSS:
 
 ## Backend setup (Hono + Turso)
 
-The API lives in `server/` (Hono + Drizzle) and is **mounted into the app server** by
+The API lives in `src/api/` (Hono + Drizzle) and is **mounted into the app server** by
 `src/server.ts`, so the frontend and the API share one origin and one port:
 
 ```
-/api/*          → the Hono API in server/src/app.ts
+/api/*          → the Hono API in src/api/app.ts
 everything else → the TanStack Start SSR handler
 ```
 
 No CORS, no second port, no `VITE_API_URL` to keep in sync — if the page loaded, the
-API is up. The API can still be run on its own host (`npm run dev:api`, `server/src/index.ts`).
+API is up. The API can still be run on its own host (`npm run dev:api`, `src/api/index.ts`).
+
+### Source layout
+
+One tree, one app — there is no separate backend project:
+
+| Path | What it is |
+| --- | --- |
+| `src/api/**` | the Hono API (routes, auth, Drizzle schema, printing) |
+| `src/server.ts` | the server entry that mounts `src/api` into TanStack Start |
+| `src/**` (the rest) | the frontend |
+| `drizzle/`, `drizzle.config.ts` | migrations and Drizzle Kit config |
+| `scripts/` | Node-side tooling (DB bootstrap, seed, password, admin) |
+
+Two TypeScript projects cover it, because the API is Node-only (no DOM lib, `types: ["node"]`) while the UI needs DOM + JSX:
+
+- `tsconfig.json` — the frontend; excludes `src/api`, `src/server.ts`, `scripts/`, `drizzle.config.ts`
+- `tsconfig.api.json` — the API, the server entry, `scripts/` and the Drizzle config
+
+```bash
+npm run typecheck   # runs both
+```
 
 ### Development
 
@@ -64,7 +85,7 @@ npm run dev     # → http://localhost:3000
 
 `npm run dev` also runs `npm run db:bootstrap`. That only does anything when
 `TURSO_DATABASE_URL` is a `file:` URL — it creates that file, applies the migrations in
-`server/drizzle/`, applies `server/drizzle/indexes.sql` (not part of the Drizzle
+`drizzle/`, applies `drizzle/indexes.sql` (not part of the Drizzle
 journal), and seeds from `convex-export/` the first time only. It is idempotent, and it
 exits immediately when a remote database is configured, so it never touches Turso.
 
@@ -88,7 +109,7 @@ Pick one of:
 #    SEED_ADMIN_PASSWORD=<at least 8 characters>
 
 # b) be prompted for the password (hidden input, nothing in shell history)
-cd server && npx tsx scripts/set-password.ts <email>
+npx tsx scripts/set-password.ts <email>
 ```
 
 Two accounts still use the pre-PBKDF2 scheme (`SHA-256(password + JWT_SECRET)`):
@@ -98,7 +119,7 @@ is the reliable fix.
 
 ### Which database is used
 
-The connection is built **only** from environment variables (`server/src/db/url.ts`), so
+The connection is built **only** from environment variables (`src/api/db/url.ts`), so
 the API, Drizzle Kit and the seed scripts can never disagree:
 
 | Variable | Notes |
@@ -107,13 +128,13 @@ the API, Drizzle Kit and the seed scripts can never disagree:
 | `TURSO_AUTH_TOKEN` | Required by Turso, ignored for `file:` |
 
 A relative `file:` path is resolved against the repo root, so the API (run from the repo
-root) and the `db:*` scripts (run from `server/`) open the same file. There is no
+root) and the `db:*` scripts open the same file. There is no
 implicit fallback: if `TURSO_DATABASE_URL` is unset the server refuses to start and says
 so. Set a long random `JWT_SECRET` for anything shared.
 
 ### Printing needs a local machine
 
-`server/src/print-transport.ts` sends ESC/POS bytes straight to a printer: raw TCP
+`src/api/print-transport.ts` sends ESC/POS bytes straight to a printer: raw TCP
 (`192.168.1.50:9100`), a device node (`/dev/usb/lp0`), or a local CUPS queue
 (`cups:POS-80`). All of those are LAN-local, so **the server must run where the printers
 are reachable** — a cloud-hosted API cannot print.
@@ -130,15 +151,13 @@ run somewhere with a route to the printers (see above).
 
 ### Deploying to Vercel
 
-**This is ONE Vercel project, rooted at the repository root.** Vercel's import screen
-also offers `server/` as a project, because that folder has its own `package.json` with
-`hono` and `@hono/node-server` in it. Ignore it (or delete it if it was created) — the
-API is *not* a separate deployment. `src/server.ts` mounts the Hono app into the
-TanStack Start server, so a single function serves both:
+**This is ONE Vercel project, rooted at the repository root.** The API is not a separate
+deployment: `src/server.ts` mounts the Hono app into the TanStack Start server, so one
+function serves both:
 
 | Route | Handled by |
 | --- | --- |
-| `/api/*` | the Hono app (`server/src/app.ts`) |
+| `/api/*` | the Hono app (`src/api/app.ts`) |
 | everything else | the TanStack Start SSR handler |
 
 `vercel.json` pins that: framework detection off, `npm run build`, and the Build Output

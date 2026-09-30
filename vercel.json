@@ -2,6 +2,6 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "framework": null,
   "buildCommand": "npm run build",
-  "installCommand": "npm install --legacy-peer-deps && npm install --prefix server",
+  "installCommand": "npm install --legacy-peer-deps",
   "outputDirectory": ".vercel/output"
 }

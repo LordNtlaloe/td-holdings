@@ -4,7 +4,7 @@
 // TanStack Start picks this file up automatically (`src/server.ts`). Everything
 // runs in ONE process on ONE port:
 //
-//   /api/*  → the Hono API from `server/src/app.ts`
+//   /api/*  → the Hono API from `src/api/app.ts`
 //   anything else → the TanStack Start SSR handler
 //
 // Because the browser only ever talks to its own origin, requests are
@@ -20,7 +20,7 @@ import {
 import type { RequestHandler } from "@tanstack/react-start/server";
 import type { Register } from "@tanstack/react-router";
 
-import { api } from "../server/src/app.ts";
+import { api } from "./api/app.ts";
 
 const renderApp = createStartHandler(defaultStreamHandler);
 
