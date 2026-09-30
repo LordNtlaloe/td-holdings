@@ -94,6 +94,8 @@ export function InventoryTable({
         {
             key: 'actions',
             header: 'Actions',
+            // Three bare icon buttons; the card view folds them into one ⋯ menu.
+            mobileActions: 'group',
             cell: (row) => (
                 <div className="flex gap-2">
                     <Button

@@ -68,6 +68,9 @@ export function TransferTable({
     columns.push({
         key: 'actions',
         header: 'Actions',
+        // Ship/Receive + Cancel are two buttons in a row, which does not fit a
+        // phone — the card view folds them into one ⋯ menu.
+        mobileActions: 'group',
         cell: (row) => (
             <div className="flex gap-2">
                 {status === 'pending' && (

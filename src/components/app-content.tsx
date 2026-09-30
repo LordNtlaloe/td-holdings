@@ -10,8 +10,14 @@ export function AppContent({ variant = 'header', children, ...props }: AppConten
         return <SidebarInset {...props}>{children}</SidebarInset>;
     }
 
+    // `w-full` together with `mx-6` pushed this 48px past the viewport on a
+    // phone; `flex-1` already fills the space, and the margins inset the card
+    // only where there is room for them.
     return (
-        <main className="mx-6 my-6 flex h-full w-full flex-1 flex-col gap-4 rounded-xl" {...props}>
+        <main
+            className="flex min-w-0 flex-1 flex-col gap-4 md:mx-6 md:my-6 md:rounded-xl"
+            {...props}
+        >
             {children}
         </main>
     );

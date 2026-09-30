@@ -62,8 +62,7 @@ function ProfilePage() {
       } else {
         setErrors(errors || {});
       }
-    } catch (error) {
-      console.error('Failed to update profile:', error);
+    } catch {
       setErrors({ general: 'Failed to update profile. Please try again.' });
     } finally {
       setProcessing(false);

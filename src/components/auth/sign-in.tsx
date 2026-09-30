@@ -86,7 +86,7 @@ export function SigninForm({ ...props }: React.ComponentProps<typeof Card>) {
                                     {loading ? "Signing in…" : "Sign In"}
                                 </Button>
                                 <FieldDescription className="px-6 text-center">
-                                    Don&apos;t have an account? <a href="/sign-up">Sign up</a>
+                                    No account? Ask an administrator to create one for you.
                                 </FieldDescription>
                             </Field>
                         </FieldGroup>

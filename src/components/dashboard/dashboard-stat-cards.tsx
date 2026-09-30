@@ -2,16 +2,12 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import {
     TrendingUp,
     Receipt,
-    AlertTriangle,
     Building2,
     ArrowRightLeft,
     ShoppingCart,
-    Users,
     Activity,
     DollarSign,
     BarChart2,
-    UserCheck,
-    Repeat2,
     Package,
     Percent,
     RefreshCw,
@@ -21,9 +17,29 @@ import { cn } from '@/lib/utils'
 import type { DashboardData } from '#/types/dashboard'
 import { formatCurrency } from './dashboard-utils'
 
+/** The four headline KPIs, and the only cards shown above the tabs. */
 interface DashboardStatCardsProps {
     data: DashboardData
+}
+
+/**
+ * Tabs that carry their own stat cards. `customers`, `financials` and `stock`
+ * are absent on purpose: those tabs already render a summary row of their own
+ * (`dashboard-extra-tabs.tsx`), so repeating the numbers here would be noise.
+ */
+export type StatCardTab =
+    | 'primary'
+    | 'sales'
+    | 'stores'
+    | 'transfers'
+    | 'purchases'
+    | 'inventory'
+    | 'activity'
+
+interface DashboardTabStatCardsProps {
+    data: DashboardData
     isGlobal: boolean
+    tab: StatCardTab
 }
 
 function StatCard({
@@ -62,28 +78,12 @@ function StatCard({
     )
 }
 
-export function DashboardStatCards({ data, isGlobal }: DashboardStatCardsProps) {
-    const { stats, customers, financial } = data
-
-    // Non-revenue performance: volume and efficiency rather than money.
-    const perf = {
-        unitsSold: data.performance?.unitsSold ?? 0,
-        itemsPerSale: data.performance?.itemsPerSale ?? 0,
-        sellThroughRate: data.performance?.sellThroughRate ?? 0,
-        stockTurnover: data.performance?.stockTurnover ?? stats.stockTurnover ?? 0,
-        cancellationRate: data.performance?.cancellationRate ?? 0,
-    }
+export function DashboardStatCards({ data }: DashboardStatCardsProps) {
+    const { stats, financial } = data
 
     const avgTxValue = stats.avgTransactionValue ?? 0
     const grossMargin = financial?.grossProfitMargin ?? stats.grossProfitMargin ?? 0
     const grossProfit = financial?.grossProfit ?? 0
-    const newCustomers = customers?.newThisMonth ?? 0
-    const returnRate =
-        customers && customers.total > 0
-            ? Math.round(
-                ((customers.total - newCustomers) / customers.total) * 100,
-            )
-            : 0
 
     return (
         <>
@@ -116,115 +116,130 @@ export function DashboardStatCards({ data, isGlobal }: DashboardStatCardsProps) 
                 />
             </div>
 
-            {/* Row 2 — always visible */}
-            <div className="grid grid-cols-2 gap-4 lg:grid-cols-4">
-                <StatCard
-                    title="Low Stock"
-                    value={stats.lowStockCount}
-                    sub="At or below reorder level"
-                    icon={AlertTriangle}
-                    accent={stats.lowStockCount > 0 ? 'amber' : undefined}
-                />
-                <StatCard
-                    title={isGlobal ? 'Active Stores' : 'Your Store'}
-                    value={isGlobal ? stats.activeStores : (data.recentSales[0]?.storeName ?? '—')}
-                    sub={isGlobal ? 'Currently active' : 'Assigned location'}
-                    icon={Building2}
-                />
-                <StatCard
-                    title="New Customers"
-                    value={newCustomers}
-                    sub="Registered this month"
-                    icon={UserCheck}
-                    accent={newCustomers > 0 ? 'green' : undefined}
-                />
-                <StatCard
-                    title="Return Rate"
-                    value={`${returnRate}%`}
-                    sub="Repeat buyers"
-                    icon={Repeat2}
-                    accent={returnRate >= 40 ? 'green' : returnRate >= 20 ? 'amber' : undefined}
-                />
-            </div>
-
-            {/* Row 3 — non-revenue performance */}
-            <div className="space-y-3">
-                <p className="text-xs font-medium uppercase tracking-wide text-muted-foreground">
-                    Performance — non-revenue
-                </p>
-                <div className="grid grid-cols-2 gap-4 lg:grid-cols-4">
-                    <StatCard
-                        title="Units Sold"
-                        value={perf.unitsSold.toLocaleString()}
-                        sub={`${perf.itemsPerSale.toFixed(1)} items per sale`}
-                        icon={Package}
-                    />
-                    <StatCard
-                        title="Sell-through"
-                        value={`${perf.sellThroughRate.toFixed(1)}%`}
-                        sub="Units sold vs stock on hand"
-                        icon={Percent}
-                        accent={
-                            perf.sellThroughRate >= 60
-                                ? 'green'
-                                : perf.sellThroughRate >= 30
-                                    ? 'amber'
-                                    : undefined
-                        }
-                    />
-                    <StatCard
-                        title="Stock Turnover"
-                        value={`${perf.stockTurnover.toFixed(2)}×`}
-                        sub="Units sold ÷ units in stock"
-                        icon={RefreshCw}
-                        accent={perf.stockTurnover >= 1 ? 'green' : undefined}
-                    />
-                    <StatCard
-                        title="Cancellations"
-                        value={`${perf.cancellationRate.toFixed(1)}%`}
-                        sub="Cancelled, refunded or voided"
-                        icon={XCircle}
-                        accent={
-                            perf.cancellationRate >= 10
-                                ? 'red'
-                                : perf.cancellationRate >= 5
-                                    ? 'amber'
-                                    : 'green'
-                        }
-                    />
-                </div>
-            </div>
-
-            {/* Row 4 — global/admin only */}
-            {isGlobal && (
-                <div className="grid grid-cols-2 gap-4 lg:grid-cols-4">
-                    <StatCard
-                        title="Pending Transfers"
-                        value={data.transfers.pendingCount}
-                        sub={`${data.transfers.inTransitCount} in transit`}
-                        icon={ArrowRightLeft}
-                        accent={data.transfers.pendingCount > 0 ? 'amber' : undefined}
-                    />
-                    <StatCard
-                        title="Stock Spend (MTD)"
-                        value={formatCurrency(data.purchases.totalThisMonth)}
-                        sub={`${data.purchases.pendingCount} pending PO${data.purchases.pendingCount !== 1 ? 's' : ''}`}
-                        icon={ShoppingCart}
-                    />
-                    <StatCard
-                        title="Customers"
-                        value={customers?.total ?? 0}
-                        sub={`+${newCustomers} this month`}
-                        icon={Users}
-                    />
-                    <StatCard
-                        title="Activity"
-                        value={data.activityFeed.length}
-                        sub="Recent actions logged"
-                        icon={Activity}
-                    />
-                </div>
-            )}
         </>
     )
+}
+
+/**
+ * The cards for one tab.
+ *
+ * Everything that used to sit in rows 2–4 above the tabs now renders inside the
+ * tab whose question it answers, so the dashboard leads with four headline
+ * numbers instead of sixteen. Cards a tab already summarises are not repeated:
+ * Low Stock, Total Customers and Gross Profit each have their own tab row.
+ */
+export function DashboardTabStatCards({ data, isGlobal, tab }: DashboardTabStatCardsProps) {
+    const perf = {
+        unitsSold: data.performance?.unitsSold ?? 0,
+        itemsPerSale: data.performance?.itemsPerSale ?? 0,
+        sellThroughRate: data.performance?.sellThroughRate ?? 0,
+        stockTurnover: data.performance?.stockTurnover ?? data.stats.stockTurnover ?? 0,
+        cancellationRate: data.performance?.cancellationRate ?? 0,
+    }
+
+    // Lazily built per tab, so a tab only touches the data it actually shows.
+    const groups: Record<StatCardTab, () => React.ReactNode[]> = {
+        primary: () => [],
+        sales: () => [
+            <StatCard
+                key="units"
+                title="Units Sold"
+                value={perf.unitsSold.toLocaleString()}
+                sub={`${perf.itemsPerSale.toFixed(1)} items per sale`}
+                icon={Package}
+            />,
+            <StatCard
+                key="cancellations"
+                title="Cancellations"
+                value={`${perf.cancellationRate.toFixed(1)}%`}
+                sub="Cancelled, refunded or voided"
+                icon={XCircle}
+                accent={
+                    perf.cancellationRate >= 10
+                        ? 'red'
+                        : perf.cancellationRate >= 5
+                            ? 'amber'
+                            : 'green'
+                }
+            />,
+        ],
+        stores: () =>
+            isGlobal
+                ? [
+                    <StatCard
+                        key="stores"
+                        title="Active Stores"
+                        value={data.stats.activeStores}
+                        sub="Currently active"
+                        icon={Building2}
+                    />,
+                ]
+                : [],
+        transfers: () =>
+            isGlobal
+                ? [
+                    <StatCard
+                        key="transfers"
+                        title="Pending Transfers"
+                        value={data.transfers?.pendingCount ?? 0}
+                        sub={`${data.transfers?.inTransitCount ?? 0} in transit`}
+                        icon={ArrowRightLeft}
+                        accent={(data.transfers?.pendingCount ?? 0) > 0 ? 'amber' : undefined}
+                    />,
+                ]
+                : [],
+        purchases: () =>
+            isGlobal
+                ? [
+                    <StatCard
+                        key="purchases"
+                        title="Stock Spend (MTD)"
+                        value={formatCurrency(data.purchases?.totalThisMonth ?? 0)}
+                        sub={`${data.purchases?.pendingCount ?? 0} pending PO${data.purchases?.pendingCount !== 1 ? 's' : ''}`}
+                        icon={ShoppingCart}
+                    />,
+                ]
+                : [],
+        inventory: () => [
+            <StatCard
+                key="sellThrough"
+                title="Sell-through"
+                value={`${perf.sellThroughRate.toFixed(1)}%`}
+                sub="Units sold vs stock on hand"
+                icon={Percent}
+                accent={
+                    perf.sellThroughRate >= 60
+                        ? 'green'
+                        : perf.sellThroughRate >= 30
+                            ? 'amber'
+                            : undefined
+                }
+            />,
+            <StatCard
+                key="turnover"
+                title="Stock Turnover"
+                value={`${perf.stockTurnover.toFixed(2)}×`}
+                sub="Units sold ÷ units in stock"
+                icon={RefreshCw}
+                accent={perf.stockTurnover >= 1 ? 'green' : undefined}
+            />,
+        ],
+        activity: () =>
+            isGlobal
+                ? [
+                    <StatCard
+                        key="activity"
+                        title="Activity"
+                        value={data.activityFeed?.length ?? 0}
+                        sub="Recent actions logged"
+                        icon={Activity}
+                    />,
+                ]
+                : [],
+    }
+
+    const items = groups[tab]()
+    if (items.length === 0) return null
+
+    return <div className="grid grid-cols-2 gap-4 lg:grid-cols-4">{items}</div>
 }

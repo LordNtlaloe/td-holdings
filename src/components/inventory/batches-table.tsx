@@ -77,6 +77,8 @@ export function BatchesTable({
         {
             key: 'actions',
             header: 'Actions',
+            // Edit + Delete sit side by side; the card view folds them into one ⋯ menu.
+            mobileActions: 'group',
             cell: (row) => (
                 <div className="flex gap-2">
                     <Button

@@ -37,6 +37,7 @@ import {
     DrawerFooter, DrawerHeader, DrawerTitle,
 } from '#/components/ui/drawer'
 import { Skeleton } from '#/components/ui/skeleton'
+import { CardActionsMenu } from '#/components/general/card-actions-menu'
 import { cn } from '#/lib/utils'
 
 // ── Column definition ─────────────────────────────────────────────────────────
@@ -59,6 +60,25 @@ export interface ColumnDef<T> {
     headerClassName?: string
     /** set to false to prevent this column from being hidden via the column-visibility menu (default true = hideable) */
     hideable?: boolean
+    /**
+     * Hide this column in the mobile card view (< 768px). Use it for incidental
+     * columns — row numbers, raw ids — that only add noise on a phone.
+     */
+    mobileHidden?: boolean
+    /** Label shown in the mobile card view. Defaults to `header`. */
+    mobileLabel?: string
+    /**
+     * Marks this column as the row's actions. In the mobile card view it moves to
+     * the card header instead of becoming a labelled row, so the card reads like
+     * a record with a ⋯ in the corner. A column keyed `actions` is treated as the
+     * actions column automatically.
+     *
+     * - `'hoist'` (default) — render the cell as-is; right for cells that already
+     *   render a single ⋯ menu.
+     * - `'group'` — collect the cell's buttons into one ⋯ dropdown; right for
+     *   cells that render several inline buttons, which are unusable on a phone.
+     */
+    mobileActions?: 'hoist' | 'group'
 }
 
 // ── Props ─────────────────────────────────────────────────────────────────────
@@ -122,6 +142,23 @@ function TableSkeleton({ rows = 5, cols = 4 }: { rows?: number; cols?: number })
     )
 }
 
+// ── Skeleton cards (mobile) ───────────────────────────────────────────────────
+function CardSkeleton({ rows = 3 }: { rows?: number }) {
+    return (
+        <>
+            {[...Array(rows)].map((_, i) => (
+                <div key={i} className="rounded-lg border p-3">
+                    <Skeleton className="h-4 w-1/2" />
+                    <div className="mt-3 space-y-2">
+                        <Skeleton className="h-3 w-full" />
+                        <Skeleton className="h-3 w-2/3" />
+                    </div>
+                </div>
+            ))}
+        </>
+    )
+}
+
 // ── Drag handle cell ──────────────────────────────────────────────────────────
 function DragHandle({ id, disabled }: { id: UniqueIdentifier; disabled?: boolean }) {
     const { attributes, listeners } = useSortable({ id, disabled })
@@ -167,6 +204,31 @@ function DraggableRow({
         >
             {children}
         </tr>
+    )
+}
+
+// ── Draggable card wrapper (mobile) ──────────────────────────────────────────
+function DraggableCard({
+    id,
+    children,
+}: {
+    id: UniqueIdentifier
+    children: React.ReactNode
+}) {
+    const { transform, transition, setNodeRef, isDragging } = useSortable({ id })
+
+    return (
+        <div
+            ref={setNodeRef}
+            data-dragging={isDragging}
+            className={cn('relative', isDragging && 'z-10 opacity-80')}
+            style={{
+                transform: CSS.Transform.toString(transform),
+                transition,
+            }}
+        >
+            {children}
+        </div>
     )
 }
 
@@ -287,6 +349,51 @@ export function DataTable<T extends Record<string, unknown>>({
         return content
     }
 
+    // ── mobile card view ───────────────────────────────────────────────────────
+    // A five-column table forces a sideways scroll on a phone, where you can only
+    // ever see one or two columns at a time. Below md each row becomes a card:
+    // the trigger column (or the first one) is the title, the rest are labelled
+    // key/value rows. Set `mobileHidden` on a column to drop it from the card.
+    const actionsCol = visibleColumns.find((c) => c.mobileActions || c.key === 'actions')
+    const mobileColumns = visibleColumns.filter(
+        (c) => c !== actionsCol && !c.mobileHidden
+    )
+
+    /**
+     * The actions column, folded into one ⋯ menu.
+     *
+     * These cells render bare buttons (Ship / Receive / Cancel, edit / add /
+     * remove), which sit in a row and overflow a phone. `CardActionsMenu`
+     * restyles them into full-width rows.
+     */
+    function renderGroupedActions(col: ColumnDef<T>, row: T) {
+        return (
+            <CardActionsMenu>{col.cell ? col.cell(row, row[col.key]) : null}</CardActionsMenu>
+        )
+    }
+
+    function renderCardTitle(row: T) {
+        const primary = visibleColumns.find((c) => c.key === triggerKey) ?? visibleColumns[0]
+        const content = primary
+            ? primary.cell
+                ? primary.cell(row, row[primary.key])
+                : String(row[primary.key] ?? '')
+            : String(row[rowKey] ?? '')
+
+        if (!renderDrawer) return content
+
+        return (
+            <button
+                type="button"
+                onClick={() => setDrawerRow(row)}
+                className="flex w-full items-center gap-1.5 text-left"
+            >
+                <span className="min-w-0 flex-1">{content}</span>
+                <ChevronRight className="size-4 shrink-0 text-muted-foreground" />
+            </button>
+        )
+    }
+
     const colCount =
         visibleColumns.length +
         (rowActions ? 1 : 0) +
@@ -296,7 +403,7 @@ export function DataTable<T extends Record<string, unknown>>({
         <div className={cn('space-y-3', className)}>
             {/* toolbar row */}
             <div className="flex items-center gap-2 flex-wrap">
-                <div className="relative flex-1 min-w-45 max-w-xs">
+                <div className="relative w-full min-w-0 flex-1 sm:max-w-xs">
                     <Search className="absolute left-2.5 top-1/2 -translate-y-1/2 size-3.5 text-muted-foreground pointer-events-none" />
                     <Input
                         value={search}
@@ -338,7 +445,7 @@ export function DataTable<T extends Record<string, unknown>>({
                     </DropdownMenu>
                 )}
 
-                {toolbar && <div className="flex items-center gap-2 ml-auto">{toolbar}</div>}
+                {toolbar && <div className="flex flex-wrap items-center gap-2 sm:ml-auto">{toolbar}</div>}
             </div>
 
             {isFiltered && enableDragReorder && (
@@ -347,8 +454,8 @@ export function DataTable<T extends Record<string, unknown>>({
                 </p>
             )}
 
-            {/* table */}
-            <div className="rounded-lg border overflow-x-auto">
+            {/* table — md and up */}
+            <div className="hidden rounded-lg border overflow-x-auto md:block">
                 <DndContext
                     collisionDetection={closestCenter}
                     modifiers={[restrictToVerticalAxis]}
@@ -424,15 +531,86 @@ export function DataTable<T extends Record<string, unknown>>({
                 </DndContext>
             </div>
 
+            {/* cards — below md */}
+            <div className="grid gap-2 md:hidden">
+                {loading ? (
+                    <CardSkeleton rows={3} />
+                ) : pageRows.length === 0 ? (
+                    <div className="rounded-lg border px-4 py-10 text-center text-sm text-muted-foreground">
+                        {emptyMessage}
+                    </div>
+                ) : (
+                    <SortableContext
+                        items={pageRowIds}
+                        strategy={verticalListSortingStrategy}
+                    >
+                        {pageRows.map((row) => {
+                            const id = String(row[rowKey]) as UniqueIdentifier
+                            return (
+                                <DraggableCard key={id} id={id}>
+                                    <div className="rounded-lg border bg-card">
+                                        <div className="flex items-start gap-2 border-b px-3 py-2.5">
+                                            {enableDragReorder && (
+                                                <DragHandle id={id} disabled={dragDisabled} />
+                                            )}
+                                            <div className="min-w-0 flex-1 text-sm font-medium">
+                                                {renderCardTitle(row)}
+                                            </div>
+                                            {rowActions && (
+                                                <div className="shrink-0">{rowActions(row)}</div>
+                                            )}
+                                            {actionsCol && !actionsCol.mobileHidden && (
+                                                <div className="shrink-0">
+                                                    {actionsCol.mobileActions === 'group'
+                                                        ? renderGroupedActions(actionsCol, row)
+                                                        : actionsCol.cell
+                                                            ? actionsCol.cell(row, row[actionsCol.key])
+                                                            : null}
+                                                </div>
+                                            )}
+                                        </div>
+
+                                        {mobileColumns.length > 0 && (
+                                            <dl className="divide-y">
+                                                {mobileColumns.map((col) => (
+                                                    <div
+                                                        key={col.key}
+                                                        className="flex items-start justify-between gap-4 px-3 py-2"
+                                                    >
+                                                        <dt className="shrink-0 text-xs text-muted-foreground">
+                                                            {col.mobileLabel ?? col.header}
+                                                        </dt>
+                                                        <dd
+                                                            className={cn(
+                                                                'min-w-0 break-words text-right text-sm',
+                                                                col.className
+                                                            )}
+                                                        >
+                                                            {col.cell
+                                                                ? col.cell(row, row[col.key])
+                                                                : String(row[col.key] ?? '—')}
+                                                        </dd>
+                                                    </div>
+                                                ))}
+                                            </dl>
+                                        )}
+                                    </div>
+                                </DraggableCard>
+                            )
+                        })}
+                    </SortableContext>
+                )}
+            </div>
+
             {/* pagination footer */}
-            <div className="flex items-center justify-between gap-4 flex-wrap text-sm">
+            <div className="flex flex-col gap-3 text-sm sm:flex-row sm:items-center sm:justify-between">
                 <p className="text-muted-foreground text-xs">
                     {loading
                         ? 'Loading…'
                         : `${filtered.length === 0 ? 0 : start + 1}–${Math.min(start + pageSize, filtered.length)} of ${filtered.length} row${filtered.length !== 1 ? 's' : ''}`}
                 </p>
 
-                <div className="flex items-center gap-3">
+                <div className="flex flex-wrap items-center justify-between gap-3 sm:justify-end">
                     <div className="flex items-center gap-1.5 text-xs text-muted-foreground">
                         <span>Rows</span>
                         <Select

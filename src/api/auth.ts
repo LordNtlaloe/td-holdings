@@ -121,6 +121,25 @@ export function requireRole(
   return user;
 }
 
+/**
+ * May `actorRole` modify or delete an account whose role is `targetRole`?
+ *
+ * The one rule: a plain `admin` has no authority over a `super_admin`. A
+ * `super_admin` may act on anyone, including another `super_admin`.
+ *
+ * Every route that can change *who a person is* has to ask this — delete,
+ * password reset, status change, and creation — not just delete. An admin who
+ * can only reset a super_admin's password already has the same effective
+ * power, just by a longer route.
+ */
+export function mayManageRole(
+  actorRole: AllowedRole | string | null | undefined,
+  targetRole: string | null | undefined
+): boolean {
+  if (targetRole !== "super_admin") return true;
+  return actorRole === "super_admin";
+}
+
 // ─── DB helpers ────────────────────────────────────────────────────────────
 
 /**

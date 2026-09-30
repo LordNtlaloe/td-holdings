@@ -6,6 +6,7 @@ import { AlertTriangle } from 'lucide-react'
 import AppLayout from '#/layouts/app-layout'
 import {
   DashboardStatCards,
+  DashboardTabStatCards,
   DashboardCharts,
   DashboardTables,
   DashboardAlerts,
@@ -83,8 +84,9 @@ function DashboardPage() {
           <DashboardAlerts alerts={data.alerts} />
         )}
 
-        {/* KPI cards */}
-        <DashboardStatCards data={data} isGlobal={isGlobal} />
+        {/* KPI cards — the four headline numbers only. Everything else lives in
+            the tab it describes, so this row never grows again. */}
+        <DashboardStatCards data={data} />
 
         {/* Tabs */}
         <Tabs defaultValue="overview" className="space-y-4">
@@ -105,7 +107,8 @@ function DashboardPage() {
             <DashboardCharts data={data} isGlobal={isGlobal} />
           </TabsContent>
 
-          <TabsContent value="sales">
+          <TabsContent value="sales" className="space-y-4">
+            <DashboardTabStatCards data={data} isGlobal={isGlobal} tab="sales" />
             <DashboardTables data={data} isGlobal={isGlobal} activeTab="sales" />
           </TabsContent>
 
@@ -116,19 +119,22 @@ function DashboardPage() {
           )}
 
           {isGlobal && (
-            <TabsContent value="stores">
+            <TabsContent value="stores" className="space-y-4">
+              <DashboardTabStatCards data={data} isGlobal={isGlobal} tab="stores" />
               <DashboardTables data={data} isGlobal={isGlobal} activeTab="stores" />
             </TabsContent>
           )}
 
           {isGlobal && (
-            <TabsContent value="transfers">
+            <TabsContent value="transfers" className="space-y-4">
+              <DashboardTabStatCards data={data} isGlobal={isGlobal} tab="transfers" />
               <DashboardTables data={data} isGlobal={isGlobal} activeTab="transfers" />
             </TabsContent>
           )}
 
           {isGlobal && (
-            <TabsContent value="purchases">
+            <TabsContent value="purchases" className="space-y-4">
+              <DashboardTabStatCards data={data} isGlobal={isGlobal} tab="purchases" />
               <DashboardTables data={data} isGlobal={isGlobal} activeTab="purchases" />
             </TabsContent>
           )}
@@ -146,13 +152,15 @@ function DashboardPage() {
           )}
 
           {!isCashier && (
-            <TabsContent value="inventory">
+            <TabsContent value="inventory" className="space-y-4">
+              <DashboardTabStatCards data={data} isGlobal={isGlobal} tab="inventory" />
               <DashboardInventoryTab data={data} />
             </TabsContent>
           )}
 
           {isGlobal && (
-            <TabsContent value="activity">
+            <TabsContent value="activity" className="space-y-4">
+              <DashboardTabStatCards data={data} isGlobal={isGlobal} tab="activity" />
               <DashboardTables data={data} isGlobal={isGlobal} activeTab="activity" />
             </TabsContent>
           )}

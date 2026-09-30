@@ -65,7 +65,7 @@ One tree, one app — there is no separate backend project:
 | `src/server.ts` | the server entry that mounts `src/api` into TanStack Start |
 | `src/**` (the rest) | the frontend |
 | `drizzle/`, `drizzle.config.ts` | migrations and Drizzle Kit config |
-| `scripts/` | Node-side tooling (DB bootstrap, seed, password, admin) |
+| `scripts/` | local-database tooling (bootstrap + one-shot Convex import). No credential tooling — passwords are set from the admin UI |
 
 Two TypeScript projects cover it, because the API is Node-only (no DOM lib, `types: ["node"]`) while the UI needs DOM + JSX:
 
@@ -101,16 +101,50 @@ Accounts imported from Convex arrive **without password hashes** (the old backen
 different auth scheme), so they cannot sign in — `POST /api/auth/sign-in` answers 401
 `"No password set. Use password reset."`, and every authed endpoint (including
 `/api/dashboard`) then answers 401 `"Not authenticated"` because there is no session.
-Pick one of:
 
-```bash
-# a) let `npm run dev` do it — add to .env, then start (idempotent, never logged)
-#    SEED_ADMIN_EMAIL=you@example.com
-#    SEED_ADMIN_PASSWORD=<at least 8 characters>
+Set a password from the app: sign in as an admin, then **sidebar → Users → ⋯ → Set
+Password** (`PATCH /api/users/:id/password`, admin/super_admin only). The same dialog is
+on the Employees page as "Set Password". There is deliberately no CLI or environment
+variable for it any more: a script needs `TURSO_AUTH_TOKEN` in its environment, i.e. full
+write access to the production database, which is far more than setting one password
+needs.
 
-# b) be prompted for the password (hidden input, nothing in shell history)
-npx tsx scripts/set-password.ts <email>
-```
+The very first account is the one exception. In an **empty** database
+`POST /api/auth/sign-up` still works and creates that account as `super_admin`, so a
+fresh install has a way in; from then on it answers
+`403 "Sign-up is closed. Ask an administrator to create your account."` and every other
+account is created by an admin (`POST /api/users`, or Employees → Add Employee). The role
+is decided by the server — it is never read from the request body.
+
+### Who may act on whom
+
+One rule: **a plain `admin` has no authority over a `super_admin`.** A `super_admin` may
+act on anyone, including another `super_admin`.
+
+It lives in `mayManageRole()` (`src/api/auth.ts`) and is asked by every route that can
+change *who a person is*:
+
+| Route | Against a `super_admin` target, as an `admin` |
+| --- | --- |
+| `DELETE /api/users/:id` | 403 `Only a super_admin can delete a super_admin account.` |
+| `PATCH /api/users/:id/password` | 403 |
+| `PATCH /api/users/:id/status` (ban / suspend / reactivate) | 403 |
+| `POST /api/users` with `role: "super_admin"` | 403 |
+| `POST /api/employees/with-user` with `role: "super_admin"` | 403 |
+| `PATCH /api/employees/:id/password` | 403 |
+
+Password and status are on that list deliberately: an admin who could only reset a
+super_admin's password would hold the same effective authority by a longer route, and
+`with-user` writes its `role` straight into `users`, so it is a second door into the same
+room. The Users page mirrors the rule — those menu items are disabled, with a
+"Super admin — only another super_admin can change this account" note.
+
+Deleting a user is a **hard** delete, and several tables (employees, activity logs, sales)
+hold a foreign key on `app_users`. `DELETE /api/employees/:id` only sets `isActive = false`,
+so the employee row — and its reference — survives, and deleting the linked user is then
+refused with `409 "… is still referenced by other records (employee card, activity log,
+sales), so it cannot be erased. Ban or suspend the account instead…"`. For anyone who has
+ever transacted, prefer **Ban** or **Suspend** over Delete.
 
 Two accounts still use the pre-PBKDF2 scheme (`SHA-256(password + JWT_SECRET)`):
 `user.test@gmail.com` and `ui.flow.test.55719@example.com`. They only verify if
@@ -172,7 +206,6 @@ nothing is inherited:
 | `TURSO_DATABASE_URL` | required |
 | `TURSO_AUTH_TOKEN` | required for Turso |
 | `JWT_SECRET` | **set a long random value.** Unset, the server falls back to a hard-coded development secret — do not ship that |
-| `SEED_ADMIN_EMAIL` / `SEED_ADMIN_PASSWORD` | optional, only used by `db:ensure-admin`, which `npm run build` does not run |
 
 Two things to know before you rely on it:
 

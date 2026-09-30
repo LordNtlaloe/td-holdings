@@ -4,7 +4,7 @@ import { NavUser } from '@/components/nav-user';
 import { Sidebar, SidebarContent, SidebarFooter, SidebarHeader, SidebarMenu, SidebarMenuButton, SidebarMenuItem } from '@/components/ui/sidebar';
 import { Link } from '@tanstack/react-router';
 import {
-    LayoutDashboard, Users, ShoppingCart, Package, Boxes,
+    LayoutDashboard, Users, UserCog, ShoppingCart, Package, Boxes,
     Truck, Receipt, ClipboardList, Building2, Contact,
     BarChart3, Settings, HelpCircle, ScrollText, type LucideIcon
 } from 'lucide-react';
@@ -34,6 +34,9 @@ const mainNavItems: NavItem[] = [
     { title: 'Reports', url: '/dashboard/reports', icon: BarChart3, roles: ['super_admin', 'admin'] },
     { title: 'Activity Logs', url: '/dashboard/activity-logs', icon: ScrollText, roles: ['super_admin', 'admin'] },
     { title: 'Employees', url: '/dashboard/employees', icon: Users, roles: ['super_admin', 'admin'] },
+    // User accounts + sign-in passwords (admin only). Employees is the HR record;
+    // Users is the login. Every employee has a user, but not every user is an employee.
+    { title: 'Users', url: '/dashboard/users', icon: UserCog, roles: ['super_admin', 'admin'] },
 ];
 
 const footerNavItems: NavItem[] = [

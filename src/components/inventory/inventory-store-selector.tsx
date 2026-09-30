@@ -20,7 +20,7 @@ export function InventoryStoreSelector({
     onStoreChange,
 }: InventoryStoreSelectorProps) {
     return (
-        <div className="flex items-center gap-4">
+        <div className="flex flex-wrap items-center gap-2">
             <Label htmlFor="store-select" className="text-sm font-medium">
                 Store:
             </Label>
@@ -28,7 +28,9 @@ export function InventoryStoreSelector({
                 value={selectedStoreId ?? ''}
                 onValueChange={onStoreChange}
             >
-                <SelectTrigger className="w-50">
+                {/* full width on a phone — a fixed 200px selector plus the
+                    button beside it is wider than the screen */}
+                <SelectTrigger className="w-full min-w-0 sm:w-50">
                     <SelectValue placeholder="Select a store" />
                 </SelectTrigger>
                 <SelectContent>

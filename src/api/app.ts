@@ -117,13 +117,36 @@ app.post("/api/auth/sign-in", async (c) => {
   return c.json({ token, user });
 });
 
+// POST /api/auth/sign-up
+//
+// Public self-registration is CLOSED. This endpoint now does exactly one thing:
+// create the *first* account in an empty database, so a fresh install is not
+// locked out (it used to be the job of the now-deleted scripts/ensure-admin.ts).
+// That first account is always super_admin, so whoever installs the app can
+// sign in and create everybody else from sidebar → Users.
+//
+// Once any account exists, only an authenticated admin/super_admin can create
+// users (POST /api/users). The role is decided here and never read from the
+// request body — a public endpoint must not let a caller ask for "super_admin".
 app.post("/api/auth/sign-up", async (c) => {
-  const { email, password, name, role } = await c.req.json();
+  const { email, password, name } = await c.req.json();
   if (!email || !password || !name) {
     return c.json({ error: "Email, password, and name required" }, 400);
   }
   if (password.length < 8) {
     return c.json({ error: "Password must be at least 8 characters" }, 400);
+  }
+
+  const anyUser = await db
+    .select({ id: usersTable.id })
+    .from(usersTable)
+    .limit(1)
+    .get();
+  if (anyUser) {
+    return c.json(
+      { error: "Sign-up is closed. Ask an administrator to create your account." },
+      403
+    );
   }
 
   const existing = await findUserByEmail(email);
@@ -132,7 +155,7 @@ app.post("/api/auth/sign-up", async (c) => {
   }
 
   const passwordHash = await hashPassword(password);
-  const userRole = (role || "cashier") as UserPayload["role"];
+  const userRole: UserPayload["role"] = "super_admin";
 
   // Insert user with hashed password
   const result = await db.insert(usersTable).values({

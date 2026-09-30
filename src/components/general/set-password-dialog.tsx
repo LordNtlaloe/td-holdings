@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react'
 import { AlertCircle, KeyRound } from 'lucide-react'
-import { useSetEmployeePassword } from '#/lib/api/hooks'
 import {
     Dialog,
     DialogContent,
@@ -13,30 +12,36 @@ import { Alert, AlertDescription } from '#/components/ui/alert'
 import { Button } from '#/components/ui/button'
 import { Label } from '#/components/ui/label'
 import { PasswordInput } from '#/components/ui/password-input'
-import type { EmployeeWithDetails } from '#/types/employees'
 
-interface SetEmployeePasswordDialogProps {
-    employee: EmployeeWithDetails | null
+interface SetPasswordDialogProps {
     open: boolean
     onOpenChange: (open: boolean) => void
+    /** Who the password is for — only used for the description text. */
+    subjectName?: string | null
+    subjectEmail?: string | null
+    /** Resets the password. Throw to have the message shown in the dialog. */
+    onSubmit: (password: string) => Promise<unknown>
     onSuccess?: () => void
+    title?: string
 }
 
 /**
- * Lets an admin set (or reset) an employee's sign-in password.
+ * Shared "set a new password for someone else" dialog.
  *
- * No current password is required: an admin managing staff credentials does not
- * know them. The server enforces super_admin/admin for this route — a user
- * changing their OWN password goes through Settings → Password, which does ask
- * for the current one.
+ * Used by the admin-only flows (Employees and Users pages). No current password
+ * is asked for, because the admin managing the account does not know it — the
+ * server enforces admin/super_admin on those routes. A user changing their OWN
+ * password goes through Settings → Password, which does require the old one.
  */
-export function SetEmployeePasswordDialog({
-    employee,
+export function SetPasswordDialog({
     open,
     onOpenChange,
+    subjectName,
+    subjectEmail,
+    onSubmit,
     onSuccess,
-}: SetEmployeePasswordDialogProps) {
-    const applyPassword = useSetEmployeePassword()
+    title = 'Set password',
+}: SetPasswordDialogProps) {
     const [password, setPassword] = useState('')
     const [confirm, setConfirm] = useState('')
     const [error, setError] = useState<string | null>(null)
@@ -51,12 +56,10 @@ export function SetEmployeePasswordDialog({
         }
     }, [open])
 
-    const displayName = employee?.user?.name || 'this employee'
-    const email = employee?.user?.email
+    const who = subjectName || 'this account'
 
     const handleSubmit = async (event: React.FormEvent) => {
         event.preventDefault()
-        if (!employee) return
 
         if (password.length < 8) {
             setError('Password must be at least 8 characters')
@@ -70,7 +73,7 @@ export function SetEmployeePasswordDialog({
         setLoading(true)
         setError(null)
         try {
-            await applyPassword({ id: employee._id, password })
+            await onSubmit(password)
             onSuccess?.()
             onOpenChange(false)
         } catch (err) {
@@ -85,11 +88,11 @@ export function SetEmployeePasswordDialog({
             <DialogContent className="sm:max-w-md">
                 <form onSubmit={handleSubmit}>
                     <DialogHeader>
-                        <DialogTitle>Set password</DialogTitle>
+                        <DialogTitle>{title}</DialogTitle>
                         <DialogDescription>
-                            Choose a new password for {displayName}
-                            {email ? ` (${email})` : ''}. They sign in with that email
-                            and this password.
+                            Choose a new password for {who}
+                            {subjectEmail ? ` (${subjectEmail})` : ''}. They sign in with that
+                            email and this password.
                         </DialogDescription>
                     </DialogHeader>
 
@@ -102,9 +105,9 @@ export function SetEmployeePasswordDialog({
                         )}
 
                         <div className="grid gap-2">
-                            <Label htmlFor="employee-new-password">New password</Label>
+                            <Label htmlFor="new-password">New password</Label>
                             <PasswordInput
-                                id="employee-new-password"
+                                id="new-password"
                                 value={password}
                                 autoComplete="new-password"
                                 onChange={(e) => setPassword(e.target.value)}
@@ -115,9 +118,9 @@ export function SetEmployeePasswordDialog({
                         </div>
 
                         <div className="grid gap-2">
-                            <Label htmlFor="employee-confirm-password">Confirm password</Label>
+                            <Label htmlFor="confirm-password">Confirm password</Label>
                             <PasswordInput
-                                id="employee-confirm-password"
+                                id="confirm-password"
                                 value={confirm}
                                 autoComplete="new-password"
                                 onChange={(e) => setConfirm(e.target.value)}

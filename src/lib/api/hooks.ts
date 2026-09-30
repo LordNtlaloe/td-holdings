@@ -480,7 +480,10 @@ export function useUpdateUserStatus() {
     'users.updateUserStatus',
     'PATCH',
     (vars) => `/api/users/${vars.userId}/status`,
-    ['users.list']
+    // The Users page reads this URL under `users.getAllUsers` (see
+    // routes/dashboard/users), not `users.list` — invalidating only the latter
+    // left the table stale after a change.
+    ['users.list', 'users.getAllUsers']
   );
 }
 
@@ -489,7 +492,22 @@ export function useDeleteUser() {
     'users.deleteUser',
     'DELETE',
     (vars) => `/api/users/${vars.userId}`,
-    ['users.list']
+    ['users.list', 'users.getAllUsers']
+  );
+}
+
+/**
+ * Set (or reset) any user's sign-in password. Admin/super_admin only.
+ *
+ * The PATCH body is the whole variables object, so the server receives
+ * `{ userId, password }`; it reads the id from the path and ignores the extra key.
+ */
+export function useSetUserPassword() {
+  return useFnMutation<{ userId: string; password: string }>(
+    'users.setPassword',
+    'PATCH',
+    (vars) => `/api/users/${vars.userId}/password`,
+    ['users.list', 'users.getAllUsers']
   );
 }
 

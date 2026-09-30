@@ -262,7 +262,7 @@ function RouteComponent() {
 
   return (
     <POSLayout>
-      <div className="grid grid-cols-1 gap-6 p-6 lg:grid-cols-[1fr_380px]">
+      <div className="grid grid-cols-1 gap-4 p-4 md:gap-6 md:p-6 lg:grid-cols-[1fr_380px]">
         <ProductBrowser
           myStore={myStore}
           activeStores={activeStores}

@@ -409,7 +409,7 @@ function RouteComponent() {
               Manage stock, batches, and inventory assignments across stores
             </p>
           </div>
-          <div className="flex items-center gap-4">
+          <div className="flex flex-wrap items-center gap-2">
             <InventoryStoreSelector
               stores={stores}
               selectedStoreId={selectedStoreId}

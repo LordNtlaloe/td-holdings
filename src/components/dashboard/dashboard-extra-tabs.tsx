@@ -109,7 +109,7 @@ export function DashboardCustomersTab({ data }: { data: DashboardData }) {
                                 <TableRow>
                                     <TableHead>Name</TableHead>
                                     <TableHead>Tier</TableHead>
-                                    <TableHead className="text-right">Visits</TableHead>
+                                    <TableHead className="hidden text-right sm:table-cell">Visits</TableHead>
                                     <TableHead className="text-right">Total Spent</TableHead>
                                 </TableRow>
                             </TableHeader>
@@ -129,7 +129,7 @@ export function DashboardCustomersTab({ data }: { data: DashboardData }) {
                                                 {TIER_LABELS[c.tier] ?? c.tier}
                                             </Badge>
                                         </TableCell>
-                                        <TableCell className="text-right">{c.visitCount}</TableCell>
+                                        <TableCell className="hidden text-right sm:table-cell">{c.visitCount}</TableCell>
                                         <TableCell className="text-right font-medium">
                                             {formatCurrency(c.totalSpent)}
                                         </TableCell>

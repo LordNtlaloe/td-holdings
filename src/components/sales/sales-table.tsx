@@ -22,6 +22,7 @@ import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { Skeleton } from '@/components/ui/skeleton'
 import { Input } from '@/components/ui/input'
+import { CardActionsMenu } from '#/components/general/card-actions-menu'
 import {
     Select,
     SelectContent,
@@ -100,6 +101,17 @@ function getProductName(item: any): string {
     }
     return 'Unknown Product'
 }
+
+// Below `md` the table is replaced by cards. The columns are declared with
+// function `header`s (they render sort buttons), so the card labels are listed
+// explicitly here instead of being read off the column defs.
+const SALES_CARD_FIELDS: { id: string; label: string }[] = [    { id: 'status', label: 'Status' },
+    { id: 'store', label: 'Store' },
+    { id: 'departments', label: 'Department' },
+    { id: 'paymentMethod', label: 'Payment' },
+    { id: 'createdAt', label: 'Date' },
+    { id: 'totalAmount', label: 'Total' },
+]
 
 export function SalesTable({
     sales,
@@ -560,8 +572,69 @@ export function SalesTable({
                 </span>
             </div>
 
-            {/* Table */}
-            <div className="rounded-md border">
+            {/* Mobile: cards. Eight columns cannot be read by scrolling sideways. */}
+            <div className="grid gap-2 md:hidden">
+                {rows.length === 0 ? (
+                    <div className="rounded-lg border px-4 py-10 text-center text-sm text-muted-foreground">
+                        {hasActiveFilters ? 'No sales match your filters' : 'No sales found'}
+                    </div>
+                ) : (
+                    rows.map(row => {
+                        const cells = row.getVisibleCells()
+                        const render = (id: string) => {
+                            const cell = cells.find(c => c.column.id === id)
+                            return cell
+                                ? flexRender(cell.column.columnDef.cell, cell.getContext())
+                                : null
+                        }
+
+                        return (
+                            <div key={row.id} className="rounded-lg border bg-card">
+                                <div className="flex items-start gap-2 border-b px-3 py-2.5">
+                                    <button
+                                        type="button"
+                                        className="min-w-0 flex-1 text-left text-sm font-medium"
+                                        onClick={() => onSelectSale(row.original._id)}
+                                    >
+                                        {render('products')}
+                                    </button>
+                                    {/* Void / Cancel / Refund are three icon buttons in a
+                                        row — too wide for a phone card, so they fold into
+                                        one ⋯ menu. Credited rows show their status among
+                                        the fields below instead. */}
+                                    {showActionsCol &&
+                                        row.original.status === 'completed' &&
+                                        (canVoid || canAction) && (
+                                            <div className="shrink-0">
+                                                <CardActionsMenu>
+                                                    {render('actions')}
+                                                </CardActionsMenu>
+                                            </div>
+                                        )}
+                                </div>
+                                <dl className="divide-y">
+                                    {SALES_CARD_FIELDS.map(field => (
+                                        <div
+                                            key={field.id}
+                                            className="flex items-start justify-between gap-4 px-3 py-2"
+                                        >
+                                            <dt className="shrink-0 text-xs text-muted-foreground">
+                                                {field.label}
+                                            </dt>
+                                            <dd className="min-w-0 break-words text-right text-sm">
+                                                {render(field.id)}
+                                            </dd>
+                                        </div>
+                                    ))}
+                                </dl>
+                            </div>
+                        )
+                    })
+                )}
+            </div>
+
+            {/* Table — md and up */}
+            <div className="hidden rounded-md border md:block">
                 <Table>
                     <TableHeader>
                         {table.getHeaderGroups().map(hg => (

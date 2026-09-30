@@ -253,7 +253,6 @@ export function useCheckout({
                 toast.error(`Failed to print receipt: ${result.error || "Unknown error"}`);
             }
         } catch (error) {
-            console.error("Print error:", error);
             toast.error(error instanceof Error ? error.message : "Failed to print receipt");
         }
     };

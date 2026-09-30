@@ -70,6 +70,8 @@ function RouteComponent() {
             <UserActions
               userId={row._id}
               userName={row.name}
+              userEmail={row.email}
+              targetRole={row.role}
               currentStatus={row.status || 'active'}
             />
           )}

@@ -3,7 +3,7 @@ import { eq, desc } from "drizzle-orm";
 import db from "../db/index.ts";
 import * as schema from "../db/schema.ts";
 import type { AuthEnv } from "../middleware/auth.ts";
-import { getUser, requireRole, hashPassword, normalizeEmail } from "../auth.ts";
+import { getUser, requireRole, hashPassword, normalizeEmail, mayManageRole } from "../auth.ts";
 
 export const employeeRoutes = new Hono<AuthEnv>();
 
@@ -50,6 +50,13 @@ employeeRoutes.post("/with-user", async (c) => {
     const existing = await db.select().from(schema.users)
       .where(eq(schema.users.email, normalizedEmail)).get();
     if (existing) return c.json({ error: "Email already in use" }, 409);
+
+    // Same rule as POST /api/users: an admin must not be able to mint a
+    // super_admin — this route writes the role straight into `users`, so without
+    // the check it is a second door into the same room.
+    if (role === "super_admin" && currentUser.role !== "super_admin") {
+      return c.json({ error: "Only a super_admin can create a super_admin account." }, 403);
+    }
 
     const userRole = (role || "cashier") as "super_admin" | "admin" | "manager" | "cashier";
     const passwordHash = await hashPassword(password || "user123");
@@ -169,6 +176,11 @@ employeeRoutes.patch("/:id/password", async (c) => {
     const target = await db.select().from(schema.users)
       .where(eq(schema.users.id, employee.userId)).get();
     if (!target) return c.json({ error: "No sign-in account for this employee" }, 404);
+    // An employee record can be linked to a super_admin's user account, so this
+    // route needs the same authority check as PATCH /api/users/:id/password.
+    if (!mayManageRole(user.role, target.role)) {
+      return c.json({ error: "Only a super_admin can change a super_admin's password." }, 403);
+    }
 
     await db.update(schema.users)
       .set({ passwordHash: await hashPassword(password), updatedAt: Date.now() })

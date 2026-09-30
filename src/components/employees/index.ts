@@ -1,6 +1,5 @@
 export { EmployeeStatCards } from './employee-stat-cards'
 export { EmployeeCharts } from './employee-charts'
 export { EmployeeTable } from './employee-table'
-export { SetEmployeePasswordDialog } from './set-employee-password-dialog'
 export * from './employee-utils'
 export * from '#/types/employees'

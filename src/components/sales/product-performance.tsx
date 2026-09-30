@@ -97,20 +97,20 @@ function SellerTable({ rows, emptyLabel }: { rows: ProductRow[]; emptyLabel: str
         <Table>
             <TableHeader>
                 <TableRow>
-                    <TableHead className="w-10">#</TableHead>
+                    <TableHead className="hidden w-10 sm:table-cell">#</TableHead>
                     <TableHead>Product</TableHead>
-                    <TableHead>SKU</TableHead>
-                    <TableHead>Department</TableHead>
+                    <TableHead className="hidden sm:table-cell">SKU</TableHead>
+                    <TableHead className="hidden sm:table-cell">Department</TableHead>
                     <TableHead className="text-right">Units</TableHead>
                     <TableHead className="text-right">Sales</TableHead>
-                    <TableHead className="text-right">Last sold</TableHead>
+                    <TableHead className="hidden text-right sm:table-cell">Last sold</TableHead>
                     <TableHead className="text-right">Stock</TableHead>
                 </TableRow>
             </TableHeader>
             <TableBody>
                 {rows.map((row, index) => (
                     <TableRow key={row.productId}>
-                        <TableCell className="text-muted-foreground tabular-nums">
+                        <TableCell className="hidden text-muted-foreground tabular-nums sm:table-cell">
                             {index + 1}
                         </TableCell>
                         <TableCell className="font-medium">
@@ -121,8 +121,8 @@ function SellerTable({ rows, emptyLabel }: { rows: ProductRow[]; emptyLabel: str
                                 </Badge>
                             )}
                         </TableCell>
-                        <TableCell className="text-muted-foreground">{row.sku}</TableCell>
-                        <TableCell className="text-muted-foreground">
+                        <TableCell className="hidden text-muted-foreground sm:table-cell">{row.sku}</TableCell>
+                        <TableCell className="hidden text-muted-foreground sm:table-cell">
                             {row.department ?? '—'}
                         </TableCell>
                         <TableCell className="text-right font-medium tabular-nums">
@@ -131,7 +131,7 @@ function SellerTable({ rows, emptyLabel }: { rows: ProductRow[]; emptyLabel: str
                         <TableCell className="text-right tabular-nums">
                             {fmt(row.transactions)}
                         </TableCell>
-                        <TableCell className="text-right text-muted-foreground">
+                        <TableCell className="hidden text-right text-muted-foreground sm:table-cell">
                             {row.lastSoldAt ? shortDate(row.lastSoldAt) : '—'}
                         </TableCell>
                         <TableCell className="text-right tabular-nums">

@@ -35,8 +35,10 @@ function parsePaymentSplits(paymentSplits: string | undefined | null): any[] {
     try {
         const parsed = JSON.parse(paymentSplits)
         return Array.isArray(parsed) ? parsed : []
-    } catch (e) {
-        console.error('Failed to parse payment splits:', e)
+    } catch {
+        // Malformed JSON in the column — treat it as "no splits" rather than
+        // breaking the sheet. Deliberately silent: the raw value holds payment
+        // and customer detail, and this runs in the browser.
         return []
     }
 }
@@ -107,7 +109,6 @@ export function SaleDetailSheet({
                 })
             }
         } catch (error) {
-            console.error('Print error:', error)
             toast('Print Failed', {
                 description: error instanceof Error ? error.message : 'Failed to print receipt',
             })

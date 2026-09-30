@@ -1,4 +1,4 @@
-export { DashboardStatCards } from './dashboard-stat-cards'
+export { DashboardStatCards, DashboardTabStatCards } from './dashboard-stat-cards'
 export { DashboardCharts } from './dashboard-charts'
 export { DashboardTables } from './dashboard-tables'
 export { DashboardAlerts } from './dashboard-alerts'

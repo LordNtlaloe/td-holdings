@@ -55,7 +55,6 @@ export function SignupForm({ ...props }: React.ComponentProps<typeof Card>) {
             setToken(result.token);
             router.navigate({ to: "/dashboard" });
         } catch (err: any) {
-            console.error(err);
             setError(err.message || "Failed to create account. Please try again.");
         } finally {
             setIsLoading(false);

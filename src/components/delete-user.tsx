@@ -45,8 +45,7 @@ export default function DeleteUser() {
             // Redirect to login or home page
             // navigate({ to: '/sign-in' });
 
-        } catch (error) {
-            console.error('Delete account error:', error);
+        } catch {
             setErrors({ password: 'An error occurred. Please try again.' });
             passwordInput.current?.focus();
         } finally {

@@ -82,11 +82,11 @@ function SalesTable({ data, isGlobal }: { data: DashboardData; isGlobal: boolean
         <Table>
           <TableHeader>
             <TableRow>
-              {isGlobal && <TableHead>Store</TableHead>}
+              {isGlobal && <TableHead className="hidden sm:table-cell">Store</TableHead>}
               <TableHead>Customer</TableHead>
-              <TableHead>Payment</TableHead>
+              <TableHead className="hidden sm:table-cell">Payment</TableHead>
               <TableHead>Status</TableHead>
-              <TableHead>Date</TableHead>
+              <TableHead className="hidden sm:table-cell">Date</TableHead>
               <TableHead className="text-right">Total</TableHead>
             </TableRow>
           </TableHeader>
@@ -103,7 +103,7 @@ function SalesTable({ data, isGlobal }: { data: DashboardData; isGlobal: boolean
             )}
             {filtered.map((sale) => (
               <TableRow key={sale._id}>
-                {isGlobal && <TableCell className="font-medium">{sale.storeName}</TableCell>}
+                {isGlobal && <TableCell className="hidden font-medium sm:table-cell">{sale.storeName}</TableCell>}
                 <TableCell>
                   <span>{sale.customerName}</span>
                   {sale.visitCount && sale.visitCount > 1 && (
@@ -112,13 +112,13 @@ function SalesTable({ data, isGlobal }: { data: DashboardData; isGlobal: boolean
                     </span>
                   )}
                 </TableCell>
-                <TableCell className="text-muted-foreground">
+                <TableCell className="hidden text-muted-foreground sm:table-cell">
                   {sale.paymentMethod ?? '—'}
                 </TableCell>
                 <TableCell>
                   <Badge variant={getStatusVariant(sale.status)}>{sale.status}</Badge>
                 </TableCell>
-                <TableCell className="text-muted-foreground">{formatTs(sale.createdAt)}</TableCell>
+                <TableCell className="hidden text-muted-foreground sm:table-cell">{formatTs(sale.createdAt)}</TableCell>
                 <TableCell className="text-right font-medium">
                   {formatCurrency(sale.totalAmount)}
                 </TableCell>

@@ -1,5 +1,5 @@
 import { createFileRoute } from '@tanstack/react-router'
-import { useApiQuery, useApiMutation } from '#/lib/api/hooks'
+import { useApiQuery, useApiMutation, useSetEmployeePassword } from '#/lib/api/hooks'
 import { useState, useMemo } from 'react'
 import { AlertCircle } from 'lucide-react'
 import {
@@ -15,12 +15,12 @@ import {
 import { toast } from 'sonner'
 import AppLayout from '#/layouts/app-layout'
 import { ExportButton } from '#/components/general/export-button'
+import { SetPasswordDialog } from '#/components/general/set-password-dialog'
 import { EmployeeForm } from '#/components/employees/employee-form'
 import {
   EmployeeStatCards,
   EmployeeCharts,
   EmployeeTable,
-  SetEmployeePasswordDialog,
   calculateEmployeeStats,
   type EmployeeWithDetails,
 } from '#/components/employees'
@@ -35,6 +35,7 @@ function RouteComponent() {
   const [deleteDialogOpen, setDeleteDialogOpen] = useState(false)
   const [passwordDialogOpen, setPasswordDialogOpen] = useState(false)
   const [isDeleting, setIsDeleting] = useState(false)
+  const setEmployeePassword = useSetEmployeePassword()
 
   // Error states for dialogs
   const [editError, setEditError] = useState<string | null>(null)
@@ -161,10 +162,15 @@ function RouteComponent() {
       </div>
 
       {/* Set / reset an employee's sign-in password */}
-      <SetEmployeePasswordDialog
-        employee={selectedEmployee}
+      <SetPasswordDialog
         open={passwordDialogOpen}
         onOpenChange={setPasswordDialogOpen}
+        subjectName={selectedEmployee?.user?.name}
+        subjectEmail={selectedEmployee?.user?.email}
+        onSubmit={async (password) => {
+          if (!selectedEmployee?.user) throw new Error('This employee has no linked user account')
+          await setEmployeePassword({ id: selectedEmployee._id, password })
+        }}
         onSuccess={() => {
           toast.success(
             `Password updated. ${selectedEmployee?.user?.name || 'They'} can now sign in with the new password.`

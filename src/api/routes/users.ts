@@ -3,7 +3,7 @@ import { eq, desc } from "drizzle-orm";
 import db from "../db/index.ts";
 import * as schema from "../db/schema.ts";
 import type { AuthEnv } from "../middleware/auth.ts";
-import { getUser, requireRole, hashPassword, normalizeEmail } from "../auth.ts";
+import { getUser, requireRole, hashPassword, normalizeEmail, mayManageRole } from "../auth.ts";
 
 export const userRoutes = new Hono<AuthEnv>();
 
@@ -105,6 +105,45 @@ userRoutes.patch("/profile", async (c) => {
   }
 });
 
+// PATCH /api/users/:id/password — set (or reset) a user's sign-in password.
+//
+// Admin/super_admin only, and deliberately no current-password prompt: an admin
+// managing staff credentials does not know them. A user changing their OWN
+// password goes through POST /api/auth/change-password, which does require it.
+userRoutes.patch("/:id/password", async (c) => {
+  try {
+    const currentUser = getUser(c);
+    requireRole(currentUser, ["super_admin", "admin"]);
+    const id = c.req.param("id");
+    const { password } = await c.req.json();
+
+    if (!password || String(password).length < 8) {
+      return c.json({ error: "Password must be at least 8 characters" }, 400);
+    }
+
+    const target = await db.select().from(schema.users).where(eq(schema.users.id, id)).get();
+    if (!target) return c.json({ error: "User not found" }, 404);
+    if (!mayManageRole(currentUser.role, target.role)) {
+      return c.json({ error: "Only a super_admin can change a super_admin's password." }, 403);
+    }
+
+    await db.update(schema.users)
+      .set({ passwordHash: await hashPassword(password), updatedAt: Date.now() })
+      .where(eq(schema.users.id, id))
+      .run();
+
+    await db.insert(schema.activityLogs).values({
+      userId: currentUser.id, role: currentUser.role, action: "user.setPassword",
+      entityType: "users", entityId: id,
+      description: `Set a new password for ${target.email}`,
+    }).run();
+
+    return c.json({ success: true });
+  } catch (error: any) {
+    return c.json({ error: error.message }, 400);
+  }
+});
+
 // PATCH /api/users/:id/status
 userRoutes.patch("/:id/status", async (c) => {
   try {
@@ -115,6 +154,12 @@ userRoutes.patch("/:id/status", async (c) => {
 
     if (currentUser.id === id) {
       return c.json({ error: "Cannot change your own status" }, 400);
+    }
+
+    const target = await db.select().from(schema.users).where(eq(schema.users.id, id)).get();
+    if (!target) return c.json({ error: "User not found" }, 404);
+    if (!mayManageRole(currentUser.role, target.role)) {
+      return c.json({ error: "Only a super_admin can change a super_admin's status." }, 403);
     }
 
     await db.update(schema.users).set({ status }).where(eq(schema.users.id, id)).run();
@@ -134,6 +179,12 @@ userRoutes.post("/", async (c) => {
     const { email, name, role, password, storeId } = body;
     if (!email || !name || !password) {
       return c.json({ error: "email, name, and password required" }, 400);
+    }
+
+    // An admin must not mint a super_admin either: they would choose its
+    // password, so they would hold the very authority this rule denies them.
+    if (role === "super_admin" && user.role !== "super_admin") {
+      return c.json({ error: "Only a super_admin can create a super_admin account." }, 403);
     }
 
     const normalizedEmail = normalizeEmail(email);
@@ -162,8 +213,32 @@ userRoutes.delete("/:id", async (c) => {
 
     const existing = await db.select().from(schema.users).where(eq(schema.users.id, id)).get();
     if (!existing) return c.json({ error: "User not found" }, 404);
+    if (!mayManageRole(currentUser.role, existing.role)) {
+      return c.json({ error: "Only a super_admin can delete a super_admin account." }, 403);
+    }
 
-    await db.delete(schema.users).where(eq(schema.users.id, id)).run();
+    // Several tables hold a foreign key on `app_users` (employees, activity logs,
+    // sales…), and `DELETE /api/employees/:id` only sets `isActive = false`, so
+    // the row stays and keeps the reference. A raw constraint error would reach
+    // the admin as "Failed query: delete from app_users …", which explains nothing.
+    try {
+      await db.delete(schema.users).where(eq(schema.users.id, id)).run();
+    } catch (error: any) {
+      // Drizzle wraps driver errors: the useful text ("FOREIGN KEY constraint
+      // failed") lives in `.cause`, not in `.message`.
+      const detail = [error?.message, error?.cause?.message, error?.cause?.cause?.message]
+        .filter(Boolean)
+        .join(" | ");
+      if (/FOREIGN KEY constraint failed/i.test(detail)) {
+        return c.json({
+          error:
+            `${existing.name} is still referenced by other records (employee card, ` +
+            `activity log, sales), so it cannot be erased. Ban or suspend the account ` +
+            `instead — that blocks sign-in without breaking those records.`,
+        }, 409);
+      }
+      throw error;
+    }
 
     await db.insert(schema.activityLogs).values({
       userId: currentUser.id, role: currentUser.role, action: "user.delete",
