@@ -1,0 +1,5 @@
+export { DepartmentStatCards } from './department-stat-cards'
+export { DepartmentCharts } from './department-chart'
+export { DepartmentTable } from './departments-table'
+export * from './department-utils'
+export * from '#/types/departments'

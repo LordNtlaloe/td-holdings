@@ -1,0 +1,1192 @@
+[
+    {
+        "_id": "jd7a1b2c3d4e5f6g7h8i9j0k1l2m3n4o5p",
+        "name": "155R12",
+        "sku": "TYR-NEW-155R12",
+        "categoryId": "jd75217c8ppga2aqw7te8cktyd891cfc",
+        "departmentId": "m17f8jq1gywj0cvd1yma16f96d88zy25",
+        "sizes": [
+            "12"
+        ],
+        "colors": [
+            "Black"
+        ],
+        "costPrice": 400,
+        "sellingPrice": 580,
+        "isActive": true,
+        "description": "Brand new standard tyre 155R12"
+    },
+    {
+        "_id": "jd7b2c3d4e5f6g7h8i9j0k1l2m3n4o5p6q",
+        "name": "175/70R13",
+        "sku": "TYR-NEW-17570R13",
+        "categoryId": "jd75217c8ppga2aqw7te8cktyd891cfc",
+        "departmentId": "m17f8jq1gywj0cvd1yma16f96d88zy25",
+        "sizes": [
+            "13"
+        ],
+        "colors": [
+            "Black"
+        ],
+        "costPrice": 400,
+        "sellingPrice": 580,
+        "isActive": true,
+        "description": "Brand new standard tyre 175/70R13"
+    },
+    {
+        "_id": "jd7c3d4e5f6g7h8i9j0k1l2m3n4o5p6q7r",
+        "name": "175/65R14",
+        "sku": "TYR-NEW-17565R14",
+        "categoryId": "jd75217c8ppga2aqw7te8cktyd891cfc",
+        "departmentId": "m17f8jq1gywj0cvd1yma16f96d88zy25",
+        "sizes": [
+            "14"
+        ],
+        "colors": [
+            "Black"
+        ],
+        "costPrice": 420,
+        "sellingPrice": 600,
+        "isActive": true,
+        "description": "Brand new standard tyre 175/65R14"
+    },
+    {
+        "_id": "jd7d4e5f6g7h8i9j0k1l2m3n4o5p6q7r8s",
+        "name": "165/70R14",
+        "sku": "TYR-NEW-16570R14",
+        "categoryId": "jd75217c8ppga2aqw7te8cktyd891cfc",
+        "departmentId": "m17f8jq1gywj0cvd1yma16f96d88zy25",
+        "sizes": [
+            "14"
+        ],
+        "colors": [
+            "Black"
+        ],
+        "costPrice": 420,
+        "sellingPrice": 600,
+        "isActive": true,
+        "description": "Brand new standard tyre 165/70R14"
+    },
+    {
+        "_id": "jd7e5f6g7h8i9j0k1l2m3n4o5p6q7r8s9t",
+        "name": "185/60R14",
+        "sku": "TYR-NEW-18560R14",
+        "categoryId": "jd75217c8ppga2aqw7te8cktyd891cfc",
+        "departmentId": "m17f8jq1gywj0cvd1yma16f96d88zy25",
+        "sizes": [
+            "14"
+        ],
+        "colors": [
+            "Black"
+        ],
+        "costPrice": 420,
+        "sellingPrice": 600,
+        "isActive": true,
+        "description": "Brand new standard tyre 185/60R14"
+    },
+    {
+        "_id": "jd7f6g7h8i9j0k1l2m3n4o5p6q7r8s9t0u",
+        "name": "175/70R14",
+        "sku": "TYR-NEW-17570R14",
+        "categoryId": "jd75217c8ppga2aqw7te8cktyd891cfc",
+        "departmentId": "m17f8jq1gywj0cvd1yma16f96d88zy25",
+        "sizes": [
+            "14"
+        ],
+        "colors": [
+            "Black"
+        ],
+        "costPrice": 420,
+        "sellingPrice": 600,
+        "isActive": true,
+        "description": "Brand new standard tyre 175/70R14"
+    },
+    {
+        "_id": "jd7g7h8i9j0k1l2m3n4o5p6q7r8s9t0u1v",
+        "name": "185/70R14",
+        "sku": "TYR-NEW-18570R14",
+        "categoryId": "jd75217c8ppga2aqw7te8cktyd891cfc",
+        "departmentId": "m17f8jq1gywj0cvd1yma16f96d88zy25",
+        "sizes": [
+            "14"
+        ],
+        "colors": [
+            "Black"
+        ],
+        "costPrice": 420,
+        "sellingPrice": 600,
+        "isActive": true,
+        "description": "Brand new standard tyre 185/70R14"
+    },
+    {
+        "_id": "jd7h8i9j0k1l2m3n4o5p6q7r8s9t0u1v2w",
+        "name": "195/60R14",
+        "sku": "TYR-NEW-19560R14",
+        "categoryId": "jd75217c8ppga2aqw7te8cktyd891cfc",
+        "departmentId": "m17f8jq1gywj0cvd1yma16f96d88zy25",
+        "sizes": [
+            "14"
+        ],
+        "colors": [
+            "Black"
+        ],
+        "costPrice": 420,
+        "sellingPrice": 600,
+        "isActive": true,
+        "description": "Brand new standard tyre 195/60R14"
+    },
+    {
+        "_id": "jd7i9j0k1l2m3n4o5p6q7r8s9t0u1v2w3x",
+        "name": "195R14C",
+        "sku": "TYR-NEW-195R14C",
+        "categoryId": "jd75217c8ppga2aqw7te8cktyd891cfc",
+        "departmentId": "m17f8jq1gywj0cvd1yma16f96d88zy25",
+        "sizes": [
+            "14"
+        ],
+        "colors": [
+            "Black"
+        ],
+        "costPrice": 700,
+        "sellingPrice": 1000,
+        "isActive": true,
+        "description": "Brand new commercial tyre 195R14C"
+    },
+    {
+        "_id": "jd7j0k1l2m3n4o5p6q7r8s9t0u1v2w3x4y",
+        "name": "195R14C-Whitewall",
+        "sku": "TYR-NEW-195R14C-WW",
+        "categoryId": "jd7cz129z32gg4bgmq5k1p1rwh890dxx",
+        "departmentId": "m17f8jq1gywj0cvd1yma16f96d88zy25",
+        "sizes": [
+            "14"
+        ],
+        "colors": [
+            "Whitewall"
+        ],
+        "costPrice": 800,
+        "sellingPrice": 1200,
+        "isActive": true,
+        "description": "New whitewall commercial tyre 195R14C"
+    },
+    {
+        "_id": "jd7k1l2m3n4o5p6q7r8s9t0u1v2w3x4y5z",
+        "name": "205/75R14-Whitewall",
+        "sku": "TYR-NEW-20575R14-WW",
+        "categoryId": "jd7cz129z32gg4bgmq5k1p1rwh890dxx",
+        "departmentId": "m17f8jq1gywj0cvd1yma16f96d88zy25",
+        "sizes": [
+            "14"
+        ],
+        "colors": [
+            "Whitewall"
+        ],
+        "costPrice": 800,
+        "sellingPrice": 1200,
+        "isActive": true,
+        "description": "New whitewall tyre 205/75R14"
+    },
+    {
+        "_id": "jd7l2m3n4o5p6q7r8s9t0u1v2w3x4y5z6a",
+        "name": "205/70R15",
+        "sku": "TYR-NEW-20570R15",
+        "categoryId": "jd75217c8ppga2aqw7te8cktyd891cfc",
+        "departmentId": "m17f8jq1gywj0cvd1yma16f96d88zy25",
+        "sizes": [
+            "15"
+        ],
+        "colors": [
+            "Black"
+        ],
+        "costPrice": 700,
+        "sellingPrice": 1000,
+        "isActive": true,
+        "description": "Brand new standard tyre 205/70R15"
+    },
+    {
+        "_id": "jd7m3n4o5p6q7r8s9t0u1v2w3x4y5z6a7b",
+        "name": "195/50R15",
+        "sku": "TYR-NEW-19550R15",
+        "categoryId": "jd75217c8ppga2aqw7te8cktyd891cfc",
+        "departmentId": "m17f8jq1gywj0cvd1yma16f96d88zy25",
+        "sizes": [
+            "15"
+        ],
+        "colors": [
+            "Black"
+        ],
+        "costPrice": 550,
+        "sellingPrice": 750,
+        "isActive": true,
+        "description": "Brand new standard tyre 195/50R15"
+    },
+    {
+        "_id": "jd7n4o5p6q7r8s9t0u1v2w3x4y5z6a7b8c",
+        "name": "195/55R15",
+        "sku": "TYR-NEW-19555R15",
+        "categoryId": "jd75217c8ppga2aqw7te8cktyd891cfc",
+        "departmentId": "m17f8jq1gywj0cvd1yma16f96d88zy25",
+        "sizes": [
+            "15"
+        ],
+        "colors": [
+            "Black"
+        ],
+        "costPrice": 550,
+        "sellingPrice": 750,
+        "isActive": true,
+        "description": "Brand new standard tyre 195/55R15"
+    },
+    {
+        "_id": "jd7o5p6q7r8s9t0u1v2w3x4y5z6a7b8c9d",
+        "name": "185/60R15",
+        "sku": "TYR-NEW-18560R15",
+        "categoryId": "jd75217c8ppga2aqw7te8cktyd891cfc",
+        "departmentId": "m17f8jq1gywj0cvd1yma16f96d88zy25",
+        "sizes": [
+            "15"
+        ],
+        "colors": [
+            "Black"
+        ],
+        "costPrice": 550,
+        "sellingPrice": 750,
+        "isActive": true,
+        "description": "Brand new standard tyre 185/60R15"
+    },
+    {
+        "_id": "jd7p6q7r8s9t0u1v2w3x4y5z6a7b8c9d0e",
+        "name": "195/65R15",
+        "sku": "TYR-NEW-19565R15",
+        "categoryId": "jd75217c8ppga2aqw7te8cktyd891cfc",
+        "departmentId": "m17f8jq1gywj0cvd1yma16f96d88zy25",
+        "sizes": [
+            "15"
+        ],
+        "colors": [
+            "Black"
+        ],
+        "costPrice": 550,
+        "sellingPrice": 750,
+        "isActive": true,
+        "description": "Brand new standard tyre 195/65R15"
+    },
+    {
+        "_id": "jd7q7r8s9t0u1v2w3x4y5z6a7b8c9d0e1f",
+        "name": "195/60R15",
+        "sku": "TYR-NEW-19560R15",
+        "categoryId": "jd75217c8ppga2aqw7te8cktyd891cfc",
+        "departmentId": "m17f8jq1gywj0cvd1yma16f96d88zy25",
+        "sizes": [
+            "15"
+        ],
+        "colors": [
+            "Black"
+        ],
+        "costPrice": 550,
+        "sellingPrice": 750,
+        "isActive": true,
+        "description": "Brand new standard tyre 195/60R15"
+    },
+    {
+        "_id": "jd7r8s9t0u1v2w3x4y5z6a7b8c9d0e1f2g",
+        "name": "175/65R15",
+        "sku": "TYR-NEW-17565R15",
+        "categoryId": "jd75217c8ppga2aqw7te8cktyd891cfc",
+        "departmentId": "m17f8jq1gywj0cvd1yma16f96d88zy25",
+        "sizes": [
+            "15"
+        ],
+        "colors": [
+            "Black"
+        ],
+        "costPrice": 550,
+        "sellingPrice": 750,
+        "isActive": true,
+        "description": "Brand new standard tyre 175/65R15"
+    },
+    {
+        "_id": "jd7s9t0u1v2w3x4y5z6a7b8c9d0e1f2g3h",
+        "name": "185/65R15",
+        "sku": "TYR-NEW-18565R15",
+        "categoryId": "jd75217c8ppga2aqw7te8cktyd891cfc",
+        "departmentId": "m17f8jq1gywj0cvd1yma16f96d88zy25",
+        "sizes": [
+            "15"
+        ],
+        "colors": [
+            "Black"
+        ],
+        "costPrice": 550,
+        "sellingPrice": 750,
+        "isActive": true,
+        "description": "Brand new standard tyre 185/65R15"
+    },
+    {
+        "_id": "jd7t0u1v2w3x4y5z6a7b8c9d0e1f2g3h4i",
+        "name": "215/65R15",
+        "sku": "TYR-NEW-21565R15",
+        "categoryId": "jd75217c8ppga2aqw7te8cktyd891cfc",
+        "departmentId": "m17f8jq1gywj0cvd1yma16f96d88zy25",
+        "sizes": [
+            "15"
+        ],
+        "colors": [
+            "Black"
+        ],
+        "costPrice": 650,
+        "sellingPrice": 900,
+        "isActive": true,
+        "description": "Brand new standard tyre 215/65R15"
+    },
+    {
+        "_id": "jd7u1v2w3x4y5z6a7b8c9d0e1f2g3h4i5j",
+        "name": "205/65R15",
+        "sku": "TYR-NEW-20565R15",
+        "categoryId": "jd75217c8ppga2aqw7te8cktyd891cfc",
+        "departmentId": "m17f8jq1gywj0cvd1yma16f96d88zy25",
+        "sizes": [
+            "15"
+        ],
+        "colors": [
+            "Black"
+        ],
+        "costPrice": 650,
+        "sellingPrice": 900,
+        "isActive": true,
+        "description": "Brand new standard tyre 205/65R15"
+    },
+    {
+        "_id": "jd7v2w3x4y5z6a7b8c9d0e1f2g3h4i5j6k",
+        "name": "205/70R15",
+        "sku": "TYR-NEW-20570R15-B",
+        "categoryId": "jd75217c8ppga2aqw7te8cktyd891cfc",
+        "departmentId": "m17f8jq1gywj0cvd1yma16f96d88zy25",
+        "sizes": [
+            "15"
+        ],
+        "colors": [
+            "Black"
+        ],
+        "costPrice": 750,
+        "sellingPrice": 1050,
+        "isActive": true,
+        "description": "Brand new standard tyre 205/70R15"
+    },
+    {
+        "_id": "jd7w3x4y5z6a7b8c9d0e1f2g3h4i5j6k7l",
+        "name": "225/70R15C",
+        "sku": "TYR-NEW-22570R15C",
+        "categoryId": "jd75217c8ppga2aqw7te8cktyd891cfc",
+        "departmentId": "m17f8jq1gywj0cvd1yma16f96d88zy25",
+        "sizes": [
+            "15"
+        ],
+        "colors": [
+            "Black"
+        ],
+        "costPrice": 800,
+        "sellingPrice": 1100,
+        "isActive": true,
+        "description": "Brand new commercial tyre 225/70R15C"
+    },
+    {
+        "_id": "jd7x4y5z6a7b8c9d0e1f2g3h4i5j6k7l8m",
+        "name": "215/15",
+        "sku": "TYR-NEW-21515",
+        "categoryId": "jd75217c8ppga2aqw7te8cktyd891cfc",
+        "departmentId": "m17f8jq1gywj0cvd1yma16f96d88zy25",
+        "sizes": [
+            "15"
+        ],
+        "colors": [
+            "Black"
+        ],
+        "costPrice": 850,
+        "sellingPrice": 1200,
+        "isActive": true,
+        "description": "Brand new standard tyre 215/15"
+    },
+    {
+        "_id": "jd7y5z6a7b8c9d0e1f2g3h4i5j6k7l8m9n",
+        "name": "215/40R16",
+        "sku": "TYR-NEW-21540R16",
+        "categoryId": "jd75217c8ppga2aqw7te8cktyd891cfc",
+        "departmentId": "m17f8jq1gywj0cvd1yma16f96d88zy25",
+        "sizes": [
+            "16"
+        ],
+        "colors": [
+            "Black"
+        ],
+        "costPrice": 600,
+        "sellingPrice": 850,
+        "isActive": true,
+        "description": "Brand new standard tyre 215/40R16"
+    },
+    {
+        "_id": "jd7z6a7b8c9d0e1f2g3h4i5j6k7l8m9n0o",
+        "name": "205/45R16",
+        "sku": "TYR-NEW-20545R16",
+        "categoryId": "jd75217c8ppga2aqw7te8cktyd891cfc",
+        "departmentId": "m17f8jq1gywj0cvd1yma16f96d88zy25",
+        "sizes": [
+            "16"
+        ],
+        "colors": [
+            "Black"
+        ],
+        "costPrice": 600,
+        "sellingPrice": 850,
+        "isActive": true,
+        "description": "Brand new standard tyre 205/45R16"
+    },
+    {
+        "_id": "jd7a7b8c9d0e1f2g3h4i5j6k7l8m9n0o1p",
+        "name": "205/50R16",
+        "sku": "TYR-NEW-20550R16",
+        "categoryId": "jd75217c8ppga2aqw7te8cktyd891cfc",
+        "departmentId": "m17f8jq1gywj0cvd1yma16f96d88zy25",
+        "sizes": [
+            "16"
+        ],
+        "colors": [
+            "Black"
+        ],
+        "costPrice": 600,
+        "sellingPrice": 850,
+        "isActive": true,
+        "description": "Brand new standard tyre 205/50R16"
+    },
+    {
+        "_id": "jd7b8c9d0e1f2g3h4i5j6k7l8m9n0o1p2q",
+        "name": "205/55R16",
+        "sku": "TYR-NEW-20555R16",
+        "categoryId": "jd75217c8ppga2aqw7te8cktyd891cfc",
+        "departmentId": "m17f8jq1gywj0cvd1yma16f96d88zy25",
+        "sizes": [
+            "16"
+        ],
+        "colors": [
+            "Black"
+        ],
+        "costPrice": 600,
+        "sellingPrice": 850,
+        "isActive": true,
+        "description": "Brand new standard tyre 205/55R16"
+    },
+    {
+        "_id": "jd7c9d0e1f2g3h4i5j6k7l8m9n0o1p2q3r",
+        "name": "225/55R16",
+        "sku": "TYR-NEW-22555R16",
+        "categoryId": "jd75217c8ppga2aqw7te8cktyd891cfc",
+        "departmentId": "m17f8jq1gywj0cvd1yma16f96d88zy25",
+        "sizes": [
+            "16"
+        ],
+        "colors": [
+            "Black"
+        ],
+        "costPrice": 600,
+        "sellingPrice": 850,
+        "isActive": true,
+        "description": "Brand new standard tyre 225/55R16"
+    },
+    {
+        "_id": "jd7d0e1f2g3h4i5j6k7l8m9n0o1p2q3r4s",
+        "name": "225/65R16C",
+        "sku": "TYR-NEW-22565R16C",
+        "categoryId": "jd75217c8ppga2aqw7te8cktyd891cfc",
+        "departmentId": "m17f8jq1gywj0cvd1yma16f96d88zy25",
+        "sizes": [
+            "16"
+        ],
+        "colors": [
+            "Black"
+        ],
+        "costPrice": 700,
+        "sellingPrice": 1000,
+        "isActive": true,
+        "description": "Brand new commercial tyre 225/65R16C"
+    },
+    {
+        "_id": "jd7e1f2g3h4i5j6k7l8m9n0o1p2q3r4s5t",
+        "name": "215/70R16",
+        "sku": "TYR-NEW-21570R16",
+        "categoryId": "jd75217c8ppga2aqw7te8cktyd891cfc",
+        "departmentId": "m17f8jq1gywj0cvd1yma16f96d88zy25",
+        "sizes": [
+            "16"
+        ],
+        "colors": [
+            "Black"
+        ],
+        "costPrice": 700,
+        "sellingPrice": 1000,
+        "isActive": true,
+        "description": "Brand new standard tyre 215/70R16"
+    },
+    {
+        "_id": "jd7f2g3h4i5j6k7l8m9n0o1p2q3r4s5t6u",
+        "name": "205/75R16",
+        "sku": "TYR-NEW-20575R16",
+        "categoryId": "jd75217c8ppga2aqw7te8cktyd891cfc",
+        "departmentId": "m17f8jq1gywj0cvd1yma16f96d88zy25",
+        "sizes": [
+            "16"
+        ],
+        "colors": [
+            "Black"
+        ],
+        "costPrice": 700,
+        "sellingPrice": 1000,
+        "isActive": true,
+        "description": "Brand new standard tyre 205/75R16"
+    },
+    {
+        "_id": "jd7g3h4i5j6k7l8m9n0o1p2q3r4s5t6u7v",
+        "name": "195/75R16 LT",
+        "sku": "TYR-NEW-19575R16-LT",
+        "categoryId": "jd785bd4ss38hbr18rfc8cjnvs890vf6",
+        "departmentId": "m17f8jq1gywj0cvd1yma16f96d88zy25",
+        "sizes": [
+            "16"
+        ],
+        "colors": [
+            "Black"
+        ],
+        "costPrice": 700,
+        "sellingPrice": 1000,
+        "isActive": true,
+        "description": "Light truck tyre 195/75R16 LT"
+    },
+    {
+        "_id": "jd7h4i5j6k7l8m9n0o1p2q3r4s5t6u7v8w",
+        "name": "215/65R16",
+        "sku": "TYR-NEW-21565R16",
+        "categoryId": "jd75217c8ppga2aqw7te8cktyd891cfc",
+        "departmentId": "m17f8jq1gywj0cvd1yma16f96d88zy25",
+        "sizes": [
+            "16"
+        ],
+        "colors": [
+            "Black"
+        ],
+        "costPrice": 650,
+        "sellingPrice": 900,
+        "isActive": true,
+        "description": "Brand new standard tyre 215/65R16"
+    },
+    {
+        "_id": "jd7i5j6k7l8m9n0o1p2q3r4s5t6u7v8w9x",
+        "name": "750/16",
+        "sku": "TYR-NEW-75016",
+        "categoryId": "jd75217c8ppga2aqw7te8cktyd891cfc",
+        "departmentId": "m17f8jq1gywj0cvd1yma16f96d88zy25",
+        "sizes": [
+            "16"
+        ],
+        "colors": [
+            "Black"
+        ],
+        "costPrice": 1400,
+        "sellingPrice": 2000,
+        "isActive": true,
+        "description": "Brand new heavy tyre 750/16"
+    },
+    {
+        "_id": "jd7j6k7l8m9n0o1p2q3r4s5t6u7v8w9x0y",
+        "name": "265/70R16 LT/AT",
+        "sku": "TYR-NEW-26570R16-AT",
+        "categoryId": "jd73b9xj43xd7bqgkjsz5mpgm1890qes",
+        "departmentId": "m17f8jq1gywj0cvd1yma16f96d88zy25",
+        "sizes": [
+            "16"
+        ],
+        "colors": [
+            "Black"
+        ],
+        "costPrice": 1200,
+        "sellingPrice": 1650,
+        "isActive": true,
+        "description": "All terrain tyre 265/70R16 LT/AT"
+    },
+    {
+        "_id": "jd7k7l8m9n0o1p2q3r4s5t6u7v8w9x0y1z",
+        "name": "245/70R16 AT/LT",
+        "sku": "TYR-NEW-24570R16-AT",
+        "categoryId": "jd73b9xj43xd7bqgkjsz5mpgm1890qes",
+        "departmentId": "m17f8jq1gywj0cvd1yma16f96d88zy25",
+        "sizes": [
+            "16"
+        ],
+        "colors": [
+            "Black"
+        ],
+        "costPrice": 1200,
+        "sellingPrice": 1650,
+        "isActive": true,
+        "description": "All terrain tyre 245/70R16 AT/LT"
+    },
+    {
+        "_id": "jd7l8m9n0o1p2q3r4s5t6u7v8w9x0y1z2a",
+        "name": "225/50R17",
+        "sku": "TYR-NEW-22550R17",
+        "categoryId": "jd75217c8ppga2aqw7te8cktyd891cfc",
+        "departmentId": "m17f8jq1gywj0cvd1yma16f96d88zy25",
+        "sizes": [
+            "17"
+        ],
+        "colors": [
+            "Black"
+        ],
+        "costPrice": 650,
+        "sellingPrice": 900,
+        "isActive": true,
+        "description": "Brand new standard tyre 225/50R17"
+    },
+    {
+        "_id": "jd7m9n0o1p2q3r4s5t6u7v8w9x0y1z2a3b",
+        "name": "225/60R17",
+        "sku": "TYR-NEW-22560R17",
+        "categoryId": "jd75217c8ppga2aqw7te8cktyd891cfc",
+        "departmentId": "m17f8jq1gywj0cvd1yma16f96d88zy25",
+        "sizes": [
+            "17"
+        ],
+        "colors": [
+            "Black"
+        ],
+        "costPrice": 650,
+        "sellingPrice": 900,
+        "isActive": true,
+        "description": "Brand new standard tyre 225/60R17"
+    },
+    {
+        "_id": "jd7n0o1p2q3r4s5t6u7v8w9x0y1z2a3b4c",
+        "name": "225/65R17 AT",
+        "sku": "TYR-NEW-22565R17-AT",
+        "categoryId": "jd73b9xj43xd7bqgkjsz5mpgm1890qes",
+        "departmentId": "m17f8jq1gywj0cvd1yma16f96d88zy25",
+        "sizes": [
+            "17"
+        ],
+        "colors": [
+            "Black"
+        ],
+        "costPrice": 700,
+        "sellingPrice": 1000,
+        "isActive": true,
+        "description": "All terrain tyre 225/65R17 AT"
+    },
+    {
+        "_id": "jd7o1p2q3r4s5t6u7v8w9x0y1z2a3b4c5d",
+        "name": "215/60R17",
+        "sku": "TYR-NEW-21560R17",
+        "categoryId": "jd75217c8ppga2aqw7te8cktyd891cfc",
+        "departmentId": "m17f8jq1gywj0cvd1yma16f96d88zy25",
+        "sizes": [
+            "17"
+        ],
+        "colors": [
+            "Black"
+        ],
+        "costPrice": 650,
+        "sellingPrice": 900,
+        "isActive": true,
+        "description": "Brand new standard tyre 215/60R17"
+    },
+    {
+        "_id": "jd7p2q3r4s5t6u7v8w9x0y1z2a3b4c5d6e",
+        "name": "245/45R17",
+        "sku": "TYR-NEW-24545R17",
+        "categoryId": "jd75217c8ppga2aqw7te8cktyd891cfc",
+        "departmentId": "m17f8jq1gywj0cvd1yma16f96d88zy25",
+        "sizes": [
+            "17"
+        ],
+        "colors": [
+            "Black"
+        ],
+        "costPrice": 650,
+        "sellingPrice": 900,
+        "isActive": true,
+        "description": "Brand new standard tyre 245/45R17"
+    },
+    {
+        "_id": "jd7q3r4s5t6u7v8w9x0y1z2a3b4c5d6e7f",
+        "name": "215/55R17",
+        "sku": "TYR-NEW-21555R17",
+        "categoryId": "jd75217c8ppga2aqw7te8cktyd891cfc",
+        "departmentId": "m17f8jq1gywj0cvd1yma16f96d88zy25",
+        "sizes": [
+            "17"
+        ],
+        "colors": [
+            "Black"
+        ],
+        "costPrice": 650,
+        "sellingPrice": 900,
+        "isActive": true,
+        "description": "Brand new standard tyre 215/55R17"
+    },
+    {
+        "_id": "jd7r4s5t6u7v8w9x0y1z2a3b4c5d6e7f8g",
+        "name": "225/45R17",
+        "sku": "TYR-NEW-22545R17",
+        "categoryId": "jd75217c8ppga2aqw7te8cktyd891cfc",
+        "departmentId": "m17f8jq1gywj0cvd1yma16f96d88zy25",
+        "sizes": [
+            "17"
+        ],
+        "colors": [
+            "Black"
+        ],
+        "costPrice": 650,
+        "sellingPrice": 900,
+        "isActive": true,
+        "description": "Brand new standard tyre 225/45R17"
+    },
+    {
+        "_id": "jd7s5t6u7v8w9x0y1z2a3b4c5d6e7f8g9h",
+        "name": "215/40R17",
+        "sku": "TYR-NEW-21540R17",
+        "categoryId": "jd75217c8ppga2aqw7te8cktyd891cfc",
+        "departmentId": "m17f8jq1gywj0cvd1yma16f96d88zy25",
+        "sizes": [
+            "17"
+        ],
+        "colors": [
+            "Black"
+        ],
+        "costPrice": 650,
+        "sellingPrice": 900,
+        "isActive": true,
+        "description": "Brand new standard tyre 215/40R17"
+    },
+    {
+        "_id": "jd7t6u7v8w9x0y1z2a3b4c5d6e7f8g9h0i",
+        "name": "205/45R17",
+        "sku": "TYR-NEW-20545R17",
+        "categoryId": "jd75217c8ppga2aqw7te8cktyd891cfc",
+        "departmentId": "m17f8jq1gywj0cvd1yma16f96d88zy25",
+        "sizes": [
+            "17"
+        ],
+        "colors": [
+            "Black"
+        ],
+        "costPrice": 650,
+        "sellingPrice": 900,
+        "isActive": true,
+        "description": "Brand new standard tyre 205/45R17"
+    },
+    {
+        "_id": "jd7u7v8w9x0y1z2a3b4c5d6e7f8g9h0i1j",
+        "name": "215/45R17",
+        "sku": "TYR-NEW-21545R17",
+        "categoryId": "jd75217c8ppga2aqw7te8cktyd891cfc",
+        "departmentId": "m17f8jq1gywj0cvd1yma16f96d88zy25",
+        "sizes": [
+            "17"
+        ],
+        "colors": [
+            "Black"
+        ],
+        "costPrice": 650,
+        "sellingPrice": 900,
+        "isActive": true,
+        "description": "Brand new standard tyre 215/45R17"
+    },
+    {
+        "_id": "jd7v8w9x0y1z2a3b4c5d6e7f8g9h0i1j2k",
+        "name": "265/65R17 AT",
+        "sku": "TYR-NEW-26565R17-AT",
+        "categoryId": "jd73b9xj43xd7bqgkjsz5mpgm1890qes",
+        "departmentId": "m17f8jq1gywj0cvd1yma16f96d88zy25",
+        "sizes": [
+            "17"
+        ],
+        "colors": [
+            "Black"
+        ],
+        "costPrice": 1200,
+        "sellingPrice": 1650,
+        "isActive": true,
+        "description": "All terrain tyre 265/65R17 AT"
+    },
+    {
+        "_id": "jd7w9x0y1z2a3b4c5d6e7f8g9h0i1j2k3l",
+        "name": "265/65R17 AT DURAN",
+        "sku": "TYR-NEW-26565R17-AT-DURAN",
+        "categoryId": "jd73b9xj43xd7bqgkjsz5mpgm1890qes",
+        "departmentId": "m17f8jq1gywj0cvd1yma16f96d88zy25",
+        "sizes": [
+            "17"
+        ],
+        "colors": [
+            "Black"
+        ],
+        "costPrice": 1600,
+        "sellingPrice": 2200,
+        "isActive": true,
+        "description": "All terrain DURAN tyre 265/65R17 AT"
+    },
+    {
+        "_id": "jd7x0y1z2a3b4c5d6e7f8g9h0i1j2k3l4m",
+        "name": "31x10.5R15 AT",
+        "sku": "TYR-NEW-31X105R15-AT",
+        "categoryId": "jd73b9xj43xd7bqgkjsz5mpgm1890qes",
+        "departmentId": "m17f8jq1gywj0cvd1yma16f96d88zy25",
+        "sizes": [
+            "15"
+        ],
+        "colors": [
+            "Black"
+        ],
+        "costPrice": 1200,
+        "sellingPrice": 1650,
+        "isActive": true,
+        "description": "All terrain tyre 31x10.5R15 AT"
+    },
+    {
+        "_id": "jd7y1z2a3b4c5d6e7f8g9h0i1j2k3l4m5n",
+        "name": "235/75R15",
+        "sku": "TYR-NEW-23575R15",
+        "categoryId": "jd75217c8ppga2aqw7te8cktyd891cfc",
+        "departmentId": "m17f8jq1gywj0cvd1yma16f96d88zy25",
+        "sizes": [
+            "15"
+        ],
+        "colors": [
+            "Black"
+        ],
+        "costPrice": 1050,
+        "sellingPrice": 1500,
+        "isActive": true,
+        "description": "Brand new standard tyre 235/75R15"
+    },
+    {
+        "_id": "jd7z2a3b4c5d6e7f8g9h0i1j2k3l4m5n6o",
+        "name": "265/60R18 AT",
+        "sku": "TYR-NEW-26560R18-AT",
+        "categoryId": "jd73b9xj43xd7bqgkjsz5mpgm1890qes",
+        "departmentId": "m17f8jq1gywj0cvd1yma16f96d88zy25",
+        "sizes": [
+            "18"
+        ],
+        "colors": [
+            "Black"
+        ],
+        "costPrice": 1200,
+        "sellingPrice": 1650,
+        "isActive": true,
+        "description": "All terrain tyre 265/60R18 AT"
+    },
+    {
+        "_id": "jd7a3b4c5d6e7f8g9h0i1j2k3l4m5n6o7p",
+        "name": "225/40R18",
+        "sku": "TYR-NEW-22540R18",
+        "categoryId": "jd75217c8ppga2aqw7te8cktyd891cfc",
+        "departmentId": "m17f8jq1gywj0cvd1yma16f96d88zy25",
+        "sizes": [
+            "18"
+        ],
+        "colors": [
+            "Black"
+        ],
+        "costPrice": 700,
+        "sellingPrice": 1000,
+        "isActive": true,
+        "description": "Brand new standard tyre 225/40R18"
+    },
+    {
+        "_id": "jd7b4c5d6e7f8g9h0i1j2k3l4m5n6o7p8q",
+        "name": "215/40R18",
+        "sku": "TYR-NEW-21540R18",
+        "categoryId": "jd75217c8ppga2aqw7te8cktyd891cfc",
+        "departmentId": "m17f8jq1gywj0cvd1yma16f96d88zy25",
+        "sizes": [
+            "18"
+        ],
+        "colors": [
+            "Black"
+        ],
+        "costPrice": 700,
+        "sellingPrice": 1000,
+        "isActive": true,
+        "description": "Brand new standard tyre 215/40R18"
+    },
+    {
+        "_id": "jd7c5d6e7f8g9h0i1j2k3l4m5n6o7p8q9r",
+        "name": "225/45R18",
+        "sku": "TYR-NEW-22545R18",
+        "categoryId": "jd75217c8ppga2aqw7te8cktyd891cfc",
+        "departmentId": "m17f8jq1gywj0cvd1yma16f96d88zy25",
+        "sizes": [
+            "18"
+        ],
+        "colors": [
+            "Black"
+        ],
+        "costPrice": 700,
+        "sellingPrice": 1000,
+        "isActive": true,
+        "description": "Brand new standard tyre 225/45R18"
+    },
+    {
+        "_id": "jd7d6e7f8g9h0i1j2k3l4m5n6o7p8q9r0s",
+        "name": "235/40R18",
+        "sku": "TYR-NEW-23540R18",
+        "categoryId": "jd75217c8ppga2aqw7te8cktyd891cfc",
+        "departmentId": "m17f8jq1gywj0cvd1yma16f96d88zy25",
+        "sizes": [
+            "18"
+        ],
+        "colors": [
+            "Black"
+        ],
+        "costPrice": 700,
+        "sellingPrice": 1000,
+        "isActive": true,
+        "description": "Brand new standard tyre 235/40R18"
+    },
+    {
+        "_id": "jd7e7f8g9h0i1j2k3l4m5n6o7p8q9r0s1t",
+        "name": "245/40R18",
+        "sku": "TYR-NEW-24540R18",
+        "categoryId": "jd75217c8ppga2aqw7te8cktyd891cfc",
+        "departmentId": "m17f8jq1gywj0cvd1yma16f96d88zy25",
+        "sizes": [
+            "18"
+        ],
+        "colors": [
+            "Black"
+        ],
+        "costPrice": 700,
+        "sellingPrice": 1000,
+        "isActive": true,
+        "description": "Brand new standard tyre 245/40R18"
+    },
+    {
+        "_id": "jd7f8g9h0i1j2k3l4m5n6o7p8q9r0s1t2u",
+        "name": "235/35R19",
+        "sku": "TYR-NEW-23535R19",
+        "categoryId": "jd75217c8ppga2aqw7te8cktyd891cfc",
+        "departmentId": "m17f8jq1gywj0cvd1yma16f96d88zy25",
+        "sizes": [
+            "19"
+        ],
+        "colors": [
+            "Black"
+        ],
+        "costPrice": 700,
+        "sellingPrice": 1000,
+        "isActive": true,
+        "description": "Brand new standard tyre 235/35R19"
+    },
+    {
+        "_id": "jd7g9h0i1j2k3l4m5n6o7p8q9r0s1t2u3v",
+        "name": "255/35R19",
+        "sku": "TYR-NEW-25535R19",
+        "categoryId": "jd75217c8ppga2aqw7te8cktyd891cfc",
+        "departmentId": "m17f8jq1gywj0cvd1yma16f96d88zy25",
+        "sizes": [
+            "19"
+        ],
+        "colors": [
+            "Black"
+        ],
+        "costPrice": 700,
+        "sellingPrice": 1000,
+        "isActive": true,
+        "description": "Brand new standard tyre 255/35R19"
+    },
+    {
+        "_id": "jd7h0i1j2k3l4m5n6o7p8q9r0s1t2u3v4w",
+        "name": "235/55R19",
+        "sku": "TYR-NEW-23555R19",
+        "categoryId": "jd75217c8ppga2aqw7te8cktyd891cfc",
+        "departmentId": "m17f8jq1gywj0cvd1yma16f96d88zy25",
+        "sizes": [
+            "19"
+        ],
+        "colors": [
+            "Black"
+        ],
+        "costPrice": 750,
+        "sellingPrice": 1050,
+        "isActive": true,
+        "description": "Brand new standard tyre 235/55R19"
+    },
+    {
+        "_id": "jd7i1j2k3l4m5n6o7p8q9r0s1t2u3v4w5x",
+        "name": "195R15C",
+        "sku": "TYR-NEW-195R15C",
+        "categoryId": "jd75217c8ppga2aqw7te8cktyd891cfc",
+        "departmentId": "m17f8jq1gywj0cvd1yma16f96d88zy25",
+        "sizes": [
+            "15"
+        ],
+        "colors": [
+            "Black"
+        ],
+        "costPrice": 700,
+        "sellingPrice": 1000,
+        "isActive": true,
+        "description": "Brand new commercial tyre 195R15C"
+    },
+    {
+        "_id": "jd7j2k3l4m5n6o7p8q9r0s1t2u3v4w5x6y",
+        "name": "195R15C-Whitewall",
+        "sku": "TYR-NEW-195R15C-WW",
+        "categoryId": "jd7cz129z32gg4bgmq5k1p1rwh890dxx",
+        "departmentId": "m17f8jq1gywj0cvd1yma16f96d88zy25",
+        "sizes": [
+            "15"
+        ],
+        "colors": [
+            "Whitewall"
+        ],
+        "costPrice": 950,
+        "sellingPrice": 1350,
+        "isActive": true,
+        "description": "New whitewall commercial tyre 195R15C"
+    },
+    {
+        "_id": "jd7k3l4m5n6o7p8q9r0s1t2u3v4w5x6y7z",
+        "name": "205/75R15C-Whitewall",
+        "sku": "TYR-NEW-20575R15C-WW",
+        "categoryId": "jd7cz129z32gg4bgmq5k1p1rwh890dxx",
+        "departmentId": "m17f8jq1gywj0cvd1yma16f96d88zy25",
+        "sizes": [
+            "15"
+        ],
+        "colors": [
+            "Whitewall"
+        ],
+        "costPrice": 950,
+        "sellingPrice": 1350,
+        "isActive": true,
+        "description": "New whitewall commercial tyre 205/75R15C"
+    },
+    {
+        "_id": "jd7l4m5n6o7p8q9r0s1t2u3v4w5x6y7z8a",
+        "name": "255/70R15 AT",
+        "sku": "TYR-NEW-25570R15-AT",
+        "categoryId": "jd73b9xj43xd7bqgkjsz5mpgm1890qes",
+        "departmentId": "m17f8jq1gywj0cvd1yma16f96d88zy25",
+        "sizes": [
+            "15"
+        ],
+        "colors": [
+            "Black"
+        ],
+        "costPrice": 1200,
+        "sellingPrice": 1650,
+        "isActive": true,
+        "description": "All terrain tyre 255/70R15 AT"
+    },
+    {
+        "_id": "jd7m5n6o7p8q9r0s1t2u3v4w5x6y7z8a9b",
+        "name": "215/75R17.5",
+        "sku": "TYR-NEW-21575R175",
+        "categoryId": "jd75h9292frz675s7qv8at7g618904hk",
+        "departmentId": "m17f8jq1gywj0cvd1yma16f96d88zy25",
+        "sizes": [
+            "17.5"
+        ],
+        "colors": [
+            "Black"
+        ],
+        "costPrice": 1400,
+        "sellingPrice": 2000,
+        "isActive": true,
+        "description": "Heavy truck tyre 215/75R17.5"
+    },
+    {
+        "_id": "jd7n6o7p8q9r0s1t2u3v4w5x6y7z8a9b0c",
+        "name": "215/35R18",
+        "sku": "TYR-NEW-21535R18",
+        "categoryId": "jd75217c8ppga2aqw7te8cktyd891cfc",
+        "departmentId": "m17f8jq1gywj0cvd1yma16f96d88zy25",
+        "sizes": [
+            "18"
+        ],
+        "colors": [
+            "Black"
+        ],
+        "costPrice": 700,
+        "sellingPrice": 1000,
+        "isActive": true,
+        "description": "Brand new standard tyre 215/35R18"
+    },
+    {
+        "_id": "jd7o7p8q9r0s1t2u3v4w5x6y7z8a9b0c1d",
+        "name": "165R13",
+        "sku": "TYR-NEW-165R13",
+        "categoryId": "jd75217c8ppga2aqw7te8cktyd891cfc",
+        "departmentId": "m17f8jq1gywj0cvd1yma16f96d88zy25",
+        "sizes": [
+            "13"
+        ],
+        "colors": [
+            "Black"
+        ],
+        "costPrice": 320,
+        "sellingPrice": 450,
+        "isActive": true,
+        "description": "Brand new standard tyre 165R13"
+    },
+    {
+        "_id": "jd7p8q9r0s1t2u3v4w5x6y7z8a9b0c1d2e",
+        "name": "165/70R13",
+        "sku": "TYR-NEW-16570R13",
+        "categoryId": "jd75217c8ppga2aqw7te8cktyd891cfc",
+        "departmentId": "m17f8jq1gywj0cvd1yma16f96d88zy25",
+        "sizes": [
+            "13"
+        ],
+        "colors": [
+            "Black"
+        ],
+        "costPrice": 320,
+        "sellingPrice": 450,
+        "isActive": true,
+        "description": "Brand new standard tyre 165/70R13"
+    },
+    {
+        "_id": "jd7q9r0s1t2u3v4w5x6y7z8a9b0c1d2e3f",
+        "name": "165/70R14",
+        "sku": "TYR-NEW-16570R14",
+        "categoryId": "jd75217c8ppga2aqw7te8cktyd891cfc",
+        "departmentId": "m17f8jq1gywj0cvd1yma16f96d88zy25",
+        "sizes": [
+            "14"
+        ],
+        "colors": [
+            "Black"
+        ],
+        "costPrice": 320,
+        "sellingPrice": 450,
+        "isActive": true,
+        "description": "Brand new standard tyre 165/70R14"
+    },
+    {
+        "_id": "jd7r0s1t2u3v4w5x6y7z8a9b0c1d2e3f4g",
+        "name": "175/65R14",
+        "sku": "TYR-NEW-17565R14-A",
+        "categoryId": "jd75217c8ppga2aqw7te8cktyd891cfc",
+        "departmentId": "m17f8jq1gywj0cvd1yma16f96d88zy25",
+        "sizes": [
+            "14"
+        ],
+        "colors": [
+            "Black"
+        ],
+        "costPrice": 320,
+        "sellingPrice": 450,
+        "isActive": true,
+        "description": "Brand new standard tyre 175/65R14"
+    }
+]

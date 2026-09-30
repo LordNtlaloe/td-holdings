@@ -1,0 +1,4986 @@
+[
+    {
+        "storeId": "k978zq6z9kazgez3sdrb76vnex88zfet",
+        "productId": "j571jv4hks2t4trd63eh3m3b75890s4n",
+        "batchNumber": "SEED-CRUSHER-88zfet",
+        "quantity": 100,
+        "costPrice": 3000,
+        "receivedAt": 1782333046024
+    },
+    {
+        "storeId": "k978zq6z9kazgez3sdrb76vnex88zfet",
+        "productId": "j57encn2x261rryq051cf6navn891whm",
+        "batchNumber": "SEED-FINESAND-88zfet",
+        "quantity": 100,
+        "costPrice": 1600,
+        "receivedAt": 1782333046025
+    },
+    {
+        "storeId": "k978zq6z9kazgez3sdrb76vnex88zfet",
+        "productId": "j57a3twaczf3adwmwjr1apa395891a27",
+        "batchNumber": "SEED-ROUGHSAND-88zfet",
+        "quantity": 100,
+        "costPrice": 1600,
+        "receivedAt": 1782333046026
+    },
+    {
+        "storeId": "k978zq6z9kazgez3sdrb76vnex88zfet",
+        "productId": "j575609rfeztawtbky7pgq873h891zpw",
+        "batchNumber": "SEED-QUARRY-88zfet",
+        "quantity": 100,
+        "costPrice": 1600,
+        "receivedAt": 1782333046027
+    },
+    {
+        "storeId": "k97c1g8sh80x2992fpt0jwjvzs88y29n",
+        "productId": "j572kq5my2zf2m2x7pt27zk51s890j8e",
+        "batchNumber": "SEED-BRA-88y29n",
+        "quantity": 100,
+        "costPrice": 3600,
+        "receivedAt": 1782333046028
+    },
+    {
+        "storeId": "k97c1g8sh80x2992fpt0jwjvzs88y29n",
+        "productId": "j576wwmf570cbgpvskkzv6fy6x891xzw",
+        "batchNumber": "SEED-PAJAMAS-88y29n",
+        "quantity": 100,
+        "costPrice": 2500,
+        "receivedAt": 1782333046029
+    },
+    {
+        "storeId": "k97c1g8sh80x2992fpt0jwjvzs88y29n",
+        "productId": "j57fn8ybxp6hsv053drtd9fbnh89076h",
+        "batchNumber": "SEED-GOWNS-88y29n",
+        "quantity": 100,
+        "costPrice": 3200,
+        "receivedAt": 1782333046030
+    },
+    {
+        "storeId": "k97c1g8sh80x2992fpt0jwjvzs88y29n",
+        "productId": "j577d0yv3gmq591yrwphdk4sdx8902gf",
+        "batchNumber": "SEED-COTTONSOCKS-88y29n",
+        "quantity": 100,
+        "costPrice": 2500,
+        "receivedAt": 1782333046031
+    },
+    {
+        "storeId": "k97c1g8sh80x2992fpt0jwjvzs88y29n",
+        "productId": "j57btxsd71cf769mhd45f53eps890mgy",
+        "batchNumber": "SEED-SCHOOLBA-88y29n",
+        "quantity": 100,
+        "costPrice": 2400,
+        "receivedAt": 1782333046032
+    },
+    {
+        "storeId": "k97c1g8sh80x2992fpt0jwjvzs88y29n",
+        "productId": "j57bmz2ph0ce3efdtq6f7cky41890nha",
+        "batchNumber": "SEED-SUMMERCA-88y29n",
+        "quantity": 100,
+        "costPrice": 2000,
+        "receivedAt": 1782333046033
+    },
+    {
+        "storeId": "k97c1g8sh80x2992fpt0jwjvzs88y29n",
+        "productId": "j57brhn2k52hm2sej3qgw8z16x890q56",
+        "batchNumber": "SEED-CHILDREN-88y29n",
+        "quantity": 100,
+        "costPrice": 2500,
+        "receivedAt": 1782333046034
+    },
+    {
+        "storeId": "k97c1g8sh80x2992fpt0jwjvzs88y29n",
+        "productId": "j5774j6rjtt58tf16sy6q9bbkd8900dh",
+        "batchNumber": "SEED-HEAVYTRA-88y29n",
+        "quantity": 100,
+        "costPrice": 3800,
+        "receivedAt": 1782333046035
+    },
+    {
+        "storeId": "k97c1g8sh80x2992fpt0jwjvzs88y29n",
+        "productId": "j575xvtgtm6afevqj5epfkn54989002s",
+        "batchNumber": "SEED-LIGHTTRA-88y29n",
+        "quantity": 100,
+        "costPrice": 2500,
+        "receivedAt": 1782333046036
+    },
+    {
+        "storeId": "k97c1g8sh80x2992fpt0jwjvzs88y29n",
+        "productId": "j575haxtrhahnxev26a8wwzkx98900j5",
+        "batchNumber": "SEED-MENSHEAV-88y29n",
+        "quantity": 100,
+        "costPrice": 3200,
+        "receivedAt": 1782333046037
+    },
+    {
+        "storeId": "k97c1g8sh80x2992fpt0jwjvzs88y29n",
+        "productId": "j57ewq4y5ppqqad6gmtd6ff2dx890s92",
+        "batchNumber": "SEED-MENSJEAN-88y29n",
+        "quantity": 100,
+        "costPrice": 3600,
+        "receivedAt": 1782333046038
+    },
+    {
+        "storeId": "k97c1g8sh80x2992fpt0jwjvzs88y29n",
+        "productId": "j57d9t4w84ekrw8vxndr106w4n8911pe",
+        "batchNumber": "SEED-LADIESWI-88y29n",
+        "quantity": 100,
+        "costPrice": 1500,
+        "receivedAt": 1782333046039
+    },
+    {
+        "storeId": "k97c1g8sh80x2992fpt0jwjvzs88y29n",
+        "productId": "j5755mq490y066rcpf1rf16tb5890ad7",
+        "batchNumber": "SEED-WINTERLE-88y29n",
+        "quantity": 100,
+        "costPrice": 2200,
+        "receivedAt": 1782333046040
+    },
+    {
+        "storeId": "k97c1g8sh80x2992fpt0jwjvzs88y29n",
+        "productId": "j57510vh5769c5tt5zxgwv8edh8907pr",
+        "batchNumber": "SEED-CW-88y29n",
+        "quantity": 100,
+        "costPrice": 1800,
+        "receivedAt": 1782333046041
+    },
+    {
+        "storeId": "k97c1g8sh80x2992fpt0jwjvzs88y29n",
+        "productId": "j57b0gsw4repbxaj5tbkjbb0q58908ad",
+        "batchNumber": "SEED-L09-88y29n",
+        "quantity": 100,
+        "costPrice": 2800,
+        "receivedAt": 1782333046042
+    },
+    {
+        "storeId": "k97c1g8sh80x2992fpt0jwjvzs88y29n",
+        "productId": "j57fnf9zn4xcktr0denc4tjvs5891c9p",
+        "batchNumber": "SEED-74W-88y29n",
+        "quantity": 100,
+        "costPrice": 2500,
+        "receivedAt": 1782333046043
+    },
+    {
+        "storeId": "k97c1g8sh80x2992fpt0jwjvzs88y29n",
+        "productId": "j57aw1vvv31112rgkkmfh6wx7h890948",
+        "batchNumber": "SEED-BLK-88y29n",
+        "quantity": 100,
+        "costPrice": 2300,
+        "receivedAt": 1782333046044
+    },
+    {
+        "storeId": "k97c1g8sh80x2992fpt0jwjvzs88y29n",
+        "productId": "j578x8vtdxhmftm9qm6p895rw5891re4",
+        "batchNumber": "SEED-NBLK-88y29n",
+        "quantity": 100,
+        "costPrice": 3500,
+        "receivedAt": 1782333046045
+    },
+    {
+        "storeId": "k97c1g8sh80x2992fpt0jwjvzs88y29n",
+        "productId": "j57fqvr7kxs765231h5tfj2g7d891q2j",
+        "batchNumber": "SEED-CO2-88y29n",
+        "quantity": 100,
+        "costPrice": 2500,
+        "receivedAt": 1782333046046
+    },
+    {
+        "storeId": "k97c1g8sh80x2992fpt0jwjvzs88y29n",
+        "productId": "j57487sddq0tjr4d2fd1nyydsh891bjd",
+        "batchNumber": "SEED-L01-A15-88y29n",
+        "quantity": 100,
+        "costPrice": 2200,
+        "receivedAt": 1782333046047
+    },
+    {
+        "storeId": "k97c1g8sh80x2992fpt0jwjvzs88y29n",
+        "productId": "j574gg6g1s32r3hw84x0zv66sh891tea",
+        "batchNumber": "SEED-M03-L01-88y29n",
+        "quantity": 100,
+        "costPrice": 2800,
+        "receivedAt": 1782333046048
+    },
+    {
+        "storeId": "k97c1g8sh80x2992fpt0jwjvzs88y29n",
+        "productId": "j570dzekzxj3x35wd7fhxfgphh890h3n",
+        "batchNumber": "SEED-M03-88y29n",
+        "quantity": 100,
+        "costPrice": 3000,
+        "receivedAt": 1782333046049
+    },
+    {
+        "storeId": "k97c1g8sh80x2992fpt0jwjvzs88y29n",
+        "productId": "j57ec78amq0waept1va74hkbx9891ynh",
+        "batchNumber": "SEED-WSW-88y29n",
+        "quantity": 100,
+        "costPrice": 2000,
+        "receivedAt": 1782333046050
+    },
+    {
+        "storeId": "k97c1g8sh80x2992fpt0jwjvzs88y29n",
+        "productId": "j574emwd67dk3xh0ag1n2czwc5890wer",
+        "batchNumber": "SEED-N07-88y29n",
+        "quantity": 100,
+        "costPrice": 2500,
+        "receivedAt": 1782333046051
+    },
+    {
+        "storeId": "k97c1g8sh80x2992fpt0jwjvzs88y29n",
+        "productId": "j57esqgdda1hbxppm2yc39z9sx891r4n",
+        "batchNumber": "SEED-SW-88y29n",
+        "quantity": 100,
+        "costPrice": 2500,
+        "receivedAt": 1782333046052
+    },
+    {
+        "storeId": "k97c1g8sh80x2992fpt0jwjvzs88y29n",
+        "productId": "j576x6vc5pc2tej4vz6sag935h890xek",
+        "batchNumber": "SEED-OT12-88y29n",
+        "quantity": 100,
+        "costPrice": 3000,
+        "receivedAt": 1782333046053
+    },
+    {
+        "storeId": "k97c1g8sh80x2992fpt0jwjvzs88y29n",
+        "productId": "j574gfkmhdeyfzeeypa9spvnn5890wfm",
+        "batchNumber": "SEED-A06-88y29n",
+        "quantity": 100,
+        "costPrice": 2700,
+        "receivedAt": 1782333046054
+    },
+    {
+        "storeId": "k97c1g8sh80x2992fpt0jwjvzs88y29n",
+        "productId": "j574h45eh1shr3hdfh1wc01k2s890s8c",
+        "batchNumber": "SEED-FL-88y29n",
+        "quantity": 100,
+        "costPrice": 2700,
+        "receivedAt": 1782333046055
+    },
+    {
+        "storeId": "k97c1g8sh80x2992fpt0jwjvzs88y29n",
+        "productId": "j5711crspq0rv00yt0fd7dhwg5890w0a",
+        "batchNumber": "SEED-BN-88y29n",
+        "quantity": 100,
+        "costPrice": 2400,
+        "receivedAt": 1782333046056
+    },
+    {
+        "storeId": "k97c1g8sh80x2992fpt0jwjvzs88y29n",
+        "productId": "j572qj5yjz0pvhq0106ce73m6s890z4t",
+        "batchNumber": "SEED-WTK-88y29n",
+        "quantity": 100,
+        "costPrice": 2500,
+        "receivedAt": 1782333046057
+    },
+    {
+        "storeId": "k97c1g8sh80x2992fpt0jwjvzs88y29n",
+        "productId": "j570rtmgzhcrp9vdvh1pkes9n9890ks6",
+        "batchNumber": "SEED-CMS-88y29n",
+        "quantity": 100,
+        "costPrice": 1500,
+        "receivedAt": 1782333046058
+    },
+    {
+        "storeId": "k97c1g8sh80x2992fpt0jwjvzs88y29n",
+        "productId": "j57f3p1g528zy7jwv3vfr0gj7d8900vy",
+        "batchNumber": "SEED-MB20-88y29n",
+        "quantity": 100,
+        "costPrice": 2800,
+        "receivedAt": 1782333046059
+    },
+    {
+        "storeId": "k97c1g8sh80x2992fpt0jwjvzs88y29n",
+        "productId": "j579brj7prwv7s5zh5jge98m3s8903pj",
+        "batchNumber": "SEED-MTK-88y29n",
+        "quantity": 100,
+        "costPrice": 3000,
+        "receivedAt": 1782333046060
+    },
+    {
+        "storeId": "k97c1g8sh80x2992fpt0jwjvzs88y29n",
+        "productId": "j5766aeamqxhmb5c162ztwtjqs891dem",
+        "batchNumber": "SEED-MMW-88y29n",
+        "quantity": 100,
+        "costPrice": 4200,
+        "receivedAt": 1782333046061
+    },
+    {
+        "storeId": "k97c1g8sh80x2992fpt0jwjvzs88y29n",
+        "productId": "j576jqt2323wydb9j37jweykk189027s",
+        "batchNumber": "SEED-MNF-88y29n",
+        "quantity": 100,
+        "costPrice": 4500,
+        "receivedAt": 1782333046062
+    },
+    {
+        "storeId": "k97c1g8sh80x2992fpt0jwjvzs88y29n",
+        "productId": "j577vgryesjcvyggjkcyhyqxgs891859",
+        "batchNumber": "SEED-MWF20-88y29n",
+        "quantity": 100,
+        "costPrice": 3800,
+        "receivedAt": 1782333046063
+    },
+    {
+        "storeId": "k97c1g8sh80x2992fpt0jwjvzs88y29n",
+        "productId": "j5701ss7pj7jfkyjjpa86dvcfx8919hy",
+        "batchNumber": "SEED-MWF25-88y29n",
+        "quantity": 100,
+        "costPrice": 4200,
+        "receivedAt": 1782333046064
+    },
+    {
+        "storeId": "k97c1g8sh80x2992fpt0jwjvzs88y29n",
+        "productId": "j57c6wqmnrv73z4vhbdnng0xe1891r1q",
+        "batchNumber": "SEED-AV20-88y29n",
+        "quantity": 100,
+        "costPrice": 3800,
+        "receivedAt": 1782333046065
+    },
+    {
+        "storeId": "k97c1g8sh80x2992fpt0jwjvzs88y29n",
+        "productId": "j576y2ckmfnfz2ka2w4qke414n890g9v",
+        "batchNumber": "SEED-AV25-88y29n",
+        "quantity": 100,
+        "costPrice": 3000,
+        "receivedAt": 1782333046066
+    },
+    {
+        "storeId": "k97c1g8sh80x2992fpt0jwjvzs88y29n",
+        "productId": "j57at9xxgemsbhw4p5ef4t4yjs891xtx",
+        "batchNumber": "SEED-WWB-88y29n",
+        "quantity": 100,
+        "costPrice": 1800,
+        "receivedAt": 1782333046067
+    },
+    {
+        "storeId": "k97674jarht9pdcqze9ee7azah88ztdj",
+        "productId": "j572kq5my2zf2m2x7pt27zk51s890j8e",
+        "batchNumber": "SEED-BRA-88ztdj",
+        "quantity": 100,
+        "costPrice": 3600,
+        "receivedAt": 1782333046068
+    },
+    {
+        "storeId": "k97674jarht9pdcqze9ee7azah88ztdj",
+        "productId": "j576wwmf570cbgpvskkzv6fy6x891xzw",
+        "batchNumber": "SEED-PAJAMAS-88ztdj",
+        "quantity": 100,
+        "costPrice": 2500,
+        "receivedAt": 1782333046069
+    },
+    {
+        "storeId": "k97674jarht9pdcqze9ee7azah88ztdj",
+        "productId": "j57fn8ybxp6hsv053drtd9fbnh89076h",
+        "batchNumber": "SEED-GOWNS-88ztdj",
+        "quantity": 100,
+        "costPrice": 3200,
+        "receivedAt": 1782333046070
+    },
+    {
+        "storeId": "k97674jarht9pdcqze9ee7azah88ztdj",
+        "productId": "j577d0yv3gmq591yrwphdk4sdx8902gf",
+        "batchNumber": "SEED-COTTONSOCKS-88ztdj",
+        "quantity": 100,
+        "costPrice": 2500,
+        "receivedAt": 1782333046071
+    },
+    {
+        "storeId": "k97674jarht9pdcqze9ee7azah88ztdj",
+        "productId": "j57btxsd71cf769mhd45f53eps890mgy",
+        "batchNumber": "SEED-SCHOOLBA-88ztdj",
+        "quantity": 100,
+        "costPrice": 2400,
+        "receivedAt": 1782333046072
+    },
+    {
+        "storeId": "k97674jarht9pdcqze9ee7azah88ztdj",
+        "productId": "j57bmz2ph0ce3efdtq6f7cky41890nha",
+        "batchNumber": "SEED-SUMMERCA-88ztdj",
+        "quantity": 100,
+        "costPrice": 2000,
+        "receivedAt": 1782333046073
+    },
+    {
+        "storeId": "k97674jarht9pdcqze9ee7azah88ztdj",
+        "productId": "j57brhn2k52hm2sej3qgw8z16x890q56",
+        "batchNumber": "SEED-CHILDREN-88ztdj",
+        "quantity": 100,
+        "costPrice": 2500,
+        "receivedAt": 1782333046074
+    },
+    {
+        "storeId": "k97674jarht9pdcqze9ee7azah88ztdj",
+        "productId": "j5774j6rjtt58tf16sy6q9bbkd8900dh",
+        "batchNumber": "SEED-HEAVYTRA-88ztdj",
+        "quantity": 100,
+        "costPrice": 3800,
+        "receivedAt": 1782333046075
+    },
+    {
+        "storeId": "k97674jarht9pdcqze9ee7azah88ztdj",
+        "productId": "j575xvtgtm6afevqj5epfkn54989002s",
+        "batchNumber": "SEED-LIGHTTRA-88ztdj",
+        "quantity": 100,
+        "costPrice": 2500,
+        "receivedAt": 1782333046076
+    },
+    {
+        "storeId": "k97674jarht9pdcqze9ee7azah88ztdj",
+        "productId": "j575haxtrhahnxev26a8wwzkx98900j5",
+        "batchNumber": "SEED-MENSHEAV-88ztdj",
+        "quantity": 100,
+        "costPrice": 3200,
+        "receivedAt": 1782333046077
+    },
+    {
+        "storeId": "k97674jarht9pdcqze9ee7azah88ztdj",
+        "productId": "j57ewq4y5ppqqad6gmtd6ff2dx890s92",
+        "batchNumber": "SEED-MENSJEAN-88ztdj",
+        "quantity": 100,
+        "costPrice": 3600,
+        "receivedAt": 1782333046078
+    },
+    {
+        "storeId": "k97674jarht9pdcqze9ee7azah88ztdj",
+        "productId": "j57d9t4w84ekrw8vxndr106w4n8911pe",
+        "batchNumber": "SEED-LADIESWI-88ztdj",
+        "quantity": 100,
+        "costPrice": 1500,
+        "receivedAt": 1782333046079
+    },
+    {
+        "storeId": "k97674jarht9pdcqze9ee7azah88ztdj",
+        "productId": "j5755mq490y066rcpf1rf16tb5890ad7",
+        "batchNumber": "SEED-WINTERLE-88ztdj",
+        "quantity": 100,
+        "costPrice": 2200,
+        "receivedAt": 1782333046080
+    },
+    {
+        "storeId": "k97674jarht9pdcqze9ee7azah88ztdj",
+        "productId": "j57510vh5769c5tt5zxgwv8edh8907pr",
+        "batchNumber": "SEED-CW-88ztdj",
+        "quantity": 100,
+        "costPrice": 1800,
+        "receivedAt": 1782333046081
+    },
+    {
+        "storeId": "k97674jarht9pdcqze9ee7azah88ztdj",
+        "productId": "j57b0gsw4repbxaj5tbkjbb0q58908ad",
+        "batchNumber": "SEED-L09-88ztdj",
+        "quantity": 100,
+        "costPrice": 2800,
+        "receivedAt": 1782333046082
+    },
+    {
+        "storeId": "k97674jarht9pdcqze9ee7azah88ztdj",
+        "productId": "j57fnf9zn4xcktr0denc4tjvs5891c9p",
+        "batchNumber": "SEED-74W-88ztdj",
+        "quantity": 100,
+        "costPrice": 2500,
+        "receivedAt": 1782333046083
+    },
+    {
+        "storeId": "k97674jarht9pdcqze9ee7azah88ztdj",
+        "productId": "j57aw1vvv31112rgkkmfh6wx7h890948",
+        "batchNumber": "SEED-BLK-88ztdj",
+        "quantity": 100,
+        "costPrice": 2300,
+        "receivedAt": 1782333046084
+    },
+    {
+        "storeId": "k97674jarht9pdcqze9ee7azah88ztdj",
+        "productId": "j578x8vtdxhmftm9qm6p895rw5891re4",
+        "batchNumber": "SEED-NBLK-88ztdj",
+        "quantity": 100,
+        "costPrice": 3500,
+        "receivedAt": 1782333046085
+    },
+    {
+        "storeId": "k97674jarht9pdcqze9ee7azah88ztdj",
+        "productId": "j57fqvr7kxs765231h5tfj2g7d891q2j",
+        "batchNumber": "SEED-CO2-88ztdj",
+        "quantity": 100,
+        "costPrice": 2500,
+        "receivedAt": 1782333046086
+    },
+    {
+        "storeId": "k97674jarht9pdcqze9ee7azah88ztdj",
+        "productId": "j57487sddq0tjr4d2fd1nyydsh891bjd",
+        "batchNumber": "SEED-L01-A15-88ztdj",
+        "quantity": 100,
+        "costPrice": 2200,
+        "receivedAt": 1782333046087
+    },
+    {
+        "storeId": "k97674jarht9pdcqze9ee7azah88ztdj",
+        "productId": "j574gg6g1s32r3hw84x0zv66sh891tea",
+        "batchNumber": "SEED-M03-L01-88ztdj",
+        "quantity": 100,
+        "costPrice": 2800,
+        "receivedAt": 1782333046088
+    },
+    {
+        "storeId": "k97674jarht9pdcqze9ee7azah88ztdj",
+        "productId": "j570dzekzxj3x35wd7fhxfgphh890h3n",
+        "batchNumber": "SEED-M03-88ztdj",
+        "quantity": 100,
+        "costPrice": 3000,
+        "receivedAt": 1782333046089
+    },
+    {
+        "storeId": "k97674jarht9pdcqze9ee7azah88ztdj",
+        "productId": "j57ec78amq0waept1va74hkbx9891ynh",
+        "batchNumber": "SEED-WSW-88ztdj",
+        "quantity": 100,
+        "costPrice": 2000,
+        "receivedAt": 1782333046090
+    },
+    {
+        "storeId": "k97674jarht9pdcqze9ee7azah88ztdj",
+        "productId": "j574emwd67dk3xh0ag1n2czwc5890wer",
+        "batchNumber": "SEED-N07-88ztdj",
+        "quantity": 100,
+        "costPrice": 2500,
+        "receivedAt": 1782333046091
+    },
+    {
+        "storeId": "k97674jarht9pdcqze9ee7azah88ztdj",
+        "productId": "j57esqgdda1hbxppm2yc39z9sx891r4n",
+        "batchNumber": "SEED-SW-88ztdj",
+        "quantity": 100,
+        "costPrice": 2500,
+        "receivedAt": 1782333046092
+    },
+    {
+        "storeId": "k97674jarht9pdcqze9ee7azah88ztdj",
+        "productId": "j576x6vc5pc2tej4vz6sag935h890xek",
+        "batchNumber": "SEED-OT12-88ztdj",
+        "quantity": 100,
+        "costPrice": 3000,
+        "receivedAt": 1782333046093
+    },
+    {
+        "storeId": "k97674jarht9pdcqze9ee7azah88ztdj",
+        "productId": "j574gfkmhdeyfzeeypa9spvnn5890wfm",
+        "batchNumber": "SEED-A06-88ztdj",
+        "quantity": 100,
+        "costPrice": 2700,
+        "receivedAt": 1782333046094
+    },
+    {
+        "storeId": "k97674jarht9pdcqze9ee7azah88ztdj",
+        "productId": "j574h45eh1shr3hdfh1wc01k2s890s8c",
+        "batchNumber": "SEED-FL-88ztdj",
+        "quantity": 100,
+        "costPrice": 2700,
+        "receivedAt": 1782333046095
+    },
+    {
+        "storeId": "k97674jarht9pdcqze9ee7azah88ztdj",
+        "productId": "j5711crspq0rv00yt0fd7dhwg5890w0a",
+        "batchNumber": "SEED-BN-88ztdj",
+        "quantity": 100,
+        "costPrice": 2400,
+        "receivedAt": 1782333046096
+    },
+    {
+        "storeId": "k97674jarht9pdcqze9ee7azah88ztdj",
+        "productId": "j572qj5yjz0pvhq0106ce73m6s890z4t",
+        "batchNumber": "SEED-WTK-88ztdj",
+        "quantity": 100,
+        "costPrice": 2500,
+        "receivedAt": 1782333046097
+    },
+    {
+        "storeId": "k97674jarht9pdcqze9ee7azah88ztdj",
+        "productId": "j570rtmgzhcrp9vdvh1pkes9n9890ks6",
+        "batchNumber": "SEED-CMS-88ztdj",
+        "quantity": 100,
+        "costPrice": 1500,
+        "receivedAt": 1782333046098
+    },
+    {
+        "storeId": "k97674jarht9pdcqze9ee7azah88ztdj",
+        "productId": "j57f3p1g528zy7jwv3vfr0gj7d8900vy",
+        "batchNumber": "SEED-MB20-88ztdj",
+        "quantity": 100,
+        "costPrice": 2800,
+        "receivedAt": 1782333046099
+    },
+    {
+        "storeId": "k97674jarht9pdcqze9ee7azah88ztdj",
+        "productId": "j579brj7prwv7s5zh5jge98m3s8903pj",
+        "batchNumber": "SEED-MTK-88ztdj",
+        "quantity": 100,
+        "costPrice": 3000,
+        "receivedAt": 1782333046100
+    },
+    {
+        "storeId": "k97674jarht9pdcqze9ee7azah88ztdj",
+        "productId": "j5766aeamqxhmb5c162ztwtjqs891dem",
+        "batchNumber": "SEED-MMW-88ztdj",
+        "quantity": 100,
+        "costPrice": 4200,
+        "receivedAt": 1782333046101
+    },
+    {
+        "storeId": "k97674jarht9pdcqze9ee7azah88ztdj",
+        "productId": "j576jqt2323wydb9j37jweykk189027s",
+        "batchNumber": "SEED-MNF-88ztdj",
+        "quantity": 100,
+        "costPrice": 4500,
+        "receivedAt": 1782333046102
+    },
+    {
+        "storeId": "k97674jarht9pdcqze9ee7azah88ztdj",
+        "productId": "j577vgryesjcvyggjkcyhyqxgs891859",
+        "batchNumber": "SEED-MWF20-88ztdj",
+        "quantity": 100,
+        "costPrice": 3800,
+        "receivedAt": 1782333046103
+    },
+    {
+        "storeId": "k97674jarht9pdcqze9ee7azah88ztdj",
+        "productId": "j5701ss7pj7jfkyjjpa86dvcfx8919hy",
+        "batchNumber": "SEED-MWF25-88ztdj",
+        "quantity": 100,
+        "costPrice": 4200,
+        "receivedAt": 1782333046104
+    },
+    {
+        "storeId": "k97674jarht9pdcqze9ee7azah88ztdj",
+        "productId": "j57c6wqmnrv73z4vhbdnng0xe1891r1q",
+        "batchNumber": "SEED-AV20-88ztdj",
+        "quantity": 100,
+        "costPrice": 3800,
+        "receivedAt": 1782333046105
+    },
+    {
+        "storeId": "k97674jarht9pdcqze9ee7azah88ztdj",
+        "productId": "j576y2ckmfnfz2ka2w4qke414n890g9v",
+        "batchNumber": "SEED-AV25-88ztdj",
+        "quantity": 100,
+        "costPrice": 3000,
+        "receivedAt": 1782333046106
+    },
+    {
+        "storeId": "k97674jarht9pdcqze9ee7azah88ztdj",
+        "productId": "j57at9xxgemsbhw4p5ef4t4yjs891xtx",
+        "batchNumber": "SEED-WWB-88ztdj",
+        "quantity": 100,
+        "costPrice": 1800,
+        "receivedAt": 1782333046107
+    },
+    {
+        "storeId": "k978zq6z9kazgez3sdrb76vnex88zfet",
+        "productId": "j572kq5my2zf2m2x7pt27zk51s890j8e",
+        "batchNumber": "SEED-BRA-88zfet",
+        "quantity": 100,
+        "costPrice": 3600,
+        "receivedAt": 1782333046108
+    },
+    {
+        "storeId": "k978zq6z9kazgez3sdrb76vnex88zfet",
+        "productId": "j576wwmf570cbgpvskkzv6fy6x891xzw",
+        "batchNumber": "SEED-PAJAMAS-88zfet",
+        "quantity": 100,
+        "costPrice": 2500,
+        "receivedAt": 1782333046109
+    },
+    {
+        "storeId": "k978zq6z9kazgez3sdrb76vnex88zfet",
+        "productId": "j57fn8ybxp6hsv053drtd9fbnh89076h",
+        "batchNumber": "SEED-GOWNS-88zfet",
+        "quantity": 100,
+        "costPrice": 3200,
+        "receivedAt": 1782333046110
+    },
+    {
+        "storeId": "k978zq6z9kazgez3sdrb76vnex88zfet",
+        "productId": "j577d0yv3gmq591yrwphdk4sdx8902gf",
+        "batchNumber": "SEED-COTTONSOCKS-88zfet",
+        "quantity": 100,
+        "costPrice": 2500,
+        "receivedAt": 1782333046111
+    },
+    {
+        "storeId": "k978zq6z9kazgez3sdrb76vnex88zfet",
+        "productId": "j57btxsd71cf769mhd45f53eps890mgy",
+        "batchNumber": "SEED-SCHOOLBA-88zfet",
+        "quantity": 100,
+        "costPrice": 2400,
+        "receivedAt": 1782333046112
+    },
+    {
+        "storeId": "k978zq6z9kazgez3sdrb76vnex88zfet",
+        "productId": "j57bmz2ph0ce3efdtq6f7cky41890nha",
+        "batchNumber": "SEED-SUMMERCA-88zfet",
+        "quantity": 100,
+        "costPrice": 2000,
+        "receivedAt": 1782333046113
+    },
+    {
+        "storeId": "k978zq6z9kazgez3sdrb76vnex88zfet",
+        "productId": "j57brhn2k52hm2sej3qgw8z16x890q56",
+        "batchNumber": "SEED-CHILDREN-88zfet",
+        "quantity": 100,
+        "costPrice": 2500,
+        "receivedAt": 1782333046114
+    },
+    {
+        "storeId": "k978zq6z9kazgez3sdrb76vnex88zfet",
+        "productId": "j5774j6rjtt58tf16sy6q9bbkd8900dh",
+        "batchNumber": "SEED-HEAVYTRA-88zfet",
+        "quantity": 100,
+        "costPrice": 3800,
+        "receivedAt": 1782333046115
+    },
+    {
+        "storeId": "k978zq6z9kazgez3sdrb76vnex88zfet",
+        "productId": "j575xvtgtm6afevqj5epfkn54989002s",
+        "batchNumber": "SEED-LIGHTTRA-88zfet",
+        "quantity": 100,
+        "costPrice": 2500,
+        "receivedAt": 1782333046116
+    },
+    {
+        "storeId": "k978zq6z9kazgez3sdrb76vnex88zfet",
+        "productId": "j575haxtrhahnxev26a8wwzkx98900j5",
+        "batchNumber": "SEED-MENSHEAV-88zfet",
+        "quantity": 100,
+        "costPrice": 3200,
+        "receivedAt": 1782333046117
+    },
+    {
+        "storeId": "k978zq6z9kazgez3sdrb76vnex88zfet",
+        "productId": "j57ewq4y5ppqqad6gmtd6ff2dx890s92",
+        "batchNumber": "SEED-MENSJEAN-88zfet",
+        "quantity": 100,
+        "costPrice": 3600,
+        "receivedAt": 1782333046118
+    },
+    {
+        "storeId": "k978zq6z9kazgez3sdrb76vnex88zfet",
+        "productId": "j57d9t4w84ekrw8vxndr106w4n8911pe",
+        "batchNumber": "SEED-LADIESWI-88zfet",
+        "quantity": 100,
+        "costPrice": 1500,
+        "receivedAt": 1782333046119
+    },
+    {
+        "storeId": "k978zq6z9kazgez3sdrb76vnex88zfet",
+        "productId": "j5755mq490y066rcpf1rf16tb5890ad7",
+        "batchNumber": "SEED-WINTERLE-88zfet",
+        "quantity": 100,
+        "costPrice": 2200,
+        "receivedAt": 1782333046120
+    },
+    {
+        "storeId": "k978zq6z9kazgez3sdrb76vnex88zfet",
+        "productId": "j57510vh5769c5tt5zxgwv8edh8907pr",
+        "batchNumber": "SEED-CW-88zfet",
+        "quantity": 100,
+        "costPrice": 1800,
+        "receivedAt": 1782333046121
+    },
+    {
+        "storeId": "k978zq6z9kazgez3sdrb76vnex88zfet",
+        "productId": "j57b0gsw4repbxaj5tbkjbb0q58908ad",
+        "batchNumber": "SEED-L09-88zfet",
+        "quantity": 100,
+        "costPrice": 2800,
+        "receivedAt": 1782333046122
+    },
+    {
+        "storeId": "k978zq6z9kazgez3sdrb76vnex88zfet",
+        "productId": "j57fnf9zn4xcktr0denc4tjvs5891c9p",
+        "batchNumber": "SEED-74W-88zfet",
+        "quantity": 100,
+        "costPrice": 2500,
+        "receivedAt": 1782333046123
+    },
+    {
+        "storeId": "k978zq6z9kazgez3sdrb76vnex88zfet",
+        "productId": "j57aw1vvv31112rgkkmfh6wx7h890948",
+        "batchNumber": "SEED-BLK-88zfet",
+        "quantity": 100,
+        "costPrice": 2300,
+        "receivedAt": 1782333046124
+    },
+    {
+        "storeId": "k978zq6z9kazgez3sdrb76vnex88zfet",
+        "productId": "j578x8vtdxhmftm9qm6p895rw5891re4",
+        "batchNumber": "SEED-NBLK-88zfet",
+        "quantity": 100,
+        "costPrice": 3500,
+        "receivedAt": 1782333046125
+    },
+    {
+        "storeId": "k978zq6z9kazgez3sdrb76vnex88zfet",
+        "productId": "j57fqvr7kxs765231h5tfj2g7d891q2j",
+        "batchNumber": "SEED-CO2-88zfet",
+        "quantity": 100,
+        "costPrice": 2500,
+        "receivedAt": 1782333046126
+    },
+    {
+        "storeId": "k978zq6z9kazgez3sdrb76vnex88zfet",
+        "productId": "j57487sddq0tjr4d2fd1nyydsh891bjd",
+        "batchNumber": "SEED-L01-A15-88zfet",
+        "quantity": 100,
+        "costPrice": 2200,
+        "receivedAt": 1782333046127
+    },
+    {
+        "storeId": "k978zq6z9kazgez3sdrb76vnex88zfet",
+        "productId": "j574gg6g1s32r3hw84x0zv66sh891tea",
+        "batchNumber": "SEED-M03-L01-88zfet",
+        "quantity": 100,
+        "costPrice": 2800,
+        "receivedAt": 1782333046128
+    },
+    {
+        "storeId": "k978zq6z9kazgez3sdrb76vnex88zfet",
+        "productId": "j570dzekzxj3x35wd7fhxfgphh890h3n",
+        "batchNumber": "SEED-M03-88zfet",
+        "quantity": 100,
+        "costPrice": 3000,
+        "receivedAt": 1782333046129
+    },
+    {
+        "storeId": "k978zq6z9kazgez3sdrb76vnex88zfet",
+        "productId": "j57ec78amq0waept1va74hkbx9891ynh",
+        "batchNumber": "SEED-WSW-88zfet",
+        "quantity": 100,
+        "costPrice": 2000,
+        "receivedAt": 1782333046130
+    },
+    {
+        "storeId": "k978zq6z9kazgez3sdrb76vnex88zfet",
+        "productId": "j574emwd67dk3xh0ag1n2czwc5890wer",
+        "batchNumber": "SEED-N07-88zfet",
+        "quantity": 100,
+        "costPrice": 2500,
+        "receivedAt": 1782333046131
+    },
+    {
+        "storeId": "k978zq6z9kazgez3sdrb76vnex88zfet",
+        "productId": "j57esqgdda1hbxppm2yc39z9sx891r4n",
+        "batchNumber": "SEED-SW-88zfet",
+        "quantity": 100,
+        "costPrice": 2500,
+        "receivedAt": 1782333046132
+    },
+    {
+        "storeId": "k978zq6z9kazgez3sdrb76vnex88zfet",
+        "productId": "j576x6vc5pc2tej4vz6sag935h890xek",
+        "batchNumber": "SEED-OT12-88zfet",
+        "quantity": 100,
+        "costPrice": 3000,
+        "receivedAt": 1782333046133
+    },
+    {
+        "storeId": "k978zq6z9kazgez3sdrb76vnex88zfet",
+        "productId": "j574gfkmhdeyfzeeypa9spvnn5890wfm",
+        "batchNumber": "SEED-A06-88zfet",
+        "quantity": 100,
+        "costPrice": 2700,
+        "receivedAt": 1782333046134
+    },
+    {
+        "storeId": "k978zq6z9kazgez3sdrb76vnex88zfet",
+        "productId": "j574h45eh1shr3hdfh1wc01k2s890s8c",
+        "batchNumber": "SEED-FL-88zfet",
+        "quantity": 100,
+        "costPrice": 2700,
+        "receivedAt": 1782333046135
+    },
+    {
+        "storeId": "k978zq6z9kazgez3sdrb76vnex88zfet",
+        "productId": "j5711crspq0rv00yt0fd7dhwg5890w0a",
+        "batchNumber": "SEED-BN-88zfet",
+        "quantity": 100,
+        "costPrice": 2400,
+        "receivedAt": 1782333046136
+    },
+    {
+        "storeId": "k978zq6z9kazgez3sdrb76vnex88zfet",
+        "productId": "j572qj5yjz0pvhq0106ce73m6s890z4t",
+        "batchNumber": "SEED-WTK-88zfet",
+        "quantity": 100,
+        "costPrice": 2500,
+        "receivedAt": 1782333046137
+    },
+    {
+        "storeId": "k978zq6z9kazgez3sdrb76vnex88zfet",
+        "productId": "j570rtmgzhcrp9vdvh1pkes9n9890ks6",
+        "batchNumber": "SEED-CMS-88zfet",
+        "quantity": 100,
+        "costPrice": 1500,
+        "receivedAt": 1782333046138
+    },
+    {
+        "storeId": "k978zq6z9kazgez3sdrb76vnex88zfet",
+        "productId": "j57f3p1g528zy7jwv3vfr0gj7d8900vy",
+        "batchNumber": "SEED-MB20-88zfet",
+        "quantity": 100,
+        "costPrice": 2800,
+        "receivedAt": 1782333046139
+    },
+    {
+        "storeId": "k978zq6z9kazgez3sdrb76vnex88zfet",
+        "productId": "j579brj7prwv7s5zh5jge98m3s8903pj",
+        "batchNumber": "SEED-MTK-88zfet",
+        "quantity": 100,
+        "costPrice": 3000,
+        "receivedAt": 1782333046140
+    },
+    {
+        "storeId": "k978zq6z9kazgez3sdrb76vnex88zfet",
+        "productId": "j5766aeamqxhmb5c162ztwtjqs891dem",
+        "batchNumber": "SEED-MMW-88zfet",
+        "quantity": 100,
+        "costPrice": 4200,
+        "receivedAt": 1782333046141
+    },
+    {
+        "storeId": "k978zq6z9kazgez3sdrb76vnex88zfet",
+        "productId": "j576jqt2323wydb9j37jweykk189027s",
+        "batchNumber": "SEED-MNF-88zfet",
+        "quantity": 100,
+        "costPrice": 4500,
+        "receivedAt": 1782333046142
+    },
+    {
+        "storeId": "k978zq6z9kazgez3sdrb76vnex88zfet",
+        "productId": "j577vgryesjcvyggjkcyhyqxgs891859",
+        "batchNumber": "SEED-MWF20-88zfet",
+        "quantity": 100,
+        "costPrice": 3800,
+        "receivedAt": 1782333046143
+    },
+    {
+        "storeId": "k978zq6z9kazgez3sdrb76vnex88zfet",
+        "productId": "j5701ss7pj7jfkyjjpa86dvcfx8919hy",
+        "batchNumber": "SEED-MWF25-88zfet",
+        "quantity": 100,
+        "costPrice": 4200,
+        "receivedAt": 1782333046144
+    },
+    {
+        "storeId": "k978zq6z9kazgez3sdrb76vnex88zfet",
+        "productId": "j57c6wqmnrv73z4vhbdnng0xe1891r1q",
+        "batchNumber": "SEED-AV20-88zfet",
+        "quantity": 100,
+        "costPrice": 3800,
+        "receivedAt": 1782333046145
+    },
+    {
+        "storeId": "k978zq6z9kazgez3sdrb76vnex88zfet",
+        "productId": "j576y2ckmfnfz2ka2w4qke414n890g9v",
+        "batchNumber": "SEED-AV25-88zfet",
+        "quantity": 100,
+        "costPrice": 3000,
+        "receivedAt": 1782333046146
+    },
+    {
+        "storeId": "k978zq6z9kazgez3sdrb76vnex88zfet",
+        "productId": "j57at9xxgemsbhw4p5ef4t4yjs891xtx",
+        "batchNumber": "SEED-WWB-88zfet",
+        "quantity": 100,
+        "costPrice": 1800,
+        "receivedAt": 1782333046147
+    },
+    {
+        "storeId": "k97bgkf518t7ret3j8anwqjks988ytc0",
+        "productId": "j57by4b5x78zxy3twmmkcj9m5x8903pz",
+        "batchNumber": "SEED-TYR-NEW-155R12-88ytc0",
+        "quantity": 100,
+        "costPrice": 400,
+        "receivedAt": 1782333046148
+    },
+    {
+        "storeId": "k97bgkf518t7ret3j8anwqjks988ytc0",
+        "productId": "j57f7qj6s7e0ptcwm46rvhw6rn891p15",
+        "batchNumber": "SEED-TYR-NEW-17570R13-88ytc0",
+        "quantity": 100,
+        "costPrice": 400,
+        "receivedAt": 1782333046149
+    },
+    {
+        "storeId": "k97bgkf518t7ret3j8anwqjks988ytc0",
+        "productId": "j57fhd5ys2743h0wqqsb5xk9b5891ebe",
+        "batchNumber": "SEED-TYR-NEW-17565R14-88ytc0",
+        "quantity": 100,
+        "costPrice": 420,
+        "receivedAt": 1782333046150
+    },
+    {
+        "storeId": "k97bgkf518t7ret3j8anwqjks988ytc0",
+        "productId": "j57dzwkhzp8krew3faht93775x891v00",
+        "batchNumber": "SEED-TYR-NEW-16570R14-88ytc0",
+        "quantity": 100,
+        "costPrice": 420,
+        "receivedAt": 1782333046151
+    },
+    {
+        "storeId": "k97bgkf518t7ret3j8anwqjks988ytc0",
+        "productId": "j57bt5325k2e9qk3dv5p50bdf98902hq",
+        "batchNumber": "SEED-TYR-NEW-18560R14-88ytc0",
+        "quantity": 100,
+        "costPrice": 420,
+        "receivedAt": 1782333046152
+    },
+    {
+        "storeId": "k97bgkf518t7ret3j8anwqjks988ytc0",
+        "productId": "j57b86mmne025075w2f709mc2d8911ns",
+        "batchNumber": "SEED-TYR-NEW-17570R14-88ytc0",
+        "quantity": 100,
+        "costPrice": 420,
+        "receivedAt": 1782333046153
+    },
+    {
+        "storeId": "k97bgkf518t7ret3j8anwqjks988ytc0",
+        "productId": "j578dsy3998xh76cg5t19rqrhn890ept",
+        "batchNumber": "SEED-TYR-NEW-18570R14-88ytc0",
+        "quantity": 100,
+        "costPrice": 420,
+        "receivedAt": 1782333046154
+    },
+    {
+        "storeId": "k97bgkf518t7ret3j8anwqjks988ytc0",
+        "productId": "j5781fyt4q0c471p3z91gzhk7x891jh7",
+        "batchNumber": "SEED-TYR-NEW-19560R14-88ytc0",
+        "quantity": 100,
+        "costPrice": 420,
+        "receivedAt": 1782333046155
+    },
+    {
+        "storeId": "k97bgkf518t7ret3j8anwqjks988ytc0",
+        "productId": "j577chcnyr8zp2ckr0e0dfk5f5890atp",
+        "batchNumber": "SEED-TYR-NEW-195R14C-88ytc0",
+        "quantity": 100,
+        "costPrice": 700,
+        "receivedAt": 1782333046156
+    },
+    {
+        "storeId": "k97bgkf518t7ret3j8anwqjks988ytc0",
+        "productId": "j573shsgf9dkd8g2h4vt6pv2k1890pbs",
+        "batchNumber": "SEED-TYR-NEW-195R14C-WW-88ytc0",
+        "quantity": 100,
+        "costPrice": 800,
+        "receivedAt": 1782333046157
+    },
+    {
+        "storeId": "k97bgkf518t7ret3j8anwqjks988ytc0",
+        "productId": "j5730wxpzs9ym6b72n6qd8eybx8912fk",
+        "batchNumber": "SEED-TYR-NEW-20575R14-WW-88ytc0",
+        "quantity": 100,
+        "costPrice": 800,
+        "receivedAt": 1782333046158
+    },
+    {
+        "storeId": "k97bgkf518t7ret3j8anwqjks988ytc0",
+        "productId": "j572q1s0vp2rgjsrd8eer36sm5891xhv",
+        "batchNumber": "SEED-TYR-NEW-20570R15-88ytc0",
+        "quantity": 100,
+        "costPrice": 700,
+        "receivedAt": 1782333046159
+    },
+    {
+        "storeId": "k97bgkf518t7ret3j8anwqjks988ytc0",
+        "productId": "j57eyjgytba3xnc7eb1pedpsvd891q11",
+        "batchNumber": "SEED-TYR-NEW-19550R15-88ytc0",
+        "quantity": 100,
+        "costPrice": 550,
+        "receivedAt": 1782333046160
+    },
+    {
+        "storeId": "k97bgkf518t7ret3j8anwqjks988ytc0",
+        "productId": "j57abw67xbhx1rb8gn467pnf05891esd",
+        "batchNumber": "SEED-TYR-NEW-19555R15-88ytc0",
+        "quantity": 100,
+        "costPrice": 550,
+        "receivedAt": 1782333046161
+    },
+    {
+        "storeId": "k97bgkf518t7ret3j8anwqjks988ytc0",
+        "productId": "j57a3wsrjy55vaja56vxcjjr8n8916hv",
+        "batchNumber": "SEED-TYR-NEW-18560R15-88ytc0",
+        "quantity": 100,
+        "costPrice": 550,
+        "receivedAt": 1782333046162
+    },
+    {
+        "storeId": "k97bgkf518t7ret3j8anwqjks988ytc0",
+        "productId": "j5700xdttt2zdcnzs0y5yj285h891krr",
+        "batchNumber": "SEED-TYR-NEW-19565R15-88ytc0",
+        "quantity": 100,
+        "costPrice": 550,
+        "receivedAt": 1782333046163
+    },
+    {
+        "storeId": "k97bgkf518t7ret3j8anwqjks988ytc0",
+        "productId": "j571vrwjnktpdw18rtsr1ypt1s890jwm",
+        "batchNumber": "SEED-TYR-NEW-19560R15-88ytc0",
+        "quantity": 100,
+        "costPrice": 550,
+        "receivedAt": 1782333046164
+    },
+    {
+        "storeId": "k97bgkf518t7ret3j8anwqjks988ytc0",
+        "productId": "j57310gmr56kcxq97zey2rek0s890qtt",
+        "batchNumber": "SEED-TYR-NEW-17565R15-88ytc0",
+        "quantity": 100,
+        "costPrice": 550,
+        "receivedAt": 1782333046165
+    },
+    {
+        "storeId": "k97bgkf518t7ret3j8anwqjks988ytc0",
+        "productId": "j570zpfnbb1vvrq503cza0gdg9891764",
+        "batchNumber": "SEED-TYR-NEW-18565R15-88ytc0",
+        "quantity": 100,
+        "costPrice": 550,
+        "receivedAt": 1782333046166
+    },
+    {
+        "storeId": "k97bgkf518t7ret3j8anwqjks988ytc0",
+        "productId": "j57bynk4er0jq7axk3pysmpn5x8906ra",
+        "batchNumber": "SEED-TYR-NEW-21565R15-88ytc0",
+        "quantity": 100,
+        "costPrice": 650,
+        "receivedAt": 1782333046167
+    },
+    {
+        "storeId": "k97bgkf518t7ret3j8anwqjks988ytc0",
+        "productId": "j57fdr1qvf320b7nwyb27v1m518915hp",
+        "batchNumber": "SEED-TYR-NEW-20565R15-88ytc0",
+        "quantity": 100,
+        "costPrice": 650,
+        "receivedAt": 1782333046168
+    },
+    {
+        "storeId": "k97bgkf518t7ret3j8anwqjks988ytc0",
+        "productId": "j575fbyw0bhfrzwvz9c626qyps89072j",
+        "batchNumber": "SEED-TYR-NEW-20570R15-B-88ytc0",
+        "quantity": 100,
+        "costPrice": 750,
+        "receivedAt": 1782333046169
+    },
+    {
+        "storeId": "k97bgkf518t7ret3j8anwqjks988ytc0",
+        "productId": "j570j2rszqb1ntrsze38ykqdqh891s3v",
+        "batchNumber": "SEED-TYR-NEW-22570R15C-88ytc0",
+        "quantity": 100,
+        "costPrice": 800,
+        "receivedAt": 1782333046170
+    },
+    {
+        "storeId": "k97bgkf518t7ret3j8anwqjks988ytc0",
+        "productId": "j571fw4mnsmgsgvcm533rszfq1891q8s",
+        "batchNumber": "SEED-TYR-NEW-21515-88ytc0",
+        "quantity": 100,
+        "costPrice": 850,
+        "receivedAt": 1782333046171
+    },
+    {
+        "storeId": "k97bgkf518t7ret3j8anwqjks988ytc0",
+        "productId": "j57ds1ebth2jhb1fvp8pcvxw9h890mme",
+        "batchNumber": "SEED-TYR-NEW-21540R16-88ytc0",
+        "quantity": 100,
+        "costPrice": 600,
+        "receivedAt": 1782333046172
+    },
+    {
+        "storeId": "k97bgkf518t7ret3j8anwqjks988ytc0",
+        "productId": "j5703m76jf6m7sxfbr0201p6md89172m",
+        "batchNumber": "SEED-TYR-NEW-20545R16-88ytc0",
+        "quantity": 100,
+        "costPrice": 600,
+        "receivedAt": 1782333046173
+    },
+    {
+        "storeId": "k97bgkf518t7ret3j8anwqjks988ytc0",
+        "productId": "j57acr5yg24cy28atjbaj03vxn891t6g",
+        "batchNumber": "SEED-TYR-NEW-20550R16-88ytc0",
+        "quantity": 100,
+        "costPrice": 600,
+        "receivedAt": 1782333046174
+    },
+    {
+        "storeId": "k97bgkf518t7ret3j8anwqjks988ytc0",
+        "productId": "j57fdvxq3x2nt2862yqa7fgy9s891fdn",
+        "batchNumber": "SEED-TYR-NEW-20555R16-88ytc0",
+        "quantity": 100,
+        "costPrice": 600,
+        "receivedAt": 1782333046175
+    },
+    {
+        "storeId": "k97bgkf518t7ret3j8anwqjks988ytc0",
+        "productId": "j576c3d87w64dej9g08c4ah90n89067y",
+        "batchNumber": "SEED-TYR-NEW-22555R16-88ytc0",
+        "quantity": 100,
+        "costPrice": 600,
+        "receivedAt": 1782333046176
+    },
+    {
+        "storeId": "k97bgkf518t7ret3j8anwqjks988ytc0",
+        "productId": "j57avqwfn9pqhm9ynap3cpfps589075s",
+        "batchNumber": "SEED-TYR-NEW-22565R16C-88ytc0",
+        "quantity": 100,
+        "costPrice": 700,
+        "receivedAt": 1782333046177
+    },
+    {
+        "storeId": "k97bgkf518t7ret3j8anwqjks988ytc0",
+        "productId": "j573rx4rdsg5k650e7k4x5xdxd890eqk",
+        "batchNumber": "SEED-TYR-NEW-21570R16-88ytc0",
+        "quantity": 100,
+        "costPrice": 700,
+        "receivedAt": 1782333046178
+    },
+    {
+        "storeId": "k97bgkf518t7ret3j8anwqjks988ytc0",
+        "productId": "j57ec44jnvgemqbb2g921mpgqh890arh",
+        "batchNumber": "SEED-TYR-NEW-20575R16-88ytc0",
+        "quantity": 100,
+        "costPrice": 700,
+        "receivedAt": 1782333046179
+    },
+    {
+        "storeId": "k97bgkf518t7ret3j8anwqjks988ytc0",
+        "productId": "j577k26sq7agtx5jkb3n829h65890ykd",
+        "batchNumber": "SEED-TYR-NEW-19575R16-LT-88ytc0",
+        "quantity": 100,
+        "costPrice": 700,
+        "receivedAt": 1782333046180
+    },
+    {
+        "storeId": "k97bgkf518t7ret3j8anwqjks988ytc0",
+        "productId": "j5793evkcxea7w7k7dns353n7d890gqa",
+        "batchNumber": "SEED-TYR-NEW-21565R16-88ytc0",
+        "quantity": 100,
+        "costPrice": 650,
+        "receivedAt": 1782333046181
+    },
+    {
+        "storeId": "k97bgkf518t7ret3j8anwqjks988ytc0",
+        "productId": "j576n2a4bz4g9hqczkhh0m6nrn891b8a",
+        "batchNumber": "SEED-TYR-NEW-75016-88ytc0",
+        "quantity": 100,
+        "costPrice": 1400,
+        "receivedAt": 1782333046182
+    },
+    {
+        "storeId": "k97bgkf518t7ret3j8anwqjks988ytc0",
+        "productId": "j5766wtp3wwxe2my99c1xtb4zd891jgs",
+        "batchNumber": "SEED-TYR-NEW-26570R16-AT-88ytc0",
+        "quantity": 100,
+        "costPrice": 1200,
+        "receivedAt": 1782333046183
+    },
+    {
+        "storeId": "k97bgkf518t7ret3j8anwqjks988ytc0",
+        "productId": "j578aqynt55n23kr8tpkdbp22x8906ts",
+        "batchNumber": "SEED-TYR-NEW-24570R16-AT-88ytc0",
+        "quantity": 100,
+        "costPrice": 1200,
+        "receivedAt": 1782333046184
+    },
+    {
+        "storeId": "k97bgkf518t7ret3j8anwqjks988ytc0",
+        "productId": "j57433608p4nvpk43pwrqkph85891xme",
+        "batchNumber": "SEED-TYR-NEW-22550R17-88ytc0",
+        "quantity": 100,
+        "costPrice": 650,
+        "receivedAt": 1782333046185
+    },
+    {
+        "storeId": "k97bgkf518t7ret3j8anwqjks988ytc0",
+        "productId": "j57fmes0nm7kj45mf9tzze0pbd891s27",
+        "batchNumber": "SEED-TYR-NEW-22560R17-88ytc0",
+        "quantity": 100,
+        "costPrice": 650,
+        "receivedAt": 1782333046186
+    },
+    {
+        "storeId": "k97bgkf518t7ret3j8anwqjks988ytc0",
+        "productId": "j571e265625pvprfnc0jt5ycnn8907gd",
+        "batchNumber": "SEED-TYR-NEW-22565R17-AT-88ytc0",
+        "quantity": 100,
+        "costPrice": 700,
+        "receivedAt": 1782333046187
+    },
+    {
+        "storeId": "k97bgkf518t7ret3j8anwqjks988ytc0",
+        "productId": "j57b5zbevpkk36y3ctppm452z58905y2",
+        "batchNumber": "SEED-TYR-NEW-21560R17-88ytc0",
+        "quantity": 100,
+        "costPrice": 650,
+        "receivedAt": 1782333046188
+    },
+    {
+        "storeId": "k97bgkf518t7ret3j8anwqjks988ytc0",
+        "productId": "j57czwteg1t7dbqnt8h6gxkjan890xbf",
+        "batchNumber": "SEED-TYR-NEW-24545R17-88ytc0",
+        "quantity": 100,
+        "costPrice": 650,
+        "receivedAt": 1782333046189
+    },
+    {
+        "storeId": "k97bgkf518t7ret3j8anwqjks988ytc0",
+        "productId": "j5701m8xzqnmxz99da17jsk5ms891qs7",
+        "batchNumber": "SEED-TYR-NEW-21555R17-88ytc0",
+        "quantity": 100,
+        "costPrice": 650,
+        "receivedAt": 1782333046190
+    },
+    {
+        "storeId": "k97bgkf518t7ret3j8anwqjks988ytc0",
+        "productId": "j571jrccen5tjqe2cp5wpbs65h8912b1",
+        "batchNumber": "SEED-TYR-NEW-22545R17-88ytc0",
+        "quantity": 100,
+        "costPrice": 650,
+        "receivedAt": 1782333046191
+    },
+    {
+        "storeId": "k97bgkf518t7ret3j8anwqjks988ytc0",
+        "productId": "j578jydmdjtm614bdf4qzjrf8n890ep6",
+        "batchNumber": "SEED-TYR-NEW-21540R17-88ytc0",
+        "quantity": 100,
+        "costPrice": 650,
+        "receivedAt": 1782333046192
+    },
+    {
+        "storeId": "k97bgkf518t7ret3j8anwqjks988ytc0",
+        "productId": "j57f3fa58jpr9sxzp5sfjbv6sh890jpn",
+        "batchNumber": "SEED-TYR-NEW-20545R17-88ytc0",
+        "quantity": 100,
+        "costPrice": 650,
+        "receivedAt": 1782333046193
+    },
+    {
+        "storeId": "k97bgkf518t7ret3j8anwqjks988ytc0",
+        "productId": "j57c4asg7svv3fxyb66nmzr3xs890vty",
+        "batchNumber": "SEED-TYR-NEW-21545R17-88ytc0",
+        "quantity": 100,
+        "costPrice": 650,
+        "receivedAt": 1782333046194
+    },
+    {
+        "storeId": "k97bgkf518t7ret3j8anwqjks988ytc0",
+        "productId": "j57c1xhn5wr231pfsw4f5e4qx1890zvs",
+        "batchNumber": "SEED-TYR-NEW-26565R17-AT-88ytc0",
+        "quantity": 100,
+        "costPrice": 1200,
+        "receivedAt": 1782333046195
+    },
+    {
+        "storeId": "k97bgkf518t7ret3j8anwqjks988ytc0",
+        "productId": "j574hwrqxy9ec17bzej191zrsd890s47",
+        "batchNumber": "SEED-TYR-NEW-26565R17-AT-DURAN-88ytc0",
+        "quantity": 100,
+        "costPrice": 1600,
+        "receivedAt": 1782333046196
+    },
+    {
+        "storeId": "k97bgkf518t7ret3j8anwqjks988ytc0",
+        "productId": "j570wt012878541044ty26s8m989192c",
+        "batchNumber": "SEED-TYR-NEW-31X105R15-AT-88ytc0",
+        "quantity": 100,
+        "costPrice": 1200,
+        "receivedAt": 1782333046197
+    },
+    {
+        "storeId": "k97bgkf518t7ret3j8anwqjks988ytc0",
+        "productId": "j5707696e9f5j9mqdgf0ffgd9s8904eb",
+        "batchNumber": "SEED-TYR-NEW-23575R15-88ytc0",
+        "quantity": 100,
+        "costPrice": 1050,
+        "receivedAt": 1782333046198
+    },
+    {
+        "storeId": "k97bgkf518t7ret3j8anwqjks988ytc0",
+        "productId": "j578dfygbfyzqpj0tk40mbkvzh891353",
+        "batchNumber": "SEED-TYR-NEW-26560R18-AT-88ytc0",
+        "quantity": 100,
+        "costPrice": 1200,
+        "receivedAt": 1782333046199
+    },
+    {
+        "storeId": "k97bgkf518t7ret3j8anwqjks988ytc0",
+        "productId": "j57f2fsr0ayarggjx8mwy8gmrn891gkq",
+        "batchNumber": "SEED-TYR-NEW-22540R18-88ytc0",
+        "quantity": 100,
+        "costPrice": 700,
+        "receivedAt": 1782333046200
+    },
+    {
+        "storeId": "k97bgkf518t7ret3j8anwqjks988ytc0",
+        "productId": "j5728pg67wf5kvgrfw9cmc0sp1890mwj",
+        "batchNumber": "SEED-TYR-NEW-21540R18-88ytc0",
+        "quantity": 100,
+        "costPrice": 700,
+        "receivedAt": 1782333046201
+    },
+    {
+        "storeId": "k97bgkf518t7ret3j8anwqjks988ytc0",
+        "productId": "j5749pmdtyjqr37p1n9smbj63h891vg0",
+        "batchNumber": "SEED-TYR-NEW-22545R18-88ytc0",
+        "quantity": 100,
+        "costPrice": 700,
+        "receivedAt": 1782333046202
+    },
+    {
+        "storeId": "k97bgkf518t7ret3j8anwqjks988ytc0",
+        "productId": "j57e7k5d0xa985tw49aspk4xqn890d8z",
+        "batchNumber": "SEED-TYR-NEW-23540R18-88ytc0",
+        "quantity": 100,
+        "costPrice": 700,
+        "receivedAt": 1782333046203
+    },
+    {
+        "storeId": "k97bgkf518t7ret3j8anwqjks988ytc0",
+        "productId": "j5729vdefmz7gxq985p64rc1z5891ym9",
+        "batchNumber": "SEED-TYR-NEW-24540R18-88ytc0",
+        "quantity": 100,
+        "costPrice": 700,
+        "receivedAt": 1782333046204
+    },
+    {
+        "storeId": "k97bgkf518t7ret3j8anwqjks988ytc0",
+        "productId": "j574rzjgwn3wey04g3vffjnnts8902hm",
+        "batchNumber": "SEED-TYR-NEW-23535R19-88ytc0",
+        "quantity": 100,
+        "costPrice": 700,
+        "receivedAt": 1782333046205
+    },
+    {
+        "storeId": "k97bgkf518t7ret3j8anwqjks988ytc0",
+        "productId": "j573rej4y18n4sgda1ztrjajs5890qkj",
+        "batchNumber": "SEED-TYR-NEW-25535R19-88ytc0",
+        "quantity": 100,
+        "costPrice": 700,
+        "receivedAt": 1782333046206
+    },
+    {
+        "storeId": "k97bgkf518t7ret3j8anwqjks988ytc0",
+        "productId": "j572chjfngjx17m36yfxrm443d891qdn",
+        "batchNumber": "SEED-TYR-NEW-23555R19-88ytc0",
+        "quantity": 100,
+        "costPrice": 750,
+        "receivedAt": 1782333046207
+    },
+    {
+        "storeId": "k97bgkf518t7ret3j8anwqjks988ytc0",
+        "productId": "j572cj2prnqkyzd9mesc0fy1mn891nhx",
+        "batchNumber": "SEED-TYR-NEW-195R15C-88ytc0",
+        "quantity": 100,
+        "costPrice": 700,
+        "receivedAt": 1782333046208
+    },
+    {
+        "storeId": "k97bgkf518t7ret3j8anwqjks988ytc0",
+        "productId": "j577g9zj1qnhdh6dk0382ckkcs8906fs",
+        "batchNumber": "SEED-TYR-NEW-195R15C-WW-88ytc0",
+        "quantity": 100,
+        "costPrice": 950,
+        "receivedAt": 1782333046209
+    },
+    {
+        "storeId": "k97bgkf518t7ret3j8anwqjks988ytc0",
+        "productId": "j57d6jmjk0kv21e560acapymjd890wyj",
+        "batchNumber": "SEED-TYR-NEW-20575R15C-WW-88ytc0",
+        "quantity": 100,
+        "costPrice": 950,
+        "receivedAt": 1782333046210
+    },
+    {
+        "storeId": "k97bgkf518t7ret3j8anwqjks988ytc0",
+        "productId": "j57cnw2bmsf7fsjfrr47zmzmk98908hf",
+        "batchNumber": "SEED-TYR-NEW-25570R15-AT-88ytc0",
+        "quantity": 100,
+        "costPrice": 1200,
+        "receivedAt": 1782333046211
+    },
+    {
+        "storeId": "k97bgkf518t7ret3j8anwqjks988ytc0",
+        "productId": "j57b3781xrr8k0mj66kf8d3qd5891a1n",
+        "batchNumber": "SEED-TYR-NEW-21575R175-88ytc0",
+        "quantity": 100,
+        "costPrice": 1400,
+        "receivedAt": 1782333046212
+    },
+    {
+        "storeId": "k97bgkf518t7ret3j8anwqjks988ytc0",
+        "productId": "j57e9b7e1sw1trb2cc02x1w4fd891eg9",
+        "batchNumber": "SEED-TYR-NEW-21535R18-88ytc0",
+        "quantity": 100,
+        "costPrice": 700,
+        "receivedAt": 1782333046213
+    },
+    {
+        "storeId": "k97bgkf518t7ret3j8anwqjks988ytc0",
+        "productId": "j57c1edg91wkeh6ye5ttaac6cx8918z1",
+        "batchNumber": "SEED-TYR-NEW-165R13-88ytc0",
+        "quantity": 100,
+        "costPrice": 320,
+        "receivedAt": 1782333046214
+    },
+    {
+        "storeId": "k97bgkf518t7ret3j8anwqjks988ytc0",
+        "productId": "j572z0ekv693h16st7tm368035891yxg",
+        "batchNumber": "SEED-TYR-NEW-16570R13-88ytc0",
+        "quantity": 100,
+        "costPrice": 320,
+        "receivedAt": 1782333046215
+    },
+    {
+        "storeId": "k97bgkf518t7ret3j8anwqjks988ytc0",
+        "productId": "j57b2pww6dek31nc4j0r4kj6kh891cfr",
+        "batchNumber": "SEED-TYR-NEW-17565R14-A-88ytc0",
+        "quantity": 100,
+        "costPrice": 320,
+        "receivedAt": 1782333046216
+    },
+    {
+        "storeId": "k97bwnbxcfp018djmyq663zr0d88zer5",
+        "productId": "j57by4b5x78zxy3twmmkcj9m5x8903pz",
+        "batchNumber": "SEED-TYR-NEW-155R12-88zer5",
+        "quantity": 100,
+        "costPrice": 400,
+        "receivedAt": 1782333046217
+    },
+    {
+        "storeId": "k97bwnbxcfp018djmyq663zr0d88zer5",
+        "productId": "j57f7qj6s7e0ptcwm46rvhw6rn891p15",
+        "batchNumber": "SEED-TYR-NEW-17570R13-88zer5",
+        "quantity": 100,
+        "costPrice": 400,
+        "receivedAt": 1782333046218
+    },
+    {
+        "storeId": "k97bwnbxcfp018djmyq663zr0d88zer5",
+        "productId": "j57fhd5ys2743h0wqqsb5xk9b5891ebe",
+        "batchNumber": "SEED-TYR-NEW-17565R14-88zer5",
+        "quantity": 100,
+        "costPrice": 420,
+        "receivedAt": 1782333046219
+    },
+    {
+        "storeId": "k97bwnbxcfp018djmyq663zr0d88zer5",
+        "productId": "j57dzwkhzp8krew3faht93775x891v00",
+        "batchNumber": "SEED-TYR-NEW-16570R14-88zer5",
+        "quantity": 100,
+        "costPrice": 420,
+        "receivedAt": 1782333046220
+    },
+    {
+        "storeId": "k97bwnbxcfp018djmyq663zr0d88zer5",
+        "productId": "j57bt5325k2e9qk3dv5p50bdf98902hq",
+        "batchNumber": "SEED-TYR-NEW-18560R14-88zer5",
+        "quantity": 100,
+        "costPrice": 420,
+        "receivedAt": 1782333046221
+    },
+    {
+        "storeId": "k97bwnbxcfp018djmyq663zr0d88zer5",
+        "productId": "j57b86mmne025075w2f709mc2d8911ns",
+        "batchNumber": "SEED-TYR-NEW-17570R14-88zer5",
+        "quantity": 100,
+        "costPrice": 420,
+        "receivedAt": 1782333046222
+    },
+    {
+        "storeId": "k97bwnbxcfp018djmyq663zr0d88zer5",
+        "productId": "j578dsy3998xh76cg5t19rqrhn890ept",
+        "batchNumber": "SEED-TYR-NEW-18570R14-88zer5",
+        "quantity": 100,
+        "costPrice": 420,
+        "receivedAt": 1782333046223
+    },
+    {
+        "storeId": "k97bwnbxcfp018djmyq663zr0d88zer5",
+        "productId": "j5781fyt4q0c471p3z91gzhk7x891jh7",
+        "batchNumber": "SEED-TYR-NEW-19560R14-88zer5",
+        "quantity": 100,
+        "costPrice": 420,
+        "receivedAt": 1782333046224
+    },
+    {
+        "storeId": "k97bwnbxcfp018djmyq663zr0d88zer5",
+        "productId": "j577chcnyr8zp2ckr0e0dfk5f5890atp",
+        "batchNumber": "SEED-TYR-NEW-195R14C-88zer5",
+        "quantity": 100,
+        "costPrice": 700,
+        "receivedAt": 1782333046225
+    },
+    {
+        "storeId": "k97bwnbxcfp018djmyq663zr0d88zer5",
+        "productId": "j573shsgf9dkd8g2h4vt6pv2k1890pbs",
+        "batchNumber": "SEED-TYR-NEW-195R14C-WW-88zer5",
+        "quantity": 100,
+        "costPrice": 800,
+        "receivedAt": 1782333046226
+    },
+    {
+        "storeId": "k97bwnbxcfp018djmyq663zr0d88zer5",
+        "productId": "j5730wxpzs9ym6b72n6qd8eybx8912fk",
+        "batchNumber": "SEED-TYR-NEW-20575R14-WW-88zer5",
+        "quantity": 100,
+        "costPrice": 800,
+        "receivedAt": 1782333046227
+    },
+    {
+        "storeId": "k97bwnbxcfp018djmyq663zr0d88zer5",
+        "productId": "j572q1s0vp2rgjsrd8eer36sm5891xhv",
+        "batchNumber": "SEED-TYR-NEW-20570R15-88zer5",
+        "quantity": 100,
+        "costPrice": 700,
+        "receivedAt": 1782333046228
+    },
+    {
+        "storeId": "k97bwnbxcfp018djmyq663zr0d88zer5",
+        "productId": "j57eyjgytba3xnc7eb1pedpsvd891q11",
+        "batchNumber": "SEED-TYR-NEW-19550R15-88zer5",
+        "quantity": 100,
+        "costPrice": 550,
+        "receivedAt": 1782333046229
+    },
+    {
+        "storeId": "k97bwnbxcfp018djmyq663zr0d88zer5",
+        "productId": "j57abw67xbhx1rb8gn467pnf05891esd",
+        "batchNumber": "SEED-TYR-NEW-19555R15-88zer5",
+        "quantity": 100,
+        "costPrice": 550,
+        "receivedAt": 1782333046230
+    },
+    {
+        "storeId": "k97bwnbxcfp018djmyq663zr0d88zer5",
+        "productId": "j57a3wsrjy55vaja56vxcjjr8n8916hv",
+        "batchNumber": "SEED-TYR-NEW-18560R15-88zer5",
+        "quantity": 100,
+        "costPrice": 550,
+        "receivedAt": 1782333046231
+    },
+    {
+        "storeId": "k97bwnbxcfp018djmyq663zr0d88zer5",
+        "productId": "j5700xdttt2zdcnzs0y5yj285h891krr",
+        "batchNumber": "SEED-TYR-NEW-19565R15-88zer5",
+        "quantity": 100,
+        "costPrice": 550,
+        "receivedAt": 1782333046232
+    },
+    {
+        "storeId": "k97bwnbxcfp018djmyq663zr0d88zer5",
+        "productId": "j571vrwjnktpdw18rtsr1ypt1s890jwm",
+        "batchNumber": "SEED-TYR-NEW-19560R15-88zer5",
+        "quantity": 100,
+        "costPrice": 550,
+        "receivedAt": 1782333046233
+    },
+    {
+        "storeId": "k97bwnbxcfp018djmyq663zr0d88zer5",
+        "productId": "j57310gmr56kcxq97zey2rek0s890qtt",
+        "batchNumber": "SEED-TYR-NEW-17565R15-88zer5",
+        "quantity": 100,
+        "costPrice": 550,
+        "receivedAt": 1782333046234
+    },
+    {
+        "storeId": "k97bwnbxcfp018djmyq663zr0d88zer5",
+        "productId": "j570zpfnbb1vvrq503cza0gdg9891764",
+        "batchNumber": "SEED-TYR-NEW-18565R15-88zer5",
+        "quantity": 100,
+        "costPrice": 550,
+        "receivedAt": 1782333046235
+    },
+    {
+        "storeId": "k97bwnbxcfp018djmyq663zr0d88zer5",
+        "productId": "j57bynk4er0jq7axk3pysmpn5x8906ra",
+        "batchNumber": "SEED-TYR-NEW-21565R15-88zer5",
+        "quantity": 100,
+        "costPrice": 650,
+        "receivedAt": 1782333046236
+    },
+    {
+        "storeId": "k97bwnbxcfp018djmyq663zr0d88zer5",
+        "productId": "j57fdr1qvf320b7nwyb27v1m518915hp",
+        "batchNumber": "SEED-TYR-NEW-20565R15-88zer5",
+        "quantity": 100,
+        "costPrice": 650,
+        "receivedAt": 1782333046237
+    },
+    {
+        "storeId": "k97bwnbxcfp018djmyq663zr0d88zer5",
+        "productId": "j575fbyw0bhfrzwvz9c626qyps89072j",
+        "batchNumber": "SEED-TYR-NEW-20570R15-B-88zer5",
+        "quantity": 100,
+        "costPrice": 750,
+        "receivedAt": 1782333046238
+    },
+    {
+        "storeId": "k97bwnbxcfp018djmyq663zr0d88zer5",
+        "productId": "j570j2rszqb1ntrsze38ykqdqh891s3v",
+        "batchNumber": "SEED-TYR-NEW-22570R15C-88zer5",
+        "quantity": 100,
+        "costPrice": 800,
+        "receivedAt": 1782333046239
+    },
+    {
+        "storeId": "k97bwnbxcfp018djmyq663zr0d88zer5",
+        "productId": "j571fw4mnsmgsgvcm533rszfq1891q8s",
+        "batchNumber": "SEED-TYR-NEW-21515-88zer5",
+        "quantity": 100,
+        "costPrice": 850,
+        "receivedAt": 1782333046240
+    },
+    {
+        "storeId": "k97bwnbxcfp018djmyq663zr0d88zer5",
+        "productId": "j57ds1ebth2jhb1fvp8pcvxw9h890mme",
+        "batchNumber": "SEED-TYR-NEW-21540R16-88zer5",
+        "quantity": 100,
+        "costPrice": 600,
+        "receivedAt": 1782333046241
+    },
+    {
+        "storeId": "k97bwnbxcfp018djmyq663zr0d88zer5",
+        "productId": "j5703m76jf6m7sxfbr0201p6md89172m",
+        "batchNumber": "SEED-TYR-NEW-20545R16-88zer5",
+        "quantity": 100,
+        "costPrice": 600,
+        "receivedAt": 1782333046242
+    },
+    {
+        "storeId": "k97bwnbxcfp018djmyq663zr0d88zer5",
+        "productId": "j57acr5yg24cy28atjbaj03vxn891t6g",
+        "batchNumber": "SEED-TYR-NEW-20550R16-88zer5",
+        "quantity": 100,
+        "costPrice": 600,
+        "receivedAt": 1782333046243
+    },
+    {
+        "storeId": "k97bwnbxcfp018djmyq663zr0d88zer5",
+        "productId": "j57fdvxq3x2nt2862yqa7fgy9s891fdn",
+        "batchNumber": "SEED-TYR-NEW-20555R16-88zer5",
+        "quantity": 100,
+        "costPrice": 600,
+        "receivedAt": 1782333046244
+    },
+    {
+        "storeId": "k97bwnbxcfp018djmyq663zr0d88zer5",
+        "productId": "j576c3d87w64dej9g08c4ah90n89067y",
+        "batchNumber": "SEED-TYR-NEW-22555R16-88zer5",
+        "quantity": 100,
+        "costPrice": 600,
+        "receivedAt": 1782333046245
+    },
+    {
+        "storeId": "k97bwnbxcfp018djmyq663zr0d88zer5",
+        "productId": "j57avqwfn9pqhm9ynap3cpfps589075s",
+        "batchNumber": "SEED-TYR-NEW-22565R16C-88zer5",
+        "quantity": 100,
+        "costPrice": 700,
+        "receivedAt": 1782333046246
+    },
+    {
+        "storeId": "k97bwnbxcfp018djmyq663zr0d88zer5",
+        "productId": "j573rx4rdsg5k650e7k4x5xdxd890eqk",
+        "batchNumber": "SEED-TYR-NEW-21570R16-88zer5",
+        "quantity": 100,
+        "costPrice": 700,
+        "receivedAt": 1782333046247
+    },
+    {
+        "storeId": "k97bwnbxcfp018djmyq663zr0d88zer5",
+        "productId": "j57ec44jnvgemqbb2g921mpgqh890arh",
+        "batchNumber": "SEED-TYR-NEW-20575R16-88zer5",
+        "quantity": 100,
+        "costPrice": 700,
+        "receivedAt": 1782333046248
+    },
+    {
+        "storeId": "k97bwnbxcfp018djmyq663zr0d88zer5",
+        "productId": "j577k26sq7agtx5jkb3n829h65890ykd",
+        "batchNumber": "SEED-TYR-NEW-19575R16-LT-88zer5",
+        "quantity": 100,
+        "costPrice": 700,
+        "receivedAt": 1782333046249
+    },
+    {
+        "storeId": "k97bwnbxcfp018djmyq663zr0d88zer5",
+        "productId": "j5793evkcxea7w7k7dns353n7d890gqa",
+        "batchNumber": "SEED-TYR-NEW-21565R16-88zer5",
+        "quantity": 100,
+        "costPrice": 650,
+        "receivedAt": 1782333046250
+    },
+    {
+        "storeId": "k97bwnbxcfp018djmyq663zr0d88zer5",
+        "productId": "j576n2a4bz4g9hqczkhh0m6nrn891b8a",
+        "batchNumber": "SEED-TYR-NEW-75016-88zer5",
+        "quantity": 100,
+        "costPrice": 1400,
+        "receivedAt": 1782333046251
+    },
+    {
+        "storeId": "k97bwnbxcfp018djmyq663zr0d88zer5",
+        "productId": "j5766wtp3wwxe2my99c1xtb4zd891jgs",
+        "batchNumber": "SEED-TYR-NEW-26570R16-AT-88zer5",
+        "quantity": 100,
+        "costPrice": 1200,
+        "receivedAt": 1782333046252
+    },
+    {
+        "storeId": "k97bwnbxcfp018djmyq663zr0d88zer5",
+        "productId": "j578aqynt55n23kr8tpkdbp22x8906ts",
+        "batchNumber": "SEED-TYR-NEW-24570R16-AT-88zer5",
+        "quantity": 100,
+        "costPrice": 1200,
+        "receivedAt": 1782333046253
+    },
+    {
+        "storeId": "k97bwnbxcfp018djmyq663zr0d88zer5",
+        "productId": "j57433608p4nvpk43pwrqkph85891xme",
+        "batchNumber": "SEED-TYR-NEW-22550R17-88zer5",
+        "quantity": 100,
+        "costPrice": 650,
+        "receivedAt": 1782333046254
+    },
+    {
+        "storeId": "k97bwnbxcfp018djmyq663zr0d88zer5",
+        "productId": "j57fmes0nm7kj45mf9tzze0pbd891s27",
+        "batchNumber": "SEED-TYR-NEW-22560R17-88zer5",
+        "quantity": 100,
+        "costPrice": 650,
+        "receivedAt": 1782333046255
+    },
+    {
+        "storeId": "k97bwnbxcfp018djmyq663zr0d88zer5",
+        "productId": "j571e265625pvprfnc0jt5ycnn8907gd",
+        "batchNumber": "SEED-TYR-NEW-22565R17-AT-88zer5",
+        "quantity": 100,
+        "costPrice": 700,
+        "receivedAt": 1782333046256
+    },
+    {
+        "storeId": "k97bwnbxcfp018djmyq663zr0d88zer5",
+        "productId": "j57b5zbevpkk36y3ctppm452z58905y2",
+        "batchNumber": "SEED-TYR-NEW-21560R17-88zer5",
+        "quantity": 100,
+        "costPrice": 650,
+        "receivedAt": 1782333046257
+    },
+    {
+        "storeId": "k97bwnbxcfp018djmyq663zr0d88zer5",
+        "productId": "j57czwteg1t7dbqnt8h6gxkjan890xbf",
+        "batchNumber": "SEED-TYR-NEW-24545R17-88zer5",
+        "quantity": 100,
+        "costPrice": 650,
+        "receivedAt": 1782333046258
+    },
+    {
+        "storeId": "k97bwnbxcfp018djmyq663zr0d88zer5",
+        "productId": "j5701m8xzqnmxz99da17jsk5ms891qs7",
+        "batchNumber": "SEED-TYR-NEW-21555R17-88zer5",
+        "quantity": 100,
+        "costPrice": 650,
+        "receivedAt": 1782333046259
+    },
+    {
+        "storeId": "k97bwnbxcfp018djmyq663zr0d88zer5",
+        "productId": "j571jrccen5tjqe2cp5wpbs65h8912b1",
+        "batchNumber": "SEED-TYR-NEW-22545R17-88zer5",
+        "quantity": 100,
+        "costPrice": 650,
+        "receivedAt": 1782333046260
+    },
+    {
+        "storeId": "k97bwnbxcfp018djmyq663zr0d88zer5",
+        "productId": "j578jydmdjtm614bdf4qzjrf8n890ep6",
+        "batchNumber": "SEED-TYR-NEW-21540R17-88zer5",
+        "quantity": 100,
+        "costPrice": 650,
+        "receivedAt": 1782333046261
+    },
+    {
+        "storeId": "k97bwnbxcfp018djmyq663zr0d88zer5",
+        "productId": "j57f3fa58jpr9sxzp5sfjbv6sh890jpn",
+        "batchNumber": "SEED-TYR-NEW-20545R17-88zer5",
+        "quantity": 100,
+        "costPrice": 650,
+        "receivedAt": 1782333046262
+    },
+    {
+        "storeId": "k97bwnbxcfp018djmyq663zr0d88zer5",
+        "productId": "j57c4asg7svv3fxyb66nmzr3xs890vty",
+        "batchNumber": "SEED-TYR-NEW-21545R17-88zer5",
+        "quantity": 100,
+        "costPrice": 650,
+        "receivedAt": 1782333046263
+    },
+    {
+        "storeId": "k97bwnbxcfp018djmyq663zr0d88zer5",
+        "productId": "j57c1xhn5wr231pfsw4f5e4qx1890zvs",
+        "batchNumber": "SEED-TYR-NEW-26565R17-AT-88zer5",
+        "quantity": 100,
+        "costPrice": 1200,
+        "receivedAt": 1782333046264
+    },
+    {
+        "storeId": "k97bwnbxcfp018djmyq663zr0d88zer5",
+        "productId": "j574hwrqxy9ec17bzej191zrsd890s47",
+        "batchNumber": "SEED-TYR-NEW-26565R17-AT-DURAN-88zer5",
+        "quantity": 100,
+        "costPrice": 1600,
+        "receivedAt": 1782333046265
+    },
+    {
+        "storeId": "k97bwnbxcfp018djmyq663zr0d88zer5",
+        "productId": "j570wt012878541044ty26s8m989192c",
+        "batchNumber": "SEED-TYR-NEW-31X105R15-AT-88zer5",
+        "quantity": 100,
+        "costPrice": 1200,
+        "receivedAt": 1782333046266
+    },
+    {
+        "storeId": "k97bwnbxcfp018djmyq663zr0d88zer5",
+        "productId": "j5707696e9f5j9mqdgf0ffgd9s8904eb",
+        "batchNumber": "SEED-TYR-NEW-23575R15-88zer5",
+        "quantity": 100,
+        "costPrice": 1050,
+        "receivedAt": 1782333046267
+    },
+    {
+        "storeId": "k97bwnbxcfp018djmyq663zr0d88zer5",
+        "productId": "j578dfygbfyzqpj0tk40mbkvzh891353",
+        "batchNumber": "SEED-TYR-NEW-26560R18-AT-88zer5",
+        "quantity": 100,
+        "costPrice": 1200,
+        "receivedAt": 1782333046268
+    },
+    {
+        "storeId": "k97bwnbxcfp018djmyq663zr0d88zer5",
+        "productId": "j57f2fsr0ayarggjx8mwy8gmrn891gkq",
+        "batchNumber": "SEED-TYR-NEW-22540R18-88zer5",
+        "quantity": 100,
+        "costPrice": 700,
+        "receivedAt": 1782333046269
+    },
+    {
+        "storeId": "k97bwnbxcfp018djmyq663zr0d88zer5",
+        "productId": "j5728pg67wf5kvgrfw9cmc0sp1890mwj",
+        "batchNumber": "SEED-TYR-NEW-21540R18-88zer5",
+        "quantity": 100,
+        "costPrice": 700,
+        "receivedAt": 1782333046270
+    },
+    {
+        "storeId": "k97bwnbxcfp018djmyq663zr0d88zer5",
+        "productId": "j5749pmdtyjqr37p1n9smbj63h891vg0",
+        "batchNumber": "SEED-TYR-NEW-22545R18-88zer5",
+        "quantity": 100,
+        "costPrice": 700,
+        "receivedAt": 1782333046271
+    },
+    {
+        "storeId": "k97bwnbxcfp018djmyq663zr0d88zer5",
+        "productId": "j57e7k5d0xa985tw49aspk4xqn890d8z",
+        "batchNumber": "SEED-TYR-NEW-23540R18-88zer5",
+        "quantity": 100,
+        "costPrice": 700,
+        "receivedAt": 1782333046272
+    },
+    {
+        "storeId": "k97bwnbxcfp018djmyq663zr0d88zer5",
+        "productId": "j5729vdefmz7gxq985p64rc1z5891ym9",
+        "batchNumber": "SEED-TYR-NEW-24540R18-88zer5",
+        "quantity": 100,
+        "costPrice": 700,
+        "receivedAt": 1782333046273
+    },
+    {
+        "storeId": "k97bwnbxcfp018djmyq663zr0d88zer5",
+        "productId": "j574rzjgwn3wey04g3vffjnnts8902hm",
+        "batchNumber": "SEED-TYR-NEW-23535R19-88zer5",
+        "quantity": 100,
+        "costPrice": 700,
+        "receivedAt": 1782333046274
+    },
+    {
+        "storeId": "k97bwnbxcfp018djmyq663zr0d88zer5",
+        "productId": "j573rej4y18n4sgda1ztrjajs5890qkj",
+        "batchNumber": "SEED-TYR-NEW-25535R19-88zer5",
+        "quantity": 100,
+        "costPrice": 700,
+        "receivedAt": 1782333046275
+    },
+    {
+        "storeId": "k97bwnbxcfp018djmyq663zr0d88zer5",
+        "productId": "j572chjfngjx17m36yfxrm443d891qdn",
+        "batchNumber": "SEED-TYR-NEW-23555R19-88zer5",
+        "quantity": 100,
+        "costPrice": 750,
+        "receivedAt": 1782333046276
+    },
+    {
+        "storeId": "k97bwnbxcfp018djmyq663zr0d88zer5",
+        "productId": "j572cj2prnqkyzd9mesc0fy1mn891nhx",
+        "batchNumber": "SEED-TYR-NEW-195R15C-88zer5",
+        "quantity": 100,
+        "costPrice": 700,
+        "receivedAt": 1782333046277
+    },
+    {
+        "storeId": "k97bwnbxcfp018djmyq663zr0d88zer5",
+        "productId": "j577g9zj1qnhdh6dk0382ckkcs8906fs",
+        "batchNumber": "SEED-TYR-NEW-195R15C-WW-88zer5",
+        "quantity": 100,
+        "costPrice": 950,
+        "receivedAt": 1782333046278
+    },
+    {
+        "storeId": "k97bwnbxcfp018djmyq663zr0d88zer5",
+        "productId": "j57d6jmjk0kv21e560acapymjd890wyj",
+        "batchNumber": "SEED-TYR-NEW-20575R15C-WW-88zer5",
+        "quantity": 100,
+        "costPrice": 950,
+        "receivedAt": 1782333046279
+    },
+    {
+        "storeId": "k97bwnbxcfp018djmyq663zr0d88zer5",
+        "productId": "j57cnw2bmsf7fsjfrr47zmzmk98908hf",
+        "batchNumber": "SEED-TYR-NEW-25570R15-AT-88zer5",
+        "quantity": 100,
+        "costPrice": 1200,
+        "receivedAt": 1782333046280
+    },
+    {
+        "storeId": "k97bwnbxcfp018djmyq663zr0d88zer5",
+        "productId": "j57b3781xrr8k0mj66kf8d3qd5891a1n",
+        "batchNumber": "SEED-TYR-NEW-21575R175-88zer5",
+        "quantity": 100,
+        "costPrice": 1400,
+        "receivedAt": 1782333046281
+    },
+    {
+        "storeId": "k97bwnbxcfp018djmyq663zr0d88zer5",
+        "productId": "j57e9b7e1sw1trb2cc02x1w4fd891eg9",
+        "batchNumber": "SEED-TYR-NEW-21535R18-88zer5",
+        "quantity": 100,
+        "costPrice": 700,
+        "receivedAt": 1782333046282
+    },
+    {
+        "storeId": "k97bwnbxcfp018djmyq663zr0d88zer5",
+        "productId": "j57c1edg91wkeh6ye5ttaac6cx8918z1",
+        "batchNumber": "SEED-TYR-NEW-165R13-88zer5",
+        "quantity": 100,
+        "costPrice": 320,
+        "receivedAt": 1782333046283
+    },
+    {
+        "storeId": "k97bwnbxcfp018djmyq663zr0d88zer5",
+        "productId": "j572z0ekv693h16st7tm368035891yxg",
+        "batchNumber": "SEED-TYR-NEW-16570R13-88zer5",
+        "quantity": 100,
+        "costPrice": 320,
+        "receivedAt": 1782333046284
+    },
+    {
+        "storeId": "k97bwnbxcfp018djmyq663zr0d88zer5",
+        "productId": "j57b2pww6dek31nc4j0r4kj6kh891cfr",
+        "batchNumber": "SEED-TYR-NEW-17565R14-A-88zer5",
+        "quantity": 100,
+        "costPrice": 320,
+        "receivedAt": 1782333046285
+    },
+    {
+        "storeId": "k978g1tb070z0qpeqf2ehcaz2188y1jc",
+        "productId": "j57by4b5x78zxy3twmmkcj9m5x8903pz",
+        "batchNumber": "SEED-TYR-NEW-155R12-88y1jc",
+        "quantity": 100,
+        "costPrice": 400,
+        "receivedAt": 1782333046286
+    },
+    {
+        "storeId": "k978g1tb070z0qpeqf2ehcaz2188y1jc",
+        "productId": "j57f7qj6s7e0ptcwm46rvhw6rn891p15",
+        "batchNumber": "SEED-TYR-NEW-17570R13-88y1jc",
+        "quantity": 100,
+        "costPrice": 400,
+        "receivedAt": 1782333046287
+    },
+    {
+        "storeId": "k978g1tb070z0qpeqf2ehcaz2188y1jc",
+        "productId": "j57fhd5ys2743h0wqqsb5xk9b5891ebe",
+        "batchNumber": "SEED-TYR-NEW-17565R14-88y1jc",
+        "quantity": 100,
+        "costPrice": 420,
+        "receivedAt": 1782333046288
+    },
+    {
+        "storeId": "k978g1tb070z0qpeqf2ehcaz2188y1jc",
+        "productId": "j57dzwkhzp8krew3faht93775x891v00",
+        "batchNumber": "SEED-TYR-NEW-16570R14-88y1jc",
+        "quantity": 100,
+        "costPrice": 420,
+        "receivedAt": 1782333046289
+    },
+    {
+        "storeId": "k978g1tb070z0qpeqf2ehcaz2188y1jc",
+        "productId": "j57bt5325k2e9qk3dv5p50bdf98902hq",
+        "batchNumber": "SEED-TYR-NEW-18560R14-88y1jc",
+        "quantity": 100,
+        "costPrice": 420,
+        "receivedAt": 1782333046290
+    },
+    {
+        "storeId": "k978g1tb070z0qpeqf2ehcaz2188y1jc",
+        "productId": "j57b86mmne025075w2f709mc2d8911ns",
+        "batchNumber": "SEED-TYR-NEW-17570R14-88y1jc",
+        "quantity": 100,
+        "costPrice": 420,
+        "receivedAt": 1782333046291
+    },
+    {
+        "storeId": "k978g1tb070z0qpeqf2ehcaz2188y1jc",
+        "productId": "j578dsy3998xh76cg5t19rqrhn890ept",
+        "batchNumber": "SEED-TYR-NEW-18570R14-88y1jc",
+        "quantity": 100,
+        "costPrice": 420,
+        "receivedAt": 1782333046292
+    },
+    {
+        "storeId": "k978g1tb070z0qpeqf2ehcaz2188y1jc",
+        "productId": "j5781fyt4q0c471p3z91gzhk7x891jh7",
+        "batchNumber": "SEED-TYR-NEW-19560R14-88y1jc",
+        "quantity": 100,
+        "costPrice": 420,
+        "receivedAt": 1782333046293
+    },
+    {
+        "storeId": "k978g1tb070z0qpeqf2ehcaz2188y1jc",
+        "productId": "j577chcnyr8zp2ckr0e0dfk5f5890atp",
+        "batchNumber": "SEED-TYR-NEW-195R14C-88y1jc",
+        "quantity": 100,
+        "costPrice": 700,
+        "receivedAt": 1782333046294
+    },
+    {
+        "storeId": "k978g1tb070z0qpeqf2ehcaz2188y1jc",
+        "productId": "j573shsgf9dkd8g2h4vt6pv2k1890pbs",
+        "batchNumber": "SEED-TYR-NEW-195R14C-WW-88y1jc",
+        "quantity": 100,
+        "costPrice": 800,
+        "receivedAt": 1782333046295
+    },
+    {
+        "storeId": "k978g1tb070z0qpeqf2ehcaz2188y1jc",
+        "productId": "j5730wxpzs9ym6b72n6qd8eybx8912fk",
+        "batchNumber": "SEED-TYR-NEW-20575R14-WW-88y1jc",
+        "quantity": 100,
+        "costPrice": 800,
+        "receivedAt": 1782333046296
+    },
+    {
+        "storeId": "k978g1tb070z0qpeqf2ehcaz2188y1jc",
+        "productId": "j572q1s0vp2rgjsrd8eer36sm5891xhv",
+        "batchNumber": "SEED-TYR-NEW-20570R15-88y1jc",
+        "quantity": 100,
+        "costPrice": 700,
+        "receivedAt": 1782333046297
+    },
+    {
+        "storeId": "k978g1tb070z0qpeqf2ehcaz2188y1jc",
+        "productId": "j57eyjgytba3xnc7eb1pedpsvd891q11",
+        "batchNumber": "SEED-TYR-NEW-19550R15-88y1jc",
+        "quantity": 100,
+        "costPrice": 550,
+        "receivedAt": 1782333046298
+    },
+    {
+        "storeId": "k978g1tb070z0qpeqf2ehcaz2188y1jc",
+        "productId": "j57abw67xbhx1rb8gn467pnf05891esd",
+        "batchNumber": "SEED-TYR-NEW-19555R15-88y1jc",
+        "quantity": 100,
+        "costPrice": 550,
+        "receivedAt": 1782333046299
+    },
+    {
+        "storeId": "k978g1tb070z0qpeqf2ehcaz2188y1jc",
+        "productId": "j57a3wsrjy55vaja56vxcjjr8n8916hv",
+        "batchNumber": "SEED-TYR-NEW-18560R15-88y1jc",
+        "quantity": 100,
+        "costPrice": 550,
+        "receivedAt": 1782333046300
+    },
+    {
+        "storeId": "k978g1tb070z0qpeqf2ehcaz2188y1jc",
+        "productId": "j5700xdttt2zdcnzs0y5yj285h891krr",
+        "batchNumber": "SEED-TYR-NEW-19565R15-88y1jc",
+        "quantity": 100,
+        "costPrice": 550,
+        "receivedAt": 1782333046301
+    },
+    {
+        "storeId": "k978g1tb070z0qpeqf2ehcaz2188y1jc",
+        "productId": "j571vrwjnktpdw18rtsr1ypt1s890jwm",
+        "batchNumber": "SEED-TYR-NEW-19560R15-88y1jc",
+        "quantity": 100,
+        "costPrice": 550,
+        "receivedAt": 1782333046302
+    },
+    {
+        "storeId": "k978g1tb070z0qpeqf2ehcaz2188y1jc",
+        "productId": "j57310gmr56kcxq97zey2rek0s890qtt",
+        "batchNumber": "SEED-TYR-NEW-17565R15-88y1jc",
+        "quantity": 100,
+        "costPrice": 550,
+        "receivedAt": 1782333046303
+    },
+    {
+        "storeId": "k978g1tb070z0qpeqf2ehcaz2188y1jc",
+        "productId": "j570zpfnbb1vvrq503cza0gdg9891764",
+        "batchNumber": "SEED-TYR-NEW-18565R15-88y1jc",
+        "quantity": 100,
+        "costPrice": 550,
+        "receivedAt": 1782333046304
+    },
+    {
+        "storeId": "k978g1tb070z0qpeqf2ehcaz2188y1jc",
+        "productId": "j57bynk4er0jq7axk3pysmpn5x8906ra",
+        "batchNumber": "SEED-TYR-NEW-21565R15-88y1jc",
+        "quantity": 100,
+        "costPrice": 650,
+        "receivedAt": 1782333046305
+    },
+    {
+        "storeId": "k978g1tb070z0qpeqf2ehcaz2188y1jc",
+        "productId": "j57fdr1qvf320b7nwyb27v1m518915hp",
+        "batchNumber": "SEED-TYR-NEW-20565R15-88y1jc",
+        "quantity": 100,
+        "costPrice": 650,
+        "receivedAt": 1782333046306
+    },
+    {
+        "storeId": "k978g1tb070z0qpeqf2ehcaz2188y1jc",
+        "productId": "j575fbyw0bhfrzwvz9c626qyps89072j",
+        "batchNumber": "SEED-TYR-NEW-20570R15-B-88y1jc",
+        "quantity": 100,
+        "costPrice": 750,
+        "receivedAt": 1782333046307
+    },
+    {
+        "storeId": "k978g1tb070z0qpeqf2ehcaz2188y1jc",
+        "productId": "j570j2rszqb1ntrsze38ykqdqh891s3v",
+        "batchNumber": "SEED-TYR-NEW-22570R15C-88y1jc",
+        "quantity": 100,
+        "costPrice": 800,
+        "receivedAt": 1782333046308
+    },
+    {
+        "storeId": "k978g1tb070z0qpeqf2ehcaz2188y1jc",
+        "productId": "j571fw4mnsmgsgvcm533rszfq1891q8s",
+        "batchNumber": "SEED-TYR-NEW-21515-88y1jc",
+        "quantity": 100,
+        "costPrice": 850,
+        "receivedAt": 1782333046309
+    },
+    {
+        "storeId": "k978g1tb070z0qpeqf2ehcaz2188y1jc",
+        "productId": "j57ds1ebth2jhb1fvp8pcvxw9h890mme",
+        "batchNumber": "SEED-TYR-NEW-21540R16-88y1jc",
+        "quantity": 100,
+        "costPrice": 600,
+        "receivedAt": 1782333046310
+    },
+    {
+        "storeId": "k978g1tb070z0qpeqf2ehcaz2188y1jc",
+        "productId": "j5703m76jf6m7sxfbr0201p6md89172m",
+        "batchNumber": "SEED-TYR-NEW-20545R16-88y1jc",
+        "quantity": 100,
+        "costPrice": 600,
+        "receivedAt": 1782333046311
+    },
+    {
+        "storeId": "k978g1tb070z0qpeqf2ehcaz2188y1jc",
+        "productId": "j57acr5yg24cy28atjbaj03vxn891t6g",
+        "batchNumber": "SEED-TYR-NEW-20550R16-88y1jc",
+        "quantity": 100,
+        "costPrice": 600,
+        "receivedAt": 1782333046312
+    },
+    {
+        "storeId": "k978g1tb070z0qpeqf2ehcaz2188y1jc",
+        "productId": "j57fdvxq3x2nt2862yqa7fgy9s891fdn",
+        "batchNumber": "SEED-TYR-NEW-20555R16-88y1jc",
+        "quantity": 100,
+        "costPrice": 600,
+        "receivedAt": 1782333046313
+    },
+    {
+        "storeId": "k978g1tb070z0qpeqf2ehcaz2188y1jc",
+        "productId": "j576c3d87w64dej9g08c4ah90n89067y",
+        "batchNumber": "SEED-TYR-NEW-22555R16-88y1jc",
+        "quantity": 100,
+        "costPrice": 600,
+        "receivedAt": 1782333046314
+    },
+    {
+        "storeId": "k978g1tb070z0qpeqf2ehcaz2188y1jc",
+        "productId": "j57avqwfn9pqhm9ynap3cpfps589075s",
+        "batchNumber": "SEED-TYR-NEW-22565R16C-88y1jc",
+        "quantity": 100,
+        "costPrice": 700,
+        "receivedAt": 1782333046315
+    },
+    {
+        "storeId": "k978g1tb070z0qpeqf2ehcaz2188y1jc",
+        "productId": "j573rx4rdsg5k650e7k4x5xdxd890eqk",
+        "batchNumber": "SEED-TYR-NEW-21570R16-88y1jc",
+        "quantity": 100,
+        "costPrice": 700,
+        "receivedAt": 1782333046316
+    },
+    {
+        "storeId": "k978g1tb070z0qpeqf2ehcaz2188y1jc",
+        "productId": "j57ec44jnvgemqbb2g921mpgqh890arh",
+        "batchNumber": "SEED-TYR-NEW-20575R16-88y1jc",
+        "quantity": 100,
+        "costPrice": 700,
+        "receivedAt": 1782333046317
+    },
+    {
+        "storeId": "k978g1tb070z0qpeqf2ehcaz2188y1jc",
+        "productId": "j577k26sq7agtx5jkb3n829h65890ykd",
+        "batchNumber": "SEED-TYR-NEW-19575R16-LT-88y1jc",
+        "quantity": 100,
+        "costPrice": 700,
+        "receivedAt": 1782333046318
+    },
+    {
+        "storeId": "k978g1tb070z0qpeqf2ehcaz2188y1jc",
+        "productId": "j5793evkcxea7w7k7dns353n7d890gqa",
+        "batchNumber": "SEED-TYR-NEW-21565R16-88y1jc",
+        "quantity": 100,
+        "costPrice": 650,
+        "receivedAt": 1782333046319
+    },
+    {
+        "storeId": "k978g1tb070z0qpeqf2ehcaz2188y1jc",
+        "productId": "j576n2a4bz4g9hqczkhh0m6nrn891b8a",
+        "batchNumber": "SEED-TYR-NEW-75016-88y1jc",
+        "quantity": 100,
+        "costPrice": 1400,
+        "receivedAt": 1782333046320
+    },
+    {
+        "storeId": "k978g1tb070z0qpeqf2ehcaz2188y1jc",
+        "productId": "j5766wtp3wwxe2my99c1xtb4zd891jgs",
+        "batchNumber": "SEED-TYR-NEW-26570R16-AT-88y1jc",
+        "quantity": 100,
+        "costPrice": 1200,
+        "receivedAt": 1782333046321
+    },
+    {
+        "storeId": "k978g1tb070z0qpeqf2ehcaz2188y1jc",
+        "productId": "j578aqynt55n23kr8tpkdbp22x8906ts",
+        "batchNumber": "SEED-TYR-NEW-24570R16-AT-88y1jc",
+        "quantity": 100,
+        "costPrice": 1200,
+        "receivedAt": 1782333046322
+    },
+    {
+        "storeId": "k978g1tb070z0qpeqf2ehcaz2188y1jc",
+        "productId": "j57433608p4nvpk43pwrqkph85891xme",
+        "batchNumber": "SEED-TYR-NEW-22550R17-88y1jc",
+        "quantity": 100,
+        "costPrice": 650,
+        "receivedAt": 1782333046323
+    },
+    {
+        "storeId": "k978g1tb070z0qpeqf2ehcaz2188y1jc",
+        "productId": "j57fmes0nm7kj45mf9tzze0pbd891s27",
+        "batchNumber": "SEED-TYR-NEW-22560R17-88y1jc",
+        "quantity": 100,
+        "costPrice": 650,
+        "receivedAt": 1782333046324
+    },
+    {
+        "storeId": "k978g1tb070z0qpeqf2ehcaz2188y1jc",
+        "productId": "j571e265625pvprfnc0jt5ycnn8907gd",
+        "batchNumber": "SEED-TYR-NEW-22565R17-AT-88y1jc",
+        "quantity": 100,
+        "costPrice": 700,
+        "receivedAt": 1782333046325
+    },
+    {
+        "storeId": "k978g1tb070z0qpeqf2ehcaz2188y1jc",
+        "productId": "j57b5zbevpkk36y3ctppm452z58905y2",
+        "batchNumber": "SEED-TYR-NEW-21560R17-88y1jc",
+        "quantity": 100,
+        "costPrice": 650,
+        "receivedAt": 1782333046326
+    },
+    {
+        "storeId": "k978g1tb070z0qpeqf2ehcaz2188y1jc",
+        "productId": "j57czwteg1t7dbqnt8h6gxkjan890xbf",
+        "batchNumber": "SEED-TYR-NEW-24545R17-88y1jc",
+        "quantity": 100,
+        "costPrice": 650,
+        "receivedAt": 1782333046327
+    },
+    {
+        "storeId": "k978g1tb070z0qpeqf2ehcaz2188y1jc",
+        "productId": "j5701m8xzqnmxz99da17jsk5ms891qs7",
+        "batchNumber": "SEED-TYR-NEW-21555R17-88y1jc",
+        "quantity": 100,
+        "costPrice": 650,
+        "receivedAt": 1782333046328
+    },
+    {
+        "storeId": "k978g1tb070z0qpeqf2ehcaz2188y1jc",
+        "productId": "j571jrccen5tjqe2cp5wpbs65h8912b1",
+        "batchNumber": "SEED-TYR-NEW-22545R17-88y1jc",
+        "quantity": 100,
+        "costPrice": 650,
+        "receivedAt": 1782333046329
+    },
+    {
+        "storeId": "k978g1tb070z0qpeqf2ehcaz2188y1jc",
+        "productId": "j578jydmdjtm614bdf4qzjrf8n890ep6",
+        "batchNumber": "SEED-TYR-NEW-21540R17-88y1jc",
+        "quantity": 100,
+        "costPrice": 650,
+        "receivedAt": 1782333046330
+    },
+    {
+        "storeId": "k978g1tb070z0qpeqf2ehcaz2188y1jc",
+        "productId": "j57f3fa58jpr9sxzp5sfjbv6sh890jpn",
+        "batchNumber": "SEED-TYR-NEW-20545R17-88y1jc",
+        "quantity": 100,
+        "costPrice": 650,
+        "receivedAt": 1782333046331
+    },
+    {
+        "storeId": "k978g1tb070z0qpeqf2ehcaz2188y1jc",
+        "productId": "j57c4asg7svv3fxyb66nmzr3xs890vty",
+        "batchNumber": "SEED-TYR-NEW-21545R17-88y1jc",
+        "quantity": 100,
+        "costPrice": 650,
+        "receivedAt": 1782333046332
+    },
+    {
+        "storeId": "k978g1tb070z0qpeqf2ehcaz2188y1jc",
+        "productId": "j57c1xhn5wr231pfsw4f5e4qx1890zvs",
+        "batchNumber": "SEED-TYR-NEW-26565R17-AT-88y1jc",
+        "quantity": 100,
+        "costPrice": 1200,
+        "receivedAt": 1782333046333
+    },
+    {
+        "storeId": "k978g1tb070z0qpeqf2ehcaz2188y1jc",
+        "productId": "j574hwrqxy9ec17bzej191zrsd890s47",
+        "batchNumber": "SEED-TYR-NEW-26565R17-AT-DURAN-88y1jc",
+        "quantity": 100,
+        "costPrice": 1600,
+        "receivedAt": 1782333046334
+    },
+    {
+        "storeId": "k978g1tb070z0qpeqf2ehcaz2188y1jc",
+        "productId": "j570wt012878541044ty26s8m989192c",
+        "batchNumber": "SEED-TYR-NEW-31X105R15-AT-88y1jc",
+        "quantity": 100,
+        "costPrice": 1200,
+        "receivedAt": 1782333046335
+    },
+    {
+        "storeId": "k978g1tb070z0qpeqf2ehcaz2188y1jc",
+        "productId": "j5707696e9f5j9mqdgf0ffgd9s8904eb",
+        "batchNumber": "SEED-TYR-NEW-23575R15-88y1jc",
+        "quantity": 100,
+        "costPrice": 1050,
+        "receivedAt": 1782333046336
+    },
+    {
+        "storeId": "k978g1tb070z0qpeqf2ehcaz2188y1jc",
+        "productId": "j578dfygbfyzqpj0tk40mbkvzh891353",
+        "batchNumber": "SEED-TYR-NEW-26560R18-AT-88y1jc",
+        "quantity": 100,
+        "costPrice": 1200,
+        "receivedAt": 1782333046337
+    },
+    {
+        "storeId": "k978g1tb070z0qpeqf2ehcaz2188y1jc",
+        "productId": "j57f2fsr0ayarggjx8mwy8gmrn891gkq",
+        "batchNumber": "SEED-TYR-NEW-22540R18-88y1jc",
+        "quantity": 100,
+        "costPrice": 700,
+        "receivedAt": 1782333046338
+    },
+    {
+        "storeId": "k978g1tb070z0qpeqf2ehcaz2188y1jc",
+        "productId": "j5728pg67wf5kvgrfw9cmc0sp1890mwj",
+        "batchNumber": "SEED-TYR-NEW-21540R18-88y1jc",
+        "quantity": 100,
+        "costPrice": 700,
+        "receivedAt": 1782333046339
+    },
+    {
+        "storeId": "k978g1tb070z0qpeqf2ehcaz2188y1jc",
+        "productId": "j5749pmdtyjqr37p1n9smbj63h891vg0",
+        "batchNumber": "SEED-TYR-NEW-22545R18-88y1jc",
+        "quantity": 100,
+        "costPrice": 700,
+        "receivedAt": 1782333046340
+    },
+    {
+        "storeId": "k978g1tb070z0qpeqf2ehcaz2188y1jc",
+        "productId": "j57e7k5d0xa985tw49aspk4xqn890d8z",
+        "batchNumber": "SEED-TYR-NEW-23540R18-88y1jc",
+        "quantity": 100,
+        "costPrice": 700,
+        "receivedAt": 1782333046341
+    },
+    {
+        "storeId": "k978g1tb070z0qpeqf2ehcaz2188y1jc",
+        "productId": "j5729vdefmz7gxq985p64rc1z5891ym9",
+        "batchNumber": "SEED-TYR-NEW-24540R18-88y1jc",
+        "quantity": 100,
+        "costPrice": 700,
+        "receivedAt": 1782333046342
+    },
+    {
+        "storeId": "k978g1tb070z0qpeqf2ehcaz2188y1jc",
+        "productId": "j574rzjgwn3wey04g3vffjnnts8902hm",
+        "batchNumber": "SEED-TYR-NEW-23535R19-88y1jc",
+        "quantity": 100,
+        "costPrice": 700,
+        "receivedAt": 1782333046343
+    },
+    {
+        "storeId": "k978g1tb070z0qpeqf2ehcaz2188y1jc",
+        "productId": "j573rej4y18n4sgda1ztrjajs5890qkj",
+        "batchNumber": "SEED-TYR-NEW-25535R19-88y1jc",
+        "quantity": 100,
+        "costPrice": 700,
+        "receivedAt": 1782333046344
+    },
+    {
+        "storeId": "k978g1tb070z0qpeqf2ehcaz2188y1jc",
+        "productId": "j572chjfngjx17m36yfxrm443d891qdn",
+        "batchNumber": "SEED-TYR-NEW-23555R19-88y1jc",
+        "quantity": 100,
+        "costPrice": 750,
+        "receivedAt": 1782333046345
+    },
+    {
+        "storeId": "k978g1tb070z0qpeqf2ehcaz2188y1jc",
+        "productId": "j572cj2prnqkyzd9mesc0fy1mn891nhx",
+        "batchNumber": "SEED-TYR-NEW-195R15C-88y1jc",
+        "quantity": 100,
+        "costPrice": 700,
+        "receivedAt": 1782333046346
+    },
+    {
+        "storeId": "k978g1tb070z0qpeqf2ehcaz2188y1jc",
+        "productId": "j577g9zj1qnhdh6dk0382ckkcs8906fs",
+        "batchNumber": "SEED-TYR-NEW-195R15C-WW-88y1jc",
+        "quantity": 100,
+        "costPrice": 950,
+        "receivedAt": 1782333046347
+    },
+    {
+        "storeId": "k978g1tb070z0qpeqf2ehcaz2188y1jc",
+        "productId": "j57d6jmjk0kv21e560acapymjd890wyj",
+        "batchNumber": "SEED-TYR-NEW-20575R15C-WW-88y1jc",
+        "quantity": 100,
+        "costPrice": 950,
+        "receivedAt": 1782333046348
+    },
+    {
+        "storeId": "k978g1tb070z0qpeqf2ehcaz2188y1jc",
+        "productId": "j57cnw2bmsf7fsjfrr47zmzmk98908hf",
+        "batchNumber": "SEED-TYR-NEW-25570R15-AT-88y1jc",
+        "quantity": 100,
+        "costPrice": 1200,
+        "receivedAt": 1782333046349
+    },
+    {
+        "storeId": "k978g1tb070z0qpeqf2ehcaz2188y1jc",
+        "productId": "j57b3781xrr8k0mj66kf8d3qd5891a1n",
+        "batchNumber": "SEED-TYR-NEW-21575R175-88y1jc",
+        "quantity": 100,
+        "costPrice": 1400,
+        "receivedAt": 1782333046350
+    },
+    {
+        "storeId": "k978g1tb070z0qpeqf2ehcaz2188y1jc",
+        "productId": "j57e9b7e1sw1trb2cc02x1w4fd891eg9",
+        "batchNumber": "SEED-TYR-NEW-21535R18-88y1jc",
+        "quantity": 100,
+        "costPrice": 700,
+        "receivedAt": 1782333046351
+    },
+    {
+        "storeId": "k978g1tb070z0qpeqf2ehcaz2188y1jc",
+        "productId": "j57c1edg91wkeh6ye5ttaac6cx8918z1",
+        "batchNumber": "SEED-TYR-NEW-165R13-88y1jc",
+        "quantity": 100,
+        "costPrice": 320,
+        "receivedAt": 1782333046352
+    },
+    {
+        "storeId": "k978g1tb070z0qpeqf2ehcaz2188y1jc",
+        "productId": "j572z0ekv693h16st7tm368035891yxg",
+        "batchNumber": "SEED-TYR-NEW-16570R13-88y1jc",
+        "quantity": 100,
+        "costPrice": 320,
+        "receivedAt": 1782333046353
+    },
+    {
+        "storeId": "k978g1tb070z0qpeqf2ehcaz2188y1jc",
+        "productId": "j57b2pww6dek31nc4j0r4kj6kh891cfr",
+        "batchNumber": "SEED-TYR-NEW-17565R14-A-88y1jc",
+        "quantity": 100,
+        "costPrice": 320,
+        "receivedAt": 1782333046354
+    },
+    {
+        "storeId": "k97c1g8sh80x2992fpt0jwjvzs88y29n",
+        "productId": "j57by4b5x78zxy3twmmkcj9m5x8903pz",
+        "batchNumber": "SEED-TYR-NEW-155R12-88y29n",
+        "quantity": 100,
+        "costPrice": 400,
+        "receivedAt": 1782333046355
+    },
+    {
+        "storeId": "k97c1g8sh80x2992fpt0jwjvzs88y29n",
+        "productId": "j57f7qj6s7e0ptcwm46rvhw6rn891p15",
+        "batchNumber": "SEED-TYR-NEW-17570R13-88y29n",
+        "quantity": 100,
+        "costPrice": 400,
+        "receivedAt": 1782333046356
+    },
+    {
+        "storeId": "k97c1g8sh80x2992fpt0jwjvzs88y29n",
+        "productId": "j57fhd5ys2743h0wqqsb5xk9b5891ebe",
+        "batchNumber": "SEED-TYR-NEW-17565R14-88y29n",
+        "quantity": 100,
+        "costPrice": 420,
+        "receivedAt": 1782333046357
+    },
+    {
+        "storeId": "k97c1g8sh80x2992fpt0jwjvzs88y29n",
+        "productId": "j57dzwkhzp8krew3faht93775x891v00",
+        "batchNumber": "SEED-TYR-NEW-16570R14-88y29n",
+        "quantity": 100,
+        "costPrice": 420,
+        "receivedAt": 1782333046358
+    },
+    {
+        "storeId": "k97c1g8sh80x2992fpt0jwjvzs88y29n",
+        "productId": "j57bt5325k2e9qk3dv5p50bdf98902hq",
+        "batchNumber": "SEED-TYR-NEW-18560R14-88y29n",
+        "quantity": 100,
+        "costPrice": 420,
+        "receivedAt": 1782333046359
+    },
+    {
+        "storeId": "k97c1g8sh80x2992fpt0jwjvzs88y29n",
+        "productId": "j57b86mmne025075w2f709mc2d8911ns",
+        "batchNumber": "SEED-TYR-NEW-17570R14-88y29n",
+        "quantity": 100,
+        "costPrice": 420,
+        "receivedAt": 1782333046360
+    },
+    {
+        "storeId": "k97c1g8sh80x2992fpt0jwjvzs88y29n",
+        "productId": "j578dsy3998xh76cg5t19rqrhn890ept",
+        "batchNumber": "SEED-TYR-NEW-18570R14-88y29n",
+        "quantity": 100,
+        "costPrice": 420,
+        "receivedAt": 1782333046361
+    },
+    {
+        "storeId": "k97c1g8sh80x2992fpt0jwjvzs88y29n",
+        "productId": "j5781fyt4q0c471p3z91gzhk7x891jh7",
+        "batchNumber": "SEED-TYR-NEW-19560R14-88y29n",
+        "quantity": 100,
+        "costPrice": 420,
+        "receivedAt": 1782333046362
+    },
+    {
+        "storeId": "k97c1g8sh80x2992fpt0jwjvzs88y29n",
+        "productId": "j577chcnyr8zp2ckr0e0dfk5f5890atp",
+        "batchNumber": "SEED-TYR-NEW-195R14C-88y29n",
+        "quantity": 100,
+        "costPrice": 700,
+        "receivedAt": 1782333046363
+    },
+    {
+        "storeId": "k97c1g8sh80x2992fpt0jwjvzs88y29n",
+        "productId": "j573shsgf9dkd8g2h4vt6pv2k1890pbs",
+        "batchNumber": "SEED-TYR-NEW-195R14C-WW-88y29n",
+        "quantity": 100,
+        "costPrice": 800,
+        "receivedAt": 1782333046364
+    },
+    {
+        "storeId": "k97c1g8sh80x2992fpt0jwjvzs88y29n",
+        "productId": "j5730wxpzs9ym6b72n6qd8eybx8912fk",
+        "batchNumber": "SEED-TYR-NEW-20575R14-WW-88y29n",
+        "quantity": 100,
+        "costPrice": 800,
+        "receivedAt": 1782333046365
+    },
+    {
+        "storeId": "k97c1g8sh80x2992fpt0jwjvzs88y29n",
+        "productId": "j572q1s0vp2rgjsrd8eer36sm5891xhv",
+        "batchNumber": "SEED-TYR-NEW-20570R15-88y29n",
+        "quantity": 100,
+        "costPrice": 700,
+        "receivedAt": 1782333046366
+    },
+    {
+        "storeId": "k97c1g8sh80x2992fpt0jwjvzs88y29n",
+        "productId": "j57eyjgytba3xnc7eb1pedpsvd891q11",
+        "batchNumber": "SEED-TYR-NEW-19550R15-88y29n",
+        "quantity": 100,
+        "costPrice": 550,
+        "receivedAt": 1782333046367
+    },
+    {
+        "storeId": "k97c1g8sh80x2992fpt0jwjvzs88y29n",
+        "productId": "j57abw67xbhx1rb8gn467pnf05891esd",
+        "batchNumber": "SEED-TYR-NEW-19555R15-88y29n",
+        "quantity": 100,
+        "costPrice": 550,
+        "receivedAt": 1782333046368
+    },
+    {
+        "storeId": "k97c1g8sh80x2992fpt0jwjvzs88y29n",
+        "productId": "j57a3wsrjy55vaja56vxcjjr8n8916hv",
+        "batchNumber": "SEED-TYR-NEW-18560R15-88y29n",
+        "quantity": 100,
+        "costPrice": 550,
+        "receivedAt": 1782333046369
+    },
+    {
+        "storeId": "k97c1g8sh80x2992fpt0jwjvzs88y29n",
+        "productId": "j5700xdttt2zdcnzs0y5yj285h891krr",
+        "batchNumber": "SEED-TYR-NEW-19565R15-88y29n",
+        "quantity": 100,
+        "costPrice": 550,
+        "receivedAt": 1782333046370
+    },
+    {
+        "storeId": "k97c1g8sh80x2992fpt0jwjvzs88y29n",
+        "productId": "j571vrwjnktpdw18rtsr1ypt1s890jwm",
+        "batchNumber": "SEED-TYR-NEW-19560R15-88y29n",
+        "quantity": 100,
+        "costPrice": 550,
+        "receivedAt": 1782333046371
+    },
+    {
+        "storeId": "k97c1g8sh80x2992fpt0jwjvzs88y29n",
+        "productId": "j57310gmr56kcxq97zey2rek0s890qtt",
+        "batchNumber": "SEED-TYR-NEW-17565R15-88y29n",
+        "quantity": 100,
+        "costPrice": 550,
+        "receivedAt": 1782333046372
+    },
+    {
+        "storeId": "k97c1g8sh80x2992fpt0jwjvzs88y29n",
+        "productId": "j570zpfnbb1vvrq503cza0gdg9891764",
+        "batchNumber": "SEED-TYR-NEW-18565R15-88y29n",
+        "quantity": 100,
+        "costPrice": 550,
+        "receivedAt": 1782333046373
+    },
+    {
+        "storeId": "k97c1g8sh80x2992fpt0jwjvzs88y29n",
+        "productId": "j57bynk4er0jq7axk3pysmpn5x8906ra",
+        "batchNumber": "SEED-TYR-NEW-21565R15-88y29n",
+        "quantity": 100,
+        "costPrice": 650,
+        "receivedAt": 1782333046374
+    },
+    {
+        "storeId": "k97c1g8sh80x2992fpt0jwjvzs88y29n",
+        "productId": "j57fdr1qvf320b7nwyb27v1m518915hp",
+        "batchNumber": "SEED-TYR-NEW-20565R15-88y29n",
+        "quantity": 100,
+        "costPrice": 650,
+        "receivedAt": 1782333046375
+    },
+    {
+        "storeId": "k97c1g8sh80x2992fpt0jwjvzs88y29n",
+        "productId": "j575fbyw0bhfrzwvz9c626qyps89072j",
+        "batchNumber": "SEED-TYR-NEW-20570R15-B-88y29n",
+        "quantity": 100,
+        "costPrice": 750,
+        "receivedAt": 1782333046376
+    },
+    {
+        "storeId": "k97c1g8sh80x2992fpt0jwjvzs88y29n",
+        "productId": "j570j2rszqb1ntrsze38ykqdqh891s3v",
+        "batchNumber": "SEED-TYR-NEW-22570R15C-88y29n",
+        "quantity": 100,
+        "costPrice": 800,
+        "receivedAt": 1782333046377
+    },
+    {
+        "storeId": "k97c1g8sh80x2992fpt0jwjvzs88y29n",
+        "productId": "j571fw4mnsmgsgvcm533rszfq1891q8s",
+        "batchNumber": "SEED-TYR-NEW-21515-88y29n",
+        "quantity": 100,
+        "costPrice": 850,
+        "receivedAt": 1782333046378
+    },
+    {
+        "storeId": "k97c1g8sh80x2992fpt0jwjvzs88y29n",
+        "productId": "j57ds1ebth2jhb1fvp8pcvxw9h890mme",
+        "batchNumber": "SEED-TYR-NEW-21540R16-88y29n",
+        "quantity": 100,
+        "costPrice": 600,
+        "receivedAt": 1782333046379
+    },
+    {
+        "storeId": "k97c1g8sh80x2992fpt0jwjvzs88y29n",
+        "productId": "j5703m76jf6m7sxfbr0201p6md89172m",
+        "batchNumber": "SEED-TYR-NEW-20545R16-88y29n",
+        "quantity": 100,
+        "costPrice": 600,
+        "receivedAt": 1782333046380
+    },
+    {
+        "storeId": "k97c1g8sh80x2992fpt0jwjvzs88y29n",
+        "productId": "j57acr5yg24cy28atjbaj03vxn891t6g",
+        "batchNumber": "SEED-TYR-NEW-20550R16-88y29n",
+        "quantity": 100,
+        "costPrice": 600,
+        "receivedAt": 1782333046381
+    },
+    {
+        "storeId": "k97c1g8sh80x2992fpt0jwjvzs88y29n",
+        "productId": "j57fdvxq3x2nt2862yqa7fgy9s891fdn",
+        "batchNumber": "SEED-TYR-NEW-20555R16-88y29n",
+        "quantity": 100,
+        "costPrice": 600,
+        "receivedAt": 1782333046382
+    },
+    {
+        "storeId": "k97c1g8sh80x2992fpt0jwjvzs88y29n",
+        "productId": "j576c3d87w64dej9g08c4ah90n89067y",
+        "batchNumber": "SEED-TYR-NEW-22555R16-88y29n",
+        "quantity": 100,
+        "costPrice": 600,
+        "receivedAt": 1782333046383
+    },
+    {
+        "storeId": "k97c1g8sh80x2992fpt0jwjvzs88y29n",
+        "productId": "j57avqwfn9pqhm9ynap3cpfps589075s",
+        "batchNumber": "SEED-TYR-NEW-22565R16C-88y29n",
+        "quantity": 100,
+        "costPrice": 700,
+        "receivedAt": 1782333046384
+    },
+    {
+        "storeId": "k97c1g8sh80x2992fpt0jwjvzs88y29n",
+        "productId": "j573rx4rdsg5k650e7k4x5xdxd890eqk",
+        "batchNumber": "SEED-TYR-NEW-21570R16-88y29n",
+        "quantity": 100,
+        "costPrice": 700,
+        "receivedAt": 1782333046385
+    },
+    {
+        "storeId": "k97c1g8sh80x2992fpt0jwjvzs88y29n",
+        "productId": "j57ec44jnvgemqbb2g921mpgqh890arh",
+        "batchNumber": "SEED-TYR-NEW-20575R16-88y29n",
+        "quantity": 100,
+        "costPrice": 700,
+        "receivedAt": 1782333046386
+    },
+    {
+        "storeId": "k97c1g8sh80x2992fpt0jwjvzs88y29n",
+        "productId": "j577k26sq7agtx5jkb3n829h65890ykd",
+        "batchNumber": "SEED-TYR-NEW-19575R16-LT-88y29n",
+        "quantity": 100,
+        "costPrice": 700,
+        "receivedAt": 1782333046387
+    },
+    {
+        "storeId": "k97c1g8sh80x2992fpt0jwjvzs88y29n",
+        "productId": "j5793evkcxea7w7k7dns353n7d890gqa",
+        "batchNumber": "SEED-TYR-NEW-21565R16-88y29n",
+        "quantity": 100,
+        "costPrice": 650,
+        "receivedAt": 1782333046388
+    },
+    {
+        "storeId": "k97c1g8sh80x2992fpt0jwjvzs88y29n",
+        "productId": "j576n2a4bz4g9hqczkhh0m6nrn891b8a",
+        "batchNumber": "SEED-TYR-NEW-75016-88y29n",
+        "quantity": 100,
+        "costPrice": 1400,
+        "receivedAt": 1782333046389
+    },
+    {
+        "storeId": "k97c1g8sh80x2992fpt0jwjvzs88y29n",
+        "productId": "j5766wtp3wwxe2my99c1xtb4zd891jgs",
+        "batchNumber": "SEED-TYR-NEW-26570R16-AT-88y29n",
+        "quantity": 100,
+        "costPrice": 1200,
+        "receivedAt": 1782333046390
+    },
+    {
+        "storeId": "k97c1g8sh80x2992fpt0jwjvzs88y29n",
+        "productId": "j578aqynt55n23kr8tpkdbp22x8906ts",
+        "batchNumber": "SEED-TYR-NEW-24570R16-AT-88y29n",
+        "quantity": 100,
+        "costPrice": 1200,
+        "receivedAt": 1782333046391
+    },
+    {
+        "storeId": "k97c1g8sh80x2992fpt0jwjvzs88y29n",
+        "productId": "j57433608p4nvpk43pwrqkph85891xme",
+        "batchNumber": "SEED-TYR-NEW-22550R17-88y29n",
+        "quantity": 100,
+        "costPrice": 650,
+        "receivedAt": 1782333046392
+    },
+    {
+        "storeId": "k97c1g8sh80x2992fpt0jwjvzs88y29n",
+        "productId": "j57fmes0nm7kj45mf9tzze0pbd891s27",
+        "batchNumber": "SEED-TYR-NEW-22560R17-88y29n",
+        "quantity": 100,
+        "costPrice": 650,
+        "receivedAt": 1782333046393
+    },
+    {
+        "storeId": "k97c1g8sh80x2992fpt0jwjvzs88y29n",
+        "productId": "j571e265625pvprfnc0jt5ycnn8907gd",
+        "batchNumber": "SEED-TYR-NEW-22565R17-AT-88y29n",
+        "quantity": 100,
+        "costPrice": 700,
+        "receivedAt": 1782333046394
+    },
+    {
+        "storeId": "k97c1g8sh80x2992fpt0jwjvzs88y29n",
+        "productId": "j57b5zbevpkk36y3ctppm452z58905y2",
+        "batchNumber": "SEED-TYR-NEW-21560R17-88y29n",
+        "quantity": 100,
+        "costPrice": 650,
+        "receivedAt": 1782333046395
+    },
+    {
+        "storeId": "k97c1g8sh80x2992fpt0jwjvzs88y29n",
+        "productId": "j57czwteg1t7dbqnt8h6gxkjan890xbf",
+        "batchNumber": "SEED-TYR-NEW-24545R17-88y29n",
+        "quantity": 100,
+        "costPrice": 650,
+        "receivedAt": 1782333046396
+    },
+    {
+        "storeId": "k97c1g8sh80x2992fpt0jwjvzs88y29n",
+        "productId": "j5701m8xzqnmxz99da17jsk5ms891qs7",
+        "batchNumber": "SEED-TYR-NEW-21555R17-88y29n",
+        "quantity": 100,
+        "costPrice": 650,
+        "receivedAt": 1782333046397
+    },
+    {
+        "storeId": "k97c1g8sh80x2992fpt0jwjvzs88y29n",
+        "productId": "j571jrccen5tjqe2cp5wpbs65h8912b1",
+        "batchNumber": "SEED-TYR-NEW-22545R17-88y29n",
+        "quantity": 100,
+        "costPrice": 650,
+        "receivedAt": 1782333046398
+    },
+    {
+        "storeId": "k97c1g8sh80x2992fpt0jwjvzs88y29n",
+        "productId": "j578jydmdjtm614bdf4qzjrf8n890ep6",
+        "batchNumber": "SEED-TYR-NEW-21540R17-88y29n",
+        "quantity": 100,
+        "costPrice": 650,
+        "receivedAt": 1782333046399
+    },
+    {
+        "storeId": "k97c1g8sh80x2992fpt0jwjvzs88y29n",
+        "productId": "j57f3fa58jpr9sxzp5sfjbv6sh890jpn",
+        "batchNumber": "SEED-TYR-NEW-20545R17-88y29n",
+        "quantity": 100,
+        "costPrice": 650,
+        "receivedAt": 1782333046400
+    },
+    {
+        "storeId": "k97c1g8sh80x2992fpt0jwjvzs88y29n",
+        "productId": "j57c4asg7svv3fxyb66nmzr3xs890vty",
+        "batchNumber": "SEED-TYR-NEW-21545R17-88y29n",
+        "quantity": 100,
+        "costPrice": 650,
+        "receivedAt": 1782333046401
+    },
+    {
+        "storeId": "k97c1g8sh80x2992fpt0jwjvzs88y29n",
+        "productId": "j57c1xhn5wr231pfsw4f5e4qx1890zvs",
+        "batchNumber": "SEED-TYR-NEW-26565R17-AT-88y29n",
+        "quantity": 100,
+        "costPrice": 1200,
+        "receivedAt": 1782333046402
+    },
+    {
+        "storeId": "k97c1g8sh80x2992fpt0jwjvzs88y29n",
+        "productId": "j574hwrqxy9ec17bzej191zrsd890s47",
+        "batchNumber": "SEED-TYR-NEW-26565R17-AT-DURAN-88y29n",
+        "quantity": 100,
+        "costPrice": 1600,
+        "receivedAt": 1782333046403
+    },
+    {
+        "storeId": "k97c1g8sh80x2992fpt0jwjvzs88y29n",
+        "productId": "j570wt012878541044ty26s8m989192c",
+        "batchNumber": "SEED-TYR-NEW-31X105R15-AT-88y29n",
+        "quantity": 100,
+        "costPrice": 1200,
+        "receivedAt": 1782333046404
+    },
+    {
+        "storeId": "k97c1g8sh80x2992fpt0jwjvzs88y29n",
+        "productId": "j5707696e9f5j9mqdgf0ffgd9s8904eb",
+        "batchNumber": "SEED-TYR-NEW-23575R15-88y29n",
+        "quantity": 100,
+        "costPrice": 1050,
+        "receivedAt": 1782333046405
+    },
+    {
+        "storeId": "k97c1g8sh80x2992fpt0jwjvzs88y29n",
+        "productId": "j578dfygbfyzqpj0tk40mbkvzh891353",
+        "batchNumber": "SEED-TYR-NEW-26560R18-AT-88y29n",
+        "quantity": 100,
+        "costPrice": 1200,
+        "receivedAt": 1782333046406
+    },
+    {
+        "storeId": "k97c1g8sh80x2992fpt0jwjvzs88y29n",
+        "productId": "j57f2fsr0ayarggjx8mwy8gmrn891gkq",
+        "batchNumber": "SEED-TYR-NEW-22540R18-88y29n",
+        "quantity": 100,
+        "costPrice": 700,
+        "receivedAt": 1782333046407
+    },
+    {
+        "storeId": "k97c1g8sh80x2992fpt0jwjvzs88y29n",
+        "productId": "j5728pg67wf5kvgrfw9cmc0sp1890mwj",
+        "batchNumber": "SEED-TYR-NEW-21540R18-88y29n",
+        "quantity": 100,
+        "costPrice": 700,
+        "receivedAt": 1782333046408
+    },
+    {
+        "storeId": "k97c1g8sh80x2992fpt0jwjvzs88y29n",
+        "productId": "j5749pmdtyjqr37p1n9smbj63h891vg0",
+        "batchNumber": "SEED-TYR-NEW-22545R18-88y29n",
+        "quantity": 100,
+        "costPrice": 700,
+        "receivedAt": 1782333046409
+    },
+    {
+        "storeId": "k97c1g8sh80x2992fpt0jwjvzs88y29n",
+        "productId": "j57e7k5d0xa985tw49aspk4xqn890d8z",
+        "batchNumber": "SEED-TYR-NEW-23540R18-88y29n",
+        "quantity": 100,
+        "costPrice": 700,
+        "receivedAt": 1782333046410
+    },
+    {
+        "storeId": "k97c1g8sh80x2992fpt0jwjvzs88y29n",
+        "productId": "j5729vdefmz7gxq985p64rc1z5891ym9",
+        "batchNumber": "SEED-TYR-NEW-24540R18-88y29n",
+        "quantity": 100,
+        "costPrice": 700,
+        "receivedAt": 1782333046411
+    },
+    {
+        "storeId": "k97c1g8sh80x2992fpt0jwjvzs88y29n",
+        "productId": "j574rzjgwn3wey04g3vffjnnts8902hm",
+        "batchNumber": "SEED-TYR-NEW-23535R19-88y29n",
+        "quantity": 100,
+        "costPrice": 700,
+        "receivedAt": 1782333046412
+    },
+    {
+        "storeId": "k97c1g8sh80x2992fpt0jwjvzs88y29n",
+        "productId": "j573rej4y18n4sgda1ztrjajs5890qkj",
+        "batchNumber": "SEED-TYR-NEW-25535R19-88y29n",
+        "quantity": 100,
+        "costPrice": 700,
+        "receivedAt": 1782333046413
+    },
+    {
+        "storeId": "k97c1g8sh80x2992fpt0jwjvzs88y29n",
+        "productId": "j572chjfngjx17m36yfxrm443d891qdn",
+        "batchNumber": "SEED-TYR-NEW-23555R19-88y29n",
+        "quantity": 100,
+        "costPrice": 750,
+        "receivedAt": 1782333046414
+    },
+    {
+        "storeId": "k97c1g8sh80x2992fpt0jwjvzs88y29n",
+        "productId": "j572cj2prnqkyzd9mesc0fy1mn891nhx",
+        "batchNumber": "SEED-TYR-NEW-195R15C-88y29n",
+        "quantity": 100,
+        "costPrice": 700,
+        "receivedAt": 1782333046415
+    },
+    {
+        "storeId": "k97c1g8sh80x2992fpt0jwjvzs88y29n",
+        "productId": "j577g9zj1qnhdh6dk0382ckkcs8906fs",
+        "batchNumber": "SEED-TYR-NEW-195R15C-WW-88y29n",
+        "quantity": 100,
+        "costPrice": 950,
+        "receivedAt": 1782333046416
+    },
+    {
+        "storeId": "k97c1g8sh80x2992fpt0jwjvzs88y29n",
+        "productId": "j57d6jmjk0kv21e560acapymjd890wyj",
+        "batchNumber": "SEED-TYR-NEW-20575R15C-WW-88y29n",
+        "quantity": 100,
+        "costPrice": 950,
+        "receivedAt": 1782333046417
+    },
+    {
+        "storeId": "k97c1g8sh80x2992fpt0jwjvzs88y29n",
+        "productId": "j57cnw2bmsf7fsjfrr47zmzmk98908hf",
+        "batchNumber": "SEED-TYR-NEW-25570R15-AT-88y29n",
+        "quantity": 100,
+        "costPrice": 1200,
+        "receivedAt": 1782333046418
+    },
+    {
+        "storeId": "k97c1g8sh80x2992fpt0jwjvzs88y29n",
+        "productId": "j57b3781xrr8k0mj66kf8d3qd5891a1n",
+        "batchNumber": "SEED-TYR-NEW-21575R175-88y29n",
+        "quantity": 100,
+        "costPrice": 1400,
+        "receivedAt": 1782333046419
+    },
+    {
+        "storeId": "k97c1g8sh80x2992fpt0jwjvzs88y29n",
+        "productId": "j57e9b7e1sw1trb2cc02x1w4fd891eg9",
+        "batchNumber": "SEED-TYR-NEW-21535R18-88y29n",
+        "quantity": 100,
+        "costPrice": 700,
+        "receivedAt": 1782333046420
+    },
+    {
+        "storeId": "k97c1g8sh80x2992fpt0jwjvzs88y29n",
+        "productId": "j57c1edg91wkeh6ye5ttaac6cx8918z1",
+        "batchNumber": "SEED-TYR-NEW-165R13-88y29n",
+        "quantity": 100,
+        "costPrice": 320,
+        "receivedAt": 1782333046421
+    },
+    {
+        "storeId": "k97c1g8sh80x2992fpt0jwjvzs88y29n",
+        "productId": "j572z0ekv693h16st7tm368035891yxg",
+        "batchNumber": "SEED-TYR-NEW-16570R13-88y29n",
+        "quantity": 100,
+        "costPrice": 320,
+        "receivedAt": 1782333046422
+    },
+    {
+        "storeId": "k97c1g8sh80x2992fpt0jwjvzs88y29n",
+        "productId": "j57b2pww6dek31nc4j0r4kj6kh891cfr",
+        "batchNumber": "SEED-TYR-NEW-17565R14-A-88y29n",
+        "quantity": 100,
+        "costPrice": 320,
+        "receivedAt": 1782333046423
+    },
+    {
+        "storeId": "k97674jarht9pdcqze9ee7azah88ztdj",
+        "productId": "j57by4b5x78zxy3twmmkcj9m5x8903pz",
+        "batchNumber": "SEED-TYR-NEW-155R12-88ztdj",
+        "quantity": 100,
+        "costPrice": 400,
+        "receivedAt": 1782333046424
+    },
+    {
+        "storeId": "k97674jarht9pdcqze9ee7azah88ztdj",
+        "productId": "j57f7qj6s7e0ptcwm46rvhw6rn891p15",
+        "batchNumber": "SEED-TYR-NEW-17570R13-88ztdj",
+        "quantity": 100,
+        "costPrice": 400,
+        "receivedAt": 1782333046425
+    },
+    {
+        "storeId": "k97674jarht9pdcqze9ee7azah88ztdj",
+        "productId": "j57fhd5ys2743h0wqqsb5xk9b5891ebe",
+        "batchNumber": "SEED-TYR-NEW-17565R14-88ztdj",
+        "quantity": 100,
+        "costPrice": 420,
+        "receivedAt": 1782333046426
+    },
+    {
+        "storeId": "k97674jarht9pdcqze9ee7azah88ztdj",
+        "productId": "j57dzwkhzp8krew3faht93775x891v00",
+        "batchNumber": "SEED-TYR-NEW-16570R14-88ztdj",
+        "quantity": 100,
+        "costPrice": 420,
+        "receivedAt": 1782333046427
+    },
+    {
+        "storeId": "k97674jarht9pdcqze9ee7azah88ztdj",
+        "productId": "j57bt5325k2e9qk3dv5p50bdf98902hq",
+        "batchNumber": "SEED-TYR-NEW-18560R14-88ztdj",
+        "quantity": 100,
+        "costPrice": 420,
+        "receivedAt": 1782333046428
+    },
+    {
+        "storeId": "k97674jarht9pdcqze9ee7azah88ztdj",
+        "productId": "j57b86mmne025075w2f709mc2d8911ns",
+        "batchNumber": "SEED-TYR-NEW-17570R14-88ztdj",
+        "quantity": 100,
+        "costPrice": 420,
+        "receivedAt": 1782333046429
+    },
+    {
+        "storeId": "k97674jarht9pdcqze9ee7azah88ztdj",
+        "productId": "j578dsy3998xh76cg5t19rqrhn890ept",
+        "batchNumber": "SEED-TYR-NEW-18570R14-88ztdj",
+        "quantity": 100,
+        "costPrice": 420,
+        "receivedAt": 1782333046430
+    },
+    {
+        "storeId": "k97674jarht9pdcqze9ee7azah88ztdj",
+        "productId": "j5781fyt4q0c471p3z91gzhk7x891jh7",
+        "batchNumber": "SEED-TYR-NEW-19560R14-88ztdj",
+        "quantity": 100,
+        "costPrice": 420,
+        "receivedAt": 1782333046431
+    },
+    {
+        "storeId": "k97674jarht9pdcqze9ee7azah88ztdj",
+        "productId": "j577chcnyr8zp2ckr0e0dfk5f5890atp",
+        "batchNumber": "SEED-TYR-NEW-195R14C-88ztdj",
+        "quantity": 100,
+        "costPrice": 700,
+        "receivedAt": 1782333046432
+    },
+    {
+        "storeId": "k97674jarht9pdcqze9ee7azah88ztdj",
+        "productId": "j573shsgf9dkd8g2h4vt6pv2k1890pbs",
+        "batchNumber": "SEED-TYR-NEW-195R14C-WW-88ztdj",
+        "quantity": 100,
+        "costPrice": 800,
+        "receivedAt": 1782333046433
+    },
+    {
+        "storeId": "k97674jarht9pdcqze9ee7azah88ztdj",
+        "productId": "j5730wxpzs9ym6b72n6qd8eybx8912fk",
+        "batchNumber": "SEED-TYR-NEW-20575R14-WW-88ztdj",
+        "quantity": 100,
+        "costPrice": 800,
+        "receivedAt": 1782333046434
+    },
+    {
+        "storeId": "k97674jarht9pdcqze9ee7azah88ztdj",
+        "productId": "j572q1s0vp2rgjsrd8eer36sm5891xhv",
+        "batchNumber": "SEED-TYR-NEW-20570R15-88ztdj",
+        "quantity": 100,
+        "costPrice": 700,
+        "receivedAt": 1782333046435
+    },
+    {
+        "storeId": "k97674jarht9pdcqze9ee7azah88ztdj",
+        "productId": "j57eyjgytba3xnc7eb1pedpsvd891q11",
+        "batchNumber": "SEED-TYR-NEW-19550R15-88ztdj",
+        "quantity": 100,
+        "costPrice": 550,
+        "receivedAt": 1782333046436
+    },
+    {
+        "storeId": "k97674jarht9pdcqze9ee7azah88ztdj",
+        "productId": "j57abw67xbhx1rb8gn467pnf05891esd",
+        "batchNumber": "SEED-TYR-NEW-19555R15-88ztdj",
+        "quantity": 100,
+        "costPrice": 550,
+        "receivedAt": 1782333046437
+    },
+    {
+        "storeId": "k97674jarht9pdcqze9ee7azah88ztdj",
+        "productId": "j57a3wsrjy55vaja56vxcjjr8n8916hv",
+        "batchNumber": "SEED-TYR-NEW-18560R15-88ztdj",
+        "quantity": 100,
+        "costPrice": 550,
+        "receivedAt": 1782333046438
+    },
+    {
+        "storeId": "k97674jarht9pdcqze9ee7azah88ztdj",
+        "productId": "j5700xdttt2zdcnzs0y5yj285h891krr",
+        "batchNumber": "SEED-TYR-NEW-19565R15-88ztdj",
+        "quantity": 100,
+        "costPrice": 550,
+        "receivedAt": 1782333046439
+    },
+    {
+        "storeId": "k97674jarht9pdcqze9ee7azah88ztdj",
+        "productId": "j571vrwjnktpdw18rtsr1ypt1s890jwm",
+        "batchNumber": "SEED-TYR-NEW-19560R15-88ztdj",
+        "quantity": 100,
+        "costPrice": 550,
+        "receivedAt": 1782333046440
+    },
+    {
+        "storeId": "k97674jarht9pdcqze9ee7azah88ztdj",
+        "productId": "j57310gmr56kcxq97zey2rek0s890qtt",
+        "batchNumber": "SEED-TYR-NEW-17565R15-88ztdj",
+        "quantity": 100,
+        "costPrice": 550,
+        "receivedAt": 1782333046441
+    },
+    {
+        "storeId": "k97674jarht9pdcqze9ee7azah88ztdj",
+        "productId": "j570zpfnbb1vvrq503cza0gdg9891764",
+        "batchNumber": "SEED-TYR-NEW-18565R15-88ztdj",
+        "quantity": 100,
+        "costPrice": 550,
+        "receivedAt": 1782333046442
+    },
+    {
+        "storeId": "k97674jarht9pdcqze9ee7azah88ztdj",
+        "productId": "j57bynk4er0jq7axk3pysmpn5x8906ra",
+        "batchNumber": "SEED-TYR-NEW-21565R15-88ztdj",
+        "quantity": 100,
+        "costPrice": 650,
+        "receivedAt": 1782333046443
+    },
+    {
+        "storeId": "k97674jarht9pdcqze9ee7azah88ztdj",
+        "productId": "j57fdr1qvf320b7nwyb27v1m518915hp",
+        "batchNumber": "SEED-TYR-NEW-20565R15-88ztdj",
+        "quantity": 100,
+        "costPrice": 650,
+        "receivedAt": 1782333046444
+    },
+    {
+        "storeId": "k97674jarht9pdcqze9ee7azah88ztdj",
+        "productId": "j575fbyw0bhfrzwvz9c626qyps89072j",
+        "batchNumber": "SEED-TYR-NEW-20570R15-B-88ztdj",
+        "quantity": 100,
+        "costPrice": 750,
+        "receivedAt": 1782333046445
+    },
+    {
+        "storeId": "k97674jarht9pdcqze9ee7azah88ztdj",
+        "productId": "j570j2rszqb1ntrsze38ykqdqh891s3v",
+        "batchNumber": "SEED-TYR-NEW-22570R15C-88ztdj",
+        "quantity": 100,
+        "costPrice": 800,
+        "receivedAt": 1782333046446
+    },
+    {
+        "storeId": "k97674jarht9pdcqze9ee7azah88ztdj",
+        "productId": "j571fw4mnsmgsgvcm533rszfq1891q8s",
+        "batchNumber": "SEED-TYR-NEW-21515-88ztdj",
+        "quantity": 100,
+        "costPrice": 850,
+        "receivedAt": 1782333046447
+    },
+    {
+        "storeId": "k97674jarht9pdcqze9ee7azah88ztdj",
+        "productId": "j57ds1ebth2jhb1fvp8pcvxw9h890mme",
+        "batchNumber": "SEED-TYR-NEW-21540R16-88ztdj",
+        "quantity": 100,
+        "costPrice": 600,
+        "receivedAt": 1782333046448
+    },
+    {
+        "storeId": "k97674jarht9pdcqze9ee7azah88ztdj",
+        "productId": "j5703m76jf6m7sxfbr0201p6md89172m",
+        "batchNumber": "SEED-TYR-NEW-20545R16-88ztdj",
+        "quantity": 100,
+        "costPrice": 600,
+        "receivedAt": 1782333046449
+    },
+    {
+        "storeId": "k97674jarht9pdcqze9ee7azah88ztdj",
+        "productId": "j57acr5yg24cy28atjbaj03vxn891t6g",
+        "batchNumber": "SEED-TYR-NEW-20550R16-88ztdj",
+        "quantity": 100,
+        "costPrice": 600,
+        "receivedAt": 1782333046450
+    },
+    {
+        "storeId": "k97674jarht9pdcqze9ee7azah88ztdj",
+        "productId": "j57fdvxq3x2nt2862yqa7fgy9s891fdn",
+        "batchNumber": "SEED-TYR-NEW-20555R16-88ztdj",
+        "quantity": 100,
+        "costPrice": 600,
+        "receivedAt": 1782333046451
+    },
+    {
+        "storeId": "k97674jarht9pdcqze9ee7azah88ztdj",
+        "productId": "j576c3d87w64dej9g08c4ah90n89067y",
+        "batchNumber": "SEED-TYR-NEW-22555R16-88ztdj",
+        "quantity": 100,
+        "costPrice": 600,
+        "receivedAt": 1782333046452
+    },
+    {
+        "storeId": "k97674jarht9pdcqze9ee7azah88ztdj",
+        "productId": "j57avqwfn9pqhm9ynap3cpfps589075s",
+        "batchNumber": "SEED-TYR-NEW-22565R16C-88ztdj",
+        "quantity": 100,
+        "costPrice": 700,
+        "receivedAt": 1782333046453
+    },
+    {
+        "storeId": "k97674jarht9pdcqze9ee7azah88ztdj",
+        "productId": "j573rx4rdsg5k650e7k4x5xdxd890eqk",
+        "batchNumber": "SEED-TYR-NEW-21570R16-88ztdj",
+        "quantity": 100,
+        "costPrice": 700,
+        "receivedAt": 1782333046454
+    },
+    {
+        "storeId": "k97674jarht9pdcqze9ee7azah88ztdj",
+        "productId": "j57ec44jnvgemqbb2g921mpgqh890arh",
+        "batchNumber": "SEED-TYR-NEW-20575R16-88ztdj",
+        "quantity": 100,
+        "costPrice": 700,
+        "receivedAt": 1782333046455
+    },
+    {
+        "storeId": "k97674jarht9pdcqze9ee7azah88ztdj",
+        "productId": "j577k26sq7agtx5jkb3n829h65890ykd",
+        "batchNumber": "SEED-TYR-NEW-19575R16-LT-88ztdj",
+        "quantity": 100,
+        "costPrice": 700,
+        "receivedAt": 1782333046456
+    },
+    {
+        "storeId": "k97674jarht9pdcqze9ee7azah88ztdj",
+        "productId": "j5793evkcxea7w7k7dns353n7d890gqa",
+        "batchNumber": "SEED-TYR-NEW-21565R16-88ztdj",
+        "quantity": 100,
+        "costPrice": 650,
+        "receivedAt": 1782333046457
+    },
+    {
+        "storeId": "k97674jarht9pdcqze9ee7azah88ztdj",
+        "productId": "j576n2a4bz4g9hqczkhh0m6nrn891b8a",
+        "batchNumber": "SEED-TYR-NEW-75016-88ztdj",
+        "quantity": 100,
+        "costPrice": 1400,
+        "receivedAt": 1782333046458
+    },
+    {
+        "storeId": "k97674jarht9pdcqze9ee7azah88ztdj",
+        "productId": "j5766wtp3wwxe2my99c1xtb4zd891jgs",
+        "batchNumber": "SEED-TYR-NEW-26570R16-AT-88ztdj",
+        "quantity": 100,
+        "costPrice": 1200,
+        "receivedAt": 1782333046459
+    },
+    {
+        "storeId": "k97674jarht9pdcqze9ee7azah88ztdj",
+        "productId": "j578aqynt55n23kr8tpkdbp22x8906ts",
+        "batchNumber": "SEED-TYR-NEW-24570R16-AT-88ztdj",
+        "quantity": 100,
+        "costPrice": 1200,
+        "receivedAt": 1782333046460
+    },
+    {
+        "storeId": "k97674jarht9pdcqze9ee7azah88ztdj",
+        "productId": "j57433608p4nvpk43pwrqkph85891xme",
+        "batchNumber": "SEED-TYR-NEW-22550R17-88ztdj",
+        "quantity": 100,
+        "costPrice": 650,
+        "receivedAt": 1782333046461
+    },
+    {
+        "storeId": "k97674jarht9pdcqze9ee7azah88ztdj",
+        "productId": "j57fmes0nm7kj45mf9tzze0pbd891s27",
+        "batchNumber": "SEED-TYR-NEW-22560R17-88ztdj",
+        "quantity": 100,
+        "costPrice": 650,
+        "receivedAt": 1782333046462
+    },
+    {
+        "storeId": "k97674jarht9pdcqze9ee7azah88ztdj",
+        "productId": "j571e265625pvprfnc0jt5ycnn8907gd",
+        "batchNumber": "SEED-TYR-NEW-22565R17-AT-88ztdj",
+        "quantity": 100,
+        "costPrice": 700,
+        "receivedAt": 1782333046463
+    },
+    {
+        "storeId": "k97674jarht9pdcqze9ee7azah88ztdj",
+        "productId": "j57b5zbevpkk36y3ctppm452z58905y2",
+        "batchNumber": "SEED-TYR-NEW-21560R17-88ztdj",
+        "quantity": 100,
+        "costPrice": 650,
+        "receivedAt": 1782333046464
+    },
+    {
+        "storeId": "k97674jarht9pdcqze9ee7azah88ztdj",
+        "productId": "j57czwteg1t7dbqnt8h6gxkjan890xbf",
+        "batchNumber": "SEED-TYR-NEW-24545R17-88ztdj",
+        "quantity": 100,
+        "costPrice": 650,
+        "receivedAt": 1782333046465
+    },
+    {
+        "storeId": "k97674jarht9pdcqze9ee7azah88ztdj",
+        "productId": "j5701m8xzqnmxz99da17jsk5ms891qs7",
+        "batchNumber": "SEED-TYR-NEW-21555R17-88ztdj",
+        "quantity": 100,
+        "costPrice": 650,
+        "receivedAt": 1782333046466
+    },
+    {
+        "storeId": "k97674jarht9pdcqze9ee7azah88ztdj",
+        "productId": "j571jrccen5tjqe2cp5wpbs65h8912b1",
+        "batchNumber": "SEED-TYR-NEW-22545R17-88ztdj",
+        "quantity": 100,
+        "costPrice": 650,
+        "receivedAt": 1782333046467
+    },
+    {
+        "storeId": "k97674jarht9pdcqze9ee7azah88ztdj",
+        "productId": "j578jydmdjtm614bdf4qzjrf8n890ep6",
+        "batchNumber": "SEED-TYR-NEW-21540R17-88ztdj",
+        "quantity": 100,
+        "costPrice": 650,
+        "receivedAt": 1782333046468
+    },
+    {
+        "storeId": "k97674jarht9pdcqze9ee7azah88ztdj",
+        "productId": "j57f3fa58jpr9sxzp5sfjbv6sh890jpn",
+        "batchNumber": "SEED-TYR-NEW-20545R17-88ztdj",
+        "quantity": 100,
+        "costPrice": 650,
+        "receivedAt": 1782333046469
+    },
+    {
+        "storeId": "k97674jarht9pdcqze9ee7azah88ztdj",
+        "productId": "j57c4asg7svv3fxyb66nmzr3xs890vty",
+        "batchNumber": "SEED-TYR-NEW-21545R17-88ztdj",
+        "quantity": 100,
+        "costPrice": 650,
+        "receivedAt": 1782333046470
+    },
+    {
+        "storeId": "k97674jarht9pdcqze9ee7azah88ztdj",
+        "productId": "j57c1xhn5wr231pfsw4f5e4qx1890zvs",
+        "batchNumber": "SEED-TYR-NEW-26565R17-AT-88ztdj",
+        "quantity": 100,
+        "costPrice": 1200,
+        "receivedAt": 1782333046471
+    },
+    {
+        "storeId": "k97674jarht9pdcqze9ee7azah88ztdj",
+        "productId": "j574hwrqxy9ec17bzej191zrsd890s47",
+        "batchNumber": "SEED-TYR-NEW-26565R17-AT-DURAN-88ztdj",
+        "quantity": 100,
+        "costPrice": 1600,
+        "receivedAt": 1782333046472
+    },
+    {
+        "storeId": "k97674jarht9pdcqze9ee7azah88ztdj",
+        "productId": "j570wt012878541044ty26s8m989192c",
+        "batchNumber": "SEED-TYR-NEW-31X105R15-AT-88ztdj",
+        "quantity": 100,
+        "costPrice": 1200,
+        "receivedAt": 1782333046473
+    },
+    {
+        "storeId": "k97674jarht9pdcqze9ee7azah88ztdj",
+        "productId": "j5707696e9f5j9mqdgf0ffgd9s8904eb",
+        "batchNumber": "SEED-TYR-NEW-23575R15-88ztdj",
+        "quantity": 100,
+        "costPrice": 1050,
+        "receivedAt": 1782333046474
+    },
+    {
+        "storeId": "k97674jarht9pdcqze9ee7azah88ztdj",
+        "productId": "j578dfygbfyzqpj0tk40mbkvzh891353",
+        "batchNumber": "SEED-TYR-NEW-26560R18-AT-88ztdj",
+        "quantity": 100,
+        "costPrice": 1200,
+        "receivedAt": 1782333046475
+    },
+    {
+        "storeId": "k97674jarht9pdcqze9ee7azah88ztdj",
+        "productId": "j57f2fsr0ayarggjx8mwy8gmrn891gkq",
+        "batchNumber": "SEED-TYR-NEW-22540R18-88ztdj",
+        "quantity": 100,
+        "costPrice": 700,
+        "receivedAt": 1782333046476
+    },
+    {
+        "storeId": "k97674jarht9pdcqze9ee7azah88ztdj",
+        "productId": "j5728pg67wf5kvgrfw9cmc0sp1890mwj",
+        "batchNumber": "SEED-TYR-NEW-21540R18-88ztdj",
+        "quantity": 100,
+        "costPrice": 700,
+        "receivedAt": 1782333046477
+    },
+    {
+        "storeId": "k97674jarht9pdcqze9ee7azah88ztdj",
+        "productId": "j5749pmdtyjqr37p1n9smbj63h891vg0",
+        "batchNumber": "SEED-TYR-NEW-22545R18-88ztdj",
+        "quantity": 100,
+        "costPrice": 700,
+        "receivedAt": 1782333046478
+    },
+    {
+        "storeId": "k97674jarht9pdcqze9ee7azah88ztdj",
+        "productId": "j57e7k5d0xa985tw49aspk4xqn890d8z",
+        "batchNumber": "SEED-TYR-NEW-23540R18-88ztdj",
+        "quantity": 100,
+        "costPrice": 700,
+        "receivedAt": 1782333046479
+    },
+    {
+        "storeId": "k97674jarht9pdcqze9ee7azah88ztdj",
+        "productId": "j5729vdefmz7gxq985p64rc1z5891ym9",
+        "batchNumber": "SEED-TYR-NEW-24540R18-88ztdj",
+        "quantity": 100,
+        "costPrice": 700,
+        "receivedAt": 1782333046480
+    },
+    {
+        "storeId": "k97674jarht9pdcqze9ee7azah88ztdj",
+        "productId": "j574rzjgwn3wey04g3vffjnnts8902hm",
+        "batchNumber": "SEED-TYR-NEW-23535R19-88ztdj",
+        "quantity": 100,
+        "costPrice": 700,
+        "receivedAt": 1782333046481
+    },
+    {
+        "storeId": "k97674jarht9pdcqze9ee7azah88ztdj",
+        "productId": "j573rej4y18n4sgda1ztrjajs5890qkj",
+        "batchNumber": "SEED-TYR-NEW-25535R19-88ztdj",
+        "quantity": 100,
+        "costPrice": 700,
+        "receivedAt": 1782333046482
+    },
+    {
+        "storeId": "k97674jarht9pdcqze9ee7azah88ztdj",
+        "productId": "j572chjfngjx17m36yfxrm443d891qdn",
+        "batchNumber": "SEED-TYR-NEW-23555R19-88ztdj",
+        "quantity": 100,
+        "costPrice": 750,
+        "receivedAt": 1782333046483
+    },
+    {
+        "storeId": "k97674jarht9pdcqze9ee7azah88ztdj",
+        "productId": "j572cj2prnqkyzd9mesc0fy1mn891nhx",
+        "batchNumber": "SEED-TYR-NEW-195R15C-88ztdj",
+        "quantity": 100,
+        "costPrice": 700,
+        "receivedAt": 1782333046484
+    },
+    {
+        "storeId": "k97674jarht9pdcqze9ee7azah88ztdj",
+        "productId": "j577g9zj1qnhdh6dk0382ckkcs8906fs",
+        "batchNumber": "SEED-TYR-NEW-195R15C-WW-88ztdj",
+        "quantity": 100,
+        "costPrice": 950,
+        "receivedAt": 1782333046485
+    },
+    {
+        "storeId": "k97674jarht9pdcqze9ee7azah88ztdj",
+        "productId": "j57d6jmjk0kv21e560acapymjd890wyj",
+        "batchNumber": "SEED-TYR-NEW-20575R15C-WW-88ztdj",
+        "quantity": 100,
+        "costPrice": 950,
+        "receivedAt": 1782333046486
+    },
+    {
+        "storeId": "k97674jarht9pdcqze9ee7azah88ztdj",
+        "productId": "j57cnw2bmsf7fsjfrr47zmzmk98908hf",
+        "batchNumber": "SEED-TYR-NEW-25570R15-AT-88ztdj",
+        "quantity": 100,
+        "costPrice": 1200,
+        "receivedAt": 1782333046487
+    },
+    {
+        "storeId": "k97674jarht9pdcqze9ee7azah88ztdj",
+        "productId": "j57b3781xrr8k0mj66kf8d3qd5891a1n",
+        "batchNumber": "SEED-TYR-NEW-21575R175-88ztdj",
+        "quantity": 100,
+        "costPrice": 1400,
+        "receivedAt": 1782333046488
+    },
+    {
+        "storeId": "k97674jarht9pdcqze9ee7azah88ztdj",
+        "productId": "j57e9b7e1sw1trb2cc02x1w4fd891eg9",
+        "batchNumber": "SEED-TYR-NEW-21535R18-88ztdj",
+        "quantity": 100,
+        "costPrice": 700,
+        "receivedAt": 1782333046489
+    },
+    {
+        "storeId": "k97674jarht9pdcqze9ee7azah88ztdj",
+        "productId": "j57c1edg91wkeh6ye5ttaac6cx8918z1",
+        "batchNumber": "SEED-TYR-NEW-165R13-88ztdj",
+        "quantity": 100,
+        "costPrice": 320,
+        "receivedAt": 1782333046490
+    },
+    {
+        "storeId": "k97674jarht9pdcqze9ee7azah88ztdj",
+        "productId": "j572z0ekv693h16st7tm368035891yxg",
+        "batchNumber": "SEED-TYR-NEW-16570R13-88ztdj",
+        "quantity": 100,
+        "costPrice": 320,
+        "receivedAt": 1782333046491
+    },
+    {
+        "storeId": "k97674jarht9pdcqze9ee7azah88ztdj",
+        "productId": "j57b2pww6dek31nc4j0r4kj6kh891cfr",
+        "batchNumber": "SEED-TYR-NEW-17565R14-A-88ztdj",
+        "quantity": 100,
+        "costPrice": 320,
+        "receivedAt": 1782333046492
+    },
+    {
+        "storeId": "k970e3dhaefh662p1b0ts152th88yw5v",
+        "productId": "j57by4b5x78zxy3twmmkcj9m5x8903pz",
+        "batchNumber": "SEED-TYR-NEW-155R12-88yw5v",
+        "quantity": 100,
+        "costPrice": 400,
+        "receivedAt": 1782333046493
+    },
+    {
+        "storeId": "k970e3dhaefh662p1b0ts152th88yw5v",
+        "productId": "j57f7qj6s7e0ptcwm46rvhw6rn891p15",
+        "batchNumber": "SEED-TYR-NEW-17570R13-88yw5v",
+        "quantity": 100,
+        "costPrice": 400,
+        "receivedAt": 1782333046494
+    },
+    {
+        "storeId": "k970e3dhaefh662p1b0ts152th88yw5v",
+        "productId": "j57fhd5ys2743h0wqqsb5xk9b5891ebe",
+        "batchNumber": "SEED-TYR-NEW-17565R14-88yw5v",
+        "quantity": 100,
+        "costPrice": 420,
+        "receivedAt": 1782333046495
+    },
+    {
+        "storeId": "k970e3dhaefh662p1b0ts152th88yw5v",
+        "productId": "j57dzwkhzp8krew3faht93775x891v00",
+        "batchNumber": "SEED-TYR-NEW-16570R14-88yw5v",
+        "quantity": 100,
+        "costPrice": 420,
+        "receivedAt": 1782333046496
+    },
+    {
+        "storeId": "k970e3dhaefh662p1b0ts152th88yw5v",
+        "productId": "j57bt5325k2e9qk3dv5p50bdf98902hq",
+        "batchNumber": "SEED-TYR-NEW-18560R14-88yw5v",
+        "quantity": 100,
+        "costPrice": 420,
+        "receivedAt": 1782333046497
+    },
+    {
+        "storeId": "k970e3dhaefh662p1b0ts152th88yw5v",
+        "productId": "j57b86mmne025075w2f709mc2d8911ns",
+        "batchNumber": "SEED-TYR-NEW-17570R14-88yw5v",
+        "quantity": 100,
+        "costPrice": 420,
+        "receivedAt": 1782333046498
+    },
+    {
+        "storeId": "k970e3dhaefh662p1b0ts152th88yw5v",
+        "productId": "j578dsy3998xh76cg5t19rqrhn890ept",
+        "batchNumber": "SEED-TYR-NEW-18570R14-88yw5v",
+        "quantity": 100,
+        "costPrice": 420,
+        "receivedAt": 1782333046499
+    },
+    {
+        "storeId": "k970e3dhaefh662p1b0ts152th88yw5v",
+        "productId": "j5781fyt4q0c471p3z91gzhk7x891jh7",
+        "batchNumber": "SEED-TYR-NEW-19560R14-88yw5v",
+        "quantity": 100,
+        "costPrice": 420,
+        "receivedAt": 1782333046500
+    },
+    {
+        "storeId": "k970e3dhaefh662p1b0ts152th88yw5v",
+        "productId": "j577chcnyr8zp2ckr0e0dfk5f5890atp",
+        "batchNumber": "SEED-TYR-NEW-195R14C-88yw5v",
+        "quantity": 100,
+        "costPrice": 700,
+        "receivedAt": 1782333046501
+    },
+    {
+        "storeId": "k970e3dhaefh662p1b0ts152th88yw5v",
+        "productId": "j573shsgf9dkd8g2h4vt6pv2k1890pbs",
+        "batchNumber": "SEED-TYR-NEW-195R14C-WW-88yw5v",
+        "quantity": 100,
+        "costPrice": 800,
+        "receivedAt": 1782333046502
+    },
+    {
+        "storeId": "k970e3dhaefh662p1b0ts152th88yw5v",
+        "productId": "j5730wxpzs9ym6b72n6qd8eybx8912fk",
+        "batchNumber": "SEED-TYR-NEW-20575R14-WW-88yw5v",
+        "quantity": 100,
+        "costPrice": 800,
+        "receivedAt": 1782333046503
+    },
+    {
+        "storeId": "k970e3dhaefh662p1b0ts152th88yw5v",
+        "productId": "j572q1s0vp2rgjsrd8eer36sm5891xhv",
+        "batchNumber": "SEED-TYR-NEW-20570R15-88yw5v",
+        "quantity": 100,
+        "costPrice": 700,
+        "receivedAt": 1782333046504
+    },
+    {
+        "storeId": "k970e3dhaefh662p1b0ts152th88yw5v",
+        "productId": "j57eyjgytba3xnc7eb1pedpsvd891q11",
+        "batchNumber": "SEED-TYR-NEW-19550R15-88yw5v",
+        "quantity": 100,
+        "costPrice": 550,
+        "receivedAt": 1782333046505
+    },
+    {
+        "storeId": "k970e3dhaefh662p1b0ts152th88yw5v",
+        "productId": "j57abw67xbhx1rb8gn467pnf05891esd",
+        "batchNumber": "SEED-TYR-NEW-19555R15-88yw5v",
+        "quantity": 100,
+        "costPrice": 550,
+        "receivedAt": 1782333046506
+    },
+    {
+        "storeId": "k970e3dhaefh662p1b0ts152th88yw5v",
+        "productId": "j57a3wsrjy55vaja56vxcjjr8n8916hv",
+        "batchNumber": "SEED-TYR-NEW-18560R15-88yw5v",
+        "quantity": 100,
+        "costPrice": 550,
+        "receivedAt": 1782333046507
+    },
+    {
+        "storeId": "k970e3dhaefh662p1b0ts152th88yw5v",
+        "productId": "j5700xdttt2zdcnzs0y5yj285h891krr",
+        "batchNumber": "SEED-TYR-NEW-19565R15-88yw5v",
+        "quantity": 100,
+        "costPrice": 550,
+        "receivedAt": 1782333046508
+    },
+    {
+        "storeId": "k970e3dhaefh662p1b0ts152th88yw5v",
+        "productId": "j571vrwjnktpdw18rtsr1ypt1s890jwm",
+        "batchNumber": "SEED-TYR-NEW-19560R15-88yw5v",
+        "quantity": 100,
+        "costPrice": 550,
+        "receivedAt": 1782333046509
+    },
+    {
+        "storeId": "k970e3dhaefh662p1b0ts152th88yw5v",
+        "productId": "j57310gmr56kcxq97zey2rek0s890qtt",
+        "batchNumber": "SEED-TYR-NEW-17565R15-88yw5v",
+        "quantity": 100,
+        "costPrice": 550,
+        "receivedAt": 1782333046510
+    },
+    {
+        "storeId": "k970e3dhaefh662p1b0ts152th88yw5v",
+        "productId": "j570zpfnbb1vvrq503cza0gdg9891764",
+        "batchNumber": "SEED-TYR-NEW-18565R15-88yw5v",
+        "quantity": 100,
+        "costPrice": 550,
+        "receivedAt": 1782333046511
+    },
+    {
+        "storeId": "k970e3dhaefh662p1b0ts152th88yw5v",
+        "productId": "j57bynk4er0jq7axk3pysmpn5x8906ra",
+        "batchNumber": "SEED-TYR-NEW-21565R15-88yw5v",
+        "quantity": 100,
+        "costPrice": 650,
+        "receivedAt": 1782333046512
+    },
+    {
+        "storeId": "k970e3dhaefh662p1b0ts152th88yw5v",
+        "productId": "j57fdr1qvf320b7nwyb27v1m518915hp",
+        "batchNumber": "SEED-TYR-NEW-20565R15-88yw5v",
+        "quantity": 100,
+        "costPrice": 650,
+        "receivedAt": 1782333046513
+    },
+    {
+        "storeId": "k970e3dhaefh662p1b0ts152th88yw5v",
+        "productId": "j575fbyw0bhfrzwvz9c626qyps89072j",
+        "batchNumber": "SEED-TYR-NEW-20570R15-B-88yw5v",
+        "quantity": 100,
+        "costPrice": 750,
+        "receivedAt": 1782333046514
+    },
+    {
+        "storeId": "k970e3dhaefh662p1b0ts152th88yw5v",
+        "productId": "j570j2rszqb1ntrsze38ykqdqh891s3v",
+        "batchNumber": "SEED-TYR-NEW-22570R15C-88yw5v",
+        "quantity": 100,
+        "costPrice": 800,
+        "receivedAt": 1782333046515
+    },
+    {
+        "storeId": "k970e3dhaefh662p1b0ts152th88yw5v",
+        "productId": "j571fw4mnsmgsgvcm533rszfq1891q8s",
+        "batchNumber": "SEED-TYR-NEW-21515-88yw5v",
+        "quantity": 100,
+        "costPrice": 850,
+        "receivedAt": 1782333046516
+    },
+    {
+        "storeId": "k970e3dhaefh662p1b0ts152th88yw5v",
+        "productId": "j57ds1ebth2jhb1fvp8pcvxw9h890mme",
+        "batchNumber": "SEED-TYR-NEW-21540R16-88yw5v",
+        "quantity": 100,
+        "costPrice": 600,
+        "receivedAt": 1782333046517
+    },
+    {
+        "storeId": "k970e3dhaefh662p1b0ts152th88yw5v",
+        "productId": "j5703m76jf6m7sxfbr0201p6md89172m",
+        "batchNumber": "SEED-TYR-NEW-20545R16-88yw5v",
+        "quantity": 100,
+        "costPrice": 600,
+        "receivedAt": 1782333046518
+    },
+    {
+        "storeId": "k970e3dhaefh662p1b0ts152th88yw5v",
+        "productId": "j57acr5yg24cy28atjbaj03vxn891t6g",
+        "batchNumber": "SEED-TYR-NEW-20550R16-88yw5v",
+        "quantity": 100,
+        "costPrice": 600,
+        "receivedAt": 1782333046519
+    },
+    {
+        "storeId": "k970e3dhaefh662p1b0ts152th88yw5v",
+        "productId": "j57fdvxq3x2nt2862yqa7fgy9s891fdn",
+        "batchNumber": "SEED-TYR-NEW-20555R16-88yw5v",
+        "quantity": 100,
+        "costPrice": 600,
+        "receivedAt": 1782333046520
+    },
+    {
+        "storeId": "k970e3dhaefh662p1b0ts152th88yw5v",
+        "productId": "j576c3d87w64dej9g08c4ah90n89067y",
+        "batchNumber": "SEED-TYR-NEW-22555R16-88yw5v",
+        "quantity": 100,
+        "costPrice": 600,
+        "receivedAt": 1782333046521
+    },
+    {
+        "storeId": "k970e3dhaefh662p1b0ts152th88yw5v",
+        "productId": "j57avqwfn9pqhm9ynap3cpfps589075s",
+        "batchNumber": "SEED-TYR-NEW-22565R16C-88yw5v",
+        "quantity": 100,
+        "costPrice": 700,
+        "receivedAt": 1782333046522
+    },
+    {
+        "storeId": "k970e3dhaefh662p1b0ts152th88yw5v",
+        "productId": "j573rx4rdsg5k650e7k4x5xdxd890eqk",
+        "batchNumber": "SEED-TYR-NEW-21570R16-88yw5v",
+        "quantity": 100,
+        "costPrice": 700,
+        "receivedAt": 1782333046523
+    },
+    {
+        "storeId": "k970e3dhaefh662p1b0ts152th88yw5v",
+        "productId": "j57ec44jnvgemqbb2g921mpgqh890arh",
+        "batchNumber": "SEED-TYR-NEW-20575R16-88yw5v",
+        "quantity": 100,
+        "costPrice": 700,
+        "receivedAt": 1782333046524
+    },
+    {
+        "storeId": "k970e3dhaefh662p1b0ts152th88yw5v",
+        "productId": "j577k26sq7agtx5jkb3n829h65890ykd",
+        "batchNumber": "SEED-TYR-NEW-19575R16-LT-88yw5v",
+        "quantity": 100,
+        "costPrice": 700,
+        "receivedAt": 1782333046525
+    },
+    {
+        "storeId": "k970e3dhaefh662p1b0ts152th88yw5v",
+        "productId": "j5793evkcxea7w7k7dns353n7d890gqa",
+        "batchNumber": "SEED-TYR-NEW-21565R16-88yw5v",
+        "quantity": 100,
+        "costPrice": 650,
+        "receivedAt": 1782333046526
+    },
+    {
+        "storeId": "k970e3dhaefh662p1b0ts152th88yw5v",
+        "productId": "j576n2a4bz4g9hqczkhh0m6nrn891b8a",
+        "batchNumber": "SEED-TYR-NEW-75016-88yw5v",
+        "quantity": 100,
+        "costPrice": 1400,
+        "receivedAt": 1782333046527
+    },
+    {
+        "storeId": "k970e3dhaefh662p1b0ts152th88yw5v",
+        "productId": "j5766wtp3wwxe2my99c1xtb4zd891jgs",
+        "batchNumber": "SEED-TYR-NEW-26570R16-AT-88yw5v",
+        "quantity": 100,
+        "costPrice": 1200,
+        "receivedAt": 1782333046528
+    },
+    {
+        "storeId": "k970e3dhaefh662p1b0ts152th88yw5v",
+        "productId": "j578aqynt55n23kr8tpkdbp22x8906ts",
+        "batchNumber": "SEED-TYR-NEW-24570R16-AT-88yw5v",
+        "quantity": 100,
+        "costPrice": 1200,
+        "receivedAt": 1782333046529
+    },
+    {
+        "storeId": "k970e3dhaefh662p1b0ts152th88yw5v",
+        "productId": "j57433608p4nvpk43pwrqkph85891xme",
+        "batchNumber": "SEED-TYR-NEW-22550R17-88yw5v",
+        "quantity": 100,
+        "costPrice": 650,
+        "receivedAt": 1782333046530
+    },
+    {
+        "storeId": "k970e3dhaefh662p1b0ts152th88yw5v",
+        "productId": "j57fmes0nm7kj45mf9tzze0pbd891s27",
+        "batchNumber": "SEED-TYR-NEW-22560R17-88yw5v",
+        "quantity": 100,
+        "costPrice": 650,
+        "receivedAt": 1782333046531
+    },
+    {
+        "storeId": "k970e3dhaefh662p1b0ts152th88yw5v",
+        "productId": "j571e265625pvprfnc0jt5ycnn8907gd",
+        "batchNumber": "SEED-TYR-NEW-22565R17-AT-88yw5v",
+        "quantity": 100,
+        "costPrice": 700,
+        "receivedAt": 1782333046532
+    },
+    {
+        "storeId": "k970e3dhaefh662p1b0ts152th88yw5v",
+        "productId": "j57b5zbevpkk36y3ctppm452z58905y2",
+        "batchNumber": "SEED-TYR-NEW-21560R17-88yw5v",
+        "quantity": 100,
+        "costPrice": 650,
+        "receivedAt": 1782333046533
+    },
+    {
+        "storeId": "k970e3dhaefh662p1b0ts152th88yw5v",
+        "productId": "j57czwteg1t7dbqnt8h6gxkjan890xbf",
+        "batchNumber": "SEED-TYR-NEW-24545R17-88yw5v",
+        "quantity": 100,
+        "costPrice": 650,
+        "receivedAt": 1782333046534
+    },
+    {
+        "storeId": "k970e3dhaefh662p1b0ts152th88yw5v",
+        "productId": "j5701m8xzqnmxz99da17jsk5ms891qs7",
+        "batchNumber": "SEED-TYR-NEW-21555R17-88yw5v",
+        "quantity": 100,
+        "costPrice": 650,
+        "receivedAt": 1782333046535
+    },
+    {
+        "storeId": "k970e3dhaefh662p1b0ts152th88yw5v",
+        "productId": "j571jrccen5tjqe2cp5wpbs65h8912b1",
+        "batchNumber": "SEED-TYR-NEW-22545R17-88yw5v",
+        "quantity": 100,
+        "costPrice": 650,
+        "receivedAt": 1782333046536
+    },
+    {
+        "storeId": "k970e3dhaefh662p1b0ts152th88yw5v",
+        "productId": "j578jydmdjtm614bdf4qzjrf8n890ep6",
+        "batchNumber": "SEED-TYR-NEW-21540R17-88yw5v",
+        "quantity": 100,
+        "costPrice": 650,
+        "receivedAt": 1782333046537
+    },
+    {
+        "storeId": "k970e3dhaefh662p1b0ts152th88yw5v",
+        "productId": "j57f3fa58jpr9sxzp5sfjbv6sh890jpn",
+        "batchNumber": "SEED-TYR-NEW-20545R17-88yw5v",
+        "quantity": 100,
+        "costPrice": 650,
+        "receivedAt": 1782333046538
+    },
+    {
+        "storeId": "k970e3dhaefh662p1b0ts152th88yw5v",
+        "productId": "j57c4asg7svv3fxyb66nmzr3xs890vty",
+        "batchNumber": "SEED-TYR-NEW-21545R17-88yw5v",
+        "quantity": 100,
+        "costPrice": 650,
+        "receivedAt": 1782333046539
+    },
+    {
+        "storeId": "k970e3dhaefh662p1b0ts152th88yw5v",
+        "productId": "j57c1xhn5wr231pfsw4f5e4qx1890zvs",
+        "batchNumber": "SEED-TYR-NEW-26565R17-AT-88yw5v",
+        "quantity": 100,
+        "costPrice": 1200,
+        "receivedAt": 1782333046540
+    },
+    {
+        "storeId": "k970e3dhaefh662p1b0ts152th88yw5v",
+        "productId": "j574hwrqxy9ec17bzej191zrsd890s47",
+        "batchNumber": "SEED-TYR-NEW-26565R17-AT-DURAN-88yw5v",
+        "quantity": 100,
+        "costPrice": 1600,
+        "receivedAt": 1782333046541
+    },
+    {
+        "storeId": "k970e3dhaefh662p1b0ts152th88yw5v",
+        "productId": "j570wt012878541044ty26s8m989192c",
+        "batchNumber": "SEED-TYR-NEW-31X105R15-AT-88yw5v",
+        "quantity": 100,
+        "costPrice": 1200,
+        "receivedAt": 1782333046542
+    },
+    {
+        "storeId": "k970e3dhaefh662p1b0ts152th88yw5v",
+        "productId": "j5707696e9f5j9mqdgf0ffgd9s8904eb",
+        "batchNumber": "SEED-TYR-NEW-23575R15-88yw5v",
+        "quantity": 100,
+        "costPrice": 1050,
+        "receivedAt": 1782333046543
+    },
+    {
+        "storeId": "k970e3dhaefh662p1b0ts152th88yw5v",
+        "productId": "j578dfygbfyzqpj0tk40mbkvzh891353",
+        "batchNumber": "SEED-TYR-NEW-26560R18-AT-88yw5v",
+        "quantity": 100,
+        "costPrice": 1200,
+        "receivedAt": 1782333046544
+    },
+    {
+        "storeId": "k970e3dhaefh662p1b0ts152th88yw5v",
+        "productId": "j57f2fsr0ayarggjx8mwy8gmrn891gkq",
+        "batchNumber": "SEED-TYR-NEW-22540R18-88yw5v",
+        "quantity": 100,
+        "costPrice": 700,
+        "receivedAt": 1782333046545
+    },
+    {
+        "storeId": "k970e3dhaefh662p1b0ts152th88yw5v",
+        "productId": "j5728pg67wf5kvgrfw9cmc0sp1890mwj",
+        "batchNumber": "SEED-TYR-NEW-21540R18-88yw5v",
+        "quantity": 100,
+        "costPrice": 700,
+        "receivedAt": 1782333046546
+    },
+    {
+        "storeId": "k970e3dhaefh662p1b0ts152th88yw5v",
+        "productId": "j5749pmdtyjqr37p1n9smbj63h891vg0",
+        "batchNumber": "SEED-TYR-NEW-22545R18-88yw5v",
+        "quantity": 100,
+        "costPrice": 700,
+        "receivedAt": 1782333046547
+    },
+    {
+        "storeId": "k970e3dhaefh662p1b0ts152th88yw5v",
+        "productId": "j57e7k5d0xa985tw49aspk4xqn890d8z",
+        "batchNumber": "SEED-TYR-NEW-23540R18-88yw5v",
+        "quantity": 100,
+        "costPrice": 700,
+        "receivedAt": 1782333046548
+    },
+    {
+        "storeId": "k970e3dhaefh662p1b0ts152th88yw5v",
+        "productId": "j5729vdefmz7gxq985p64rc1z5891ym9",
+        "batchNumber": "SEED-TYR-NEW-24540R18-88yw5v",
+        "quantity": 100,
+        "costPrice": 700,
+        "receivedAt": 1782333046549
+    },
+    {
+        "storeId": "k970e3dhaefh662p1b0ts152th88yw5v",
+        "productId": "j574rzjgwn3wey04g3vffjnnts8902hm",
+        "batchNumber": "SEED-TYR-NEW-23535R19-88yw5v",
+        "quantity": 100,
+        "costPrice": 700,
+        "receivedAt": 1782333046550
+    },
+    {
+        "storeId": "k970e3dhaefh662p1b0ts152th88yw5v",
+        "productId": "j573rej4y18n4sgda1ztrjajs5890qkj",
+        "batchNumber": "SEED-TYR-NEW-25535R19-88yw5v",
+        "quantity": 100,
+        "costPrice": 700,
+        "receivedAt": 1782333046551
+    },
+    {
+        "storeId": "k970e3dhaefh662p1b0ts152th88yw5v",
+        "productId": "j572chjfngjx17m36yfxrm443d891qdn",
+        "batchNumber": "SEED-TYR-NEW-23555R19-88yw5v",
+        "quantity": 100,
+        "costPrice": 750,
+        "receivedAt": 1782333046552
+    },
+    {
+        "storeId": "k970e3dhaefh662p1b0ts152th88yw5v",
+        "productId": "j572cj2prnqkyzd9mesc0fy1mn891nhx",
+        "batchNumber": "SEED-TYR-NEW-195R15C-88yw5v",
+        "quantity": 100,
+        "costPrice": 700,
+        "receivedAt": 1782333046553
+    },
+    {
+        "storeId": "k970e3dhaefh662p1b0ts152th88yw5v",
+        "productId": "j577g9zj1qnhdh6dk0382ckkcs8906fs",
+        "batchNumber": "SEED-TYR-NEW-195R15C-WW-88yw5v",
+        "quantity": 100,
+        "costPrice": 950,
+        "receivedAt": 1782333046554
+    },
+    {
+        "storeId": "k970e3dhaefh662p1b0ts152th88yw5v",
+        "productId": "j57d6jmjk0kv21e560acapymjd890wyj",
+        "batchNumber": "SEED-TYR-NEW-20575R15C-WW-88yw5v",
+        "quantity": 100,
+        "costPrice": 950,
+        "receivedAt": 1782333046555
+    },
+    {
+        "storeId": "k970e3dhaefh662p1b0ts152th88yw5v",
+        "productId": "j57cnw2bmsf7fsjfrr47zmzmk98908hf",
+        "batchNumber": "SEED-TYR-NEW-25570R15-AT-88yw5v",
+        "quantity": 100,
+        "costPrice": 1200,
+        "receivedAt": 1782333046556
+    },
+    {
+        "storeId": "k970e3dhaefh662p1b0ts152th88yw5v",
+        "productId": "j57b3781xrr8k0mj66kf8d3qd5891a1n",
+        "batchNumber": "SEED-TYR-NEW-21575R175-88yw5v",
+        "quantity": 100,
+        "costPrice": 1400,
+        "receivedAt": 1782333046557
+    },
+    {
+        "storeId": "k970e3dhaefh662p1b0ts152th88yw5v",
+        "productId": "j57e9b7e1sw1trb2cc02x1w4fd891eg9",
+        "batchNumber": "SEED-TYR-NEW-21535R18-88yw5v",
+        "quantity": 100,
+        "costPrice": 700,
+        "receivedAt": 1782333046558
+    },
+    {
+        "storeId": "k970e3dhaefh662p1b0ts152th88yw5v",
+        "productId": "j57c1edg91wkeh6ye5ttaac6cx8918z1",
+        "batchNumber": "SEED-TYR-NEW-165R13-88yw5v",
+        "quantity": 100,
+        "costPrice": 320,
+        "receivedAt": 1782333046559
+    },
+    {
+        "storeId": "k970e3dhaefh662p1b0ts152th88yw5v",
+        "productId": "j572z0ekv693h16st7tm368035891yxg",
+        "batchNumber": "SEED-TYR-NEW-16570R13-88yw5v",
+        "quantity": 100,
+        "costPrice": 320,
+        "receivedAt": 1782333046560
+    },
+    {
+        "storeId": "k970e3dhaefh662p1b0ts152th88yw5v",
+        "productId": "j57b2pww6dek31nc4j0r4kj6kh891cfr",
+        "batchNumber": "SEED-TYR-NEW-17565R14-A-88yw5v",
+        "quantity": 100,
+        "costPrice": 320,
+        "receivedAt": 1782333046561
+    },
+    {
+        "storeId": "k978zq6z9kazgez3sdrb76vnex88zfet",
+        "productId": "j57by4b5x78zxy3twmmkcj9m5x8903pz",
+        "batchNumber": "SEED-TYR-NEW-155R12-88zfet",
+        "quantity": 100,
+        "costPrice": 400,
+        "receivedAt": 1782333046562
+    },
+    {
+        "storeId": "k978zq6z9kazgez3sdrb76vnex88zfet",
+        "productId": "j57f7qj6s7e0ptcwm46rvhw6rn891p15",
+        "batchNumber": "SEED-TYR-NEW-17570R13-88zfet",
+        "quantity": 100,
+        "costPrice": 400,
+        "receivedAt": 1782333046563
+    },
+    {
+        "storeId": "k978zq6z9kazgez3sdrb76vnex88zfet",
+        "productId": "j57fhd5ys2743h0wqqsb5xk9b5891ebe",
+        "batchNumber": "SEED-TYR-NEW-17565R14-88zfet",
+        "quantity": 100,
+        "costPrice": 420,
+        "receivedAt": 1782333046564
+    },
+    {
+        "storeId": "k978zq6z9kazgez3sdrb76vnex88zfet",
+        "productId": "j57dzwkhzp8krew3faht93775x891v00",
+        "batchNumber": "SEED-TYR-NEW-16570R14-88zfet",
+        "quantity": 100,
+        "costPrice": 420,
+        "receivedAt": 1782333046565
+    },
+    {
+        "storeId": "k978zq6z9kazgez3sdrb76vnex88zfet",
+        "productId": "j57bt5325k2e9qk3dv5p50bdf98902hq",
+        "batchNumber": "SEED-TYR-NEW-18560R14-88zfet",
+        "quantity": 100,
+        "costPrice": 420,
+        "receivedAt": 1782333046566
+    },
+    {
+        "storeId": "k978zq6z9kazgez3sdrb76vnex88zfet",
+        "productId": "j57b86mmne025075w2f709mc2d8911ns",
+        "batchNumber": "SEED-TYR-NEW-17570R14-88zfet",
+        "quantity": 100,
+        "costPrice": 420,
+        "receivedAt": 1782333046567
+    },
+    {
+        "storeId": "k978zq6z9kazgez3sdrb76vnex88zfet",
+        "productId": "j578dsy3998xh76cg5t19rqrhn890ept",
+        "batchNumber": "SEED-TYR-NEW-18570R14-88zfet",
+        "quantity": 100,
+        "costPrice": 420,
+        "receivedAt": 1782333046568
+    },
+    {
+        "storeId": "k978zq6z9kazgez3sdrb76vnex88zfet",
+        "productId": "j5781fyt4q0c471p3z91gzhk7x891jh7",
+        "batchNumber": "SEED-TYR-NEW-19560R14-88zfet",
+        "quantity": 100,
+        "costPrice": 420,
+        "receivedAt": 1782333046569
+    },
+    {
+        "storeId": "k978zq6z9kazgez3sdrb76vnex88zfet",
+        "productId": "j577chcnyr8zp2ckr0e0dfk5f5890atp",
+        "batchNumber": "SEED-TYR-NEW-195R14C-88zfet",
+        "quantity": 100,
+        "costPrice": 700,
+        "receivedAt": 1782333046570
+    },
+    {
+        "storeId": "k978zq6z9kazgez3sdrb76vnex88zfet",
+        "productId": "j573shsgf9dkd8g2h4vt6pv2k1890pbs",
+        "batchNumber": "SEED-TYR-NEW-195R14C-WW-88zfet",
+        "quantity": 100,
+        "costPrice": 800,
+        "receivedAt": 1782333046571
+    },
+    {
+        "storeId": "k978zq6z9kazgez3sdrb76vnex88zfet",
+        "productId": "j5730wxpzs9ym6b72n6qd8eybx8912fk",
+        "batchNumber": "SEED-TYR-NEW-20575R14-WW-88zfet",
+        "quantity": 100,
+        "costPrice": 800,
+        "receivedAt": 1782333046572
+    },
+    {
+        "storeId": "k978zq6z9kazgez3sdrb76vnex88zfet",
+        "productId": "j572q1s0vp2rgjsrd8eer36sm5891xhv",
+        "batchNumber": "SEED-TYR-NEW-20570R15-88zfet",
+        "quantity": 100,
+        "costPrice": 700,
+        "receivedAt": 1782333046573
+    },
+    {
+        "storeId": "k978zq6z9kazgez3sdrb76vnex88zfet",
+        "productId": "j57eyjgytba3xnc7eb1pedpsvd891q11",
+        "batchNumber": "SEED-TYR-NEW-19550R15-88zfet",
+        "quantity": 100,
+        "costPrice": 550,
+        "receivedAt": 1782333046574
+    },
+    {
+        "storeId": "k978zq6z9kazgez3sdrb76vnex88zfet",
+        "productId": "j57abw67xbhx1rb8gn467pnf05891esd",
+        "batchNumber": "SEED-TYR-NEW-19555R15-88zfet",
+        "quantity": 100,
+        "costPrice": 550,
+        "receivedAt": 1782333046575
+    },
+    {
+        "storeId": "k978zq6z9kazgez3sdrb76vnex88zfet",
+        "productId": "j57a3wsrjy55vaja56vxcjjr8n8916hv",
+        "batchNumber": "SEED-TYR-NEW-18560R15-88zfet",
+        "quantity": 100,
+        "costPrice": 550,
+        "receivedAt": 1782333046576
+    },
+    {
+        "storeId": "k978zq6z9kazgez3sdrb76vnex88zfet",
+        "productId": "j5700xdttt2zdcnzs0y5yj285h891krr",
+        "batchNumber": "SEED-TYR-NEW-19565R15-88zfet",
+        "quantity": 100,
+        "costPrice": 550,
+        "receivedAt": 1782333046577
+    },
+    {
+        "storeId": "k978zq6z9kazgez3sdrb76vnex88zfet",
+        "productId": "j571vrwjnktpdw18rtsr1ypt1s890jwm",
+        "batchNumber": "SEED-TYR-NEW-19560R15-88zfet",
+        "quantity": 100,
+        "costPrice": 550,
+        "receivedAt": 1782333046578
+    },
+    {
+        "storeId": "k978zq6z9kazgez3sdrb76vnex88zfet",
+        "productId": "j57310gmr56kcxq97zey2rek0s890qtt",
+        "batchNumber": "SEED-TYR-NEW-17565R15-88zfet",
+        "quantity": 100,
+        "costPrice": 550,
+        "receivedAt": 1782333046579
+    },
+    {
+        "storeId": "k978zq6z9kazgez3sdrb76vnex88zfet",
+        "productId": "j570zpfnbb1vvrq503cza0gdg9891764",
+        "batchNumber": "SEED-TYR-NEW-18565R15-88zfet",
+        "quantity": 100,
+        "costPrice": 550,
+        "receivedAt": 1782333046580
+    },
+    {
+        "storeId": "k978zq6z9kazgez3sdrb76vnex88zfet",
+        "productId": "j57bynk4er0jq7axk3pysmpn5x8906ra",
+        "batchNumber": "SEED-TYR-NEW-21565R15-88zfet",
+        "quantity": 100,
+        "costPrice": 650,
+        "receivedAt": 1782333046581
+    },
+    {
+        "storeId": "k978zq6z9kazgez3sdrb76vnex88zfet",
+        "productId": "j57fdr1qvf320b7nwyb27v1m518915hp",
+        "batchNumber": "SEED-TYR-NEW-20565R15-88zfet",
+        "quantity": 100,
+        "costPrice": 650,
+        "receivedAt": 1782333046582
+    },
+    {
+        "storeId": "k978zq6z9kazgez3sdrb76vnex88zfet",
+        "productId": "j575fbyw0bhfrzwvz9c626qyps89072j",
+        "batchNumber": "SEED-TYR-NEW-20570R15-B-88zfet",
+        "quantity": 100,
+        "costPrice": 750,
+        "receivedAt": 1782333046583
+    },
+    {
+        "storeId": "k978zq6z9kazgez3sdrb76vnex88zfet",
+        "productId": "j570j2rszqb1ntrsze38ykqdqh891s3v",
+        "batchNumber": "SEED-TYR-NEW-22570R15C-88zfet",
+        "quantity": 100,
+        "costPrice": 800,
+        "receivedAt": 1782333046584
+    },
+    {
+        "storeId": "k978zq6z9kazgez3sdrb76vnex88zfet",
+        "productId": "j571fw4mnsmgsgvcm533rszfq1891q8s",
+        "batchNumber": "SEED-TYR-NEW-21515-88zfet",
+        "quantity": 100,
+        "costPrice": 850,
+        "receivedAt": 1782333046585
+    },
+    {
+        "storeId": "k978zq6z9kazgez3sdrb76vnex88zfet",
+        "productId": "j57ds1ebth2jhb1fvp8pcvxw9h890mme",
+        "batchNumber": "SEED-TYR-NEW-21540R16-88zfet",
+        "quantity": 100,
+        "costPrice": 600,
+        "receivedAt": 1782333046586
+    },
+    {
+        "storeId": "k978zq6z9kazgez3sdrb76vnex88zfet",
+        "productId": "j5703m76jf6m7sxfbr0201p6md89172m",
+        "batchNumber": "SEED-TYR-NEW-20545R16-88zfet",
+        "quantity": 100,
+        "costPrice": 600,
+        "receivedAt": 1782333046587
+    },
+    {
+        "storeId": "k978zq6z9kazgez3sdrb76vnex88zfet",
+        "productId": "j57acr5yg24cy28atjbaj03vxn891t6g",
+        "batchNumber": "SEED-TYR-NEW-20550R16-88zfet",
+        "quantity": 100,
+        "costPrice": 600,
+        "receivedAt": 1782333046588
+    },
+    {
+        "storeId": "k978zq6z9kazgez3sdrb76vnex88zfet",
+        "productId": "j57fdvxq3x2nt2862yqa7fgy9s891fdn",
+        "batchNumber": "SEED-TYR-NEW-20555R16-88zfet",
+        "quantity": 100,
+        "costPrice": 600,
+        "receivedAt": 1782333046589
+    },
+    {
+        "storeId": "k978zq6z9kazgez3sdrb76vnex88zfet",
+        "productId": "j576c3d87w64dej9g08c4ah90n89067y",
+        "batchNumber": "SEED-TYR-NEW-22555R16-88zfet",
+        "quantity": 100,
+        "costPrice": 600,
+        "receivedAt": 1782333046590
+    },
+    {
+        "storeId": "k978zq6z9kazgez3sdrb76vnex88zfet",
+        "productId": "j57avqwfn9pqhm9ynap3cpfps589075s",
+        "batchNumber": "SEED-TYR-NEW-22565R16C-88zfet",
+        "quantity": 100,
+        "costPrice": 700,
+        "receivedAt": 1782333046591
+    },
+    {
+        "storeId": "k978zq6z9kazgez3sdrb76vnex88zfet",
+        "productId": "j573rx4rdsg5k650e7k4x5xdxd890eqk",
+        "batchNumber": "SEED-TYR-NEW-21570R16-88zfet",
+        "quantity": 100,
+        "costPrice": 700,
+        "receivedAt": 1782333046592
+    },
+    {
+        "storeId": "k978zq6z9kazgez3sdrb76vnex88zfet",
+        "productId": "j57ec44jnvgemqbb2g921mpgqh890arh",
+        "batchNumber": "SEED-TYR-NEW-20575R16-88zfet",
+        "quantity": 100,
+        "costPrice": 700,
+        "receivedAt": 1782333046593
+    },
+    {
+        "storeId": "k978zq6z9kazgez3sdrb76vnex88zfet",
+        "productId": "j577k26sq7agtx5jkb3n829h65890ykd",
+        "batchNumber": "SEED-TYR-NEW-19575R16-LT-88zfet",
+        "quantity": 100,
+        "costPrice": 700,
+        "receivedAt": 1782333046594
+    },
+    {
+        "storeId": "k978zq6z9kazgez3sdrb76vnex88zfet",
+        "productId": "j5793evkcxea7w7k7dns353n7d890gqa",
+        "batchNumber": "SEED-TYR-NEW-21565R16-88zfet",
+        "quantity": 100,
+        "costPrice": 650,
+        "receivedAt": 1782333046595
+    },
+    {
+        "storeId": "k978zq6z9kazgez3sdrb76vnex88zfet",
+        "productId": "j576n2a4bz4g9hqczkhh0m6nrn891b8a",
+        "batchNumber": "SEED-TYR-NEW-75016-88zfet",
+        "quantity": 100,
+        "costPrice": 1400,
+        "receivedAt": 1782333046596
+    },
+    {
+        "storeId": "k978zq6z9kazgez3sdrb76vnex88zfet",
+        "productId": "j5766wtp3wwxe2my99c1xtb4zd891jgs",
+        "batchNumber": "SEED-TYR-NEW-26570R16-AT-88zfet",
+        "quantity": 100,
+        "costPrice": 1200,
+        "receivedAt": 1782333046597
+    },
+    {
+        "storeId": "k978zq6z9kazgez3sdrb76vnex88zfet",
+        "productId": "j578aqynt55n23kr8tpkdbp22x8906ts",
+        "batchNumber": "SEED-TYR-NEW-24570R16-AT-88zfet",
+        "quantity": 100,
+        "costPrice": 1200,
+        "receivedAt": 1782333046598
+    },
+    {
+        "storeId": "k978zq6z9kazgez3sdrb76vnex88zfet",
+        "productId": "j57433608p4nvpk43pwrqkph85891xme",
+        "batchNumber": "SEED-TYR-NEW-22550R17-88zfet",
+        "quantity": 100,
+        "costPrice": 650,
+        "receivedAt": 1782333046599
+    },
+    {
+        "storeId": "k978zq6z9kazgez3sdrb76vnex88zfet",
+        "productId": "j57fmes0nm7kj45mf9tzze0pbd891s27",
+        "batchNumber": "SEED-TYR-NEW-22560R17-88zfet",
+        "quantity": 100,
+        "costPrice": 650,
+        "receivedAt": 1782333046600
+    },
+    {
+        "storeId": "k978zq6z9kazgez3sdrb76vnex88zfet",
+        "productId": "j571e265625pvprfnc0jt5ycnn8907gd",
+        "batchNumber": "SEED-TYR-NEW-22565R17-AT-88zfet",
+        "quantity": 100,
+        "costPrice": 700,
+        "receivedAt": 1782333046601
+    },
+    {
+        "storeId": "k978zq6z9kazgez3sdrb76vnex88zfet",
+        "productId": "j57b5zbevpkk36y3ctppm452z58905y2",
+        "batchNumber": "SEED-TYR-NEW-21560R17-88zfet",
+        "quantity": 100,
+        "costPrice": 650,
+        "receivedAt": 1782333046602
+    },
+    {
+        "storeId": "k978zq6z9kazgez3sdrb76vnex88zfet",
+        "productId": "j57czwteg1t7dbqnt8h6gxkjan890xbf",
+        "batchNumber": "SEED-TYR-NEW-24545R17-88zfet",
+        "quantity": 100,
+        "costPrice": 650,
+        "receivedAt": 1782333046603
+    },
+    {
+        "storeId": "k978zq6z9kazgez3sdrb76vnex88zfet",
+        "productId": "j5701m8xzqnmxz99da17jsk5ms891qs7",
+        "batchNumber": "SEED-TYR-NEW-21555R17-88zfet",
+        "quantity": 100,
+        "costPrice": 650,
+        "receivedAt": 1782333046604
+    },
+    {
+        "storeId": "k978zq6z9kazgez3sdrb76vnex88zfet",
+        "productId": "j571jrccen5tjqe2cp5wpbs65h8912b1",
+        "batchNumber": "SEED-TYR-NEW-22545R17-88zfet",
+        "quantity": 100,
+        "costPrice": 650,
+        "receivedAt": 1782333046605
+    },
+    {
+        "storeId": "k978zq6z9kazgez3sdrb76vnex88zfet",
+        "productId": "j578jydmdjtm614bdf4qzjrf8n890ep6",
+        "batchNumber": "SEED-TYR-NEW-21540R17-88zfet",
+        "quantity": 100,
+        "costPrice": 650,
+        "receivedAt": 1782333046606
+    },
+    {
+        "storeId": "k978zq6z9kazgez3sdrb76vnex88zfet",
+        "productId": "j57f3fa58jpr9sxzp5sfjbv6sh890jpn",
+        "batchNumber": "SEED-TYR-NEW-20545R17-88zfet",
+        "quantity": 100,
+        "costPrice": 650,
+        "receivedAt": 1782333046607
+    },
+    {
+        "storeId": "k978zq6z9kazgez3sdrb76vnex88zfet",
+        "productId": "j57c4asg7svv3fxyb66nmzr3xs890vty",
+        "batchNumber": "SEED-TYR-NEW-21545R17-88zfet",
+        "quantity": 100,
+        "costPrice": 650,
+        "receivedAt": 1782333046608
+    },
+    {
+        "storeId": "k978zq6z9kazgez3sdrb76vnex88zfet",
+        "productId": "j57c1xhn5wr231pfsw4f5e4qx1890zvs",
+        "batchNumber": "SEED-TYR-NEW-26565R17-AT-88zfet",
+        "quantity": 100,
+        "costPrice": 1200,
+        "receivedAt": 1782333046609
+    },
+    {
+        "storeId": "k978zq6z9kazgez3sdrb76vnex88zfet",
+        "productId": "j574hwrqxy9ec17bzej191zrsd890s47",
+        "batchNumber": "SEED-TYR-NEW-26565R17-AT-DURAN-88zfet",
+        "quantity": 100,
+        "costPrice": 1600,
+        "receivedAt": 1782333046610
+    },
+    {
+        "storeId": "k978zq6z9kazgez3sdrb76vnex88zfet",
+        "productId": "j570wt012878541044ty26s8m989192c",
+        "batchNumber": "SEED-TYR-NEW-31X105R15-AT-88zfet",
+        "quantity": 100,
+        "costPrice": 1200,
+        "receivedAt": 1782333046611
+    },
+    {
+        "storeId": "k978zq6z9kazgez3sdrb76vnex88zfet",
+        "productId": "j5707696e9f5j9mqdgf0ffgd9s8904eb",
+        "batchNumber": "SEED-TYR-NEW-23575R15-88zfet",
+        "quantity": 100,
+        "costPrice": 1050,
+        "receivedAt": 1782333046612
+    },
+    {
+        "storeId": "k978zq6z9kazgez3sdrb76vnex88zfet",
+        "productId": "j578dfygbfyzqpj0tk40mbkvzh891353",
+        "batchNumber": "SEED-TYR-NEW-26560R18-AT-88zfet",
+        "quantity": 100,
+        "costPrice": 1200,
+        "receivedAt": 1782333046613
+    },
+    {
+        "storeId": "k978zq6z9kazgez3sdrb76vnex88zfet",
+        "productId": "j57f2fsr0ayarggjx8mwy8gmrn891gkq",
+        "batchNumber": "SEED-TYR-NEW-22540R18-88zfet",
+        "quantity": 100,
+        "costPrice": 700,
+        "receivedAt": 1782333046614
+    },
+    {
+        "storeId": "k978zq6z9kazgez3sdrb76vnex88zfet",
+        "productId": "j5728pg67wf5kvgrfw9cmc0sp1890mwj",
+        "batchNumber": "SEED-TYR-NEW-21540R18-88zfet",
+        "quantity": 100,
+        "costPrice": 700,
+        "receivedAt": 1782333046615
+    },
+    {
+        "storeId": "k978zq6z9kazgez3sdrb76vnex88zfet",
+        "productId": "j5749pmdtyjqr37p1n9smbj63h891vg0",
+        "batchNumber": "SEED-TYR-NEW-22545R18-88zfet",
+        "quantity": 100,
+        "costPrice": 700,
+        "receivedAt": 1782333046616
+    },
+    {
+        "storeId": "k978zq6z9kazgez3sdrb76vnex88zfet",
+        "productId": "j57e7k5d0xa985tw49aspk4xqn890d8z",
+        "batchNumber": "SEED-TYR-NEW-23540R18-88zfet",
+        "quantity": 100,
+        "costPrice": 700,
+        "receivedAt": 1782333046617
+    },
+    {
+        "storeId": "k978zq6z9kazgez3sdrb76vnex88zfet",
+        "productId": "j5729vdefmz7gxq985p64rc1z5891ym9",
+        "batchNumber": "SEED-TYR-NEW-24540R18-88zfet",
+        "quantity": 100,
+        "costPrice": 700,
+        "receivedAt": 1782333046618
+    },
+    {
+        "storeId": "k978zq6z9kazgez3sdrb76vnex88zfet",
+        "productId": "j574rzjgwn3wey04g3vffjnnts8902hm",
+        "batchNumber": "SEED-TYR-NEW-23535R19-88zfet",
+        "quantity": 100,
+        "costPrice": 700,
+        "receivedAt": 1782333046619
+    },
+    {
+        "storeId": "k978zq6z9kazgez3sdrb76vnex88zfet",
+        "productId": "j573rej4y18n4sgda1ztrjajs5890qkj",
+        "batchNumber": "SEED-TYR-NEW-25535R19-88zfet",
+        "quantity": 100,
+        "costPrice": 700,
+        "receivedAt": 1782333046620
+    },
+    {
+        "storeId": "k978zq6z9kazgez3sdrb76vnex88zfet",
+        "productId": "j572chjfngjx17m36yfxrm443d891qdn",
+        "batchNumber": "SEED-TYR-NEW-23555R19-88zfet",
+        "quantity": 100,
+        "costPrice": 750,
+        "receivedAt": 1782333046621
+    },
+    {
+        "storeId": "k978zq6z9kazgez3sdrb76vnex88zfet",
+        "productId": "j572cj2prnqkyzd9mesc0fy1mn891nhx",
+        "batchNumber": "SEED-TYR-NEW-195R15C-88zfet",
+        "quantity": 100,
+        "costPrice": 700,
+        "receivedAt": 1782333046622
+    },
+    {
+        "storeId": "k978zq6z9kazgez3sdrb76vnex88zfet",
+        "productId": "j577g9zj1qnhdh6dk0382ckkcs8906fs",
+        "batchNumber": "SEED-TYR-NEW-195R15C-WW-88zfet",
+        "quantity": 100,
+        "costPrice": 950,
+        "receivedAt": 1782333046623
+    },
+    {
+        "storeId": "k978zq6z9kazgez3sdrb76vnex88zfet",
+        "productId": "j57d6jmjk0kv21e560acapymjd890wyj",
+        "batchNumber": "SEED-TYR-NEW-20575R15C-WW-88zfet",
+        "quantity": 100,
+        "costPrice": 950,
+        "receivedAt": 1782333046624
+    },
+    {
+        "storeId": "k978zq6z9kazgez3sdrb76vnex88zfet",
+        "productId": "j57cnw2bmsf7fsjfrr47zmzmk98908hf",
+        "batchNumber": "SEED-TYR-NEW-25570R15-AT-88zfet",
+        "quantity": 100,
+        "costPrice": 1200,
+        "receivedAt": 1782333046625
+    },
+    {
+        "storeId": "k978zq6z9kazgez3sdrb76vnex88zfet",
+        "productId": "j57b3781xrr8k0mj66kf8d3qd5891a1n",
+        "batchNumber": "SEED-TYR-NEW-21575R175-88zfet",
+        "quantity": 100,
+        "costPrice": 1400,
+        "receivedAt": 1782333046626
+    },
+    {
+        "storeId": "k978zq6z9kazgez3sdrb76vnex88zfet",
+        "productId": "j57e9b7e1sw1trb2cc02x1w4fd891eg9",
+        "batchNumber": "SEED-TYR-NEW-21535R18-88zfet",
+        "quantity": 100,
+        "costPrice": 700,
+        "receivedAt": 1782333046627
+    },
+    {
+        "storeId": "k978zq6z9kazgez3sdrb76vnex88zfet",
+        "productId": "j57c1edg91wkeh6ye5ttaac6cx8918z1",
+        "batchNumber": "SEED-TYR-NEW-165R13-88zfet",
+        "quantity": 100,
+        "costPrice": 320,
+        "receivedAt": 1782333046628
+    },
+    {
+        "storeId": "k978zq6z9kazgez3sdrb76vnex88zfet",
+        "productId": "j572z0ekv693h16st7tm368035891yxg",
+        "batchNumber": "SEED-TYR-NEW-16570R13-88zfet",
+        "quantity": 100,
+        "costPrice": 320,
+        "receivedAt": 1782333046629
+    },
+    {
+        "storeId": "k978zq6z9kazgez3sdrb76vnex88zfet",
+        "productId": "j57b2pww6dek31nc4j0r4kj6kh891cfr",
+        "batchNumber": "SEED-TYR-NEW-17565R14-A-88zfet",
+        "quantity": 100,
+        "costPrice": 320,
+        "receivedAt": 1782333046630
+    },
+    {
+        "storeId": "k978zq6z9kazgez3sdrb76vnex88zfet",
+        "productId": "j573zqkxe4jxgcqxfqqe7dqda588ydz2",
+        "batchNumber": "SEED-PVCWALLP-88zfet",
+        "quantity": 100,
+        "costPrice": 160,
+        "receivedAt": 1782333046631
+    },
+    {
+        "storeId": "k978zq6z9kazgez3sdrb76vnex88zfet",
+        "productId": "j57ev64fdbzytpk7cj4crtjh4h88z013",
+        "batchNumber": "SEED-MDF-AWP-88zfet",
+        "quantity": 100,
+        "costPrice": 600,
+        "receivedAt": 1782333046632
+    },
+    {
+        "storeId": "k978zq6z9kazgez3sdrb76vnex88zfet",
+        "productId": "j577r7wp7da4v0yw1am27q7v6h88y2qt",
+        "batchNumber": "SEED-GW-QSS-88zfet",
+        "quantity": 100,
+        "costPrice": 13400,
+        "receivedAt": 1782333046633
+    },
+    {
+        "storeId": "k978zq6z9kazgez3sdrb76vnex88zfet",
+        "productId": "j5736bemxg6yz3y3sgs31cez7s890aej",
+        "batchNumber": "SEED-ARCTICVE-88zfet",
+        "quantity": 100,
+        "costPrice": 13400,
+        "receivedAt": 1782333046634
+    },
+    {
+        "storeId": "k978zq6z9kazgez3sdrb76vnex88zfet",
+        "productId": "j57eqbx118f5rh88t5yqvzgvp1890qvt",
+        "batchNumber": "SEED-CLOUDFAL-88zfet",
+        "quantity": 100,
+        "costPrice": 13400,
+        "receivedAt": 1782333046635
+    },
+    {
+        "storeId": "k978zq6z9kazgez3sdrb76vnex88zfet",
+        "productId": "j572tpw7x2hz79m09c2kvdt0a9890j32",
+        "batchNumber": "SEED-PALEHORI-88zfet",
+        "quantity": 100,
+        "costPrice": 13400,
+        "receivedAt": 1782333046636
+    },
+    {
+        "storeId": "k978zq6z9kazgez3sdrb76vnex88zfet",
+        "productId": "j57btd3atnpzs7m4qpfgxsghhn890t67",
+        "batchNumber": "SEED-STONEFOR-88zfet",
+        "quantity": 100,
+        "costPrice": 11500,
+        "receivedAt": 1782333046637
+    },
+    {
+        "storeId": "k978zq6z9kazgez3sdrb76vnex88zfet",
+        "productId": "j57d5tb2hh9r9y6d758spvhyws891exn",
+        "batchNumber": "SEED-LUNARGRA-88zfet",
+        "quantity": 100,
+        "costPrice": 11500,
+        "receivedAt": 1782333046638
+    },
+    {
+        "storeId": "k978zq6z9kazgez3sdrb76vnex88zfet",
+        "productId": "j570bzv66mcd9en3sksrz0n4b1890wyj",
+        "batchNumber": "SEED-CRYSTALF-88zfet",
+        "quantity": 100,
+        "costPrice": 10000,
+        "receivedAt": 1782333046639
+    },
+    {
+        "storeId": "k978zq6z9kazgez3sdrb76vnex88zfet",
+        "productId": "j578h4adzx8thnga4zs445ycyh890btk",
+        "batchNumber": "SEED-REG-SMT-SINK-88zfet",
+        "quantity": 100,
+        "costPrice": 2500,
+        "receivedAt": 1782333046640
+    },
+    {
+        "storeId": "k978zq6z9kazgez3sdrb76vnex88zfet",
+        "productId": "j570g7nstma17exj3y36kb77ns890nhc",
+        "batchNumber": "SEED-GLD-SMT-SINK-88zfet",
+        "quantity": 100,
+        "costPrice": 3200,
+        "receivedAt": 1782333046641
+    },
+    {
+        "storeId": "k978zq6z9kazgez3sdrb76vnex88zfet",
+        "productId": "j574s1hp37mphvz4yavba6rte58901sb",
+        "batchNumber": "SEED-ADV-SMT-SINK-88zfet",
+        "quantity": 100,
+        "costPrice": 3600,
+        "receivedAt": 1782333046642
+    },
+    {
+        "storeId": "k978zq6z9kazgez3sdrb76vnex88zfet",
+        "productId": "j57a16jex0p8r8yffq085cywy18905te",
+        "batchNumber": "SEED-34MATTRE-88zfet",
+        "quantity": 100,
+        "costPrice": 3300,
+        "receivedAt": 1782333046643
+    },
+    {
+        "storeId": "k978zq6z9kazgez3sdrb76vnex88zfet",
+        "productId": "j576wdxyevxnptjg4wc0xmxc09890xnn",
+        "batchNumber": "SEED-DBL-BED-MAT-88zfet",
+        "quantity": 100,
+        "costPrice": 4300,
+        "receivedAt": 1782333046644
+    },
+    {
+        "storeId": "k978zq6z9kazgez3sdrb76vnex88zfet",
+        "productId": "j579tfx8mkz6j57m4yvhgkr89x891wnx",
+        "batchNumber": "SEED-QN-BED-MAT-88zfet",
+        "quantity": 100,
+        "costPrice": 4800,
+        "receivedAt": 1782333046645
+    },
+    {
+        "storeId": "k978zq6z9kazgez3sdrb76vnex88zfet",
+        "productId": "j57f0h90pvja501e7bdbbnvqnx891h7x",
+        "batchNumber": "SEED-KNG-BED-MAT-88zfet",
+        "quantity": 100,
+        "costPrice": 5200,
+        "receivedAt": 1782333046646
+    }
+]

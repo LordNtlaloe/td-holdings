@@ -1,0 +1,32 @@
+node_modules
+.DS_Store
+dist
+dist-ssr
+*.local
+.env
+.nitro
+.tanstack
+.wrangler
+.output
+.vinxi
+__unconfig*
+todos.json
+.yarn
+
+# Snapshot export of the legacy database (may contain production data)
+convex-export/
+convex-export.zip
+
+# Local development database (SQLite file + WAL sidecars)
+local.db
+local.db-*
+
+# Secrets — the key pair that was previously committed (still present on disk).
+# NOTE: these remain in the history of the OLD repository, so the key pair
+# should be rotated if it ever guarded anything real.
+private-key.pem
+private-key.b64.txt
+*.pem
+*.key
+# Scratch/temporary scripts (never publish these)
+_tmp-*
