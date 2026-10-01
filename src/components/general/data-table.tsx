@@ -582,7 +582,7 @@ export function DataTable<T extends Record<string, unknown>>({
                                                         </dt>
                                                         <dd
                                                             className={cn(
-                                                                'min-w-0 break-words text-right text-sm',
+                                                                'min-w-0 wrap-break-word text-right text-sm',
                                                                 col.className
                                                             )}
                                                         >

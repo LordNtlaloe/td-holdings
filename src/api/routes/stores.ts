@@ -4,7 +4,7 @@ import db from "../db/index.ts";
 import * as schema from "../db/schema.ts";
 import type { AuthEnv } from "../middleware/auth.ts";
 import { getUser, requireRole } from "../auth.ts";
-import { describeTarget, parsePrintTarget, testPrinterTarget } from "../print-transport.ts";
+import { fetchConnectedAgents } from "../print.ts";
 
 export const storeRoutes = new Hono<AuthEnv>();
 
@@ -94,15 +94,15 @@ storeRoutes.get("/:id/print-settings", async (c) => {
       storeId: store.id,
       storeName: store.name,
       printAgentId: store.printAgentId,
-      target: describeTarget(parsePrintTarget(store.printAgentId)),
     });
   } catch (error: any) {
     return c.json({ error: error.message }, 401);
   }
 });
 
-// POST /api/stores/test-print-connection — reachability probe used by the
-// settings page before saving. Does not print anything.
+// POST /api/stores/test-print-connection — asks the relay which tills are
+// connected and checks the store's agent is among them. Mirrors the
+// `testPrintConnection` action from the original convex/stores.ts.
 storeRoutes.post("/test-print-connection", async (c) => {
   try {
     const user = getUser(c);
@@ -113,17 +113,34 @@ storeRoutes.post("/test-print-connection", async (c) => {
     const store = await db.select().from(schema.stores).where(eq(schema.stores.id, storeId)).get();
     if (!store) return c.json({ success: false, error: "Store not found" }, 404);
 
-    // An optional candidate address lets the settings page probe a value before
-    // saving it. Falls back to whatever the store already has.
+    // The settings page can probe the value currently in the box before saving
+    // it. Falls back to whatever the store already has.
     const candidate = String(agentId ?? printAgentId ?? "").trim();
-    const target = parsePrintTarget(candidate || store.printAgentId);
-    const result = await testPrinterTarget(target);
+    const target = candidate || store.printAgentId || "";
+
+    if (!target) {
+      return c.json({ success: false, error: "No printer agent configured for this store" });
+    }
+
+    let connectedAgents: string[];
+    try {
+      connectedAgents = await fetchConnectedAgents();
+    } catch (error: any) {
+      return c.json({ success: false, error: error.message || "Relay unreachable" });
+    }
+
+    if (connectedAgents.includes(target)) {
+      return c.json({
+        success: true,
+        message: `Printer agent is online and connected! (${connectedAgents.length} agent(s) connected)`,
+        target,
+      });
+    }
 
     return c.json({
-      success: result.ok,
-      error: result.ok ? undefined : result.detail,
-      detail: result.detail,
-      target: describeTarget(target),
+      success: false,
+      error: `Printer agent "${target}" not found. Connected agents: ${connectedAgents.join(", ") || "none"}`,
+      target,
     });
   } catch (error: any) {
     return c.json({ success: false, error: error.message }, 400);
