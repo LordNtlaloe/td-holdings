@@ -82,7 +82,7 @@ function SalesPage() {
   const { data: stores } = useApiQuery<any>('stores.getAllStores', '/api/stores', undefined, !!isGlobal)
   const { data: departments } = useApiQuery<any>('departments.getAllDepartments', '/api/departments')
 
-  // Today's date range
+  // Today's date range — used as the fallback when the user picks no range.
   const todayStart = useMemo(() => startOfDay(new Date()), [])
   const todayEnd = useMemo(() => endOfDay(new Date()), [])
 
@@ -93,11 +93,18 @@ function SalesPage() {
     return dept?._id as string | undefined
   }, [breakdownDepartment, departments])
 
-  // Product breakdown with department filtering (TODAY ONLY)
+  // The product breakdown follows the date pickers. When no range is selected
+  // it falls back to today, which is what the card is titled for by default.
+  const breakdownFrom = filters.dateFrom
+    ? startOfDay(new Date(filters.dateFrom))
+    : todayStart
+  const breakdownTo = filters.dateTo ? endOfDay(new Date(filters.dateTo)) : todayEnd
+
+  // Product breakdown with department filtering (selected range, else today)
   const { data: todayProductSales } = useApiQuery<any>('sales.getProductSalesWithPaymentMethods', '/api/sales/product-sales', {
     storeId: filters.store !== 'all' ? filters.store : undefined,
-    dateFrom: String(todayStart),
-    dateTo: String(todayEnd),
+    dateFrom: String(breakdownFrom),
+    dateTo: String(breakdownTo),
     departmentId: departmentId || undefined,
   })
 
@@ -312,6 +319,8 @@ function SalesPage() {
               onBreakdownDepartmentChange={setBreakdownDepartment}
               storeFilter={filters.store}
               stores={stores}
+              dateFrom={filters.dateFrom}
+              dateTo={filters.dateTo}
             />
 
             <SalesHistoryCard
@@ -382,6 +391,8 @@ function SalesPage() {
               onBreakdownDepartmentChange={setBreakdownDepartment}
               storeFilter={filters.store}
               stores={stores}
+              dateFrom={filters.dateFrom}
+              dateTo={filters.dateTo}
             />
           </TabsContent>
 

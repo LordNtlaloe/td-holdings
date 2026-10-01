@@ -20,6 +20,34 @@ interface ProductSalesBreakdownCardProps {
     onBreakdownDepartmentChange: (value: string) => void
     storeFilter: string
     stores: { _id: Id<'stores'>; name: string }[] | undefined
+    /** Active date pickers (YYYY-MM-DD). Empty means "today". */
+    dateFrom?: string
+    dateTo?: string
+}
+
+const LONG_DATE: Intl.DateTimeFormatOptions = {
+    weekday: 'long',
+    day: 'numeric',
+    month: 'long',
+    year: 'numeric',
+}
+
+const SHORT_DATE: Intl.DateTimeFormatOptions = {
+    day: 'numeric',
+    month: 'short',
+    year: 'numeric',
+}
+
+/**
+ * Parses a `YYYY-MM-DD` value from a date input as a *local* date.
+ *
+ * `new Date('2026-10-01')` is parsed as UTC midnight, which renders as
+ * 30 September in any timezone behind UTC. Building the date from its parts
+ * keeps the heading on the day the user actually picked.
+ */
+function parseFilterDate(value: string): Date {
+    const [year, month, day] = value.split('-').map(Number)
+    return new Date(year, (month ?? 1) - 1, day ?? 1)
 }
 
 export function ProductSalesBreakdownCard({
@@ -30,8 +58,48 @@ export function ProductSalesBreakdownCard({
     onBreakdownDepartmentChange,
     storeFilter,
     stores,
+    dateFrom,
+    dateTo,
 }: ProductSalesBreakdownCardProps) {
     const products = todayProductSales ?? []
+
+    /**
+     * The card used to be hardcoded to "today", which was wrong as soon as a
+     * date range was chosen — the numbers followed the filter but the heading
+     * still claimed to be today's takings. Both now describe the same period.
+     */
+    const range = useMemo(() => {
+        const today = new Date()
+
+        if (!dateFrom && !dateTo) {
+            return { title: "Today's Product Sales", subtitle: today.toLocaleDateString('en-GB', LONG_DATE) }
+        }
+
+        if (dateFrom && dateTo) {
+            const from = parseFilterDate(dateFrom)
+            const to = parseFilterDate(dateTo)
+            // A single day reads better as a full date than as "1 Oct – 1 Oct".
+            const sameDay = dateFrom === dateTo
+            return {
+                title: 'Product Sales',
+                subtitle: sameDay
+                    ? from.toLocaleDateString('en-GB', LONG_DATE)
+                    : `${from.toLocaleDateString('en-GB', SHORT_DATE)} – ${to.toLocaleDateString('en-GB', SHORT_DATE)}`,
+            }
+        }
+
+        if (dateFrom) {
+            return {
+                title: 'Product Sales',
+                subtitle: `From ${parseFilterDate(dateFrom).toLocaleDateString('en-GB', SHORT_DATE)}`,
+            }
+        }
+
+        return {
+            title: 'Product Sales',
+            subtitle: `Up to ${parseFilterDate(dateTo!).toLocaleDateString('en-GB', SHORT_DATE)}`,
+        }
+    }, [dateFrom, dateTo])
 
     const totals = useMemo(() => {
         return {
@@ -50,6 +118,11 @@ export function ProductSalesBreakdownCard({
         return acc
     }, [products])
 
+    // Shown both in the card's empty state and as the mobile list's fallback.
+    const emptyLabel =
+        `${dateFrom || dateTo ? 'No sales recorded in this period' : 'No sales recorded today'}` +
+        `${breakdownDepartment !== 'all' ? ` in ${breakdownDepartment}` : ''}`
+
     const showDepartmentColumn = availableDepartments.length > 0 && breakdownDepartment === 'all'
 
     return (
@@ -57,14 +130,9 @@ export function ProductSalesBreakdownCard({
             <CardHeader className="pb-3">
                 <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
                     <div className="space-y-0.5">
-                        <CardTitle>Today's Product Sales</CardTitle>
+                        <CardTitle>{range.title}</CardTitle>
                         <p className="text-sm text-muted-foreground">
-                            {new Date().toLocaleDateString('en-GB', {
-                                weekday: 'long',
-                                day: 'numeric',
-                                month: 'long',
-                                year: 'numeric',
-                            })}
+                            {range.subtitle}
                             {storeFilter !== 'all' && stores
                                 ? ` · ${stores.find((s) => s._id === storeFilter)?.name ?? ''}`
                                 : ''}
@@ -98,10 +166,7 @@ export function ProductSalesBreakdownCard({
                         <div className="h-6 w-6 animate-spin rounded-full border-2 border-primary border-t-transparent" />
                     </div>
                 ) : products.length === 0 ? (
-                    <p className="py-8 text-center text-muted-foreground">
-                        No sales recorded today
-                        {breakdownDepartment !== 'all' ? ` in ${breakdownDepartment}` : ''}
-                    </p>
+                    <p className="py-8 text-center text-muted-foreground">{emptyLabel}</p>
                 ) : (
                     <div className="space-y-3">
                         {/* Phones get one card per product — this table is six
@@ -154,7 +219,7 @@ export function ProductSalesBreakdownCard({
                                     ),
                                 },
                             ]}
-                            empty="No sales recorded today"
+                            empty={emptyLabel}
                         />
 
                         {/* md and up: the full table, with payment-method detail. */}
