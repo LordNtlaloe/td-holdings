@@ -18,6 +18,7 @@ import { Route as DashboardCategoriesIndexRouteImport } from './routes/dashboard
 import { Route as DashboardCustomersIndexRouteImport } from './routes/dashboard/customers/index'
 import { Route as DashboardDepartmentsIndexRouteImport } from './routes/dashboard/departments/index'
 import { Route as DashboardEmployeesIndexRouteImport } from './routes/dashboard/employees/index'
+import { Route as DashboardExpensesIndexRouteImport } from './routes/dashboard/expenses/index'
 import { Route as DashboardInventoryIndexRouteImport } from './routes/dashboard/inventory/index'
 import { Route as DashboardInvoiceIndexRouteImport } from './routes/dashboard/invoice/index'
 import { Route as DashboardProductsIndexRouteImport } from './routes/dashboard/products/index'
@@ -79,6 +80,11 @@ const DashboardDepartmentsIndexRoute =
 const DashboardEmployeesIndexRoute = DashboardEmployeesIndexRouteImport.update({
   id: '/dashboard/employees/',
   path: '/dashboard/employees/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DashboardExpensesIndexRoute = DashboardExpensesIndexRouteImport.update({
+  id: '/dashboard/expenses/',
+  path: '/dashboard/expenses/',
   getParentRoute: () => rootRouteImport,
 } as any)
 const DashboardInventoryIndexRoute = DashboardInventoryIndexRouteImport.update({
@@ -174,6 +180,7 @@ export interface FileRoutesByFullPath {
   '/dashboard/customers/': typeof DashboardCustomersIndexRoute
   '/dashboard/departments/': typeof DashboardDepartmentsIndexRoute
   '/dashboard/employees/': typeof DashboardEmployeesIndexRoute
+  '/dashboard/expenses/': typeof DashboardExpensesIndexRoute
   '/dashboard/inventory/': typeof DashboardInventoryIndexRoute
   '/dashboard/invoice/': typeof DashboardInvoiceIndexRoute
   '/dashboard/products/': typeof DashboardProductsIndexRoute
@@ -200,6 +207,7 @@ export interface FileRoutesByTo {
   '/dashboard/customers': typeof DashboardCustomersIndexRoute
   '/dashboard/departments': typeof DashboardDepartmentsIndexRoute
   '/dashboard/employees': typeof DashboardEmployeesIndexRoute
+  '/dashboard/expenses': typeof DashboardExpensesIndexRoute
   '/dashboard/inventory': typeof DashboardInventoryIndexRoute
   '/dashboard/invoice': typeof DashboardInvoiceIndexRoute
   '/dashboard/products': typeof DashboardProductsIndexRoute
@@ -227,6 +235,7 @@ export interface FileRoutesById {
   '/dashboard/customers/': typeof DashboardCustomersIndexRoute
   '/dashboard/departments/': typeof DashboardDepartmentsIndexRoute
   '/dashboard/employees/': typeof DashboardEmployeesIndexRoute
+  '/dashboard/expenses/': typeof DashboardExpensesIndexRoute
   '/dashboard/inventory/': typeof DashboardInventoryIndexRoute
   '/dashboard/invoice/': typeof DashboardInvoiceIndexRoute
   '/dashboard/products/': typeof DashboardProductsIndexRoute
@@ -255,6 +264,7 @@ export interface FileRouteTypes {
     | '/dashboard/customers/'
     | '/dashboard/departments/'
     | '/dashboard/employees/'
+    | '/dashboard/expenses/'
     | '/dashboard/inventory/'
     | '/dashboard/invoice/'
     | '/dashboard/products/'
@@ -281,6 +291,7 @@ export interface FileRouteTypes {
     | '/dashboard/customers'
     | '/dashboard/departments'
     | '/dashboard/employees'
+    | '/dashboard/expenses'
     | '/dashboard/inventory'
     | '/dashboard/invoice'
     | '/dashboard/products'
@@ -307,6 +318,7 @@ export interface FileRouteTypes {
     | '/dashboard/customers/'
     | '/dashboard/departments/'
     | '/dashboard/employees/'
+    | '/dashboard/expenses/'
     | '/dashboard/inventory/'
     | '/dashboard/invoice/'
     | '/dashboard/products/'
@@ -334,6 +346,7 @@ export interface RootRouteChildren {
   DashboardCustomersIndexRoute: typeof DashboardCustomersIndexRoute
   DashboardDepartmentsIndexRoute: typeof DashboardDepartmentsIndexRoute
   DashboardEmployeesIndexRoute: typeof DashboardEmployeesIndexRoute
+  DashboardExpensesIndexRoute: typeof DashboardExpensesIndexRoute
   DashboardInventoryIndexRoute: typeof DashboardInventoryIndexRoute
   DashboardInvoiceIndexRoute: typeof DashboardInvoiceIndexRoute
   DashboardProductsIndexRoute: typeof DashboardProductsIndexRoute
@@ -412,6 +425,13 @@ declare module '@tanstack/react-router' {
       path: '/dashboard/employees'
       fullPath: '/dashboard/employees/'
       preLoaderRoute: typeof DashboardEmployeesIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/dashboard/expenses/': {
+      id: '/dashboard/expenses/'
+      path: '/dashboard/expenses'
+      fullPath: '/dashboard/expenses/'
+      preLoaderRoute: typeof DashboardExpensesIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/dashboard/inventory/': {
@@ -534,6 +554,7 @@ const rootRouteChildren: RootRouteChildren = {
   DashboardCustomersIndexRoute: DashboardCustomersIndexRoute,
   DashboardDepartmentsIndexRoute: DashboardDepartmentsIndexRoute,
   DashboardEmployeesIndexRoute: DashboardEmployeesIndexRoute,
+  DashboardExpensesIndexRoute: DashboardExpensesIndexRoute,
   DashboardInventoryIndexRoute: DashboardInventoryIndexRoute,
   DashboardInvoiceIndexRoute: DashboardInvoiceIndexRoute,
   DashboardProductsIndexRoute: DashboardProductsIndexRoute,

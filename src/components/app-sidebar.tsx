@@ -5,7 +5,7 @@ import { Sidebar, SidebarContent, SidebarFooter, SidebarHeader, SidebarMenu, Sid
 import { Link } from '@tanstack/react-router';
 import {
     LayoutDashboard, Users, UserCog, ShoppingCart, Package, Boxes,
-    Truck, Receipt, ClipboardList, Building2, Contact,
+    Truck, Receipt, ClipboardList, Building2, Contact, Wallet,
     BarChart3, Settings, HelpCircle, ScrollText, type LucideIcon
 } from 'lucide-react';
 import { useCurrentUser } from '#/lib/api/hooks';
@@ -24,6 +24,7 @@ const mainNavItems: NavItem[] = [
     { title: 'Dashboard', url: '/dashboard', icon: LayoutDashboard, roles: ['super_admin', 'admin', 'manager', 'cashier'] },
     { title: 'POS', url: '/pos', icon: ShoppingCart, roles: ['super_admin', 'admin', 'manager', 'cashier'] },
     { title: 'Sales', url: '/dashboard/sales', icon: Receipt, roles: ['super_admin', 'admin', 'manager', 'cashier'] },
+    { title: 'Expenses', url: '/dashboard/expenses', icon: Wallet, roles: ['super_admin', 'admin', 'manager', 'cashier'] },
     { title: 'Products', url: '/dashboard/products', icon: Package, roles: ['super_admin', 'admin', 'manager'] },
     { title: 'Inventory', url: '/dashboard/inventory', icon: Boxes, roles: ['super_admin', 'admin', 'manager'] },
     { title: 'Transfers', url: '/dashboard/transfers', icon: Truck, roles: ['super_admin', 'admin', 'manager'] },

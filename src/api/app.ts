@@ -45,6 +45,7 @@ import { storeDepartmentRoutes } from "./routes/store-departments.ts";
 import { printRoutes } from "./routes/print.ts";
 import { medicationRoutes } from "./routes/medications.ts";
 import { consultationRoutes } from "./routes/consultations.ts";
+import { expenseRoutes } from "./routes/expenses.ts";
 
 const app = new Hono<AuthEnv>();
 
@@ -344,6 +345,7 @@ app.route("/api/store-departments", storeDepartmentRoutes);
 app.route("/api/print", printRoutes);
 app.route("/api/medications", medicationRoutes);
 app.route("/api/consultations", consultationRoutes);
+app.route("/api/expenses", expenseRoutes);
 
 // No listener here — see the header comment.
 export const api = app;

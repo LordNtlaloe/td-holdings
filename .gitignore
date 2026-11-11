@@ -33,3 +33,4 @@ private-key.b64.txt
 *.key
 # Scratch/temporary scripts (never publish these)
 _tmp-*
+.yarn-*.log
