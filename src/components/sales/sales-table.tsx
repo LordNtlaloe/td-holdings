@@ -9,6 +9,7 @@ import {
     type ColumnDef,
     type SortingState,
     type ColumnFiltersState,
+    type PaginationState,
 } from '@tanstack/react-table'
 import {
     Table,
@@ -105,7 +106,8 @@ function getProductName(item: any): string {
 // Below `md` the table is replaced by cards. The columns are declared with
 // function `header`s (they render sort buttons), so the card labels are listed
 // explicitly here instead of being read off the column defs.
-const SALES_CARD_FIELDS: { id: string; label: string }[] = [    { id: 'status', label: 'Status' },
+const SALES_CARD_FIELDS: { id: string; label: string }[] = [
+    { id: 'status', label: 'Status' },
     { id: 'store', label: 'Store' },
     { id: 'departments', label: 'Department' },
     { id: 'paymentMethod', label: 'Payment' },
@@ -129,7 +131,10 @@ export function SalesTable({
     const [searchQuery, setSearchQuery] = useState('')
     const [selectedDepartments, setSelectedDepartments] = useState<string[]>([])
     const [selectedPaymentMethods, setSelectedPaymentMethods] = useState<string[]>([])
-    const [pageSize, setPageSize] = useState(10)
+    const [pagination, setPagination] = useState<PaginationState>({
+        pageIndex: 0,
+        pageSize: 10,
+    })
     const [dateFrom, setDateFrom] = useState('')
     const [dateTo, setDateTo] = useState('')
 
@@ -392,10 +397,11 @@ export function SalesTable({
         state: {
             sorting,
             columnFilters,
-            pagination: { pageIndex: 0, pageSize },
+            pagination,
         },
         onSortingChange: setSorting,
         onColumnFiltersChange: setColumnFilters,
+        onPaginationChange: setPagination,
         getCoreRowModel: getCoreRowModel(),
         getFilteredRowModel: getFilteredRowModel(),
         getSortedRowModel: getSortedRowModel(),
@@ -421,8 +427,11 @@ export function SalesTable({
     }
 
     const { rows } = table.getRowModel()
-    const totalFiltered = filteredSales.length
-    const pageIndex = table.getState().pagination.pageIndex
+    // The table's own pre-pagination model accounts for BOTH the external
+    // `filteredSales` and the in-table column filters (e.g. status), so it is
+    // the accurate total to display and to compute the page range from.
+    const totalFiltered = table.getPrePaginationRowModel().rows.length
+    const { pageIndex, pageSize } = table.getState().pagination
     const startIndex = pageIndex * pageSize
     const endIndex = Math.min(startIndex + pageSize, totalFiltered)
 
@@ -682,10 +691,9 @@ export function SalesTable({
                     <div className="flex items-center gap-2">
                         <Select
                             value={String(pageSize)}
-                            onValueChange={val => {
-                                setPageSize(Number(val))
-                                table.setPageSize(Number(val))
-                            }}
+                            onValueChange={val =>
+                                setPagination({ pageIndex: 0, pageSize: Number(val) })
+                            }
                         >
                             <SelectTrigger className="w-32">
                                 <SelectValue />

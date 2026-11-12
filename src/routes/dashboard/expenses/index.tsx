@@ -1,19 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useMemo, useState } from "react";
 import { format } from "date-fns";
-import { toast } from "sonner";
 import { useApiQuery, useApiMutation } from "#/lib/api/hooks";
 import AppLayout from "#/layouts/app-layout";
-import {
-  AlertDialog,
-  AlertDialogAction,
-  AlertDialogCancel,
-  AlertDialogContent,
-  AlertDialogDescription,
-  AlertDialogFooter,
-  AlertDialogHeader,
-  AlertDialogTitle,
-} from "@/components/ui/alert-dialog";
 import { cn } from "@/lib/utils";
 import {
   ChartLegend,
@@ -32,7 +21,6 @@ import {
   card,
   downloadCsv,
   fieldCls,
-  formatMoney,
   formatMoneyCompact,
   lastDaysBuckets,
   listRange,
@@ -87,8 +75,6 @@ function ExpensesDashboard() {
 
   // Dialogs
   const [formOpen, setFormOpen] = useState(false);
-  const [deleteTarget, setDeleteTarget] = useState<ExpenseRecord | null>(null);
-  const [isDeleting, setIsDeleting] = useState(false);
 
   const { data: currentUser } = useApiQuery<any>("users.getUserProfile", "/api/users/profile");
   const isGlobal = currentUser?.role === "super_admin" || currentUser?.role === "admin";
@@ -209,20 +195,6 @@ function ExpensesDashboard() {
     );
   };
 
-  const handleDelete = async () => {
-    if (!deleteTarget) return;
-    setIsDeleting(true);
-    try {
-      await deleteExpense.mutateAsync({ id: deleteTarget.id });
-      toast.success("Expense deleted");
-      setDeleteTarget(null);
-    } catch (error) {
-      toast.error(error instanceof Error ? error.message : "Failed to delete expense");
-    } finally {
-      setIsDeleting(false);
-    }
-  };
-
   const loading = !main;
 
   return (
@@ -335,7 +307,7 @@ function ExpensesDashboard() {
             onPeriodChange={setListPeriod}
             onAnchorChange={setListAnchor}
             onAdd={() => setFormOpen(true)}
-            onDelete={setDeleteTarget}
+            onDelete={(expense) => deleteExpense.mutateAsync({ id: expense.id })}
           />
 
           {/* Today */}
@@ -378,36 +350,6 @@ function ExpensesDashboard() {
             await createExpense.mutateAsync(payload);
           }}
         />
-
-        <AlertDialog
-          open={deleteTarget !== null}
-          onOpenChange={(open) => !open && !isDeleting && setDeleteTarget(null)}
-        >
-          <AlertDialogContent>
-            <AlertDialogHeader>
-              <AlertDialogTitle>Delete expense</AlertDialogTitle>
-              <AlertDialogDescription>
-                Delete {deleteTarget?.category} — {formatMoney(deleteTarget?.amount ?? 0)}? This
-                cannot be undone.
-              </AlertDialogDescription>
-            </AlertDialogHeader>
-            <AlertDialogFooter>
-              <AlertDialogCancel disabled={isDeleting}>Cancel</AlertDialogCancel>
-              <AlertDialogAction
-                onClick={(event) => {
-                  // Radix closes the dialog on click by default. Hold it open until
-                  // the request finishes so "Deleting..." shows and errors stay visible.
-                  event.preventDefault();
-                  void handleDelete();
-                }}
-                disabled={isDeleting}
-                className="bg-destructive text-destructive-foreground hover:bg-destructive/90"
-              >
-                {isDeleting ? "Deleting..." : "Delete"}
-              </AlertDialogAction>
-            </AlertDialogFooter>
-          </AlertDialogContent>
-        </AlertDialog>
       </div>
     </AppLayout>
   );

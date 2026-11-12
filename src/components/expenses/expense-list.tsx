@@ -14,6 +14,17 @@ import {
 } from "./range-utils";
 import { btnDark, btnIcon, card, fieldCls, formatMoney } from "./theme";
 import type { ExpenseRecord } from "./types";
+import { toast } from "sonner";
+import {
+    AlertDialog,
+    AlertDialogAction,
+    AlertDialogCancel,
+    AlertDialogContent,
+    AlertDialogDescription,
+    AlertDialogFooter,
+    AlertDialogHeader,
+    AlertDialogTitle,
+} from "@/components/ui/alert-dialog";
 
 const LIST_PERIODS: { value: ListPeriod; label: string }[] = [
     { value: "day", label: "Day" },
@@ -84,7 +95,8 @@ interface ExpenseListProps {
     onPeriodChange: (period: ListPeriod) => void;
     onAnchorChange: (anchor: Date) => void;
     onAdd: () => void;
-    onDelete: (expense: ExpenseRecord) => void;
+    /** Performs the actual deletion. Only called after the user confirms. */
+    onDelete: (expense: ExpenseRecord) => Promise<void>;
 }
 
 export function ExpenseList({
@@ -102,6 +114,22 @@ export function ExpenseList({
     const [query, setQuery] = useState("");
     const [expanded, setExpanded] = useState<Record<string, boolean>>({});
     const [showAll, setShowAll] = useState<Record<string, boolean>>({});
+    const [pendingDelete, setPendingDelete] = useState<ExpenseRecord | null>(null);
+    const [deleting, setDeleting] = useState(false);
+
+    const confirmDelete = async () => {
+        if (!pendingDelete) return;
+        setDeleting(true);
+        try {
+            await onDelete(pendingDelete);
+            toast.success("Expense deleted");
+            setPendingDelete(null);
+        } catch (error) {
+            toast.error(error instanceof Error ? error.message : "Failed to delete expense");
+        } finally {
+            setDeleting(false);
+        }
+    };
 
     const range = useMemo(() => listRange(period, anchor), [period, anchor]);
 
@@ -141,7 +169,7 @@ export function ExpenseList({
             <td className="pr-3 text-right">
                 <button
                     type="button"
-                    onClick={() => onDelete(expense)}
+                    onClick={() => setPendingDelete(expense)}
                     aria-label={`Remove ${expense.category} expense of ${formatMoney(expense.amount)}`}
                     className={cn(btnIcon, "w-auto px-2 text-[13px] font-medium text-[#9a3d00]")}
                 >
@@ -152,7 +180,8 @@ export function ExpenseList({
     );
 
     return (
-        <section className={card}>
+        <>
+            <section className={card}>
             <div className="mb-4 flex flex-wrap items-center justify-between gap-3">
                 <div>
                     <h2 className="text-base font-semibold">Expenses</h2>
@@ -307,6 +336,37 @@ export function ExpenseList({
                     </table>
                 </div>
             )}
-        </section>
+            </section>
+
+            <AlertDialog
+                open={pendingDelete !== null}
+                onOpenChange={(open) => !open && !deleting && setPendingDelete(null)}
+            >
+                <AlertDialogContent>
+                    <AlertDialogHeader>
+                        <AlertDialogTitle>Delete expense</AlertDialogTitle>
+                        <AlertDialogDescription>
+                            Delete {pendingDelete?.category} — {formatMoney(pendingDelete?.amount ?? 0)}? This
+                            cannot be undone.
+                        </AlertDialogDescription>
+                    </AlertDialogHeader>
+                    <AlertDialogFooter>
+                        <AlertDialogCancel disabled={deleting}>Cancel</AlertDialogCancel>
+                        <AlertDialogAction
+                            onClick={(event) => {
+                                // Radix closes the dialog on click by default. Hold it open until
+                                // the request finishes so "Deleting..." shows and errors stay visible.
+                                event.preventDefault();
+                                void confirmDelete();
+                            }}
+                            disabled={deleting}
+                            className="bg-destructive text-destructive-foreground hover:bg-destructive/90"
+                        >
+                            {deleting ? "Deleting..." : "Delete"}
+                        </AlertDialogAction>
+                    </AlertDialogFooter>
+                </AlertDialogContent>
+            </AlertDialog>
+        </>
     );
 }
