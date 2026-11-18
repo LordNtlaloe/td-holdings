@@ -1,18 +1,13 @@
-import type { ReactNode } from "react";
-import { Delta } from "#/components/expenses/kpi-cards";
-import { SalesDailyBarsChart, type SalesDayBar } from "./sales-daily-bars";
-import { SALES_COLOR, card, formatMoneyCompact } from "#/components/expenses/theme";
+import { Delta } from "./kpi-cards";
+import { BarsLegend, DailyBarsChart, type DayBar } from "./daily-bars-chart";
+import { SALES_COLOR, UNITS_COLOR, card, formatMoneyCompact } from "./theme";
 
-const whole = (n: number) => n.toLocaleString();
-
-/** Today's sales against yesterday, with the last 14 days as bars. */
-export function SalesTodayPanel({
+export function TodayPanel({
     days,
     dateLabel,
     loading,
 }: {
-    /** Oldest first; the last entry is today. */
-    days: SalesDayBar[];
+    days: DayBar[];
     dateLabel: string;
     loading?: boolean;
 }) {
@@ -27,44 +22,39 @@ export function SalesTodayPanel({
                     <p className="mt-0.5 text-[13px] text-[#5b6270]">{dateLabel} · vs yesterday</p>
                 </div>
 
-                <Stat label="Sales today" color={SALES_COLOR} loading={loading} value={today?.revenue}>
+                <Stat label="Revenue today" color={SALES_COLOR} loading={loading} value={today?.sales}>
                     {today && yesterday && (
                         <Delta
-                            current={today.revenue}
-                            previous={yesterday.revenue}
+                            current={today.sales}
+                            previous={yesterday.sales}
                             higherIsBetter
-                            suffix={`vs ${formatMoneyCompact(yesterday.revenue)} yesterday`}
+                            suffix={`vs ${formatMoneyCompact(yesterday.sales)} yesterday`}
                         />
                     )}
                 </Stat>
-                <Stat
-                    label="Transactions today"
-                    color={SALES_COLOR}
-                    loading={loading}
-                    value={today?.transactions}
-                    formatValue={whole}
-                >
+                <Stat label="Units today" color={UNITS_COLOR} loading={loading} value={today?.units}>
                     {today && yesterday && (
                         <Delta
-                            current={today.transactions}
-                            previous={yesterday.transactions}
+                            current={today.units}
+                            previous={yesterday.units}
                             higherIsBetter
-                            suffix={`vs ${yesterday.transactions} yesterday`}
+                            suffix={`vs ${yesterday.units} yesterday`}
                         />
                     )}
                 </Stat>
             </div>
 
             <div className="min-w-0 flex-[3_1_420px]">
-                <div className="mb-3">
-                    <h2 className="text-base font-semibold">Daily sales, last 14 days</h2>
+                <div className="mb-3 flex flex-wrap justify-between gap-3">
+                    <h2 className="text-base font-semibold">Daily revenue vs units, last 14 days</h2>
+                    <BarsLegend />
                 </div>
                 {loading ? (
                     <div className="flex h-45 items-center justify-center text-sm text-[#5b6270]">
                         Loading…
                     </div>
                 ) : (
-                    <SalesDailyBarsChart days={days} />
+                    <DailyBarsChart days={days} />
                 )}
             </div>
         </section>
@@ -76,21 +66,19 @@ function Stat({
     color,
     value,
     loading,
-    formatValue = formatMoneyCompact,
     children,
 }: {
     label: string;
     color: string;
     value: number | undefined;
     loading?: boolean;
-    formatValue?: (value: number) => string;
-    children?: ReactNode;
+    children?: React.ReactNode;
 }) {
     return (
         <div className="border-l-4 pl-3" style={{ borderLeftColor: color }}>
             <div className="text-[13px] font-medium text-[#5b6270]">{label}</div>
             <div className="my-1 text-[28px] font-bold leading-tight">
-                {loading || value === undefined ? "—" : formatValue(value)}
+                {loading || value === undefined ? "—" : label.startsWith("Revenue") ? formatMoneyCompact(value) : value}
             </div>
             <div className="min-h-5 text-[13px]">{!loading && children}</div>
         </div>

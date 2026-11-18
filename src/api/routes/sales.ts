@@ -188,16 +188,53 @@ async function loadEnrichedSales(opts: { storeId?: string; status?: SaleStatus }
   });
 }
 
-// GET /api/sales/completed — every completed sale, fully enriched.
-// NOTE: must be registered before `/:id` or that route would treat "completed"
-// as a sale id.
+/**
+ * GET /api/sales/completed — every completed sale, fully enriched.
+ * Must be registered before /:id.
+ */
 salesRoutes.get("/completed", async (c) => {
   try {
     getUser(c);
+
     const sales = await loadEnrichedSales({ status: "completed" });
+
     return c.json({ sales });
-  } catch (error: any) {
-    return c.json({ error: error.message }, 401);
+  } catch (error: unknown) {
+    console.error("GET /api/sales/completed failed:", error);
+
+    return c.json(
+      {
+        error:
+          error instanceof Error
+            ? error.message
+            : "Failed to load completed sales",
+      },
+      500
+    );
+  }
+});
+
+// GET /api/sales/all — every sale (any status), fully enriched.
+// Powers the Sales page's transaction list and its status filters.
+salesRoutes.get("/all", async (c) => {
+  try {
+    getUser(c);
+
+    const sales = await loadEnrichedSales();
+
+    return c.json({ sales });
+  } catch (error: unknown) {
+    console.error("GET /api/sales/all failed:", error);
+
+    return c.json(
+      {
+        error:
+          error instanceof Error
+            ? error.message
+            : "Failed to load sales",
+      },
+      500
+    );
   }
 });
 
@@ -644,11 +681,12 @@ salesRoutes.post("/", async (c) => {
   }
 });
 
-// POST /api/sales/:id/cancel — cancel sale
+// POST /api/sales/:id/cancel — cancel sale.
+// Cashiers may only cancel; void and refund stay admin-only.
 salesRoutes.post("/:id/cancel", async (c) => {
   try {
     const user = getUser(c);
-    requireRole(user, ["super_admin", "admin"]);
+    requireRole(user, ["super_admin", "admin", "manager", "cashier"]);
     const id = c.req.param("id");
     const { reason } = await c.req.json();
 

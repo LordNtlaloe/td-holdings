@@ -1,27 +1,26 @@
 "use client";
 
 import { useState } from "react";
-import { btnIcon, card, formatMoneyCompact } from "#/components/expenses/theme";
+import { btnIcon, card, formatMoneyCompact, formatCount } from "./theme";
 import { cn } from "@/lib/utils";
 
-export interface RecentSalesRow {
+export interface RecentRow {
     key: string;
     label: string;
-    revenue: number;
-    transactions: number;
+    sales: number;
+    units: number;
 }
 
 const COLLAPSED_ROWS = 3;
 
-export function RecentSalesPeriods({
+export function RecentPeriodsTable({
     title,
     firstColumn,
     rows,
 }: {
     title: string;
     firstColumn: string;
-    /** Newest first. */
-    rows: RecentSalesRow[];
+    rows: RecentRow[];
 }) {
     const [showAll, setShowAll] = useState(false);
     const visible = showAll ? rows : rows.slice(0, COLLAPSED_ROWS);
@@ -41,12 +40,12 @@ export function RecentSalesPeriods({
                 )}
             </div>
             <div className="overflow-x-auto">
-                <table className="w-full min-w-100 border-collapse text-sm">
+                <table className="w-full min-w-130 border-collapse text-sm">
                     <thead>
                         <tr className="text-left text-xs text-[#5b6270]">
                             <th className="py-2 font-medium">{firstColumn}</th>
-                            <th className="py-2 text-right font-medium">Sales</th>
-                            <th className="py-2 text-right font-medium">Transactions</th>
+                            <th className="py-2 text-right font-medium">Revenue</th>
+                            <th className="py-2 text-right font-medium">Units</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -60,8 +59,8 @@ export function RecentSalesPeriods({
                             visible.map((row) => (
                                 <tr key={row.key} className="border-t border-[#eef0f3]">
                                     <td className="py-3">{row.label}</td>
-                                    <td className="text-right">{formatMoneyCompact(row.revenue)}</td>
-                                    <td className="text-right">{row.transactions.toLocaleString()}</td>
+                                    <td className="text-right">{formatMoneyCompact(row.sales)}</td>
+                                    <td className="text-right">{formatCount(row.units)}</td>
                                 </tr>
                             ))
                         )}

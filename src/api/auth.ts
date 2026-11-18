@@ -10,7 +10,9 @@ import db from "./db/index.ts";
 import { users as usersTable } from "./db/schema.ts";
 
 const JWT_SECRET = process.env.JWT_SECRET || "change-me-in-production-32chars!";
-const JWT_EXPIRY = 60 * 60 * 24 * 7; // 7 days in seconds
+
+/** Session lifetime: 1 year, in seconds. Also use this for any auth cookie maxAge. */
+export const JWT_EXPIRY = 60 * 60 * 24 * 365;
 
 export type UserPayload = {
   id: string;

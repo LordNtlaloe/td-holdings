@@ -16,10 +16,25 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+import {
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from "@/components/ui/popover";
+import {
+  Command,
+  CommandEmpty,
+  CommandGroup,
+  CommandInput,
+  CommandItem,
+  CommandList,
+} from "@/components/ui/command";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
+import { Check, ChevronsUpDown } from "lucide-react";
+import { cn } from "@/lib/utils";
 import { toast } from "sonner";
 
 const COMMON_CATEGORIES = [
@@ -69,7 +84,8 @@ export function ExpenseFormDialog({
 }: ExpenseFormDialogProps) {
   const [amount, setAmount] = useState("");
   const [category, setCategory] = useState<string>("");
-  const [customCategory, setCustomCategory] = useState("");
+  const [categoryOpen, setCategoryOpen] = useState(false);
+  const [categoryQuery, setCategoryQuery] = useState("");
   const [description, setDescription] = useState("");
   const [date, setDate] = useState(toDateInputValue(defaultDate ?? new Date()));
   const [storeId, setStoreId] = useState<string>("");
@@ -81,7 +97,8 @@ export function ExpenseFormDialog({
     if (open) {
       setAmount("");
       setCategory("");
-      setCustomCategory("");
+      setCategoryOpen(false);
+      setCategoryQuery("");
       setDescription("");
       setDate(toDateInputValue(defaultDate ?? new Date()));
       setStoreId("");
@@ -89,8 +106,7 @@ export function ExpenseFormDialog({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [open]);
 
-  const finalCategory =
-    category === "Other" ? customCategory.trim() : category.trim();
+  const finalCategory = category.trim();
 
   const handleSubmit = async (event?: React.FormEvent) => {
     event?.preventDefault();
@@ -103,6 +119,10 @@ export function ExpenseFormDialog({
     }
     if (!finalCategory) {
       toast.error("Choose a category or type a custom one");
+      return;
+    }
+    if (finalCategory.length > MAX_CATEGORY_LENGTH) {
+      toast.error(`Category can't be longer than ${MAX_CATEGORY_LENGTH} characters`);
       return;
     }
     if (isGlobal && !storeId) {
@@ -166,27 +186,81 @@ export function ExpenseFormDialog({
 
             <div className="grid gap-2">
               <Label htmlFor="expense-category">Category</Label>
-              <Select value={category} onValueChange={setCategory}>
-                <SelectTrigger id="expense-category" className="w-full">
-                  <SelectValue placeholder="Select a category" />
-                </SelectTrigger>
-                <SelectContent>
-                  {COMMON_CATEGORIES.map((c) => (
-                    <SelectItem key={c} value={c}>
-                      {c}
-                    </SelectItem>
-                  ))}
-                </SelectContent>
-              </Select>
-              {category === "Other" && (
-                <Input
-                  aria-label="Custom category"
-                  placeholder="Custom category"
-                  maxLength={MAX_CATEGORY_LENGTH}
-                  value={customCategory}
-                  onChange={(e) => setCustomCategory(e.target.value)}
-                />
-              )}
+              <Popover open={categoryOpen} onOpenChange={setCategoryOpen}>
+                <PopoverTrigger asChild>
+                  <Button
+                    id="expense-category"
+                    type="button"
+                    variant="outline"
+                    role="combobox"
+                    aria-expanded={categoryOpen}
+                    className="w-full justify-between font-normal"
+                  >
+                    {category || "Select a category"}
+                    <ChevronsUpDown className="ml-2 h-4 w-4 shrink-0 opacity-50" />
+                  </Button>
+                </PopoverTrigger>
+                <PopoverContent
+                  className="w-[var(--radix-popover-trigger-width)] p-0"
+                  align="start"
+                >
+                  <Command>
+                    <CommandInput
+                      placeholder="Search or type a category"
+                      value={categoryQuery}
+                      onValueChange={setCategoryQuery}
+                    />
+                    <CommandList>
+                      <CommandEmpty>No category found.</CommandEmpty>
+                      <CommandGroup>
+                        {COMMON_CATEGORIES.map((c) => (
+                          <CommandItem
+                            key={c}
+                            value={c}
+                            onSelect={() => {
+                              setCategory(c);
+                              setCategoryQuery("");
+                              setCategoryOpen(false);
+                            }}
+                          >
+                            <Check
+                              className={cn(
+                                "mr-2 h-4 w-4",
+                                category === c ? "opacity-100" : "opacity-0"
+                              )}
+                            />
+                            {c}
+                          </CommandItem>
+                        ))}
+                      </CommandGroup>
+                      {categoryQuery.trim() &&
+                        !COMMON_CATEGORIES.some(
+                          (c) =>
+                            c.toLowerCase() === categoryQuery.trim().toLowerCase()
+                        ) && (
+                          <CommandGroup heading="Custom category">
+                            <CommandItem
+                              value={categoryQuery.trim()}
+                              onSelect={() => {
+                                setCategory(categoryQuery.trim());
+                                setCategoryQuery("");
+                                setCategoryOpen(false);
+                              }}
+                            >
+                              <Check
+                                className={cn(
+                                  "mr-2 h-4 w-4",
+                                  category === categoryQuery.trim() ? "opacity-100" : "opacity-0"
+                                )}
+                              />
+                              {categoryQuery.trim()}
+                            </CommandItem>
+                          </CommandGroup>
+                        )}
+                    </CommandList>
+                  </Command>
+                </PopoverContent>
+              </Popover>
             </div>
 
             <div className="grid gap-2">

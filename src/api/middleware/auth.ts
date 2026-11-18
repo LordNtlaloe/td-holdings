@@ -23,6 +23,16 @@ export type AuthEnv = {
   };
 };
 
+/** Reads the user row, retrying once so a one-off database hiccup isn't fatal. */
+async function loadUser(id: string) {
+  try {
+    return await db.select().from(usersTable).where(eq(usersTable.id, id)).get();
+  } catch (firstError) {
+    console.warn("Auth user lookup failed, retrying once:", firstError);
+    return await db.select().from(usersTable).where(eq(usersTable.id, id)).get();
+  }
+}
+
 export async function authMiddleware(c: Context<AuthEnv>, next: Next) {
   const authHeader = c.req.header("Authorization");
   if (!authHeader || !authHeader.startsWith("Bearer ")) {
@@ -31,35 +41,44 @@ export async function authMiddleware(c: Context<AuthEnv>, next: Next) {
   }
 
   const token = authHeader.slice(7);
+
+  // 1. Is the token itself valid? Only a bad or expired token means "signed out".
+  let payload: UserPayload;
   try {
-    const payload = await verifyToken(token);
-
-    // The JWT only proves *identity*. Role / store / status are re-read from the
-    // database on every request, so promotions, demotions, store reassignments
-    // and bans take effect immediately instead of waiting for the token to
-    // expire (previously they were frozen into the token for up to 7 days).
-    const fresh = await db
-      .select()
-      .from(usersTable)
-      .where(eq(usersTable.id, payload.id))
-      .get();
-
-    if (!fresh || fresh.status === "banned") {
-      c.set("user", null);
-      return next();
-    }
-
-    c.set("user", {
-      id: fresh.id,
-      email: fresh.email,
-      name: fresh.name,
-      role: fresh.role,
-      storeId: fresh.storeId,
-      status: fresh.status,
-    });
+    payload = await verifyToken(token);
   } catch {
     c.set("user", null);
+    return next();
   }
+
+  // 2. The JWT only proves *identity*. Role / store / status are re-read from the
+  // database on every request, so promotions, demotions, store reassignments
+  // and bans take effect immediately instead of waiting for the token to expire.
+  //
+  // A database failure here is NOT a sign-out. It used to share the try/catch
+  // above, so any Turso timeout looked like an invalid session and the app
+  // reported "Not authenticated" to a perfectly valid user.
+  let fresh;
+  try {
+    fresh = await loadUser(payload.id);
+  } catch (error) {
+    console.error("Auth user lookup failed:", error);
+    return c.json({ error: "Service temporarily unavailable. Please try again." }, 503);
+  }
+
+  if (!fresh || fresh.status === "banned") {
+    c.set("user", null);
+    return next();
+  }
+
+  c.set("user", {
+    id: fresh.id,
+    email: fresh.email,
+    name: fresh.name,
+    role: fresh.role,
+    storeId: fresh.storeId,
+    status: fresh.status,
+  });
 
   return next();
 }

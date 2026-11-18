@@ -1,10 +1,10 @@
-import { SALES_COLOR, formatMoneyCompact } from "#/components/expenses/theme";
-import { niceCeil } from "#/components/expenses/chart-utils";
+import { SALES_COLOR, UNITS_COLOR, formatMoneyCompact, formatCount } from "./theme";
+import { niceCeil } from "./chart-utils";
 
-export interface SalesDayBar {
+export interface DayBar {
     label: string;
-    revenue: number;
-    transactions: number;
+    sales: number;
+    units: number;
 }
 
 const W = 530;
@@ -13,20 +13,19 @@ const BASE = 150;
 const TOP = 20;
 const PAD = 10;
 
-/** Daily sales bars. The last entry is today and is highlighted. */
-export function SalesDailyBarsChart({ days }: { days: SalesDayBar[] }) {
+export function DailyBarsChart({ days }: { days: DayBar[] }) {
     const n = days.length;
     if (n === 0) return null;
 
-    const max = niceCeil(Math.max(0, ...days.map((d) => d.revenue)));
+    const max = niceCeil(Math.max(0, ...days.flatMap((d) => [d.sales, d.units])));
     const groupW = (W - PAD * 2) / n;
-    const barW = Math.min(24, groupW - 10);
+    const barW = Math.min(12, (groupW - 10) / 2);
     const height = (v: number) => ((BASE - TOP) * v) / max;
     const today = days[n - 1];
 
     const summary =
-        `Bar chart of daily sales for the last ${n} days. ` +
-        `Today: sales ${formatMoneyCompact(today.revenue)}.`;
+        `Paired bar chart of daily revenue and units for the last ${n} days. ` +
+        `Today: revenue ${formatMoneyCompact(today.sales)}, units ${formatCount(today.units)}.`;
 
     return (
         <svg viewBox={`0 0 ${W} ${H}`} className="block h-auto w-full" role="img" aria-label={summary}>
@@ -41,18 +40,12 @@ export function SalesDailyBarsChart({ days }: { days: SalesDayBar[] }) {
             <line x1={PAD} x2={W - PAD} y1={BASE} y2={BASE} stroke="#d4d8df" />
 
             {days.map((d, i) => {
-                const x0 = PAD + i * groupW + (groupW - barW) / 2;
+                const x0 = PAD + i * groupW + (groupW - (barW * 2 + 2)) / 2;
                 const isToday = i === n - 1;
                 return (
                     <g key={i}>
-                        <rect
-                            x={x0}
-                            y={BASE - height(d.revenue)}
-                            width={barW}
-                            height={height(d.revenue)}
-                            rx="2"
-                            fill={SALES_COLOR}
-                        />
+                        <rect x={x0} y={BASE - height(d.sales)} width={barW} height={height(d.sales)} rx="2" fill={SALES_COLOR} />
+                        <rect x={x0 + barW + 2} y={BASE - height(d.units)} width={barW} height={height(d.units)} rx="2" fill={UNITS_COLOR} />
                         {(n - 1 - i) % 2 === 0 && (
                             <text
                                 x={PAD + i * groupW + groupW / 2}
@@ -69,5 +62,20 @@ export function SalesDailyBarsChart({ days }: { days: SalesDayBar[] }) {
                 );
             })}
         </svg>
+    );
+}
+
+export function BarsLegend() {
+    return (
+        <div className="flex gap-4 text-[13px] text-[#3d4452]">
+            <span className="inline-flex items-center gap-1.5">
+                <span className="size-3 rounded-[3px]" style={{ background: SALES_COLOR }} />
+                Revenue
+            </span>
+            <span className="inline-flex items-center gap-1.5">
+                <span className="size-3 rounded-[3px]" style={{ background: UNITS_COLOR }} />
+                Units
+            </span>
+        </div>
     );
 }
