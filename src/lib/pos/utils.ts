@@ -38,12 +38,22 @@ export function extractRimSize(sizeStr: string): number | null {
 }
 
 /**
+ * Discount actually applied to a line: a fixed amount for the whole line,
+ * clamped between 0 and the line total. The server applies the same rule,
+ * so client and server totals always agree.
+ */
+export function lineDiscount(line: CartLine): number {
+    const gross = line.unitPrice * line.quantity;
+    return Math.min(Math.max(line.manualDiscount || 0, 0), gross);
+}
+
+/**
  * Total discount across the cart. Discounts are entirely manual —
  * set by whoever is manning the POS via each line's `manualDiscount`.
  * No automatic/bulk discount rules are applied here.
  */
 export function computeFrontendDiscounts(cart: CartLine[]): number {
-    return cart.reduce((sum, l) => sum + (l.manualDiscount || 0), 0);
+    return cart.reduce((sum, l) => sum + lineDiscount(l), 0);
 }
 
 /**
@@ -55,10 +65,11 @@ export function buildReceiptDiscounts(cart: CartLine[]) {
     const discounts: { productId: string; discountAmount: number; reason?: string }[] = [];
 
     for (const line of cart) {
-        if (line.manualDiscount && line.manualDiscount > 0) {
+        const d = lineDiscount(line);
+        if (d > 0) {
             discounts.push({
                 productId: line.productId,
-                discountAmount: line.manualDiscount,
+                discountAmount: d,
                 reason: "Manual discount",
             });
         }

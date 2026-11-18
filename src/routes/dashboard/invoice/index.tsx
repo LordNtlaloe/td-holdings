@@ -95,8 +95,8 @@ function RouteComponent() {
                         invoice.status === "paid"
                           ? "default"
                           : invoice.status === "cancelled"
-                          ? "destructive"
-                          : "secondary"
+                            ? "destructive"
+                            : "secondary"
                       }
                     >
                       {invoice.status}
@@ -104,15 +104,15 @@ function RouteComponent() {
                   </td>
                   <td className="p-3 text-right">
                     <Button variant="ghost" size="sm" asChild>
-    <Link
-      to="/dashboard/invoice/$id"
-      params={{
-        id: invoice._id,
-      }}
-    >
-      View
-    </Link>
-  </Button>
+                      <Link
+                        to="/dashboard/invoice/$id"
+                        params={{
+                          id: invoice._id,
+                        }}
+                      >
+                        View
+                      </Link>
+                    </Button>
                   </td>
                 </tr>
               ))}

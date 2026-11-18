@@ -1,95 +1,92 @@
 import { useMemo, useState } from "react";
-import type { Id } from "#/types/entities";
+import type { InventoryItem } from "#/types/pos";
+import { cartKey } from "#/lib/pos/utils";
 
-export type InvoiceCartItem = {
-  productId: Id<"products">;
+export type InvoiceLine = {
+  key: string;
+  productId: string;
   name: string;
   sku: string;
-  unitPrice: number;
-  quantity: number;
   size?: string;
   color?: string;
   variant?: string;
+  unitPrice: number;
+  quantity: number;
+  /** Units in stock when the line was added (store inventory). */
+  availableQuantity: number;
 };
 
-type ProductLike = {
-  _id: Id<"products">;
-  name: string;
-  sku: string;
-};
+export type StockShortage = { productId: string; name: string; requested: number; available: number };
 
+/**
+ * Cart for quotations, proformas and invoices. Unlike the POS cart it does NOT cap
+ * quantity at stock: a document can be written for more than is on the shelf, and the
+ * shortage is flagged instead (and blocks converting to a sale later).
+ */
 export function useInvoiceCart() {
-  const [cart, setCart] = useState<InvoiceCartItem[]>([]);
-  const [discountTotal, setDiscountTotal] = useState(0);
+  const [cart, setCart] = useState<InvoiceLine[]>([]);
+  const [discount, setDiscount] = useState(0);
 
   const addToCart = (
-    product: ProductLike,
+    item: InventoryItem,
     unitPrice: number,
     opts: { size?: string; color?: string; variant?: string } = {}
   ) => {
+    if (!item.product) return;
+    const product = item.product;
+    const key = cartKey(item.productId, opts.size, opts.color, opts.variant);
     setCart((prev) => {
-      const existingIndex = prev.findIndex(
-        (item) =>
-          item.productId === product._id &&
-          item.size === opts.size &&
-          item.color === opts.color &&
-          item.variant === opts.variant
-      );
-      if (existingIndex >= 0) {
-        const next = [...prev];
-        next[existingIndex] = {
-          ...next[existingIndex],
-          quantity: next[existingIndex].quantity + 1,
-        };
-        return next;
+      if (prev.some((l) => l.key === key)) {
+        return prev.map((l) => (l.key === key ? { ...l, quantity: l.quantity + 1 } : l));
       }
       return [
         ...prev,
         {
-          productId: product._id,
+          key,
+          productId: item.productId,
           name: product.name,
           sku: product.sku,
+          ...opts,
           unitPrice,
           quantity: 1,
-          ...opts,
+          availableQuantity: item.quantity,
         },
       ];
     });
   };
 
-  const updateQuantity = (index: number, quantity: number) => {
-    if (quantity <= 0) {
-      removeFromCart(index);
-      return;
-    }
-    setCart((prev) => prev.map((item, i) => (i === index ? { ...item, quantity } : item)));
+  const removeFromCart = (key: string) => setCart((prev) => prev.filter((l) => l.key !== key));
+
+  const updateQuantity = (key: string, quantity: number) => {
+    if (!Number.isFinite(quantity) || quantity <= 0) return removeFromCart(key);
+    setCart((prev) => prev.map((l) => (l.key === key ? { ...l, quantity } : l)));
   };
 
-  const updatePrice = (index: number, unitPrice: number) => {
-    setCart((prev) => prev.map((item, i) => (i === index ? { ...item, unitPrice } : item)));
-  };
-
-  const removeFromCart = (index: number) => {
-    setCart((prev) => prev.filter((_, i) => i !== index));
-  };
+  const updatePrice = (key: string, unitPrice: number) =>
+    setCart((prev) => prev.map((l) => (l.key === key ? { ...l, unitPrice: Math.max(0, unitPrice) } : l)));
 
   const clearCart = () => {
     setCart([]);
-    setDiscountTotal(0);
+    setDiscount(0);
   };
 
-  const cartQuantityForProduct = (productId: Id<"products">) =>
-    cart.filter((item) => item.productId === productId).reduce((sum, i) => sum + i.quantity, 0);
+  const cartQuantityForProduct = (productId: string) =>
+    cart.filter((l) => l.productId === productId).reduce((sum, l) => sum + l.quantity, 0);
 
-  const cartTotal = useMemo(
-    () => cart.reduce((sum, item) => sum + item.unitPrice * item.quantity, 0),
-    [cart]
-  );
-  const netTotal = useMemo(() => cartTotal - discountTotal, [cartTotal, discountTotal]);
-  const cartItemCount = useMemo(
-    () => cart.reduce((sum, item) => sum + item.quantity, 0),
-    [cart]
-  );
+  const cartTotal = useMemo(() => cart.reduce((sum, l) => sum + l.unitPrice * l.quantity, 0), [cart]);
+  const discountTotal = Math.min(Math.max(discount, 0), cartTotal);
+  const netTotal = cartTotal - discountTotal;
+
+  // Lines of the same product (different sizes/colours) share one stock pool.
+  const shortages = useMemo<StockShortage[]>(() => {
+    const byProduct = new Map<string, StockShortage>();
+    for (const l of cart) {
+      const existing = byProduct.get(l.productId);
+      if (existing) existing.requested += l.quantity;
+      else byProduct.set(l.productId, { productId: l.productId, name: l.name, requested: l.quantity, available: l.availableQuantity });
+    }
+    return [...byProduct.values()].filter((s) => s.requested > s.available);
+  }, [cart]);
 
   return {
     cart,
@@ -100,9 +97,10 @@ export function useInvoiceCart() {
     clearCart,
     cartQuantityForProduct,
     cartTotal,
+    discount,
+    setDiscount,
     discountTotal,
-    setDiscountTotal,
     netTotal,
-    cartItemCount,
+    shortages,
   };
 }

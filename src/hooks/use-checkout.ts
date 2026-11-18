@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { toast } from "sonner";
 import type { CartLine, CompletedSale, PaymentSplit } from "#/types/pos";
-import { buildReceiptDiscounts, formatCurrency } from "#/lib/pos/utils";
+import { buildReceiptDiscounts, formatCurrency, lineDiscount } from "#/lib/pos/utils";
 
 type StoreLike = { _id: string; name: string; phone?: string | null; address?: string | null } | null | undefined;
 type UserLike = { name?: string | null; email?: string | null } | null | undefined;
@@ -140,11 +140,14 @@ export function useCheckout({
                     color: line.color,
                     variant: line.variant,
                     departmentName: line.departmentName,
-                    manualDiscount: line.manualDiscount || 0,
+                    // Clamped to the line total, same rule the server applies
+                    manualDiscount: lineDiscount(line),
                 })),
             });
             const saleId = readId(createdSale, "sale");
 
+            // NOTE: POST /api/sales already updates customer stats server-side.
+            // If recordPurchase updates the same fields, remove one of the two.
             if (resolvedCustomerId) {
                 await recordPurchase({ customerId: resolvedCustomerId as any, amount: netTotal });
             }

@@ -552,26 +552,66 @@ salesRoutes.post("/", async (c) => {
     requireRole(user, ["super_admin", "admin", "manager", "cashier"]);
     const body = await c.req.json();
 
-    const { storeId, items, payments, customerId, customerName, discountTotal, paymentMethod, amountReceived, changeDue } = body;
+    // NOTE: `discountTotal` is intentionally NOT read from the body any more.
+    // The client only sends per-line `manualDiscount`, so the server derives
+    // the total itself (and can't be fed an inconsistent figure).
+    const { storeId, items, payments, customerId, paymentMethod, amountReceived, changeDue } = body;
 
     if (!storeId || !items || !items.length) {
       return c.json({ error: "storeId and items are required" }, 400);
     }
 
-    // Use a transaction-equivalent approach: all or nothing
-    const totalAmount = items.reduce((sum: number, item: any) => sum + (item.unitPrice * item.quantity), 0);
-    const netTotal = totalAmount - (discountTotal || 0);
+    // Per-line discount is a fixed amount for the whole line (not per unit,
+    // not a percentage). Clamp so it can't be negative or exceed the line total.
+    const lineDiscount = (item: any): number => {
+      const gross = item.unitPrice * item.quantity;
+      return Math.min(Math.max(Number(item.manualDiscount) || 0, 0), gross);
+    };
+
+    const grossTotal = items.reduce(
+      (sum: number, item: any) => sum + item.unitPrice * item.quantity,
+      0
+    );
+    const discountTotal = items.reduce(
+      (sum: number, item: any) => sum + lineDiscount(item),
+      0
+    );
+    const netTotal = grossTotal - discountTotal;
+
+    // Payments must add up to the discounted total (client checks this too,
+    // but the server shouldn't trust that).
+    if (Array.isArray(payments) && payments.length > 0) {
+      const paid = payments.reduce((sum: number, p: any) => sum + (Number(p.amount) || 0), 0);
+      if (Math.abs(paid - netTotal) > 0.01) {
+        return c.json(
+          { error: `Payment total (${paid.toFixed(2)}) does not match sale total (${netTotal.toFixed(2)})` },
+          400
+        );
+      }
+    }
+
+    // The client sends cash details inside `payments[]`, not as top-level
+    // fields, so derive them here when they aren't provided.
+    const cashPayments = Array.isArray(payments)
+      ? payments.filter((p: any) => p.method === "Cash")
+      : [];
+    const derivedAmountReceived = cashPayments.length
+      ? cashPayments.reduce((s: number, p: any) => s + (Number(p.amountReceived) || 0), 0)
+      : undefined;
+    const derivedChangeDue = cashPayments.length
+      ? cashPayments.reduce((s: number, p: any) => s + (Number(p.changeDue) || 0), 0)
+      : undefined;
 
     // Create sale record
     const result = await db.insert(schema.sales).values({
       storeId,
       customerId,
       totalAmount: netTotal,
-      discountTotal: discountTotal || 0,
+      discountTotal,
       paymentMethod: paymentMethod || payments?.[0]?.method || "Cash",
       paymentSplits: payments ? JSON.stringify(payments) : undefined,
-      amountReceived,
-      changeDue,
+      amountReceived: amountReceived ?? derivedAmountReceived,
+      changeDue: changeDue ?? derivedChangeDue,
       status: "completed",
     }).returning().get();
 
@@ -629,18 +669,22 @@ salesRoutes.post("/", async (c) => {
         }
       }
 
-      // Handle manual discounts
-      if (item.manualDiscount && item.manualDiscount > 0) {
+      // Handle manual discounts (use the clamped value so it matches the totals)
+      const appliedDiscount = lineDiscount(item);
+      if (appliedDiscount > 0) {
         await db.insert(schema.saleDiscounts).values({
           saleId: result.id,
           productId: item.productId,
-          discountAmount: item.manualDiscount,
+          discountAmount: appliedDiscount,
           reason: item.discountReason || "Manual",
         }).run();
       }
     }
 
     // Update customer stats
+    // NOTE: the client also calls customers.recordPurchase after this request.
+    // If that endpoint updates the same fields, stats are counted twice —
+    // keep it in one place only.
     if (customerId) {
       const customer = await db.select().from(schema.customers)
         .where(eq(schema.customers.id, customerId)).get();

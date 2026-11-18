@@ -167,14 +167,14 @@ export function ExpenseList({
             </td>
             <td className="py-3 text-right font-semibold">{formatMoney(expense.amount)}</td>
             <td className="pr-3 text-right">
-                <button
+                {/* <button
                     type="button"
                     onClick={() => setPendingDelete(expense)}
                     aria-label={`Remove ${expense.category} expense of ${formatMoney(expense.amount)}`}
                     className={cn(btnIcon, "w-auto px-2 text-[13px] font-medium text-[#9a3d00]")}
                 >
                     Remove
-                </button>
+                </button> */}
             </td>
         </tr>
     );
