@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
-import { format } from "date-fns";
 import {
     Dialog,
     DialogContent,
@@ -10,6 +9,7 @@ import {
     DialogTitle,
 } from "@/components/ui/dialog";
 import { cn } from "@/lib/utils";
+import { formatStoreDateTime } from "@/lib/datetime";
 import { btnDark, btnOutline, formatMoney } from "./theme";
 
 export interface SaleDetailsItem {
@@ -177,7 +177,7 @@ export function SaleDetailsDialog({
                         </span>
                     </div>
                     <DialogDescription className="text-[13px] text-[#5b6270]">
-                        {format(new Date(sale.createdAt), "EEE d MMM yyyy, HH:mm")}
+                        {formatStoreDateTime(sale.createdAt)}
                         {sale.store?.name ? ` · ${sale.store.name}` : ""}
                     </DialogDescription>
                 </DialogHeader>
@@ -354,8 +354,8 @@ export function SaleDetailsDialog({
                                 {busy === "cancel" || busy === "void"
                                     ? "Working…"
                                     : mode === "void"
-                                      ? "Yes, void sale"
-                                      : "Yes, cancel sale"}
+                                        ? "Yes, void sale"
+                                        : "Yes, cancel sale"}
                             </button>
                         </>
                     ) : (

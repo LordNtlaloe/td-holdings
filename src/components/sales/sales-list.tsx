@@ -3,6 +3,7 @@
 import { Fragment, useMemo, useState } from "react";
 import { format } from "date-fns";
 import { cn } from "@/lib/utils";
+import { formatStoreTime } from "@/lib/datetime";
 import { SegmentedControl } from "./segmented-control";
 import { listLabel, listRange, shiftList, type ListPeriod } from "./range-util";
 import { btnDark, btnIcon, card, fieldCls, formatCount, formatMoney } from "./theme";
@@ -191,7 +192,7 @@ export function SalesList({
             </td>
             {period === "day" && (
                 <td className="whitespace-nowrap border-b border-[#eef0f3] py-3 tabular-nums text-[#5b6270]">
-                    {row.soldAt?.[0] ? format(new Date(row.soldAt[0]), "HH:mm") : "—"}
+                    {row.soldAt?.[0] ? formatStoreTime(row.soldAt[0]) : "—"}
                 </td>
             )}
             <td className="border-b border-[#eef0f3] py-3 text-right">
@@ -221,7 +222,7 @@ export function SalesList({
         // for many sales, "09:14 – 17:40 · 6 sales".
         const timesLabel = (times: number[] | undefined, fallback: string) => {
             if (!times || times.length === 0) return fallback;
-            const stamps = times.map((time) => format(new Date(time), "HH:mm"));
+            const stamps = times.map((time) => formatStoreTime(time));
             if (stamps.length <= 3) return stamps.join(", ");
             return `${stamps[0]} – ${stamps[stamps.length - 1]} · ${stamps.length} sales`;
         };

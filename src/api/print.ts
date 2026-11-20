@@ -31,6 +31,7 @@ import {
   Image,
 } from "react-thermal-printer";
 import { Jimp } from "jimp";
+import { formatReceiptDateTime } from "../lib/datetime.ts";
 
 // ===============================
 // CONSTANTS
@@ -270,7 +271,7 @@ export async function renderReceipt(args: PrintReceiptArgs): Promise<Uint8Array>
     React.createElement(
       Text,
       { align: "center" },
-      new Date(args.completedAt).toLocaleString("en-ZA")
+      formatReceiptDateTime(args.completedAt)
     )
   );
   children.push(

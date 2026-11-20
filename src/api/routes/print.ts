@@ -9,7 +9,7 @@
  */
 
 import { Hono } from "hono";
-import { eq } from "drizzle-orm";
+import { and, eq } from "drizzle-orm";
 import db from "../db/index.ts";
 import * as schema from "../db/schema.ts";
 import type { AuthEnv } from "../middleware/auth.ts";
@@ -22,6 +22,7 @@ import {
   RELAY_SECRET,
   type PrintReceiptArgs,
 } from "../print.ts";
+import { formatReceiptDateTime } from "../../lib/datetime.ts";
 
 export const printRoutes = new Hono<AuthEnv>();
 
@@ -60,10 +61,10 @@ function parseReceiptArgs(body: any): PrintReceiptArgs | { error: string } {
     })),
     discounts: Array.isArray(body.discounts)
       ? body.discounts.map((d: any) => ({
-          productId: String(d?.productId ?? ""),
-          discountAmount: Number(d?.discountAmount) || 0,
-          reason: d?.reason ?? undefined,
-        }))
+        productId: String(d?.productId ?? ""),
+        discountAmount: Number(d?.discountAmount) || 0,
+        reason: d?.reason ?? undefined,
+      }))
       : [],
     total: Number(body.total) || 0,
     itemCount: Number(body.itemCount) || 0,
@@ -98,6 +99,146 @@ async function resolveAgentId(
 // POST /api/print/receipt — render the sale and hand it to the till.
 // Mirrors `printReceipt` from convex/print.ts, including its return shape.
 // ─────────────────────────────────────────────────────────────────────────────
+type ReceiptUser = { id: string; role: string };
+
+/**
+ * The single path a receipt takes to the till. POS checkout and Sales > Reprint both end
+ * here, so a reprint is rendered, addressed and logged exactly like the original print.
+ */
+async function deliverReceipt(
+  args: PrintReceiptArgs,
+  user: ReceiptUser,
+  logAction: string,
+  logNote: string
+) {
+  const agentId = await resolveAgentId(args, args.saleId);
+  if (!agentId) {
+    return {
+      status: 400 as const,
+      body: {
+        success: false,
+        error: "No printer configured for this store. Please set up a printer in store settings.",
+      },
+    };
+  }
+
+  const data = await renderReceipt({ ...args, agentId });
+  await sendToRelay(data, agentId, args.paymentMethod);
+
+  await db
+    .insert(schema.activityLogs)
+    .values({
+      userId: user.id,
+      role: user.role,
+      action: logAction,
+      entityType: "sales",
+      entityId: args.saleId,
+      description: `${logNote} ${agentId}`,
+    })
+    .run();
+
+  return { status: 200 as const, body: { success: true, message: "Job sent to till" } };
+}
+
+/**
+ * Rebuilds, from the database, the same receipt data the POS builds from its cart.
+ * Used by reprint, where the browser only knows the sale id.
+ */
+async function buildReceiptArgsFromSale(
+  saleId: string
+): Promise<{ args: PrintReceiptArgs } | { error: string; status: 400 | 404 }> {
+  const sale = await db.select().from(schema.sales).where(eq(schema.sales.id, saleId)).get();
+  if (!sale) return { error: "Sale not found", status: 404 };
+  if (sale.status !== "completed") {
+    return { error: "Only completed sales can be printed", status: 400 };
+  }
+
+  const store = await db.select().from(schema.stores).where(eq(schema.stores.id, sale.storeId)).get();
+
+  const saleItems = await db.select().from(schema.saleItems).where(eq(schema.saleItems.saleId, saleId)).all();
+  const items = [];
+  for (const item of saleItems) {
+    const product = await db.select().from(schema.products).where(eq(schema.products.id, item.productId)).get();
+    const department = product
+      ? await db.select().from(schema.departments).where(eq(schema.departments.id, product.departmentId)).get()
+      : null;
+    items.push({
+      productId: item.productId,
+      name: product?.name ?? "Unknown product",
+      sku: product?.sku ?? "",
+      size: item.size ?? undefined,
+      color: item.color ?? undefined,
+      variant: item.variant ?? undefined,
+      unitPrice: item.unitPrice,
+      quantity: item.quantity,
+      availableQuantity: 0,
+      departmentId: product?.departmentId ?? "",
+      departmentName: department?.name ?? "",
+    });
+  }
+
+  const discountRows = await db
+    .select()
+    .from(schema.saleDiscounts)
+    .where(eq(schema.saleDiscounts.saleId, saleId))
+    .all();
+
+  // The cashier is whoever created the sale (the sales table has no user column).
+  const created = await db
+    .select()
+    .from(schema.activityLogs)
+    .where(and(eq(schema.activityLogs.action, "sale.created"), eq(schema.activityLogs.entityId, saleId)))
+    .get();
+  const cashier = created
+    ? await db.select().from(schema.users).where(eq(schema.users.id, created.userId)).get()
+    : null;
+
+  const customer = sale.customerId
+    ? await db.select().from(schema.customers).where(eq(schema.customers.id, sale.customerId)).get()
+    : null;
+
+  // The POS prints "Cash + Card" for split payments; the sale row only keeps the first method.
+  let paymentMethod = sale.paymentMethod;
+  if (sale.paymentSplits) {
+    try {
+      const splits = JSON.parse(sale.paymentSplits);
+      if (Array.isArray(splits) && splits.length > 0) {
+        paymentMethod = splits.map((p: any) => String(p.method)).join(" + ");
+      }
+    } catch {
+      // keep the stored method
+    }
+  }
+
+  return {
+    args: {
+      saleId,
+      storeName: store?.name ?? "TD Holdings",
+      storePhone: store?.phone || undefined,
+      storeAddress: store?.address || undefined,
+      customerName: customer?.name || undefined,
+      cashierName: cashier?.name || cashier?.email || undefined,
+      paymentMethod,
+      amountReceived: sale.amountReceived ?? undefined,
+      changeDue: sale.changeDue ?? undefined,
+      items,
+      discounts: discountRows.map((d) => ({
+        productId: d.productId,
+        discountAmount: d.discountAmount,
+        reason: d.reason ?? undefined,
+      })),
+      total: sale.totalAmount,
+      itemCount: items.reduce((sum, i) => sum + i.quantity, 0),
+      completedAt: sale.createdAt,
+      agentId: "", // resolved from the sale's store
+    },
+  };
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// POST /api/print/receipt — render the sale and hand it to the till (POS checkout).
+// Mirrors `printReceipt` from convex/print.ts, including its return shape.
+// ─────────────────────────────────────────────────────────────────────────────
 printRoutes.post("/receipt", async (c) => {
   try {
     const user = getUser(c);
@@ -108,36 +249,38 @@ printRoutes.post("/receipt", async (c) => {
       return c.json({ success: false, error: parsed.error }, 400);
     }
 
-    const agentId = await resolveAgentId(parsed, parsed.saleId);
-    if (!agentId) {
-      return c.json(
-        {
-          success: false,
-          error:
-            "No printer configured for this store. Please set up a printer in store settings.",
-        },
-        400
-      );
-    }
+    // The sale's stored timestamp is the single source of truth. The browser's clock can
+    // differ from the server's, which is what made receipts disagree with the sales records.
+    const sale = await db.select().from(schema.sales).where(eq(schema.sales.id, parsed.saleId)).get();
+    const args = sale ? { ...parsed, completedAt: sale.createdAt } : parsed;
 
-    const data = await renderReceipt({ ...parsed, agentId });
-    await sendToRelay(data, agentId, parsed.paymentMethod);
-
-    await db
-      .insert(schema.activityLogs)
-      .values({
-        userId: user.id,
-        role: user.role,
-        action: "print.receipt",
-        entityType: "sales",
-        entityId: parsed.saleId,
-        description: `Receipt sent to till ${agentId}`,
-      })
-      .run();
-
-    return c.json({ success: true, message: "Job sent to till" });
+    const result = await deliverReceipt(args, user, "print.receipt", "Receipt sent to till");
+    return c.json(result.body, result.status);
   } catch (error) {
     console.error("Print error:", error);
+    return c.json({
+      success: false,
+      error: error instanceof Error ? error.message : "Unknown error occurred",
+    });
+  }
+});
+
+// ─────────────────────────────────────────────────────────────────────────────
+// POST /api/print/reprint/:saleId — Sales page "Reprint receipt". Same renderer, same
+// delivery path as the POS; only the data comes from the saved sale instead of the cart.
+// ─────────────────────────────────────────────────────────────────────────────
+printRoutes.post("/reprint/:saleId", async (c) => {
+  try {
+    const user = getUser(c);
+    const built = await buildReceiptArgsFromSale(c.req.param("saleId"));
+    if ("error" in built) {
+      return c.json({ success: false, error: built.error }, built.status);
+    }
+
+    const result = await deliverReceipt(built.args, user, "print.reprint", "Receipt reprinted on till");
+    return c.json(result.body, result.status);
+  } catch (error) {
+    console.error("Reprint error:", error);
     return c.json({
       success: false,
       error: error instanceof Error ? error.message : "Unknown error occurred",
@@ -193,7 +336,7 @@ printRoutes.post("/test", async (c) => {
 ==============================
 Store: ${store.name}
 Agent ID: ${store.printAgentId}
-Time: ${new Date().toLocaleString()}
+Time: ${formatReceiptDateTime(Date.now())}
 ==============================
 This is a test print to verify
 the printer connection is working
