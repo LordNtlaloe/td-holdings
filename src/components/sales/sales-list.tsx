@@ -50,6 +50,8 @@ const departmentOf = (row: ProductBreakdownRow) => row.department?.trim() || NO_
 /** Groups show their biggest items first; the rest sit behind "N more items". */
 const PREVIEW_ITEMS = 10;
 
+const roundCents = (value: number) => Math.round(value * 100) / 100;
+
 interface SalesListProps {
     groups: ProductBreakdownGroup[];
     period: ListPeriod;
@@ -61,6 +63,12 @@ interface SalesListProps {
     onSaleClick?: (saleId: string) => void;
     onPeriodChange: (period: ListPeriod) => void;
     onAnchorChange: (anchor: Date) => void;
+}
+
+/** Position of a row inside a sale in Day view (rows of one sale are merged). */
+interface SaleBlock {
+    first: boolean;
+    span: number;
 }
 
 export function SalesList({
@@ -102,6 +110,28 @@ export function SalesList({
             .sort((a, b) => b.total - a.total);
     }, [allProducts]);
 
+    // The real payment split of each sale. Line rows carry their share of the
+    // sale's payments (proportional to line value), so summing every line of a
+    // sale gives back exactly what the customer paid per method.
+    const salePayments = useMemo(() => {
+        const bySale = new Map<string, Map<string, number>>();
+
+        for (const row of allProducts) {
+            if (!row.saleId) continue;
+            const map = bySale.get(row.saleId) ?? new Map<string, number>();
+            for (const payment of row.payments) {
+                map.set(payment.method, (map.get(payment.method) ?? 0) + payment.revenue);
+            }
+            bySale.set(row.saleId, map);
+        }
+
+        for (const map of bySale.values()) {
+            for (const [method, amount] of map) map.set(method, roundCents(amount));
+        }
+
+        return bySale;
+    }, [allProducts]);
+
     // Departments present in the current period, for the filter dropdown.
     const departmentOptions = useMemo(
         () => [...new Set(allProducts.map(departmentOf))].sort((a, b) => a.localeCompare(b)),
@@ -138,6 +168,21 @@ export function SalesList({
         );
     }, [visibleGroups, query]);
 
+    // Day view: lines of the same sale are kept together so the payment
+    // columns can be merged into one cell per sale.
+    const dayBlocks = useMemo(() => {
+        const blocks = new Map<string, ProductBreakdownRow[]>();
+
+        filtered.forEach((row, index) => {
+            const key = row.saleId ?? `row:${row.id ?? index}`;
+            const list = blocks.get(key);
+            if (list) list.push(row);
+            else blocks.set(key, [row]);
+        });
+
+        return [...blocks.values()];
+    }, [filtered]);
+
     const totals = useMemo(() => {
         const methodTotals = new Map<string, number>();
         let quantity = 0;
@@ -160,56 +205,71 @@ export function SalesList({
     const searching = query.trim().length > 0;
     const columnCount = 4 + methods.length;
 
-    const renderRow = (row: ProductBreakdownRow) => {
+    const renderRow = (row: ProductBreakdownRow, block?: SaleBlock) => {
         const saleId = period === "day" ? row.saleId : undefined;
         const clickable = Boolean(saleId && onSaleClick);
+        const mergedPayments = Boolean(block && saleId);
 
         return (
-        <tr
-            key={row.id ?? row.productName}
-            onClick={clickable ? () => onSaleClick?.(saleId as string) : undefined}
-            onKeyDown={
-                clickable
-                    ? (event) => {
-                          if (event.key === "Enter" || event.key === " ") {
-                              event.preventDefault();
-                              onSaleClick?.(saleId as string);
-                          }
-                      }
-                    : undefined
-            }
-            tabIndex={clickable ? 0 : undefined}
-            title={clickable ? "View sale details" : undefined}
-            className={cn(clickable && "cursor-pointer hover:bg-[#f6f7f9] focus-visible:bg-[#f6f7f9]")}
-        >
-            <td className="border-b border-[#eef0f3] py-3 font-medium">
-                {row.productName}
-            </td>
-            <td className="border-b border-[#eef0f3] py-3">
-                <span className="rounded-full bg-[#f1f3f6] px-2.5 py-1 text-xs text-[#3d4452]">
-                    {row.department || "—"}
-                </span>
-            </td>
-            {period === "day" && (
-                <td className="whitespace-nowrap border-b border-[#eef0f3] py-3 tabular-nums text-[#5b6270]">
-                    {row.soldAt?.[0] ? formatStoreTime(row.soldAt[0]) : "—"}
+            <tr
+                key={row.id ?? row.productName}
+                onClick={clickable ? () => onSaleClick?.(saleId as string) : undefined}
+                onKeyDown={
+                    clickable
+                        ? (event) => {
+                            if (event.key === "Enter" || event.key === " ") {
+                                event.preventDefault();
+                                onSaleClick?.(saleId as string);
+                            }
+                        }
+                        : undefined
+                }
+                tabIndex={clickable ? 0 : undefined}
+                title={clickable ? "View sale details" : undefined}
+                className={cn(clickable && "cursor-pointer hover:bg-[#f6f7f9] focus-visible:bg-[#f6f7f9]")}
+            >
+                <td className="border-b border-[#eef0f3] py-3 font-medium">
+                    {row.productName}
                 </td>
-            )}
-            <td className="border-b border-[#eef0f3] py-3 text-right">
-                {formatCount(row.quantity)}
-            </td>
-            <td className="border-b border-[#eef0f3] py-3 text-right font-semibold">
-                {formatMoney(row.revenue)}
-            </td>
-            {methods.map((m) => {
-                const payment = row.payments.find((p) => p.method === m.method);
-                return (
-                    <td key={m.method} className="border-b border-[#eef0f3] py-3 text-right">
-                        {payment ? formatMoney(payment.revenue) : "—"}
+                <td className="border-b border-[#eef0f3] py-3">
+                    <span className="rounded-full bg-[#f1f3f6] px-2.5 py-1 text-xs text-[#3d4452]">
+                        {row.department || "—"}
+                    </span>
+                </td>
+                {period === "day" && (
+                    <td className="whitespace-nowrap border-b border-[#eef0f3] py-3 tabular-nums text-[#5b6270]">
+                        {row.soldAt?.[0] ? formatStoreTime(row.soldAt[0]) : "—"}
                     </td>
-                );
-            })}
-        </tr>
+                )}
+                <td className="border-b border-[#eef0f3] py-3 text-right">
+                    {formatCount(row.quantity)}
+                </td>
+                <td className="border-b border-[#eef0f3] py-3 text-right font-semibold">
+                    {formatMoney(row.revenue)}
+                </td>
+                {mergedPayments
+                    ? block!.first &&
+                    methods.map((m) => {
+                        const amount = salePayments.get(saleId as string)?.get(m.method);
+                        return (
+                            <td
+                                key={m.method}
+                                rowSpan={block!.span}
+                                className="border-b border-[#eef0f3] py-3 text-right align-middle"
+                            >
+                                {amount ? formatMoney(amount) : "—"}
+                            </td>
+                        );
+                    })
+                    : methods.map((m) => {
+                        const payment = row.payments.find((p) => p.method === m.method);
+                        return (
+                            <td key={m.method} className="border-b border-[#eef0f3] py-3 text-right">
+                                {payment ? formatMoney(payment.revenue) : "—"}
+                            </td>
+                        );
+                    })}
+            </tr>
         );
     };
 
@@ -311,8 +371,7 @@ export function SalesList({
             rows.push({
                 kind: "section",
                 cells: [
-                    `${department.name} · ${productCount} ${
-                        productCount === 1 ? "product" : "products"
+                    `${department.name} · ${productCount} ${productCount === 1 ? "product" : "products"
                     }`,
                 ],
             });
@@ -416,8 +475,8 @@ export function SalesList({
                                     ? "item"
                                     : "items"
                                 : filtered.length === 1
-                                  ? "product"
-                                  : "products"}
+                                    ? "product"
+                                    : "products"}
                         </span>
                         <button
                             type="button"
@@ -503,8 +562,14 @@ export function SalesList({
                             </tr>
                         </thead>
                         <tbody>
-                            {searching || period === "day" ? (
-                                filtered.map(renderRow)
+                            {period === "day" ? (
+                                dayBlocks.flatMap((rows) =>
+                                    rows.map((row, i) =>
+                                        renderRow(row, { first: i === 0, span: rows.length })
+                                    )
+                                )
+                            ) : searching ? (
+                                filtered.map((row) => renderRow(row))
                             ) : (
                                 visibleGroups.map((group, index) => {
                                     const isOpen = expanded[group.key] ?? index === 0;
@@ -545,7 +610,7 @@ export function SalesList({
                                                     </div>
                                                 </td>
                                             </tr>
-                                            {isOpen && visible.map(renderRow)}
+                                            {isOpen && visible.map((row) => renderRow(row))}
                                             {isOpen && hidden.length > 0 && (
                                                 <tr className="border-t border-[#eef0f3] text-[13px] text-[#5b6270]">
                                                     <td colSpan={columnCount} className="p-0">
