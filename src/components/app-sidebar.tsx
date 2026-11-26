@@ -6,7 +6,7 @@ import { Link } from '@tanstack/react-router';
 import {
     LayoutDashboard, Users, UserCog, ShoppingCart, Package, Boxes,
     Truck, Receipt, ClipboardList, Building2, Contact, Wallet,
-    BarChart3, Settings, HelpCircle, ScrollText, BookOpen, type LucideIcon
+    BarChart3, Settings, HelpCircle, ScrollText, type LucideIcon
 } from 'lucide-react';
 import { useCurrentUser } from '#/lib/api/hooks';
 import AppLogo from './app-logo';
@@ -38,7 +38,6 @@ const mainNavItems: NavItem[] = [
     // User accounts + sign-in passwords (admin only). Employees is the HR record;
     // Users is the login. Every employee has a user, but not every user is an employee.
     { title: 'Users', url: '/dashboard/users', icon: UserCog, roles: ['super_admin', 'admin'] },
-    { title: 'Accounting', url: '/dashboard/accounting', icon: BookOpen, roles: ['super_admin', 'admin', 'accountant'] },
 ];
 
 const footerNavItems: NavItem[] = [

@@ -5,19 +5,9 @@
 // Tables are ordered topologically so FK references always point to tables
 // defined earlier. Circular references are handled by omitting the constraint
 // on one side (enforced at the application layer).
-//
-// CHANGES in this version (double-entry accounting):
-//   • NEW  TIER 11: accounts, accountMappings, accountingPeriods,
-//          journalEntries, journalLines, bankStatements, bankStatementLines
-//   • EDIT ledgerEntries   → added journalEntryId (links legacy rows to journals)
-//   • EDIT activityLogs    → added storeId + metadata (before/after for audit trail)
-//   • EDIT purchases       → added paymentMethod (which account paid for stock)
-//   • EDIT users/employees → role enum gains "accountant" (TS-only; SQLite has no
-//          CHECK for it, so no migration is needed)
-// All edits to existing tables are NULLABLE additions, so no data is rewritten.
 // ─────────────────────────────────────────────────────────────────────────────
 
-import { sqliteTable, text, integer, real, index, uniqueIndex } from "drizzle-orm/sqlite-core";
+import { sqliteTable, text, integer, real } from "drizzle-orm/sqlite-core";
 
 // ─── Helpers ────────────────────────────────────────────────────────────────
 
@@ -95,7 +85,7 @@ export const users = sqliteTable("app_users", {
   id: id(),
   email: text("email").notNull().unique(),
   name: text("name").notNull(),
-  role: text("role", { enum: ["super_admin", "admin", "manager", "cashier", "accountant"] }).notNull().default("cashier"),
+  role: text("role", { enum: ["super_admin", "admin", "manager", "cashier"] }).notNull().default("cashier"),
   storeId: text("store_id"), // FK omitted to avoid circular ref; enforced app-level
   passwordHash: text("password_hash"), // stored here for simplicity
   image: text("image"),
@@ -141,7 +131,7 @@ export const employees = sqliteTable("employees", {
   id: id(),
   userId: text("user_id").notNull().references(() => users.id),
   storeId: text("store_id").notNull().references(() => stores.id),
-  role: text("role", { enum: ["super_admin", "admin", "manager", "cashier", "accountant"] }).notNull(),
+  role: text("role", { enum: ["super_admin", "admin", "manager", "cashier"] }).notNull(),
   isActive: integer("is_active", { mode: "boolean" }).notNull().default(true),
   createdAt: createdAt(),
   updatedAt: updatedAt(),
@@ -239,12 +229,6 @@ export const purchases = sqliteTable("purchases", {
   supplierId: text("supplier_id").references(() => suppliers.id),
   totalAmount: real("total_amount").notNull(),
   status: text("status", { enum: ["received", "pending", "cancelled"] }).notNull().default("pending"),
-  /**
-   * NEW: how the purchase was paid ("Cash", "Bank Transfer", ...). Decides the
-   * credit side of the stock-purchase journal. NULL = unpaid / on account, which
-   * credits Accounts payable instead.
-   */
-  paymentMethod: text("payment_method"),
   createdAt: integer("created_at", { mode: "number" }).notNull().$defaultFn(() => Date.now()),
   updatedAt: updatedAt(),
 });
@@ -341,11 +325,6 @@ export const saleEdits = sqliteTable("sale_edits", {
   createdAt: createdAt(),
 });
 
-/**
- * LEGACY single-entry ledger. Kept so existing screens and data keep working.
- * New code should post to `journalEntries` / `journalLines` (TIER 11); during
- * the transition each legacy row can point at the journal that replaced it.
- */
 export const ledgerEntries = sqliteTable("ledger_entries", {
   id: id(),
   storeId: text("store_id").notNull().references(() => stores.id),
@@ -358,8 +337,6 @@ export const ledgerEntries = sqliteTable("ledger_entries", {
   purchaseId: text("purchase_id").references(() => purchases.id),
   cancelledSaleId: text("cancelled_sale_id").references(() => sales.id),
   date: integer("date", { mode: "number" }).notNull(),
-  /** NEW: journal entry that replaced this row (FK omitted: journalEntries is defined later). */
-  journalEntryId: text("journal_entry_id"),
   createdAt: createdAt(),
 });
 
@@ -371,10 +348,6 @@ export const activityLogs = sqliteTable("activity_logs", {
   entityType: text("entity_type"),
   entityId: text("entity_id"),
   description: text("description"),
-  /** NEW: store the action happened in, for per-store audit filtering. */
-  storeId: text("store_id"),
-  /** NEW: JSON `{ before, after }` so the Audit trail can show what changed. */
-  metadata: text("metadata"),
   createdAt: integer("created_at", { mode: "number" }).notNull().$defaultFn(() => Date.now()),
 });
 
@@ -439,179 +412,3 @@ export const consultations = sqliteTable("consultations", {
   createdAt: createdAt(),
   updatedAt: updatedAt(),
 });
-
-// ═════════════════════════════════════════════════════════════════════════════
-// TIER 11: Double-entry accounting  (NEW)
-//
-// Rules enforced at the application layer (put them in ONE posting helper):
-//   1. A journal entry's lines must satisfy  SUM(debit) = SUM(credit).
-//   2. Each line has exactly one side > 0 (the other is 0).
-//   3. Posted entries are NEVER edited or deleted. Corrections are a new entry
-//      with `reversalOfId` pointing at the original (status → "reversed").
-//   4. No entry may be posted with a `date` inside a closed accounting period.
-//   5. Amounts are rounded to 2 decimals before saving (floats, same as the
-//      rest of this schema); compare balances with a 0.01 tolerance.
-// ═════════════════════════════════════════════════════════════════════════════
-
-/** Chart of accounts. */
-export const accounts = sqliteTable(
-  "accounts",
-  {
-    id: id(),
-    code: text("code").notNull(), // "1000", "4000", ...
-    name: text("name").notNull(), // "Cash on hand"
-    type: text("type", {
-      enum: ["asset", "liability", "equity", "revenue", "expense"],
-    }).notNull(),
-    /** Side that increases the account. Contra accounts (e.g. Returns) flip it. */
-    normalBalance: text("normal_balance", { enum: ["debit", "credit"] }).notNull(),
-    parentId: text("parent_id"), // self-ref FK omitted; for grouped accounts
-    description: text("description"),
-    /** System accounts (cash, sales, inventory...) can't be deleted or retyped. */
-    isSystem: integer("is_system", { mode: "boolean" }).notNull().default(false),
-    isActive: integer("is_active", { mode: "boolean" }).notNull().default(true),
-    createdAt: createdAt(),
-    updatedAt: updatedAt(),
-  },
-  (t) => ({
-    codeIdx: uniqueIndex("accounts_code_idx").on(t.code),
-  })
-);
-
-/**
- * Tells the posting code which account to use for an event, so nothing is
- * hard-coded. Examples of `key`:
- *   "payment:Cash" "payment:Mpesa" "payment:Ecocash" "payment:Card"
- *   "payment:Bank Transfer"            → the asset account that method lands in
- *   "sales:revenue"  "sales:returns"   "inventory"  "cogs"  "payables"
- *   "equity:retained-earnings"
- */
-export const accountMappings = sqliteTable(
-  "account_mappings",
-  {
-    id: id(),
-    key: text("key").notNull(),
-    accountId: text("account_id").notNull().references(() => accounts.id),
-    createdAt: createdAt(),
-    updatedAt: updatedAt(),
-  },
-  (t) => ({
-    keyIdx: uniqueIndex("account_mappings_key_idx").on(t.key),
-  })
-);
-
-/** One row per month. Closing a period locks it against new postings. */
-export const accountingPeriods = sqliteTable(
-  "accounting_periods",
-  {
-    id: id(),
-    year: integer("year").notNull(),
-    month: integer("month").notNull(), // 1–12
-    startDate: integer("start_date", { mode: "number" }).notNull(), // ms, store time
-    endDate: integer("end_date", { mode: "number" }).notNull(), // ms, inclusive
-    status: text("status", { enum: ["open", "closed"] }).notNull().default("open"),
-    closedAt: integer("closed_at", { mode: "number" }),
-    closedBy: text("closed_by").references(() => users.id),
-    /** Set when an admin reopens the period; the reason also goes to activityLogs. */
-    reopenedAt: integer("reopened_at", { mode: "number" }),
-    reopenedBy: text("reopened_by").references(() => users.id),
-    createdAt: createdAt(),
-    updatedAt: updatedAt(),
-  },
-  (t) => ({
-    ymIdx: uniqueIndex("accounting_periods_ym_idx").on(t.year, t.month),
-  })
-);
-
-/** A balanced set of lines. `storeId` NULL = company-level (rent, salaries...). */
-export const journalEntries = sqliteTable(
-  "journal_entries",
-  {
-    id: id(),
-    entryNumber: text("entry_number").notNull(), // "JE-0412"; SL-/PU-/CN- for system entries
-    storeId: text("store_id").references(() => stores.id),
-    date: integer("date", { mode: "number" }).notNull(),
-    memo: text("memo"),
-    status: text("status", { enum: ["draft", "posted", "reversed"] }).notNull().default("draft"),
-    /** What produced this entry. "manual" = typed in the Journal entries screen. */
-    sourceType: text("source_type", {
-      enum: ["sale", "cancellation", "purchase", "manual", "adjustment", "bank"],
-    }).notNull(),
-    saleId: text("sale_id").references(() => sales.id),
-    purchaseId: text("purchase_id").references(() => purchases.id),
-    cancelledSaleId: text("cancelled_sale_id").references(() => sales.id),
-    periodId: text("period_id").references(() => accountingPeriods.id),
-    /** If this entry reverses another, the original's id (self-ref FK omitted). */
-    reversalOfId: text("reversal_of_id"),
-    createdBy: text("created_by").notNull().references(() => users.id),
-    postedBy: text("posted_by").references(() => users.id),
-    postedAt: integer("posted_at", { mode: "number" }),
-    createdAt: createdAt(),
-    updatedAt: updatedAt(),
-  },
-  (t) => ({
-    numberIdx: uniqueIndex("journal_entries_number_idx").on(t.entryNumber),
-    dateIdx: index("journal_entries_date_idx").on(t.date),
-    saleIdx: index("journal_entries_sale_idx").on(t.saleId),
-    storeDateIdx: index("journal_entries_store_date_idx").on(t.storeId, t.date),
-  })
-);
-
-/** Debit/credit lines. This is the table the General ledger reads. */
-export const journalLines = sqliteTable(
-  "journal_lines",
-  {
-    id: id(),
-    entryId: text("entry_id").notNull().references(() => journalEntries.id),
-    accountId: text("account_id").notNull().references(() => accounts.id),
-    description: text("description"),
-    debit: real("debit").notNull().default(0),
-    credit: real("credit").notNull().default(0),
-    createdAt: createdAt(),
-  },
-  (t) => ({
-    entryIdx: index("journal_lines_entry_idx").on(t.entryId),
-    accountIdx: index("journal_lines_account_idx").on(t.accountId),
-  })
-);
-
-/** An imported bank / mobile-money statement for one asset account. */
-export const bankStatements = sqliteTable(
-  "bank_statements",
-  {
-    id: id(),
-    accountId: text("account_id").notNull().references(() => accounts.id), // e.g. 1030 Bank
-    periodStart: integer("period_start", { mode: "number" }).notNull(),
-    periodEnd: integer("period_end", { mode: "number" }).notNull(),
-    openingBalance: real("opening_balance").notNull(),
-    closingBalance: real("closing_balance").notNull(),
-    status: text("status", { enum: ["in_progress", "reconciled"] }).notNull().default("in_progress"),
-    importedBy: text("imported_by").notNull().references(() => users.id),
-    reconciledBy: text("reconciled_by").references(() => users.id),
-    reconciledAt: integer("reconciled_at", { mode: "number" }),
-    createdAt: createdAt(),
-    updatedAt: updatedAt(),
-  },
-  (t) => ({
-    accountIdx: index("bank_statements_account_idx").on(t.accountId, t.periodEnd),
-  })
-);
-
-/** One statement line. Positive = money in, negative = money out. */
-export const bankStatementLines = sqliteTable(
-  "bank_statement_lines",
-  {
-    id: id(),
-    statementId: text("statement_id").notNull().references(() => bankStatements.id),
-    date: integer("date", { mode: "number" }).notNull(),
-    description: text("description").notNull(),
-    reference: text("reference"),
-    amount: real("amount").notNull(),
-    /** The ledger line this statement line was matched to (NULL = unmatched). */
-    matchedJournalLineId: text("matched_journal_line_id").references(() => journalLines.id),
-    createdAt: createdAt(),
-  },
-  (t) => ({
-    statementIdx: index("bank_statement_lines_statement_idx").on(t.statementId),
-  })
-);

@@ -14,7 +14,6 @@ import { Route as authSignInRouteImport } from './routes/(auth)/sign-in'
 import { Route as authSignUpRouteImport } from './routes/(auth)/sign-up'
 import { Route as DashboardIndexRouteImport } from './routes/dashboard/index'
 import { Route as PosIndexRouteImport } from './routes/pos/index'
-import { Route as DashboardAccountingIndexRouteImport } from './routes/dashboard/accounting/index'
 import { Route as DashboardCategoriesIndexRouteImport } from './routes/dashboard/categories/index'
 import { Route as DashboardCustomersIndexRouteImport } from './routes/dashboard/customers/index'
 import { Route as DashboardDepartmentsIndexRouteImport } from './routes/dashboard/departments/index'
@@ -31,9 +30,6 @@ import { Route as DashboardSettingsPasswordRouteImport } from './routes/dashboar
 import { Route as DashboardStoresIndexRouteImport } from './routes/dashboard/stores/index'
 import { Route as DashboardTransfersIndexRouteImport } from './routes/dashboard/transfers/index'
 import { Route as DashboardUsersIndexRouteImport } from './routes/dashboard/users/index'
-import { Route as DashboardAccountingAccountsIndexRouteImport } from './routes/dashboard/accounting/accounts/index'
-import { Route as DashboardAccountingJournalIndexRouteImport } from './routes/dashboard/accounting/journal/index'
-import { Route as DashboardAccountingReportsIndexRouteImport } from './routes/dashboard/accounting/reports/index'
 import { Route as DashboardInvoiceIdIndexRouteImport } from './routes/dashboard/invoice/$id/index'
 import { Route as DashboardInvoiceNewIndexRouteImport } from './routes/dashboard/invoice/new/index'
 import { Route as DashboardProductsExportIndexRouteImport } from './routes/dashboard/products/export/index'
@@ -64,12 +60,6 @@ const PosIndexRoute = PosIndexRouteImport.update({
   path: '/pos/',
   getParentRoute: () => rootRouteImport,
 } as any)
-const DashboardAccountingIndexRoute =
-  DashboardAccountingIndexRouteImport.update({
-    id: '/dashboard/accounting/',
-    path: '/dashboard/accounting/',
-    getParentRoute: () => rootRouteImport,
-  } as any)
 const DashboardCategoriesIndexRoute =
   DashboardCategoriesIndexRouteImport.update({
     id: '/dashboard/categories/',
@@ -154,24 +144,6 @@ const DashboardUsersIndexRoute = DashboardUsersIndexRouteImport.update({
   path: '/dashboard/users/',
   getParentRoute: () => rootRouteImport,
 } as any)
-const DashboardAccountingAccountsIndexRoute =
-  DashboardAccountingAccountsIndexRouteImport.update({
-    id: '/dashboard/accounting/accounts/',
-    path: '/dashboard/accounting/accounts/',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const DashboardAccountingJournalIndexRoute =
-  DashboardAccountingJournalIndexRouteImport.update({
-    id: '/dashboard/accounting/journal/',
-    path: '/dashboard/accounting/journal/',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const DashboardAccountingReportsIndexRoute =
-  DashboardAccountingReportsIndexRouteImport.update({
-    id: '/dashboard/accounting/reports/',
-    path: '/dashboard/accounting/reports/',
-    getParentRoute: () => rootRouteImport,
-  } as any)
 const DashboardInvoiceIdIndexRoute = DashboardInvoiceIdIndexRouteImport.update({
   id: '/dashboard/invoice/$id/',
   path: '/dashboard/invoice/$id/',
@@ -204,7 +176,6 @@ export interface FileRoutesByFullPath {
   '/pos/': typeof PosIndexRoute
   '/dashboard/settings/appearance': typeof DashboardSettingsAppearanceRoute
   '/dashboard/settings/password': typeof DashboardSettingsPasswordRoute
-  '/dashboard/accounting/': typeof DashboardAccountingIndexRoute
   '/dashboard/categories/': typeof DashboardCategoriesIndexRoute
   '/dashboard/customers/': typeof DashboardCustomersIndexRoute
   '/dashboard/departments/': typeof DashboardDepartmentsIndexRoute
@@ -219,9 +190,6 @@ export interface FileRoutesByFullPath {
   '/dashboard/stores/': typeof DashboardStoresIndexRoute
   '/dashboard/transfers/': typeof DashboardTransfersIndexRoute
   '/dashboard/users/': typeof DashboardUsersIndexRoute
-  '/dashboard/accounting/accounts/': typeof DashboardAccountingAccountsIndexRoute
-  '/dashboard/accounting/journal/': typeof DashboardAccountingJournalIndexRoute
-  '/dashboard/accounting/reports/': typeof DashboardAccountingReportsIndexRoute
   '/dashboard/invoice/$id/': typeof DashboardInvoiceIdIndexRoute
   '/dashboard/invoice/new/': typeof DashboardInvoiceNewIndexRoute
   '/dashboard/products/export/': typeof DashboardProductsExportIndexRoute
@@ -235,7 +203,6 @@ export interface FileRoutesByTo {
   '/pos': typeof PosIndexRoute
   '/dashboard/settings/appearance': typeof DashboardSettingsAppearanceRoute
   '/dashboard/settings/password': typeof DashboardSettingsPasswordRoute
-  '/dashboard/accounting': typeof DashboardAccountingIndexRoute
   '/dashboard/categories': typeof DashboardCategoriesIndexRoute
   '/dashboard/customers': typeof DashboardCustomersIndexRoute
   '/dashboard/departments': typeof DashboardDepartmentsIndexRoute
@@ -250,9 +217,6 @@ export interface FileRoutesByTo {
   '/dashboard/stores': typeof DashboardStoresIndexRoute
   '/dashboard/transfers': typeof DashboardTransfersIndexRoute
   '/dashboard/users': typeof DashboardUsersIndexRoute
-  '/dashboard/accounting/accounts': typeof DashboardAccountingAccountsIndexRoute
-  '/dashboard/accounting/journal': typeof DashboardAccountingJournalIndexRoute
-  '/dashboard/accounting/reports': typeof DashboardAccountingReportsIndexRoute
   '/dashboard/invoice/$id': typeof DashboardInvoiceIdIndexRoute
   '/dashboard/invoice/new': typeof DashboardInvoiceNewIndexRoute
   '/dashboard/products/export': typeof DashboardProductsExportIndexRoute
@@ -267,7 +231,6 @@ export interface FileRoutesById {
   '/pos/': typeof PosIndexRoute
   '/dashboard/settings/appearance': typeof DashboardSettingsAppearanceRoute
   '/dashboard/settings/password': typeof DashboardSettingsPasswordRoute
-  '/dashboard/accounting/': typeof DashboardAccountingIndexRoute
   '/dashboard/categories/': typeof DashboardCategoriesIndexRoute
   '/dashboard/customers/': typeof DashboardCustomersIndexRoute
   '/dashboard/departments/': typeof DashboardDepartmentsIndexRoute
@@ -282,9 +245,6 @@ export interface FileRoutesById {
   '/dashboard/stores/': typeof DashboardStoresIndexRoute
   '/dashboard/transfers/': typeof DashboardTransfersIndexRoute
   '/dashboard/users/': typeof DashboardUsersIndexRoute
-  '/dashboard/accounting/accounts/': typeof DashboardAccountingAccountsIndexRoute
-  '/dashboard/accounting/journal/': typeof DashboardAccountingJournalIndexRoute
-  '/dashboard/accounting/reports/': typeof DashboardAccountingReportsIndexRoute
   '/dashboard/invoice/$id/': typeof DashboardInvoiceIdIndexRoute
   '/dashboard/invoice/new/': typeof DashboardInvoiceNewIndexRoute
   '/dashboard/products/export/': typeof DashboardProductsExportIndexRoute
@@ -300,7 +260,6 @@ export interface FileRouteTypes {
     | '/pos/'
     | '/dashboard/settings/appearance'
     | '/dashboard/settings/password'
-    | '/dashboard/accounting/'
     | '/dashboard/categories/'
     | '/dashboard/customers/'
     | '/dashboard/departments/'
@@ -315,9 +274,6 @@ export interface FileRouteTypes {
     | '/dashboard/stores/'
     | '/dashboard/transfers/'
     | '/dashboard/users/'
-    | '/dashboard/accounting/accounts/'
-    | '/dashboard/accounting/journal/'
-    | '/dashboard/accounting/reports/'
     | '/dashboard/invoice/$id/'
     | '/dashboard/invoice/new/'
     | '/dashboard/products/export/'
@@ -331,7 +287,6 @@ export interface FileRouteTypes {
     | '/pos'
     | '/dashboard/settings/appearance'
     | '/dashboard/settings/password'
-    | '/dashboard/accounting'
     | '/dashboard/categories'
     | '/dashboard/customers'
     | '/dashboard/departments'
@@ -346,9 +301,6 @@ export interface FileRouteTypes {
     | '/dashboard/stores'
     | '/dashboard/transfers'
     | '/dashboard/users'
-    | '/dashboard/accounting/accounts'
-    | '/dashboard/accounting/journal'
-    | '/dashboard/accounting/reports'
     | '/dashboard/invoice/$id'
     | '/dashboard/invoice/new'
     | '/dashboard/products/export'
@@ -362,7 +314,6 @@ export interface FileRouteTypes {
     | '/pos/'
     | '/dashboard/settings/appearance'
     | '/dashboard/settings/password'
-    | '/dashboard/accounting/'
     | '/dashboard/categories/'
     | '/dashboard/customers/'
     | '/dashboard/departments/'
@@ -377,9 +328,6 @@ export interface FileRouteTypes {
     | '/dashboard/stores/'
     | '/dashboard/transfers/'
     | '/dashboard/users/'
-    | '/dashboard/accounting/accounts/'
-    | '/dashboard/accounting/journal/'
-    | '/dashboard/accounting/reports/'
     | '/dashboard/invoice/$id/'
     | '/dashboard/invoice/new/'
     | '/dashboard/products/export/'
@@ -394,7 +342,6 @@ export interface RootRouteChildren {
   PosIndexRoute: typeof PosIndexRoute
   DashboardSettingsAppearanceRoute: typeof DashboardSettingsAppearanceRoute
   DashboardSettingsPasswordRoute: typeof DashboardSettingsPasswordRoute
-  DashboardAccountingIndexRoute: typeof DashboardAccountingIndexRoute
   DashboardCategoriesIndexRoute: typeof DashboardCategoriesIndexRoute
   DashboardCustomersIndexRoute: typeof DashboardCustomersIndexRoute
   DashboardDepartmentsIndexRoute: typeof DashboardDepartmentsIndexRoute
@@ -409,9 +356,6 @@ export interface RootRouteChildren {
   DashboardStoresIndexRoute: typeof DashboardStoresIndexRoute
   DashboardTransfersIndexRoute: typeof DashboardTransfersIndexRoute
   DashboardUsersIndexRoute: typeof DashboardUsersIndexRoute
-  DashboardAccountingAccountsIndexRoute: typeof DashboardAccountingAccountsIndexRoute
-  DashboardAccountingJournalIndexRoute: typeof DashboardAccountingJournalIndexRoute
-  DashboardAccountingReportsIndexRoute: typeof DashboardAccountingReportsIndexRoute
   DashboardInvoiceIdIndexRoute: typeof DashboardInvoiceIdIndexRoute
   DashboardInvoiceNewIndexRoute: typeof DashboardInvoiceNewIndexRoute
   DashboardProductsExportIndexRoute: typeof DashboardProductsExportIndexRoute
@@ -453,13 +397,6 @@ declare module '@tanstack/react-router' {
       path: '/pos'
       fullPath: '/pos/'
       preLoaderRoute: typeof PosIndexRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/dashboard/accounting/': {
-      id: '/dashboard/accounting/'
-      path: '/dashboard/accounting'
-      fullPath: '/dashboard/accounting/'
-      preLoaderRoute: typeof DashboardAccountingIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/dashboard/categories/': {
@@ -574,27 +511,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof DashboardUsersIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/dashboard/accounting/accounts/': {
-      id: '/dashboard/accounting/accounts/'
-      path: '/dashboard/accounting/accounts'
-      fullPath: '/dashboard/accounting/accounts/'
-      preLoaderRoute: typeof DashboardAccountingAccountsIndexRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/dashboard/accounting/journal/': {
-      id: '/dashboard/accounting/journal/'
-      path: '/dashboard/accounting/journal'
-      fullPath: '/dashboard/accounting/journal/'
-      preLoaderRoute: typeof DashboardAccountingJournalIndexRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/dashboard/accounting/reports/': {
-      id: '/dashboard/accounting/reports/'
-      path: '/dashboard/accounting/reports'
-      fullPath: '/dashboard/accounting/reports/'
-      preLoaderRoute: typeof DashboardAccountingReportsIndexRouteImport
-      parentRoute: typeof rootRouteImport
-    }
     '/dashboard/invoice/$id/': {
       id: '/dashboard/invoice/$id/'
       path: '/dashboard/invoice/$id'
@@ -634,7 +550,6 @@ const rootRouteChildren: RootRouteChildren = {
   PosIndexRoute: PosIndexRoute,
   DashboardSettingsAppearanceRoute: DashboardSettingsAppearanceRoute,
   DashboardSettingsPasswordRoute: DashboardSettingsPasswordRoute,
-  DashboardAccountingIndexRoute: DashboardAccountingIndexRoute,
   DashboardCategoriesIndexRoute: DashboardCategoriesIndexRoute,
   DashboardCustomersIndexRoute: DashboardCustomersIndexRoute,
   DashboardDepartmentsIndexRoute: DashboardDepartmentsIndexRoute,
@@ -649,9 +564,6 @@ const rootRouteChildren: RootRouteChildren = {
   DashboardStoresIndexRoute: DashboardStoresIndexRoute,
   DashboardTransfersIndexRoute: DashboardTransfersIndexRoute,
   DashboardUsersIndexRoute: DashboardUsersIndexRoute,
-  DashboardAccountingAccountsIndexRoute: DashboardAccountingAccountsIndexRoute,
-  DashboardAccountingJournalIndexRoute: DashboardAccountingJournalIndexRoute,
-  DashboardAccountingReportsIndexRoute: DashboardAccountingReportsIndexRoute,
   DashboardInvoiceIdIndexRoute: DashboardInvoiceIdIndexRoute,
   DashboardInvoiceNewIndexRoute: DashboardInvoiceNewIndexRoute,
   DashboardProductsExportIndexRoute: DashboardProductsExportIndexRoute,

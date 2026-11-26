@@ -19,6 +19,7 @@ import {
   btnIcon,
   btnOutline,
   card,
+  downloadCsv,
   fieldCls,
   formatMoneyCompact,
   lastDaysBuckets,
@@ -35,11 +36,6 @@ import {
   type RecentRow,
   type Summary,
 } from "#/components/expenses";
-import {
-  downloadXlsx,
-  formatDateRange,
-  type XlsxCell,
-} from "#/components/sales";
 
 export const Route = createFileRoute("/dashboard/expenses/")({
   component: ExpensesDashboard,
@@ -88,10 +84,6 @@ function ExpensesDashboard() {
     () => (isGlobal && selectedStore ? { storeId: selectedStore } : {} as Record<string, string>),
     [isGlobal, selectedStore]
   );
-
-  const selectedStoreName: string | undefined = selectedStore
-    ? (stores || []).find((s: any) => (s._id ?? s.id) === selectedStore)?.name
-    : undefined;
 
   // Every range and bucket boundary is computed here, in the browser's
   // timezone, and sent as a timestamp so the server's timezone never matters.
@@ -188,28 +180,19 @@ function ExpensesDashboard() {
     now >= listRangeMs.from && now <= listRangeMs.to ? new Date(now) : new Date(listRangeMs.from);
 
   const handleExport = () => {
-    const rows: XlsxCell[][] = buckets.starts.map((start, i) => [
-      format(new Date(start), byDay ? "yyyy-MM-dd" : "LLLL yyyy"),
-      series[i]?.sales ?? 0,
-      series[i]?.expenses ?? 0,
-    ]);
-
-    const details = [`Period: ${formatDateRange(range.from, range.to)}`];
-    if (isGlobal) details.push(`Store: ${selectedStoreName ?? "All stores"}`);
-
-    void downloadXlsx({
-      fileName: `sales-vs-expenses-${format(new Date(range.from), "yyyy-MM-dd")}-to-${format(
-        new Date(range.to),
-        "yyyy-MM-dd"
-      )}.xlsx`,
-      sheetName: "Sales vs expenses",
-      title: "Sales vs expenses",
-      details,
-      header: [byDay ? "Day" : "Month", "Sales", "Expenses"],
-      rows,
-      totalRow: ["Total", totals?.sales ?? 0, totals?.expenses ?? 0],
-      moneyColumns: [1, 2],
+    const rows: (string | number)[][] = [["Period", "Sales", "Expenses"]];
+    buckets.starts.forEach((start, i) => {
+      rows.push([
+        format(new Date(start), byDay ? "yyyy-MM-dd" : "LLLL yyyy"),
+        series[i]?.sales ?? 0,
+        series[i]?.expenses ?? 0,
+      ]);
     });
+    rows.push(["Total", totals?.sales ?? 0, totals?.expenses ?? 0]);
+    downloadCsv(
+      `sales-vs-expenses-${format(new Date(range.from), "yyyy-MM-dd")}-to-${format(new Date(range.to), "yyyy-MM-dd")}.csv`,
+      rows
+    );
   };
 
   const loading = !main;
