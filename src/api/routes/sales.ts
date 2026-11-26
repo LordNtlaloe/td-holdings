@@ -4,6 +4,12 @@ import db from "../db/index.ts";
 import * as schema from "../db/schema.ts";
 import type { AuthEnv } from "../middleware/auth.ts";
 import { getUser, requireRole } from "../auth.ts";
+import {
+  createJournal,
+  getMappings,
+  round2,
+  AccountingError,
+} from "./lib/accounting.ts";
 
 export const salesRoutes = new Hono<AuthEnv>();
 
@@ -59,6 +65,55 @@ async function reverseCompletedSale(
     reason: reason || "No reason",
     originalData,
   }).run();
+
+  // Calculate COGS for reversal (restore inventory value, reverse COGS expense)
+  let reversalCogs = 0;
+  const reversalItems = await db.select().from(schema.saleItems)
+    .where(eq(schema.saleItems.saleId, id)).all();
+  for (const si of reversalItems) {
+    const product = await db.select().from(schema.products)
+      .where(eq(schema.products.id, si.productId)).get();
+    if (product) {
+      reversalCogs += product.costPrice * si.quantity;
+    }
+  }
+  reversalCogs = round2(reversalCogs);
+
+  // Post reversal journal entry
+  // Dr: Sales returns (contra-revenue) = totalAmount
+  // Cr: Payment account                 = totalAmount
+  // Dr: Inventory                       = reversalCogs
+  // Cr: COGS                            = reversalCogs
+  try {
+    const mappings = await getMappings();
+    const returnsAccountId = mappings.get("sales:returns");
+    const paymentAccountId = mappings.get(`payment:${sale.paymentMethod}`);
+    const cogsAccountId = mappings.get("cogs");
+    const inventoryAccountId = mappings.get("inventory");
+
+    if (returnsAccountId && paymentAccountId && cogsAccountId && inventoryAccountId) {
+      const reversalLines = [
+        { accountId: returnsAccountId, debit: round2(sale.totalAmount), credit: 0, description: `Reversal of sale ${id} – ${targetStatus}` },
+        { accountId: paymentAccountId, debit: 0, credit: round2(sale.totalAmount), description: `Reversal of sale ${id} – ${targetStatus}` },
+        { accountId: inventoryAccountId, debit: reversalCogs, credit: 0, description: `Reversal of sale ${id} – restore inventory` },
+        { accountId: cogsAccountId, debit: 0, credit: reversalCogs, description: `Reversal of sale ${id} – reverse COGS` },
+      ];
+
+      await createJournal({
+        date: Date.now(),
+        memo: `Reversal of sale ${id} (${targetStatus})`,
+        storeId: sale.storeId,
+        sourceType: "cancellation",
+        cancelledSaleId: id,
+        lines: reversalLines,
+        createdBy: user.id,
+        post: true,
+        prefix: "CX",
+      });
+    }
+  } catch (jeError: any) {
+    console.error("Reversal journal posting failed for sale", id, jeError);
+  }
 
   await db.insert(schema.ledgerEntries).values({
     storeId: sale.storeId,
@@ -698,7 +753,62 @@ salesRoutes.post("/", async (c) => {
       }
     }
 
-    // Create ledger entry
+    // ─── Double-entry journal posting ────────────────────────────────────────
+    // Dr: Payment account  = netTotal
+    // Cr: Sales revenue    = netTotal
+    // Dr: COGS             = total cost of items sold
+    // Cr: Inventory        = total cost of items sold
+    let journalEntryId: string | null = null;
+    try {
+      // Calculate COGS from product cost prices
+      let totalCogs = 0;
+      for (const item of items) {
+        const product = await db.select().from(schema.products)
+          .where(eq(schema.products.id, item.productId)).get();
+        if (product) {
+          totalCogs += product.costPrice * item.quantity;
+        }
+      }
+      totalCogs = round2(totalCogs);
+
+      const mappings = await getMappings();
+      const paymentAccountId = mappings.get(`payment:${paymentMethod}`);
+      const revenueAccountId = mappings.get("sales:revenue");
+      const cogsAccountId = mappings.get("cogs");
+      const inventoryAccountId = mappings.get("inventory");
+
+      if (!paymentAccountId) throw new AccountingError(`No account mapped for payment method: ${paymentMethod}`);
+      if (!revenueAccountId) throw new AccountingError("No account mapped for sales:revenue");
+      if (!cogsAccountId) throw new AccountingError("No account mapped for cogs");
+      if (!inventoryAccountId) throw new AccountingError("No account mapped for inventory");
+
+      const lines = [
+        { accountId: paymentAccountId, debit: round2(netTotal), credit: 0, description: `Sale ${result.id} – ${paymentMethod}` },
+        { accountId: revenueAccountId, debit: 0, credit: round2(netTotal), description: `Sale ${result.id} – revenue` },
+        { accountId: cogsAccountId, debit: totalCogs, credit: 0, description: `Sale ${result.id} – COGS` },
+        { accountId: inventoryAccountId, debit: 0, credit: totalCogs, description: `Sale ${result.id} – Inventory` },
+      ];
+
+      const journal = await createJournal({
+        date: Date.now(),
+        memo: `Sale ${result.id}`,
+        storeId,
+        sourceType: "sale",
+        saleId: result.id,
+        lines,
+        createdBy: user.id,
+        post: true,
+        prefix: "SL",
+      });
+      journalEntryId = journal.entry.id;
+    } catch (jeError: any) {
+      // Journal posting failure doesn't roll back the already-committed sale,
+      // but we surface it so an accountant can backfill. The ledger entry is
+      // still written below (without journalEntryId) so legacy screens keep working.
+      console.error("Journal posting failed for sale", result.id, jeError);
+    }
+
+    // Create ledger entry (linked to journal when available)
     await db.insert(schema.ledgerEntries).values({
       storeId,
       type: "income",
@@ -706,6 +816,7 @@ salesRoutes.post("/", async (c) => {
       amount: netTotal,
       referenceType: "sale",
       saleId: result.id,
+      journalEntryId,
       date: Date.now(),
     }).run();
 
@@ -777,6 +888,51 @@ salesRoutes.post("/:id/cancel", async (c) => {
       reason: reason || "No reason",
       originalData,
     }).run();
+
+    // Calculate COGS for reversal (restore inventory value, reverse COGS expense)
+    let cancelCogs = 0;
+    const cancelSaleItems = await db.select().from(schema.saleItems)
+      .where(eq(schema.saleItems.saleId, id)).all();
+    for (const si of cancelSaleItems) {
+      const product = await db.select().from(schema.products)
+        .where(eq(schema.products.id, si.productId)).get();
+      if (product) {
+        cancelCogs += product.costPrice * si.quantity;
+      }
+    }
+    cancelCogs = round2(cancelCogs);
+
+    // Post reversal journal entry
+    try {
+      const mappings = await getMappings();
+      const returnsAccountId = mappings.get("sales:returns");
+      const paymentAccountId = mappings.get(`payment:${sale.paymentMethod}`);
+      const cogsAccountId = mappings.get("cogs");
+      const inventoryAccountId = mappings.get("inventory");
+
+      if (returnsAccountId && paymentAccountId && cogsAccountId && inventoryAccountId) {
+        const reversalLines = [
+          { accountId: returnsAccountId, debit: round2(sale.totalAmount), credit: 0, description: `Cancellation of sale ${id}` },
+          { accountId: paymentAccountId, debit: 0, credit: round2(sale.totalAmount), description: `Cancellation of sale ${id}` },
+          { accountId: inventoryAccountId, debit: cancelCogs, credit: 0, description: `Cancellation of sale ${id} – restore inventory` },
+          { accountId: cogsAccountId, debit: 0, credit: cancelCogs, description: `Cancellation of sale ${id} – reverse COGS` },
+        ];
+
+        await createJournal({
+          date: Date.now(),
+          memo: `Cancellation of sale ${id}`,
+          storeId: sale.storeId,
+          sourceType: "cancellation",
+          cancelledSaleId: id,
+          lines: reversalLines,
+          createdBy: user.id,
+          post: true,
+          prefix: "CX",
+        });
+      }
+    } catch (jeError: any) {
+      console.error("Cancellation journal posting failed for sale", id, jeError);
+    }
 
     // Create reverse ledger entry
     await db.insert(schema.ledgerEntries).values({
